@@ -17,6 +17,8 @@ import SetHealthSanity from './components/settings/SetHealthSanity'
 import SetProperties from './components/settings/SetProperties'
 import SetUpMonsters from './components/settings/SetUpMonsters'
 import MixAncientPackage from './components/settings/MixAncientPackage'
+import PlaceInvestigators from './components/settings/PlaceInvestigators'
+import MythStep from './components/mythstep/MythStep'
 
 const router = new VueRouter({
     mode: 'history',
@@ -85,6 +87,16 @@ const router = new VueRouter({
             path: '/mix-ancient-package',
             name: 'mix-ancient-package',
             component: MixAncientPackage,
+        },
+        {
+            path: '/place-investigators',
+            name: 'place-investigators',
+            component: PlaceInvestigators,
+        },
+        {
+            path: '/myth-step',
+            name: 'myth-step',
+            component: MythStep,
         },
 
     ],

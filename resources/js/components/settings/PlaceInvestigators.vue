@@ -106,7 +106,7 @@
                             v-for="(char,index) of site.character"
                             v-bind:class="'investigator_'+(index+1)"
                             v-bind:id="char"
-                            v-html="'Inv.'+(index+1)">
+                            v-html="char">
                         </div>
 
                         <!-- Monstres -->
@@ -146,7 +146,7 @@
                             v-for="(char,index) of street.character"
                             v-bind:class="'investigator_'+(index+1)"
                             v-bind:id="char"
-                            v-html="'Inv.'+(index+1)">
+                            v-html="char">
                         </div>
 
                         <!-- Monstres -->
@@ -172,7 +172,7 @@
                             v-for="(char,index) of special.character"
                             v-bind:class="'investigator_'+(index+1)"
                             v-bind:id="char"
-                            v-html="'Inv.'+(index+1)">
+                            v-html="char">
                         </div>
 
                         <!-- Monstres -->
@@ -216,7 +216,7 @@
                                 v-for="char of step.character"
                                 v-bind:id="char"
                                 v-bind:class="step.position==1? 'inv_first':'inv_second'"
-                                v-html="'Inv.'">
+                                v-html="char">
                             </div>
                         </div>
 
@@ -228,24 +228,22 @@
 
                 <div id="modal1" class="modal open" tabindex="0" style="z-index: 999; display: block; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);height:168px;">
                     <div class="modal-content">
-                        <h4>Apparition des indices</h4>
-                        <p>Des indices sont apparus
-                        dans les lieux instables d'Arkham.</p>
+                        <h4 v-html="pageTitle"></h4>
+                        <p>Les investigateurs apparaissent dans les lieux d'Arkham</p>
                         <div class="right-align">
                             <button class="modal-close waves-effect waves-light btn teal" @click="continueAction">Etape suivante</button>
                         </div>
                     </div>
                 </div>
         </body>
-    </div>
-
-</template>
+    </div></template>
 
 <script>
     export default {
         data: function(){
             return {
-                pageTitle: 'map',
+
+                pageTitle: 'Placement des investigateurs',
                 playerNumber: 2,
                 navbar:
                     {
@@ -266,13 +264,13 @@
                 sites: [
                     { name: "Boutique<br>de<br>souvenir1"        , id: "1" , type: "site", character: [],                 monster: [], event: [], clue: 1, color: "orange", portal: [], marker: []},
                     { name: "Journal2"                           , id: "2" , type: "site", character: [],                 monster: [], event: [], clue: 0, color: "orange", portal: [], marker: []},
-                    { name: "Gare3"                              , id: "3" , type: "site", character: [],                 monster: [], event: [], clue: 0, color: "orange", portal: [], marker: []},
+                    { name: "Gare3"                              , id: "3" , type: "site", character: ["Jenny Barnes"],   monster: [], event: [], clue: 0, color: "orange", portal: [], marker: []},
                     { name: "Banque<br>d'Arkham4"                , id: "4" , type: "site", character: [],                 monster: [], event: [], clue: 0, color: "white",  portal: [], marker: []},
                     { name: "Asile<br>d'Arkham5"                 , id: "5" , type: "site", character: [],                 monster: [], event: [], clue: 0, color: "white",  portal: [], marker: []},
                     { name: "Square de<br>l'indépen-<br>-dance6" , id: "6" , type: "site", character: [],                 monster: [], event: [], clue: 1, color: "white",  portal: [], marker: []},
                     { name: "Relais<br>routier<br>de Hibb7"      , id: "7" , type: "site", character: [],                 monster: [], event: [], clue: 1, color: "grey",   portal: [], marker: []},
                     { name: "Restaurant<br>de Velma8"            , id: "8" , type: "site", character: [],                 monster: [], event: [], clue: 1, color: "grey",   portal: [], marker: []},
-                    { name: "Poste<br>de<br>-police9"            , id: "9" , type: "site", character: [],                 monster: [], event: [], clue: 1, color: "grey",   portal: [], marker: []},
+                    { name: "Poste<br>de<br>-police9"            , id: "9" , type: "site", character: ["Joe Diamond"],    monster: [], event: [], clue: 1, color: "grey",   portal: [], marker: []},
                     { name: "L'ile<br>inexplorée10"             , id: "10", type: "site", character: [],                 monster: [], event: [], clue: 1, color: "green",  portal: [], marker: []},
                     { name: "Les<br>quais11"                     , id: "11", type: "site", character: [],                 monster: [], event: [], clue: 1, color: "green",  portal: [], marker: []},
                     { name: "l'Inno-<br>-mable12"                , id: "12", type: "site", character: [],                 monster: [], event: [], clue: 1, color: "green",  portal: [], marker: []},
@@ -433,36 +431,27 @@
             }
         },
         methods: {
-            next() {
-            //Envoi des données au server
-            //Diriger vers le nouveau composant
-            },
+
             switchNavbar(libelle)
             {
                 this.navbar[libelle] = !this.navbar[libelle];
             },
-            log(name)
+            log (message)
             {
-                console.log(name);
+                console.log(message);
             },
-            showInvestigator(name)
-            {
-                this.investigatorPreview = name;
-            },
+
             continueAction () {
                 // console.log('ici')
-                this.$router.push('set-fixed-objects')
+                this.$router.push('myth-step')
             }
         }
-        ,
-        updated(){
-
-        }
     }
+
 </script>
 
 <style>
-    /***** MAP*****/
+/***** MAP*****/
         #map-container
         {
             height : 780px;

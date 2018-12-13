@@ -15,8 +15,8 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <img class="responsive-img card-image" style="width: 100px;" src="/image/card/type/autre-monde.jpg" alt="Autre monde">
-                        <img class="responsive-img card-image" style="width: 100px;" src="/image/card/type/mythe.jpg" alt="Carte Mythe">
+                        <img class="responsive-img card-image" style="width: 100px;border-radius:5px;" src="/image/card/type/autre-monde.jpg" alt="Autre monde">
+                        <img class="responsive-img card-image" style="width: 100px;border-radius:5px;" src="/image/card/type/mythe.jpg" alt="Carte Mythe">
                         <img class="responsive-img card-image" style="width: 100px;border-radius:50%;" src="/image/card/type/PortailBack.jpg" alt="Portail">
                     </div>
                 </div>
@@ -40,8 +40,8 @@
         },
         methods: {
             continueAction () {
-                console.log('ici')
-                // this.$router.push('set-random-objects')
+                // console.log('ici')
+                this.$router.push('place-investigators')
             }
         }
     }
