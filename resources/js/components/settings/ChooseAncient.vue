@@ -15,7 +15,7 @@
 
             <div class="col-md-9 text-center">
 
-                <button v-for="ancien in anciens" v-bind:class="{ 'btn-light': !ancien.selected, 'btn-success': ancien.selected }" class="btn" @click="chooseAcien(ancien)">
+                <button v-for="ancien in anciens" v-bind:class="{ 'teal': !ancien.selected, 'red': ancien.selected }" class="waves-effect waves-light btn" @click="chooseAcien(ancien)">
                     {{ ancien.name }}
                 </button>
                 <hr>

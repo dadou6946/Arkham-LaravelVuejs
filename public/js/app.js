@@ -15382,6 +15382,10 @@ if (inBrowser && window.Vue) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(118)
+}
 var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(19)
@@ -15390,7 +15394,7 @@ var __vue_template__ = __webpack_require__(20)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -16920,7 +16924,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n    /*color: white;\n    background-color: teal;*/\n}\n.selected {\n    border: 3px solid lightgreen;\n    -webkit-box-shadow: -3px -2px 5px 0px lightgreen;\n    box-shadow: -3px -2px 5px 0px lightgreen;\n}\n\n", ""]);
+exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n    /*color: white;\n    background-color: teal;*/\n}\n.selected {\n    border: 3px solid lightgreen;\n    -webkit-box-shadow: -3px -2px 5px 0px lightgreen;\n    box-shadow: -3px -2px 5px 0px lightgreen;\n}\n#image_content\n{\n    height: 550px;\n    background-color: teal;\n}\n\n", ""]);
 
 // exports
 
@@ -16976,6 +16980,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -16986,6 +17002,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             current: 1,
             enableSubmit: false,
             recapMessage: '',
+            hovered: '',
             investigators: [],
             // waitSubmit: true,
             available: [{ disabled: '', name: 'Joe Diamond' }, { disabled: '', name: 'Peggy Green' }, { disabled: '', name: 'Jenny Barnes' }, { disabled: '', name: 'Francis Sailor' }]
@@ -17016,6 +17033,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 character.disabled = '';
             });
         },
+        mouseOver: function mouseOver(name) {
+            this.hovered = name;
+        },
         submit: function submit() {
             //Envoi des données au server
             //Diriger vers le nouveau composant
@@ -17029,6 +17049,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     updated: function updated() {
 
         this.recapMessage = this.playerNumber == 1 ? 'Le joueur 1 a été choisi. Vous pouvez le réattribuer ou passer à l\'étape suivante.' : 'Les joueurs ont été choisis. Vous pouvez les réattribuer ou passer à l\'étape suivante.';
+    },
+
+    computed: {
+        preview: function preview() {
+            return { backgroundImage: "url('/image/sheet/character/" + this.hovered.replace(' ', '') + ".jpg')"
+                // "+ this.hovered.replace(' ', '') +"
+            };
+        }
     }
 });
 
@@ -17112,6 +17140,12 @@ var render = function() {
                 on: {
                   click: function($event) {
                     _vm.choose(player)
+                  },
+                  mouseover: function($event) {
+                    _vm.mouseOver(player.name)
+                  },
+                  mouseleave: function($event) {
+                    _vm.hovered = ""
                   }
                 }
               },
@@ -17145,6 +17179,17 @@ var render = function() {
           )
         ],
         2
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c(
+        "div",
+        {
+          staticClass: "col-md-9 col-md-offset-3",
+          attrs: { id: "image_content" }
+        },
+        [_vm.hovered != "" ? _c("div", { style: _vm.preview }) : _vm._e()]
       )
     ])
   ])
@@ -17811,11 +17856,8 @@ var render = function() {
             return _c(
               "button",
               {
-                staticClass: "btn",
-                class: {
-                  "btn-light": !ancien.selected,
-                  "btn-success": ancien.selected
-                },
+                staticClass: "waves-effect waves-light btn",
+                class: { teal: !ancien.selected, red: ancien.selected },
                 on: {
                   click: function($event) {
                     _vm.chooseAcien(ancien)
@@ -18870,10 +18912,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -18985,16 +19023,7 @@ var render = function() {
                           _c("div", { staticClass: "card-content" }, [
                             _c("p", { domProps: { innerHTML: _vm._s(ob) } })
                           ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass: "card-panel",
-                          domProps: { innerHTML: _vm._s(ob) }
-                        }),
-                        _vm._v(" "),
-                        _c("img", {
-                          attrs: { src: "Lance-Flammes.jpg", alt: "" }
-                        })
+                        ])
                       ])
                     })
                   ),
@@ -19138,7 +19167,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -19149,10 +19178,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
 //
 //
 //
@@ -19318,19 +19343,7 @@ var render = function() {
                           _c("div", { staticClass: "card-content" }, [
                             _c("p", { domProps: { innerHTML: _vm._s(ob) } })
                           ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass: "card-panel",
-                          domProps: { innerHTML: _vm._s(ob) }
-                        }),
-                        _vm._v(" "),
-                        _c("img", {
-                          attrs: {
-                            src: "/image/card/common/Lance-Flammes.jpg",
-                            alt: ""
-                          }
-                        })
+                        ])
                       ])
                     })
                   ),
@@ -22803,6 +22816,49 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(119);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("0f3c2172", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-91ac6b5c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-91ac6b5c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.jumbotron\n{\n    margin-top: 0;\n    margin-bottom: 15px;\n    padding: 25px;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

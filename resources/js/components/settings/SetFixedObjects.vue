@@ -32,10 +32,6 @@
                                   <p v-html="ob"></p>
                                 </div>
                             </div>
-                            <div class="card-panel"
-                                v-html="ob"></div>
-                            <img src="Lance-Flammes.jpg" alt="" />
-
                         </li>
                     </ul>
                     <br>

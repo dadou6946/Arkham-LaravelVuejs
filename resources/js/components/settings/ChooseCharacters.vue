@@ -27,6 +27,8 @@
                     <button v-for="player in available"
                             v-bind:class="player.disabled"
                             @click="choose(player)"
+                            @mouseover="mouseOver(player.name)"
+                            @mouseleave="hovered=''"
                             class="btn">
                         {{ player.name }}
                     </button>
@@ -35,6 +37,16 @@
 
                 <button class="btn btn-success" :disabled="!enableSubmit" @click="continueAction">Confirmer</button>
                 <button class="btn btn-success" @click="reboot">Réattribuer les personnages</button>
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="image_content"
+                 class="col-md-9 col-md-offset-3">
+                <div v-if="hovered !=''" :style="preview">
+                </div>
 
 
             </div>
@@ -53,6 +65,7 @@
                 current: 1,
                 enableSubmit: false,
                 recapMessage : '',
+                hovered: '',
                 investigators: [],
                 // waitSubmit: true,
                 available: [
@@ -92,6 +105,9 @@
                     character.disabled=''
                 })
             },
+            mouseOver(name){
+                this.hovered = name;
+            },
             submit () {
                 //Envoi des données au server
                 //Diriger vers le nouveau composant
@@ -109,6 +125,12 @@
             this.recapMessage = this.playerNumber == 1 ? 'Le joueur 1 a été choisi. Vous pouvez le réattribuer ou passer à l\'étape suivante.':
                                                          'Les joueurs ont été choisis. Vous pouvez les réattribuer ou passer à l\'étape suivante.';
         },
+        computed: {
+            preview: function(){
+             return { backgroundImage: "url('/image/sheet/character/" + this.hovered.replace(' ', '') + ".jpg')" }
+             // "+ this.hovered.replace(' ', '') +"
+            }
+        }
     }
 </script>
 
@@ -123,6 +145,12 @@
         border: 3px solid lightgreen;
         -webkit-box-shadow: -3px -2px 5px 0px lightgreen;
         -moz-box-shadow: -3px -2px 5px 0px lightgreen;
-        box-shadow: -3px -2px 5px 0px lightgreen;        }
+        box-shadow: -3px -2px 5px 0px lightgreen;
+    }
+    #image_content
+    {
+        height: 550px;
+        background-color: teal;
+    }
 
 </style>
