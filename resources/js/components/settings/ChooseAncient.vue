@@ -5,27 +5,42 @@
         <hr>
 
         <div class="row">
-            <div class="col-md-3 text-center">
+            <div class="col-md-7 text-center">
                 <div>
                   <label>{{ instruction }}</label>
                 </div>
-
-                <hr>
-            </div>
-
-            <div class="col-md-9 text-center">
-
-                <button v-for="ancien in anciens" v-bind:class="{ 'teal': !ancien.selected, 'red': ancien.selected }" class="waves-effect waves-light btn" @click="chooseAcien(ancien)">
+                <div>
+                    <button v-for="ancien in anciens"
+                        v-bind:class="{ 'teal': !ancien.selected, 'red': ancien.selected }"
+                        class="waves-effect waves-light btn"
+                        @click="chooseAcien(ancien)"
+                        @mouseover="mouseOver(ancien.name)"
+                        @mouseleave="hovered=''">
                     {{ ancien.name }}
-                </button>
+                    </button>
+                </div>
                 <hr>
                 <div class="form-group">
                   <input type="submit" class="form-control btn btn-success" :disabled="!preventConfirm" @click="continueAction" value="Confirmer">
                 </div>
+
+                <hr>
+            </div>
+
+            <div class="col-md-5 text-center">
+                <transition name="fade">
+                    <div v-if="hovered !=''" id="image_content" class="center-align">
+                        <img id="image-preview" :src="imagePath" alt="" class="">
+                    </div>
+                </transition>
             </div>
 
         </div>
+        <div class="row">
 
+            <div class="col-md-4 text-center">
+            </div>
+        </div>
 
     </div>
 </template>
@@ -45,7 +60,8 @@
                 ],
                 ancienChoice: '',
                 preventConfirm: false,
-
+                imagePath: '',
+                hovered: '',
             }
         },
         methods: {
@@ -77,11 +93,23 @@
             continueAction () {
                 // console.log('ici')
                 this.$router.push('set-clues')
-            }
+            },
+            mouseOver(name){
+                this.hovered = true;
+                this.imagePath = '/image/sheet/ancient/' + name.replace(' ', '') + '.jpg';
+            },
         }
     }
 </script>
 
 <style>
 
+    /*TRANSITIONS*/
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .75s;
+    }
+    .fade-enter, .fade-leave-to
+    {
+        opacity: 0;
+    }
 </style>

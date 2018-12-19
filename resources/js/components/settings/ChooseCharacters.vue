@@ -6,50 +6,63 @@
 
         <div class="row">
 
-            <div class="col-md-3">
-                <div>Le joueur {{ first }} commencera la partie.</div>
+            <div class="col-md-7">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div v-if="!enableSubmit">
+                        Le joueur {{ current }} doit choisir son investivateur :</div>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="badge teal white-text">Le joueur {{ first }} commencera la partie</span>
+                    </div>
+
+
+                </div>
                 <hr>
-                <div v-for="investigator in investigators" class="alert alert-success" role="alert">
-                    Joueur {{investigator.player}} : {{investigator.name}}
-                </div>
-            </div>
-
-            <div class="col-md-9 text-center">
-
-                <div v-if="!enableSubmit">
-                    Le joueur {{ current }} choisit son investivateur :
-                </div>
-                <div v-if="enableSubmit">
-                    {{ recapMessage }}
-                </div>
 
                 <br>
-                    <button v-for="player in available"
-                            v-bind:class="player.disabled"
-                            @click="choose(player)"
-                            @mouseover="mouseOver(player.name)"
-                            @mouseleave="hovered=''"
-                            class="btn">
-                        {{ player.name }}
-                    </button>
+
+                <button v-for="player in available"
+                        v-bind:class="player.disabled"
+                        @click="choose(player)"
+                        @mouseover="mouseOver(player.name)"
+                        @mouseleave="hovered=''"
+                        class="btn">
+                    {{ player.name }}
+                </button>
 
                 <br><br>
 
                 <button class="btn btn-success" :disabled="!enableSubmit" @click="continueAction">Confirmer</button>
                 <button class="btn btn-success" @click="reboot">Réattribuer les personnages</button>
 
+                <hr>
+                <div class="row">
+                    <!-- Messages récapitulatifs des chois de personnages -->
+                    <div v-for="investigator in investigators"
+                         class="col-md-5 character-resume alert alert-success text-center"
+                         role="alert"
+                         @mouseover="mouseOver(investigator.name)"
+                         @mouseleave="hovered=''">
+                        Joueur {{investigator.player}} : {{investigator.name}}
+                    </div>
+                </div>
+                <blockquote v-if="enableSubmit">
+                    {{ recapMessage }}
+                </blockquote>
+            </div>
 
+            <div class="col-md-5 text-center">
+                <transition name="fade">
+                    <div v-if="hovered !=''" id="image_content" class="center-align">
+                        <img id="image-preview" :src="imagePath" alt="" class="">
+                    </div>
+                </transition>
             </div>
         </div>
 
         <div class="row">
-            <div id="image_content"
-                 class="col-md-9 col-md-offset-3">
-                <div v-if="hovered !=''" :style="preview">
-                </div>
-
-
-            </div>
         </div>
 
     </div>
@@ -60,7 +73,7 @@
         data: function(){
             return {
                 pageTitle2: 'Choix des investigateurs',
-                playerNumber: 2,
+                playerNumber: 6,
                 first: 1,
                 current: 1,
                 enableSubmit: false,
@@ -68,10 +81,14 @@
                 hovered: '',
                 investigators: [],
                 // waitSubmit: true,
+                preview: '',
+                imagePath: '',
                 available: [
                     { disabled: '', name: 'Joe Diamond'},
-                    { disabled: '', name: 'Peggy Green'},
                     { disabled: '', name: 'Jenny Barnes'},
+                    { disabled: '', name: 'Mark Harrigan'},
+                    { disabled: '', name: 'Michael McGlen'},
+                    { disabled: '', name: 'Peggy Green'},
                     { disabled: '', name: 'Francis Sailor'}
             ],
             }
@@ -106,7 +123,8 @@
                 })
             },
             mouseOver(name){
-                this.hovered = name;
+                this.hovered = true;
+                this.imagePath = '/image/sheet/character/' + name.replace(' ', '') + '.jpg';
             },
             submit () {
                 //Envoi des données au server
@@ -126,10 +144,7 @@
                                                          'Les joueurs ont été choisis. Vous pouvez les réattribuer ou passer à l\'étape suivante.';
         },
         computed: {
-            preview: function(){
-             return { backgroundImage: "url('/image/sheet/character/" + this.hovered.replace(' ', '') + ".jpg')" }
-             // "+ this.hovered.replace(' ', '') +"
-            }
+
         }
     }
 </script>
@@ -150,7 +165,26 @@
     #image_content
     {
         height: 550px;
-        background-color: teal;
+        width: 100%;
+        /*background-color: teal;*/
     }
+    #image-preview {
+        height: 100%;
+        width: auto;
+        margin: auto;
+    }
+    .character-resume
+    {
+        margin: 2px;
+    }
+    /*TRANSITIONS*/
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .75s;
+    }
+    .fade-enter, .fade-leave-to
+    {
+        opacity: 0;
+    }
+
 
 </style>
