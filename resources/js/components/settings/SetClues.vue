@@ -1,84 +1,7 @@
 <template>
     <div>
-        <transition name="fade">
-            <nav id="sidebar-investigator" class="teal lighten-3 sidenav sidenav-fixed center-align"
-                style="transform: translateX(0px);z-index:980;"
-                v-if="navbar.investigator">
-
-                    <div class="waves-effect waves-light valign-wrapper"
-                        v-for="(investigator, index) of investigators"
-                        style="margin:7px;border-radius:5px;margin-top:-15px;padding-top:-15px;font-size:15px;"
-                        @click="showInvestigator(investigator.name)">
-                        <span v-html="investigator.name"></span>
-                    </div>
-
-                    <div v-if="investigatorPreview!=''">
-                        <div class="card teal lighten-4"
-                            v-html="investigatorPreview"></div>
-
-                    </div>
-
-            </nav>
-        </transition>
-
-        <transition name="fade">
-            <nav id="sidebar-ancient" class="sidenav blue lighten-3"
-                style="transform: translateX(0px);z-index:990;height:100%;width:280px;position:absolute;right:0;"
-                v-if="navbar.guardian">
-            </nav>
-        </transition>
-
-        <transition name="fade">
-            <nav id="sidebar-ancient" class="cyan lighten-3"
-                 style="z-index:1000;width:100%;height:300px;position:absolute;bottom:0;"
-                 v-if="navbar.game">
-                <div>
-                    <span>Tour n° 2</span><br>
-                    <span>Phase : mouvement</span><br>
-                    <span>Premier joueur : joueur 1 - Francis Sailor</span>
-                </div>
-            </nav>
-        </transition>
-
-        <transition name="fade">
-            <nav id="sidebar-ancient" class="red lighten-3"
-                 style="z-index:980;height:100%;width:300px;position:absolute;right:0;"
-                 v-if="navbar.ancient">
-            </nav>
-        </transition>
-
-        <transition name="fade">
-            <nav id="sidebar-ancient" class="orange lighten-3"
-                 style="z-index:990;height:100%;width:280px;position:absolute;right:0;"
-                 v-if="navbar.herald">
-            </nav>
-        </transition>
-
         <body>
-
-            <!-- BOUTONS -->
-            <div id="button-container" class="center-align teal darken-3 card">
-
-                <button class="waves-effect waves-light btn teal"
-                    v-html="navbar.investigator==false?'joueurs +':'joueurs -'"
-                    @click="switchNavbar('investigator')"></button>
-
-                </button><button class="waves-effect waves-light btn  blue lighten-1"
-                    v-html="navbar.guardian==false?'Gardien +':'Gardien -'"
-                    @click="switchNavbar('guardian')"></button>
-
-                <button class="waves-effect waves-light btn cyan lighten-2"
-                    v-html="navbar.game==false?'Informations sur la partie +':'Informations sur la partie -'"
-                    @click="switchNavbar('game')"></button>
-
-                <button class="waves-effect waves-light btn red"
-                    v-html="navbar.ancient==false?'Ancien +':'Ancien -'"
-                    @click="switchNavbar('ancient')"></button>
-
-                <button class="waves-effect waves-light btn orange lighten-1"
-                    v-html="navbar.herald==false?'Héraut +':'Héraut -'"
-                    @click="switchNavbar('herald')"></button>
-            </div>
+            <app-sidebar></app-sidebar>
 
             <!-- MAP -->
             <div id="map-container" class="">
@@ -225,44 +148,37 @@
                     </div>
                 </div>
             </div>
-
-                <div id="modal1" class="modal open" tabindex="0" style="z-index: 999; display: block; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);height:168px;">
-                    <div class="modal-content">
-                        <h4>Apparition des indices</h4>
-                        <p>Des indices sont apparus
-                        dans les lieux instables d'Arkham.</p>
-                        <div class="right-align">
-                            <button class="modal-close waves-effect waves-light btn teal" @click="continueAction">Etape suivante</button>
-                        </div>
-                    </div>
-                </div>
+            <!-- Modale de simple message -->
+            <app-simple-modal :title="modalTexts.title"
+                              :content="modalTexts.content"
+                              :buttonText="modalTexts.buttonText"
+                              :route="modalTexts.route">
+            </app-simple-modal>
         </body>
     </div>
 
 </template>
 
 <script>
+    import Sidebar from '../Sidebar.vue'
+    import SimpleModal from '../SimpleModal.vue'
+
     export default {
+        // déclaration des composants utilisés
+        components: {
+            'app-sidebar': Sidebar,
+            'app-simple-modal': SimpleModal
+        },
         data: function(){
             return {
                 pageTitle: 'map',
                 playerNumber: 2,
-                navbar:
-                    {
-                        investigator: false,
-                        ancient: false,
-                        game: false,
-                        guardian: false,
-                        herald: false,
-                    },
-                investigatorPreview: "",
-                investigators: [
-                    { name: "Joe Diamond"},
-                    { name: "Francis Sailor"},
-                    { name: "Jenny Barnes"},
-                    { name: "Daisie Walker"},
-                    { name: "Peggy Green"},
-                ],
+                modalTexts: {
+                    title: "Apparition des indices",
+                    content: "Des indices sont apparus dans les lieux instables d'Arkham.",
+                    buttonText: "Etape suivante",
+                    route: "set-fixed-objects"
+                },
                 sites: [
                     { name: "Boutique<br>de<br>souvenir1"        , id: "1" , type: "site", character: [],                 monster: [], event: [], clue: 1, color: "orange", portal: [], marker: []},
                     { name: "Journal2"                           , id: "2" , type: "site", character: [],                 monster: [], event: [], clue: 0, color: "orange", portal: [], marker: []},
@@ -433,14 +349,6 @@
             }
         },
         methods: {
-            next() {
-            //Envoi des données au server
-            //Diriger vers le nouveau composant
-            },
-            switchNavbar(libelle)
-            {
-                this.navbar[libelle] = !this.navbar[libelle];
-            },
             log(name)
             {
                 console.log(name);
@@ -1481,44 +1389,44 @@
         }
 
         /*BOUTTONS GROUPES*/
-    .btn-group {
-      position: relative;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      vertical-align: middle;
-    }
+        .btn-group {
+          position: relative;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          vertical-align: middle;
+        }
 
-    .btn-group>.btn:first-child:not(:last-child) {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
+        .btn-group>.btn:first-child:not(:last-child) {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
 
-    .btn-group>.btn:not(:first-child):not(:last-child) {
-      border-radius: 0;
-    }
+        .btn-group>.btn:not(:first-child):not(:last-child) {
+          border-radius: 0;
+        }
 
-    .btn-group>.btn:last-child:not(:first-child),
-    .btn-group>.dropdown-toggle:not(:first-child) {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
+        .btn-group>.btn:last-child:not(:first-child),
+        .btn-group>.dropdown-toggle:not(:first-child) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
 
-    .btn-group>.btn-inactive {
-      background-color: #607d8b;
-    }
+        .btn-group>.btn-inactive {
+          background-color: #607d8b;
+        }
 
-    .btn-group>.btn {
-      -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
-      box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
-    }
+        .btn-group>.btn {
+          -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+        }
 
-    .btn-group>.btn-inactive:hover {
-      background-color: #728F9D;
-    }
+        .btn-group>.btn-inactive:hover {
+          background-color: #728F9D;
+        }
 
-    .btn-group>.btn:hover {
-      -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    }
+        .btn-group>.btn:hover {
+          -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        }
 
 </style>

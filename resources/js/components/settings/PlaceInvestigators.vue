@@ -226,10 +226,10 @@
                 </div>
             </div>
 
-                <div id="modal1" class="modal open" tabindex="0" style="z-index: 999; display: block; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);height:168px;">
+                <div id="modal1" class="modal open" tabindex="0">
                     <div class="modal-content">
                         <h4 v-html="pageTitle"></h4>
-                        <p>Les investigateurs apparaissent dans les lieux d'Arkham</p>
+                        <p class="text-center">Les investigateurs apparaissent dans les lieux d'Arkham</p>
                         <div class="right-align">
                             <button class="modal-close waves-effect waves-light btn teal" @click="continueAction">Etape suivante</button>
                         </div>
@@ -1468,6 +1468,18 @@
         {
             opacity: 0;
         }
+
+    /*Modale*/
+
+    #modal1
+    {
+        z-index: 999;
+        display: block;
+        opacity: 1; top: 10%;
+        transform: scaleX(1) scaleY(1);
+        height:168px;
+        border-radius: 15px;
+    }
 
         /*BOUTTONS GROUPES*/
     .btn-group {

@@ -231,7 +231,7 @@
                 </div>
             </div>
 
-            <div id="modal1" class="modal" tabindex="0" style="z-index: 999; display: block; opacity: 1; top: 5%;width: 20%; margin-left: 25px;">
+            <div id="modal-myth-1" class="modal" tabindex="0">
                 <div class="modal-content" style="height:100%">
                     <div class="row">
                         <div class="col s12">
@@ -249,7 +249,7 @@
                 </div>
             </div>
 
-            <div id="modal2" class="modal open modal-fixed-footer" tabindex="0" style="z-index: 999; display: block; opacity: 1; top: 5%;width: 20%; margin-right: 25px;height:100%;">
+            <div id="modal-myth-2" class="modal open modal-fixed-footer" tabindex="0">
                 <div class="modal-content" style="height:100%">
                     <div class="row">
                         <div class="col s12">
@@ -1730,45 +1730,66 @@
             opacity: 0;
         }
 
-        /*BOUTTONS GROUPES*/
-.btn-group {
-  position: relative;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: middle;
-}
+        /*Modales*/
+        #modal-myth-1
+        {
+            z-index: 999;
+            display: block;
+            opacity: 1;
+            top: 5%;
+            width: 20%;
+            margin-left: 25px;
+        }
+        #modal-myth-2
+        {
+            z-index: 999;
+            display: block;
+            opacity: 1;
+            top: 5%;
+            width: 20%;
+            margin-right: 25px;
+            height:100%;
+        }
 
-.btn-group>.btn:first-child:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
+                /*BOUTTONS GROUPES*/
+        .btn-group {
+          position: relative;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          vertical-align: middle;
+        }
 
-.btn-group>.btn:not(:first-child):not(:last-child) {
-  border-radius: 0;
-}
+        .btn-group>.btn:first-child:not(:last-child) {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
 
-.btn-group>.btn:last-child:not(:first-child),
-.btn-group>.dropdown-toggle:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
+        .btn-group>.btn:not(:first-child):not(:last-child) {
+          border-radius: 0;
+        }
 
-.btn-group>.btn-inactive {
-  background-color: #607d8b;
-}
+        .btn-group>.btn:last-child:not(:first-child),
+        .btn-group>.dropdown-toggle:not(:first-child) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
 
-.btn-group>.btn {
-  -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
-  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
-}
+        .btn-group>.btn-inactive {
+          background-color: #607d8b;
+        }
 
-.btn-group>.btn-inactive:hover {
-  background-color: #728F9D;
-}
+        .btn-group>.btn {
+          -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+        }
 
-.btn-group>.btn:hover {
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-}
+        .btn-group>.btn-inactive:hover {
+          background-color: #728F9D;
+        }
+
+        .btn-group>.btn:hover {
+          -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        }
 
 </style>
