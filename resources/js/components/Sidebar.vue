@@ -120,7 +120,10 @@
             {
                 this.navbar[libelle] = !this.navbar[libelle];
             },
-
+            showInvestigator(name)
+            {
+                this.investigatorPreview = name;
+            },
             continueAction () {
                 // console.log('ici')
                 // this.$router.push('choose-ancient')
