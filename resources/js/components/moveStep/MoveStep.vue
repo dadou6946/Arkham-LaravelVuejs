@@ -3,13 +3,11 @@
             <app-sidebar></app-sidebar>
 
             <!-- ARKHAM MAP -->
-            <app-map
-                     :investigators="investigators"
-                     :monsters="monsters"
+            <app-map :investigators="investigators"
                      :sites="sites"
                      :beyond="beyond"
                      :specials="specials"
-                     ></app-map>
+                     :monsters="monsters"></app-map>
 
             <!-- Modale de simple message -->
             <app-simple-modal :title="modalTexts.title"
@@ -18,6 +16,7 @@
                               :route="modalTexts.route">
             </app-simple-modal>
         </body>
+
 
 </template>
 
@@ -35,15 +34,23 @@
         },
         data(){
             return {
-                pageTitle: 'Apparition des indices',
+                pageTitle: 'Phase de mouvement',
+                playerNumber: 2, // nombre de joueurs
                 modalTexts: {
-                    title: "Apparition des indices",
-                    content: "Des indices sont apparus dans les lieux instables d'Arkham.",
-                    buttonText: "Etape suivante",
-                    route: "set-fixed-objects"
+                    title: "Mouvement",
+                    content: "Phase de mouvement...",
+                    buttonText: "Phase de rencontres à Arkham",
+                    route: "arkham-encounter-step"
                 },
-                monsters: [],
-                investigators: [],
+                investigators: [
+                    { id:1, name: "Joe Diamond"   , siteId:3 },
+                    { id:2, name: "Francis Sailor", siteId:1 }
+                ],
+                monsters: [
+                    { id:1, name:"Chthonien", siteId:11, symbol:"triangle", habilities: {}},
+                    { id:2, name:"Migo",      siteId:1,  symbol:"cercle",   habilities: {}},
+                    { id:3, name:"Cultiste",  siteId:3,  symbol:"lune",     habilities: {}}
+                ],
                 sites: [
                     { name: "Boutique<br>de<br>souvenir"        , id: "1" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white:27, black:27},
                     { name: "Journal"                           , id: "2" , type: "site",   character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:27, black:27},
@@ -71,8 +78,8 @@
                     { name: "Pension<br>de Ma"                  , id: "24", type: "site",   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
                     { name: "Société<br>des<br>historiens"      , id: "25", type: "site",   character: [], monster: [], event: [], clue: 1, color: "brown" , portal: [], marker: [], white:35, black:35},
                     { name: "Eglise<br>méridionale"             , id: "26", type: "site",   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
-                    { name: "Quartier<br>Nord"                  , id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:28, black:30},
-                    { name: "Centre<br>Ville"                   , id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white" , portal:  [], marker: [], white:29, black:27},
+    /*'Migo'*/      { name: "Quartier<br>Nord"                  , id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:28, black:30},
+    /*'Cultiste'*/  { name: "Centre<br>Ville"                   , id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white" , portal:  [], marker: [], white:29, black:27},
                     { name: "Quartier<br>Est"                   , id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey"  , portal:   [], marker: [], white:31, black:28},
                     { name: "Quartier<br>marchand"              , id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green" , portal:  [], marker: [], white:27, black:32},
                     { name: "Quartier<br>de la<br>rivière"      , id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white:33, black:29},
@@ -117,21 +124,30 @@
                                                                             ]}
                 ],
                 specials: [
-                    { name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: []},
-                    { name: 'Ciel',                                   id: 37, monster: []},
-                    { name: 'Périphérie',                             id: 38, monster: []}
+                    { name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: []},
+                    { name: 'Ciel',                                   id: 2, monster: []},
+                    { name: 'Périphérie',                             id: 3, monster: []}
                 ],
+
             }
         },
         methods: {
-            log(name)
+
+            log (message)
             {
-                console.log(name);
+                console.log(message);
+            },
+
+            continueAction () {
+                console.log('ici')
+                // this.$router.push('choose-ancient')
             }
         }
         ,
         updated(){
 
+        },
+        mounted(){
         }
     }
 </script>

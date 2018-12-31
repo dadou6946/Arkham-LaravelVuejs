@@ -1,7 +1,7 @@
 <template>
 
     <!-- MAP -->
-    <div id="map-container" class="">
+    <div id="map-container" class="z-depth-3">
 
         <div id="ark-map" class="indigo lighten-5 right">
 
@@ -10,6 +10,7 @@
                 v-for="site of sites"
                 v-bind:class="[site.color, site.type]"
                 v-bind:id="'site'+site.id"
+                @click="lastClick(site)"
                 >
 
                 <span v-html="site.name+site.id"></span>
@@ -26,7 +27,7 @@
                     <div class="investigator"
                         v-for="(char,index) of site.character"
                         v-bind:class="'investigator_'+(index+1)"
-                        v-bind:id="char"
+                        v-bind:id="char.replace(' ','_')"
                         v-html="char"
                         v-bind:key="index">
                     </div>
@@ -88,7 +89,7 @@
                     <div class="investigator"
                         v-for="(char,index) of special.character"
                         v-bind:class="'investigator_'+(index+1)"
-                        v-bind:id="char"
+                        v-bind:id="char.replace(' ','_')"
                         v-html="char"
                         v-bind:key="index">
                     </div>
@@ -137,7 +138,7 @@
                     <transition-group name="fade">
                         <div class="beyond_investigator"
                             v-for="(char, index) of step.character"
-                            v-bind:id="char"
+                            v-bind:id="char.replace(' ','_')"
                             v-bind:class="step.position==1? 'inv_first':'inv_second'"
                             v-html="char"
                             v-bind:key="index">
@@ -146,7 +147,6 @@
                 </div>
 
                 <span class="other_world" v-html="world.name" ></span>
-
             </div>
         </div>
     </div>
@@ -258,7 +258,11 @@
             }
         },
         methods: {
-
+            lastClick (site)
+            {
+                // this.log(site)
+                this.$emit('wasClicked', site);
+            },
             log (message)
             {
                 console.log(message);
@@ -267,27 +271,48 @@
             continueAction () {
                 // console.log('ici')
                 this.$router.push('choose-ancient')
+            },
+            updateSites()
+            {
+                // Ajout des monstres sur la map
+                this.monsters.forEach((monster) => {
+                // Pour chacun des monstres dans monsters
+                    this.sites.find(function(site) {
+                        // On ajoute ce montre au site correspondant
+                        if( site.id == monster.siteId ) site.monster.push(monster.name);
+                    });
+                });
+
+                // Ajout des INVESTIGATEURS sur la map
+                this.investigators.forEach((investigator) => {
+                // Pour chacun des monstres dans monsters
+                    this.sites.find(function(site) {
+                        // On ajoute ce montre au site correspondant
+                        if( site.id == investigator.siteId ) site.character.push(investigator.name);
+                    });
+                });
             }
         },
         mounted(){
 
+            this.updateSites();
             // Ajout des monstres sur la map
-            this.monsters.forEach((monster) => {
-            // Pour chacun des monstres dans monsters
-                this.sites.find(function(site) {
-                    // On ajoute ce montre au site correspondant
-                    if( site.id == monster.siteId ) site.monster.push(monster.name);
-                });
-            });
+            // this.monsters.forEach((monster) => {
+            // // Pour chacun des monstres dans monsters
+            //     this.sites.find(function(site) {
+            //         // On ajoute ce montre au site correspondant
+            //         if( site.id == monster.siteId ) site.monster.push(monster.name);
+            //     });
+            // });
 
-            // Ajout des INVESTIGATEURS sur la map
-            this.investigators.forEach((investigator) => {
-            // Pour chacun des monstres dans monsters
-                this.sites.find(function(site) {
-                    // On ajoute ce montre au site correspondant
-                    if( site.id == investigator.siteId ) site.character.push(investigator.name);
-                });
-            });
+            // // Ajout des INVESTIGATEURS sur la map
+            // this.investigators.forEach((investigator) => {
+            // // Pour chacun des monstres dans monsters
+            //     this.sites.find(function(site) {
+            //         // On ajoute ce montre au site correspondant
+            //         if( site.id == investigator.siteId ) site.character.push(investigator.name);
+            //     });
+            // });
         }
     }
 
@@ -298,7 +323,7 @@
         /***** MAP*****/
         #map-container
         {
-            height : 780px;
+            height : 710px;
             width: 1090px;
         }
         #button-container
@@ -328,6 +353,7 @@
             width: 115px;
             /*background-color: lightgrey;*/
             padding: 5px;
+            padding-top: 30px
 
         }
 
@@ -386,17 +412,17 @@
             /*left: 0%;
             right: 0%;*/
         }
-        div .special1
+        div .special36
         {
             bottom: 2px;
             left: 2px;
         }
-        div .special2
+        div .special37
         {
             bottom: 2px;
             right: 2px;
         }
-        div .special3
+        div .special38
         {
             bottom: 90px;
             right: 2px;
@@ -1210,7 +1236,7 @@
             background-color: lightgrey;
         }
         .token, #clue_token, .portal_token,
-        div#Jenny_Barnes, div#Peggy_Green, div#Francis_Sailor, div#Joe_Diamond, div#Daisie_Walker, div#Anne_Hathaway
+        div#Jenny_Barnes, div#Peggy_Green, div#Francis_Sailor, div#Joe_Diamond, div#Daisie_Walker, div#Anne_Hathaway, div#Mark_Harrigan
         {
             position: absolute;
             z-index: 999;

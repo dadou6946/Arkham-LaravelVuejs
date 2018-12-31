@@ -26,7 +26,8 @@
                         <li v-for="ob of investigator.object">
                             <div class="card">
                                 <div class="card-image">
-                                  <img src="/image/card/common/Lance-Flammes.jpg">
+                                  <img class="responsive-img" style="width:159px;height:245px;"
+                                        :src="'/image/card/common/'+ob.replace(' ','_')+'.jpg'">
                                 </div>
                                 <div class="card-content">
                                   <p v-html="ob"></p>

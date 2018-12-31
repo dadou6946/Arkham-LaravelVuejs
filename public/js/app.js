@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -274,7 +274,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(21)
+var listToStyles = __webpack_require__(24)
 
 /*
 type StyleObject = {
@@ -489,8 +489,8 @@ function applyToTag (styleElement, obj) {
 "use strict";
 
 
-var bind = __webpack_require__(7);
-var isBuffer = __webpack_require__(33);
+var bind = __webpack_require__(10);
+var isBuffer = __webpack_require__(36);
 
 /*global toString:true*/
 
@@ -794,6 +794,159 @@ module.exports = {
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(78)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(80)
+/* template */
+var __vue_template__ = __webpack_require__(81)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/Sidebar.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-81fbb27e", Component.options)
+  } else {
+    hotAPI.reload("data-v-81fbb27e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(86)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(88)
+/* template */
+var __vue_template__ = __webpack_require__(89)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/Map.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-479a2f41", Component.options)
+  } else {
+    hotAPI.reload("data-v-479a2f41", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(82)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(84)
+/* template */
+var __vue_template__ = __webpack_require__(85)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/SimpleModal.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-01e18d80", Component.options)
+  } else {
+    hotAPI.reload("data-v-01e18d80", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports) {
 
 var g;
@@ -820,14 +973,14 @@ module.exports = g;
 
 
 /***/ }),
-/* 5 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(3);
-var normalizeHeaderName = __webpack_require__(35);
+var normalizeHeaderName = __webpack_require__(38);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -843,10 +996,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(8);
+    adapter = __webpack_require__(11);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(8);
+    adapter = __webpack_require__(11);
   }
   return adapter;
 }
@@ -921,10 +1074,10 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 6 */
+/* 9 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -1114,7 +1267,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 7 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1132,19 +1285,19 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 8 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(3);
-var settle = __webpack_require__(36);
-var buildURL = __webpack_require__(38);
-var parseHeaders = __webpack_require__(39);
-var isURLSameOrigin = __webpack_require__(40);
-var createError = __webpack_require__(9);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(41);
+var settle = __webpack_require__(39);
+var buildURL = __webpack_require__(41);
+var parseHeaders = __webpack_require__(42);
+var isURLSameOrigin = __webpack_require__(43);
+var createError = __webpack_require__(12);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(44);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -1241,7 +1394,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(42);
+      var cookies = __webpack_require__(45);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -1319,13 +1472,13 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 9 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(37);
+var enhanceError = __webpack_require__(40);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -1344,7 +1497,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 10 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1356,7 +1509,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 11 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1382,54 +1535,62 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 12 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(13);
-module.exports = __webpack_require__(126);
+__webpack_require__(16);
+module.exports = __webpack_require__(151);
 
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_App__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_App__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_App___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__views_App__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_settings_Home__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_settings_Home__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_settings_Home___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_settings_Home__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_settings_ChoosePlayers__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_settings_ChoosePlayers__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_settings_ChoosePlayers___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_settings_ChoosePlayers__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_settings_ChooseCharacters__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_settings_ChooseCharacters__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_settings_ChooseCharacters___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_settings_ChooseCharacters__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_settings_MixAllyPackage__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_settings_MixAllyPackage__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_settings_MixAllyPackage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_settings_MixAllyPackage__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_settings_MixInvestigatorPackage__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_settings_MixInvestigatorPackage__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_settings_MixInvestigatorPackage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_settings_MixInvestigatorPackage__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_settings_ChooseAncient__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_settings_ChooseAncient__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_settings_ChooseAncient___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_settings_ChooseAncient__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_settings_SetClues__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_settings_SetClues__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_settings_SetClues___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_settings_SetClues__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_settings_SetFixedObjects__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_settings_SetFixedObjects__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_settings_SetFixedObjects___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_settings_SetFixedObjects__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_settings_SetRandomObjects__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_settings_SetRandomObjects__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_settings_SetRandomObjects___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_settings_SetRandomObjects__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_settings_SetHealthSanity__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_settings_SetHealthSanity__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_settings_SetHealthSanity___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_settings_SetHealthSanity__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_settings_SetProperties__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_settings_SetProperties__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_settings_SetProperties___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__components_settings_SetProperties__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_settings_SetUpMonsters__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_settings_SetUpMonsters__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_settings_SetUpMonsters___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__components_settings_SetUpMonsters__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_settings_MixAncientPackage__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_settings_MixAncientPackage__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_settings_MixAncientPackage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__components_settings_MixAncientPackage__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_settings_PlaceInvestigators__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_settings_PlaceInvestigators__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_settings_PlaceInvestigators___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__components_settings_PlaceInvestigators__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_mythstep_MythStep__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_mythstep_MythStep___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__components_mythstep_MythStep__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_mythStep_MythStep__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_mythStep_MythStep___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__components_mythStep_MythStep__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_upkeepStep_UpkeepStep__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_upkeepStep_UpkeepStep___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18__components_upkeepStep_UpkeepStep__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_moveStep_MoveStep__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_moveStep_MoveStep___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19__components_moveStep_MoveStep__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_arkhamEncounterStep_ArkhamEncounterStep__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_arkhamEncounterStep_ArkhamEncounterStep___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20__components_arkhamEncounterStep_ArkhamEncounterStep__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_beyondEncounterStep_BeyondEncounterStep__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_beyondEncounterStep_BeyondEncounterStep___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21__components_beyondEncounterStep_BeyondEncounterStep__);
 
 
 
@@ -1437,6 +1598,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 
 
 
+// Settings
 
 
 
@@ -1446,6 +1608,13 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 
 
 
+
+
+
+
+
+
+// Phases de tours
 
 
 
@@ -1513,7 +1682,23 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     }, {
         path: '/myth-step',
         name: 'myth-step',
-        component: __WEBPACK_IMPORTED_MODULE_17__components_mythstep_MythStep___default.a
+        component: __WEBPACK_IMPORTED_MODULE_17__components_mythStep_MythStep___default.a
+    }, {
+        path: '/upkeep-step',
+        name: 'upkeep-step',
+        component: __WEBPACK_IMPORTED_MODULE_18__components_upkeepStep_UpkeepStep___default.a
+    }, {
+        path: '/move-step',
+        name: 'move-step',
+        component: __WEBPACK_IMPORTED_MODULE_19__components_moveStep_MoveStep___default.a
+    }, {
+        path: '/arkham-encounter-step',
+        name: 'arkham-encounter-step',
+        component: __WEBPACK_IMPORTED_MODULE_20__components_arkhamEncounterStep_ArkhamEncounterStep___default.a
+    }, {
+        path: '/beyond-encounter-step',
+        name: 'beyond-encounter-step',
+        component: __WEBPACK_IMPORTED_MODULE_21__components_beyondEncounterStep_BeyondEncounterStep___default.a
     }]
 });
 
@@ -1524,7 +1709,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 });
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12487,10 +12672,10 @@ Vue.compile = compileToFunctions;
 
 module.exports = Vue;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(15).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(18).setImmediate))
 
 /***/ }),
-/* 15 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -12546,7 +12731,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(16);
+__webpack_require__(19);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -12557,10 +12742,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
-/* 16 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -12750,10 +12935,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(9)))
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15378,19 +15563,19 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(19)
+  __webpack_require__(22)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(22)
+var __vue_script__ = __webpack_require__(25)
 /* template */
-var __vue_template__ = __webpack_require__(23)
+var __vue_template__ = __webpack_require__(26)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -15429,13 +15614,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(20);
+var content = __webpack_require__(23);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -15455,7 +15640,7 @@ if(false) {
 }
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -15463,13 +15648,13 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.jumbotron\n{\n    margin-top: 0;\n    margin-bottom: 15px;\n    padding: 25px;\n}\n", ""]);
+exports.push([module.i, "\n.jumbotron\n{\n    margin-top: 0;\n    margin-bottom: 15px;\n    padding: 25px;\n}\nbody\n{\n    background-color: #e8eaf6;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 21 */
+/* 24 */
 /***/ (function(module, exports) {
 
 /**
@@ -15502,7 +15687,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 22 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15517,7 +15702,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
-/* 23 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -15537,15 +15722,15 @@ if (false) {
 }
 
 /***/ }),
-/* 24 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(25)
+var __vue_script__ = __webpack_require__(28)
 /* template */
-var __vue_template__ = __webpack_require__(26)
+var __vue_template__ = __webpack_require__(29)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -15584,7 +15769,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 25 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15623,7 +15808,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 26 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -15679,19 +15864,19 @@ if (false) {
 }
 
 /***/ }),
-/* 27 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(28)
+  __webpack_require__(31)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(30)
+var __vue_script__ = __webpack_require__(33)
 /* template */
-var __vue_template__ = __webpack_require__(50)
+var __vue_template__ = __webpack_require__(53)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -15730,13 +15915,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 28 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(29);
+var content = __webpack_require__(32);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -15756,7 +15941,7 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -15770,12 +15955,12 @@ exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n  
 
 
 /***/ }),
-/* 30 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
@@ -15881,22 +16066,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 31 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(32);
+module.exports = __webpack_require__(35);
 
 /***/ }),
-/* 32 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(3);
-var bind = __webpack_require__(7);
-var Axios = __webpack_require__(34);
-var defaults = __webpack_require__(5);
+var bind = __webpack_require__(10);
+var Axios = __webpack_require__(37);
+var defaults = __webpack_require__(8);
 
 /**
  * Create an instance of Axios
@@ -15929,15 +16114,15 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(11);
-axios.CancelToken = __webpack_require__(48);
-axios.isCancel = __webpack_require__(10);
+axios.Cancel = __webpack_require__(14);
+axios.CancelToken = __webpack_require__(51);
+axios.isCancel = __webpack_require__(13);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(49);
+axios.spread = __webpack_require__(52);
 
 module.exports = axios;
 
@@ -15946,7 +16131,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 33 */
+/* 36 */
 /***/ (function(module, exports) {
 
 /*!
@@ -15973,16 +16158,16 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 34 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(5);
+var defaults = __webpack_require__(8);
 var utils = __webpack_require__(3);
-var InterceptorManager = __webpack_require__(43);
-var dispatchRequest = __webpack_require__(44);
+var InterceptorManager = __webpack_require__(46);
+var dispatchRequest = __webpack_require__(47);
 
 /**
  * Create a new instance of Axios
@@ -16059,7 +16244,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 35 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16078,13 +16263,13 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 36 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var createError = __webpack_require__(9);
+var createError = __webpack_require__(12);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -16111,7 +16296,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 37 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16139,7 +16324,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 38 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16212,7 +16397,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 39 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16272,7 +16457,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 40 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16347,7 +16532,7 @@ module.exports = (
 
 
 /***/ }),
-/* 41 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16390,7 +16575,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 42 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16450,7 +16635,7 @@ module.exports = (
 
 
 /***/ }),
-/* 43 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16509,18 +16694,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 44 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(3);
-var transformData = __webpack_require__(45);
-var isCancel = __webpack_require__(10);
-var defaults = __webpack_require__(5);
-var isAbsoluteURL = __webpack_require__(46);
-var combineURLs = __webpack_require__(47);
+var transformData = __webpack_require__(48);
+var isCancel = __webpack_require__(13);
+var defaults = __webpack_require__(8);
+var isAbsoluteURL = __webpack_require__(49);
+var combineURLs = __webpack_require__(50);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -16602,7 +16787,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 45 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16629,7 +16814,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 46 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16650,7 +16835,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 47 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16671,13 +16856,13 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 48 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Cancel = __webpack_require__(11);
+var Cancel = __webpack_require__(14);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -16735,7 +16920,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 49 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16769,7 +16954,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 50 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -16879,19 +17064,19 @@ if (false) {
 }
 
 /***/ }),
-/* 51 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(52)
+  __webpack_require__(55)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(54)
+var __vue_script__ = __webpack_require__(57)
 /* template */
-var __vue_template__ = __webpack_require__(55)
+var __vue_template__ = __webpack_require__(58)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -16930,13 +17115,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 52 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(53);
+var content = __webpack_require__(56);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -16956,7 +17141,7 @@ if(false) {
 }
 
 /***/ }),
-/* 53 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -16970,7 +17155,7 @@ exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n  
 
 
 /***/ }),
-/* 54 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17111,7 +17296,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 55 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -17291,19 +17476,19 @@ if (false) {
 }
 
 /***/ }),
-/* 56 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(57)
+  __webpack_require__(60)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(59)
+var __vue_script__ = __webpack_require__(62)
 /* template */
-var __vue_template__ = __webpack_require__(60)
+var __vue_template__ = __webpack_require__(63)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -17342,13 +17527,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 57 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(58);
+var content = __webpack_require__(61);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17368,7 +17553,7 @@ if(false) {
 }
 
 /***/ }),
-/* 58 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -17382,7 +17567,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 59 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17438,7 +17623,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 60 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -17510,19 +17695,19 @@ if (false) {
 }
 
 /***/ }),
-/* 61 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(62)
+  __webpack_require__(65)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(64)
+var __vue_script__ = __webpack_require__(67)
 /* template */
-var __vue_template__ = __webpack_require__(65)
+var __vue_template__ = __webpack_require__(68)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -17561,13 +17746,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 62 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(63);
+var content = __webpack_require__(66);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17587,7 +17772,7 @@ if(false) {
 }
 
 /***/ }),
-/* 63 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -17601,7 +17786,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 64 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17657,7 +17842,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 65 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -17745,19 +17930,19 @@ if (false) {
 }
 
 /***/ }),
-/* 66 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(67)
+  __webpack_require__(70)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(69)
+var __vue_script__ = __webpack_require__(72)
 /* template */
-var __vue_template__ = __webpack_require__(70)
+var __vue_template__ = __webpack_require__(73)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -17796,13 +17981,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 67 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(68);
+var content = __webpack_require__(71);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17822,7 +18007,7 @@ if(false) {
 }
 
 /***/ }),
-/* 68 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -17836,7 +18021,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 69 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17933,7 +18118,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 70 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -18051,19 +18236,19 @@ if (false) {
 }
 
 /***/ }),
-/* 71 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(72)
+  __webpack_require__(75)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(74)
+var __vue_script__ = __webpack_require__(77)
 /* template */
-var __vue_template__ = __webpack_require__(85)
+var __vue_template__ = __webpack_require__(90)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -18102,13 +18287,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 72 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(73);
+var content = __webpack_require__(76);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -18128,7 +18313,7 @@ if(false) {
 }
 
 /***/ }),
-/* 73 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -18142,16 +18327,16 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 74 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Map_vue__);
 //
 //
@@ -18201,7 +18386,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             investigators: [],
             sites: [{ name: "Boutique<br>de<br>souvenir", id: "1", type: "site", character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Journal", id: "2", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Gare", id: "3", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Banque<br>d'Arkham", id: "4", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Asile<br>d'Arkham", id: "5", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Square de<br>l'indépen-<br>-dance", id: "6", type: "site", character: [], monster: [], event: [], clue: 1, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Relais<br>routier<br>de Hibb", id: "7", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Restaurant<br>de Velma", id: "8", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Poste<br>de<br>-polic9", id: "9", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "L'ile<br>inexplorée", id: "10", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Les<br>quais", id: "11", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "l'Inno-<br>-mable", id: "12", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Le<br>cimetière", id: "13", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "La Caverne<br>noire", id: "14", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Le<br>magasin", id: "15", type: "site", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Département<br>Scientifique", id: "16", type: "site", character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Adminis-<br>-tration", id: "17", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Biblio-<br>-thèque", id: "18", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Maison<br>de la<br>sorcière", id: "19", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Loge du<br>crépuscule<br>d'argent", id: "20", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Hôpital<br>Sainte<br>Marie", id: "21", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Vieille<br>échoppe<br>de magie", id: "22", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Les<br>bois", id: "23", type: "site", character: [], monster: [], event: [], clue: 1, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Pension<br>de Ma", id: "24", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Société<br>des<br>historiens", id: "25", type: "site", character: [], monster: [], event: [], clue: 1, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Eglise<br>méridionale", id: "26", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Quartier<br>Nord", id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 }, { name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivière", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Université<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>Résidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
             beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cité de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contrées<br>du rêve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
-            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: [] }, { name: 'Ciel', id: 2, monster: [] }, { name: 'Périphérie', id: 3, monster: [] }]
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: [] }, { name: 'Ciel', id: 37, monster: [] }, { name: 'Périphérie', id: 38, monster: [] }]
         };
     },
 
@@ -18215,64 +18400,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(76)
-}
-var normalizeComponent = __webpack_require__(0)
-/* script */
-var __vue_script__ = __webpack_require__(78)
-/* template */
-var __vue_template__ = __webpack_require__(79)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/js/components/Sidebar.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-81fbb27e", Component.options)
-  } else {
-    hotAPI.reload("data-v-81fbb27e", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(77);
+var content = __webpack_require__(79);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -18292,7 +18426,7 @@ if(false) {
 }
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -18306,7 +18440,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18434,7 +18568,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -18671,64 +18805,13 @@ if (false) {
 }
 
 /***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(81)
-}
-var normalizeComponent = __webpack_require__(0)
-/* script */
-var __vue_script__ = __webpack_require__(83)
-/* template */
-var __vue_template__ = __webpack_require__(84)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/js/components/SimpleModal.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-01e18d80", Component.options)
-  } else {
-    hotAPI.reload("data-v-01e18d80", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(82);
+var content = __webpack_require__(83);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -18748,7 +18831,7 @@ if(false) {
 }
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -18762,7 +18845,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18794,7 +18877,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -18814,7 +18897,7 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "modal-close waves-effect waves-light btn teal",
+              staticClass: "waves-effect waves-light btn teal",
               on: { click: _vm.continueAction }
             },
             [_vm._v(_vm._s(_vm.buttonText))]
@@ -18835,7 +18918,515 @@ if (false) {
 }
 
 /***/ }),
-/* 85 */
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(87);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("2fe2bc16", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-479a2f41\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Map.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-479a2f41\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Map.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/***** MAP*****/\n#map-container\n{\n    height : 710px;\n    width: 1090px;\n}\n#button-container\n{\n    height : 40px;\n    width: 100%;\n    margin-bottom: 25px;\n}\n#map-container, #button-container\n{\n    margin-left: auto;\n    margin-right: auto;\n}\n#ark-map\n{\n    position : relative;\n    height : 710px;\n    width: 975px;\n    /*background-color: lightgrey;*/\n    padding-top: -50px;\n}\n#beyond-map\n{\n    position : relative;\n    height : 710px;\n    width: 115px;\n    /*background-color: lightgrey;*/\n    padding: 5px;\n    padding-top: 30px\n}\n\n/***** LIEUX *****/\ndiv .site, div .street, div .world, div .special_site\n{\n    position : absolute;\n    height: 80px;\n    text-align: center;\n    color: white;\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    z-index: 10;\n    text-shadow: 1px 1px 2px black;\n}\ndiv .site\n{\n    width : 80px;\n    border-radius: 20%;\n}\ndiv .street, div .special_site\n{\n    width: 80px;\n}\ndiv .card\n{\n    margin: 0;\n}\ndiv.world\n{\n    height:75px;\n    width: 105px;\n    background-color: white;\n    position: relative;\n    border-radius: 5px;\n    z-index: 0;\n    margin-top: 4px;\n    margin-bottom: 4px;\n}\ndiv.first, div.second\n{\n    width: 50%;\n    height: 100%;\n}\ndiv.first\n{\n    background-color: grey;\n    width: 50%;\n    border-radius: 5px 0 0 5px;\n}\nspan.other_world {\n    position: absolute;\n    z-index: 500;\n    /*left: 0%;\n    right: 0%;*/\n}\ndiv .special36\n{\n    bottom: 2px;\n    left: 2px;\n}\ndiv .special37\n{\n    bottom: 2px;\n    right: 2px;\n}\ndiv .special38\n{\n    bottom: 90px;\n    right: 2px;\n}\n\n\n\n/***** LIEU individuel *****/\ndiv #site1\n{\n    top: 5px;\n    left: 55px;\n}\ndiv #site2\n{\n    top: 5px;\n    left: 155px;\n}\ndiv #site3\n{\n    top: 5px;\n    left: 255px;\n}\ndiv #site4\n{\n    top: 5px;\n    left: 355px;\n}\ndiv #site5\n{\n    top: 5px;\n    left: 455px;\n}\ndiv #site6\n{\n    top: 5px;\n    left: 555px;\n}\ndiv #site7\n{\n    top: 5px;\n    right: 235px;\n}\ndiv #site8\n{\n    top: 5px;\n    right: 135px;\n}\ndiv #site9\n{\n    top: 5px;\n    right: 35px;\n}\ndiv #site10\n{\n    top: 145px;\n    left: 50px;\n}\ndiv #site11\n{\n    top: 245px;\n    left: 50px;\n}\ndiv #site12\n{\n    top: 345px;\n    left: 50px;\n}\ndiv #site13\n{\n    top: 135px;\n    right: 10px;\n}\ndiv #site14\n{\n    top: 235px;\n    right: 10px;\n}\ndiv #site15\n{\n    top: 335px;\n    right: 10px;\n}\ndiv #site16\n{\n    top: 365px;\n    left: 180px;\n}\ndiv #site17\n{\n    top: 465px;\n    left: 180px;\n}\ndiv #site18\n{\n    top: 465px;\n    left: 385px;\n}\ndiv #site19\n{\n    top: 395px;\n    right: 140px;\n}\ndiv #site20\n{\n    top: 495px;\n    right: 140px;\n}\ndiv #site21\n{\n    bottom: 5px;\n    left: 185px;\n}\ndiv #site22\n{\n    bottom: 5px;\n    left: 285px;\n}\ndiv #site23\n{\n    bottom: 5px;\n    left: 385px;\n}\ndiv #site24\n{\n    bottom: 5px;\n    right: 405px;\n}\ndiv #site25\n{\n    bottom: 5px;\n    right: 305px;\n}\ndiv #site26\n{\n    bottom: 5px;\n    right: 205px;\n}\ndiv #site27\n{\n    top: 105px;\n    left: 155px;\n}\ndiv #site28\n{\n    top: 105px;\n    left: 455px;\n}\ndiv #site29\n{\n    top: 105px;\n    right: 135px;\n}\ndiv #site30\n{\n    top: 245px;\n    left: 155px;\n}\ndiv #site31\n{\n    top: 235px;\n    right: 115px;\n}\ndiv #site32\n{\n    top: 365px;\n    left: 285px;\n}\ndiv #site33\n{\n    top: 395px;\n    right: 245px;\n}\ndiv #site34\n{\n    bottom: 105px;\n    left: 285px;\n}\ndiv #site35\n{\n    bottom: 105px;\n    right: 305px;\n}\n\n/***** COULEURS *****/\ndiv .orange\n{\n    background-color : orange;\n}\ndiv .white\n{\n    background-color : #B5B4B3; color: black;\n    text-shadow: 0px 0px 0px white;\n}\ndiv .grey\n{\n    background-color: #656364;\n}\ndiv .green\n{\n    background-color: #0b700b;\n}\ndiv .purple\n{\n    background-color: #633E87;\n}\ndiv .yellow\n{\n    background-color: #F9E46B;\n}\ndiv .blue\n{\n    background-color: #41a3ef;\n}\ndiv .red\n{\n    background-color: #CB191F;\n}\ndiv .brown\n{\n    background-color: #631E15;\n}\n/***** liens entre les lieux *****/\ndiv .bar-h, div .bar-v, div .bar-c\n{\n    background-color : white;\n    -webkit-box-shadow: 1px 2px 2px lightgrey;\n            box-shadow: 1px 2px 2px lightgrey;\n    position: absolute;\n    z-index: 0;\n}\ndiv .bar-h\n{\n    height: 4px;\n}\ndiv .bar-v, div .bar-c\n{\n    width: 4px;\n}\ndiv #road1\n{\n    width: 270px;\n    top: 135px;\n    left : 205px;\n}\ndiv #road2\n{\n    width: 270px;\n    top: 135px;\n    right : 205px;\n}\ndiv #road3\n{\n    width: 370px;\n    top: 415px;\n    right : 255px;\n}\ndiv #road4\n{\n    width: 280px;\n    bottom: 145px;\n    right : 355px;\n}\ndiv #road5\n{\n    width: 560px;\n    top: 280px;\n    right : 185px;\n}\ndiv #road6\n{\n    height: 80px;\n    top: 175px;\n    left : 195px;\n}\ndiv #road7\n{\n    height: 120px;\n    bottom: 170px;\n    left : 325px;\n}\ndiv #road8\n{\n    height: 180px;\n    bottom: 290px;\n    left : 275px;\n    -webkit-transform: rotate(-55deg);\n            transform: rotate(-55deg);\n}\ndiv #road9\n{\n    height: 200px;\n    bottom: 260px;\n    right : 215px;\n    -webkit-transform: rotate(55deg);\n            transform: rotate(55deg);\n}\ndiv #road10\n{\n    height: 120px;\n    bottom: 155px;\n    right : 305px;\n    -webkit-transform: rotate(45deg);\n            transform: rotate(45deg);\n}\ndiv #road11\n{\n    height: 350px;\n    top: 50px;\n    left : 315px;\n    -webkit-transform: rotate(65deg);\n            transform: rotate(65deg);\n}\ndiv #road12\n{\n    height: 80px;\n    top: 175px;\n    right : 160px;\n    -webkit-transform: rotate(-25deg);\n            transform: rotate(-25deg);\n}\ndiv #road13\n{\n    height: 50px;\n    top: 75px;\n    right : 175px;\n}\ndiv #road14\n{\n    height: 50px;\n    top: 75px;\n    right : 475px;\n}\ndiv #road15\n{\n    height: 50px;\n    top: 75px;\n    left : 195px;\n}\ndiv #road16\n{\n    height: 50px;\n    bottom: 75px;\n    left : 325px;\n}\ndiv #road17\n{\n    height: 50px;\n    bottom: 75px;\n    right : 345px;\n}\ndiv #road18\n{\n    height: 50px;\n    bottom: 245px;\n    right : 225px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road19\n{\n    height: 50px;\n    bottom: 275px;\n    left : 275px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road20\n{\n    height: 50px;\n    bottom: 395px;\n    left : 145px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road21\n{\n    height: 50px;\n    bottom: 405px;\n    right : 95px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road22\n{\n    height: 80px;\n    top: 45px;\n    left : 255px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road23\n{\n    height: 80px;\n    top: 40px;\n    left : 125px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road24\n{\n    height: 80px;\n    top: 40px;\n    left : 425px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road25\n{\n    height: 80px;\n    top: 40px;\n    right : 240px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road26\n{\n    height: 80px;\n    top: 40px;\n    right : 110px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road27\n{\n    height: 80px;\n    top: 40px;\n    right : 410px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road28\n{\n    height: 80px;\n    top: 175px;\n    right : 90px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road29\n{\n    height: 80px;\n    top: 295px;\n    right : 90px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road30\n{\n    height: 80px;\n    top: 180px;\n    left : 130px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road31\n{\n    height: 80px;\n    top: 300px;\n    left : 140px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road32\n{\n    height: 80px;\n    top: 420px;\n    left : 270px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road33\n{\n    height: 80px;\n    top: 420px;\n    left : 375px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road34\n{\n    height: 80px;\n    bottom: 50px;\n    left : 270px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road35\n{\n    height: 80px;\n    bottom: 50px;\n    left : 375px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road36\n{\n    height: 80px;\n    bottom: 50px;\n    right : 400px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road37\n{\n    height: 80px;\n    bottom: 50px;\n    right : 290px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road38\n{\n    height: 80px;\n    bottom: 180px;\n    right : 225px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n\n/****** FLECHES ******/\n.white-arrow, .black-arrow, .double-arrow\n{\n    position: absolute;\n    z-index: 0;\n}\n.white-arrow\n{\n    font-size: 25px;\n    color:white;\n    text-shadow: 1px 1px 2px black;\n}\n.black-arrow\n{\n    font-size: 25px;\n    color:black;\n}\n.double-arrow\n{\n    color:black;\n    font-size: 35px;\n}\n#arrow1\n{\n    left: 228px;\n    top: 116px;\n}\n#arrow2\n{\n    left: 529px;\n    top: 116px;\n}\n#arrow3\n{\n    right: 156px;\n    top: 172px;\n    -webkit-transform:rotate(70deg);\n            transform:rotate(70deg);\n}\n#arrow4\n{\n    right: 160px;\n    top: 302px;\n    -webkit-transform:rotate(150deg);\n            transform:rotate(150deg);\n}\n#arrow5\n{\n    right: 278px;\n    top: 465px;\n    -webkit-transform:rotate(140deg);\n            transform:rotate(140deg);\n}\n#arrow6\n{\n    right: 380px;\n    bottom: 125px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n#arrow7\n{\n    left: 312px;\n    bottom: 173px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow8\n{\n    left: 306px;\n    bottom: 330px;\n    -webkit-transform:rotate(-150deg);\n            transform:rotate(-150deg);\n}\n#arrow9\n{\n    left: 182px;\n    top: 220px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow10\n{\n    left: 436px;\n    top: 120px;\n    -webkit-transform:rotate(-180deg);\n            transform:rotate(-180deg);\n}\n#arrow11\n{\n    right: 209px;\n    top: 120px;\n    -webkit-transform:rotate(-180deg);\n            transform:rotate(-180deg);\n}\n#arrow12\n{\n    right: 144px;\n    top: 212px;\n    -webkit-transform:rotate(250deg);\n            transform:rotate(250deg);\n}\n#arrow13\n{\n    right: 262px;\n    top: 371px;\n    -webkit-transform:rotate(320deg);\n            transform:rotate(320deg);\n}\n#arrow14\n{\n    right: 322px;\n    top: 501px;\n    -webkit-transform:rotate(320deg);\n            transform:rotate(320deg);\n}\n#arrow15\n{\n    left: 359px;\n    bottom: 129px;\n}\n#arrow16\n{\n    left: 317px;\n    bottom: 240px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow17\n{\n    left: 229px;\n    bottom: 392px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow18\n{\n    left: 187px;\n    top: 173px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow19\n{\n    left: 118px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow20\n{\n    left: 182px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow21\n{\n    left: 242px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow22\n{\n    left: 417px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow23\n{\n    left: 483px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow24\n{\n    left: 542px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow25\n{\n    right: 218px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow26\n{\n    right: 158px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow27\n{\n    right: 96px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow28\n{\n    right: 73px;\n    top: 190px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow29\n{\n    right: 73px;\n    top: 256px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n#arrow30\n{\n    right: 75px;\n    top: 312px;\n    -webkit-transform:rotate(225deg);\n            transform:rotate(225deg);\n}\n#arrow31\n{\n    left: 116px;\n    top: 192px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow32\n{\n    left: 113px;\n    top: 262px;\n}\n#arrow33\n{\n    left: 113px;\n    top: 323px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow34\n{\n    left: 243px;\n    top: 382px;\n}\n#arrow35\n{\n    left: 243px;\n    top: 443px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow36\n{\n    left: 367px;\n    top: 443px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow37\n{\n    left: 247px;\n    bottom: 59px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow38\n{\n    left: 308px;\n    bottom: 57px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow39\n{\n    left: 367px;\n    bottom: 55px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow40\n{\n    right: 392px;\n    bottom: 60px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow41\n{\n    right: 332px;\n    bottom: 57px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow42\n{\n    right: 268px;\n    bottom: 55px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow43\n{\n    right: 205px;\n    bottom: 185px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow44\n{\n    right: 203px;\n    top: 416px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n\n/***** JETONS *****/\n#clue_token\n{\n    color: white;\n    top: -3px;\n    right: -4px;\n    height: 30px;\n    width: 30px;\n    background-color: lightgreen;\n    background-image: url(\"/image/token/clue.png\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    padding-top: 1rem;\n    font-size: 12px;\n    /*filter: opacity(70%);*/\n    /*-webkit-filter: opacity(70%);*/\n}\n.token\n{\n    height: 35px;\n    width: 35px;\n    background-color: lightgrey;\n}\n.token, #clue_token, .portal_token,\ndiv#Jenny_Barnes, div#Peggy_Green, div#Francis_Sailor, div#Joe_Diamond, div#Daisie_Walker, div#Anne_Hathaway, div#Mark_Harrigan\n{\n    position: absolute;\n    z-index: 999;\n    background-size: contain;\n    background-repeat: no-repeat;\n    border-radius: 50%;\n    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.65);\n    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.65);\n}\ndiv.monster\n{\n    position: absolute;\n    z-index: 999;\n    /*background-size: contain;*/\n    /*background-repeat: no-repeat;*/\n    border-radius: 5px;\n    -webkit-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.65);\n    box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.65);\n    /*font-size: 12px;*/\n    background-color: lightgrey;\n    height: 30px;\n    width: 42px;\n}\ndiv.monster_1\n{\n    top:-2px;\n    left:-2px;\n}\ndiv.monster_2\n{\n    top:-2px;\n    left:18px;\n}\ndiv.monster_3\n{\n    top:-2px;\n    left:38px;\n}\ndiv.monster_4\n{\n    top:-2px;\n    left:58px;\n}\ndiv.investigator, div.beyond_investigator\n{\n    background-color: grey;\n    height: 35px;\n    width: 35px;\n}\ndiv.investigator_1\n{\n    bottom: 0;\n    right: 5px;\n}\ndiv.investigator_2\n{\n    bottom: 0;\n    right: 20px;\n}\ndiv.investigator_3\n{\n    bottom: 0;\n    right: 35px;\n}\ndiv.investigator_4\n{\n    bottom: 0;\n    right: 50px;\n}\ndiv.investigator_5\n{\n    bottom: 30px;\n    right: 5px;\n}\ndiv.investigator_6\n{\n    bottom: 30px;\n    right: 20px;\n}\n.portal_token\n{\n    top: -2px;\n    right: 22px;\n    height: 45px;\n    width: 45px;\n    background-color: black;\n    color: white;\n    /*background-image: url(img/portal/hallCelano.png);*/\n}\ndiv.event_token\n{\n    background-color: red;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/*Modales*/\n#modal-myth-1\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-left: 25px;\n}\n#modal-myth-2\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-right: 25px;\n    height:100%;\n}\n\n        /*BOUTTONS GROUPES*/\n.btn-group {\n  position: relative;\n  display: -ms-inline-flexbox;\n  display: -webkit-inline-box;\n  display: inline-flex;\n  vertical-align: middle;\n}\n.btn-group>.btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group>.btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.btn-group>.btn:last-child:not(:first-child),\n.btn-group>.dropdown-toggle:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group>.btn-inactive {\n  background-color: #607d8b;\n}\n.btn-group>.btn {\n  -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);\n  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);\n}\n.btn-group>.btn-inactive:hover {\n  background-color: #728F9D;\n}\n.btn-group>.btn:hover {\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ["investigators", "sites", "beyond", "specials", "monsters"],
+    data: function data() {
+        return {
+
+            playerNumber: 2, // nombre de joueurs
+            investigatorPreview: "",
+            roads: [{ id: "1", way: "bar-h" }, { id: "2", way: "bar-h" }, { id: "3", way: "bar-h" }, { id: "4", way: "bar-h" }, { id: "5", way: "bar-h" }, { id: "6", way: "bar-v" }, { id: "7", way: "bar-v" }, { id: "8", way: "bar-v" }, { id: "9", way: "bar-v" }, { id: "10", way: "bar-v" }, { id: "11", way: "bar-v" }, { id: "12", way: "bar-v" }, { id: "13", way: "bar-c" }, { id: "14", way: "bar-c" }, { id: "15", way: "bar-c" }, { id: "16", way: "bar-c" }, { id: "17", way: "bar-c" }, { id: "18", way: "bar-c" }, { id: "19", way: "bar-c" }, { id: "20", way: "bar-c" }, { id: "21", way: "bar-c" }, { id: "22", way: "bar-c" }, { id: "23", way: "bar-c" }, { id: "24", way: "bar-c" }, { id: "25", way: "bar-c" }, { id: "26", way: "bar-c" }, { id: "27", way: "bar-c" }, { id: "28", way: "bar-c" }, { id: "29", way: "bar-c" }, { id: "30", way: "bar-c" }, { id: "31", way: "bar-c" }, { id: "32", way: "bar-c" }, { id: "33", way: "bar-c" }, { id: "34", way: "bar-c" }, { id: "35", way: "bar-c" }, { id: "36", way: "bar-c" }, { id: "37", way: "bar-c" }, { id: "38", way: "bar-c" }],
+            arrows: [{ id: "1", color: "white" }, { id: "2", color: "white" }, { id: "3", color: "white" }, { id: "4", color: "white" }, { id: "5", color: "white" }, { id: "6", color: "white" }, { id: "7", color: "white" }, { id: "8", color: "white" }, { id: "9", color: "white" }, { id: "10", color: "black" }, { id: "11", color: "black" }, { id: "12", color: "black" }, { id: "13", color: "black" }, { id: "14", color: "black" }, { id: "15", color: "black" }, { id: "16", color: "black" }, { id: "17", color: "black" }, { id: "18", color: "black" }, { id: "19", color: "double" }, { id: "20", color: "double" }, { id: "21", color: "double" }, { id: "22", color: "double" }, { id: "23", color: "double" }, { id: "24", color: "double" }, { id: "25", color: "double" }, { id: "26", color: "double" }, { id: "27", color: "double" }, { id: "28", color: "double" }, { id: "29", color: "double" }, { id: "30", color: "double" }, { id: "31", color: "double" }, { id: "32", color: "double" }, { id: "33", color: "double" }, { id: "34", color: "double" }, { id: "35", color: "double" }, { id: "36", color: "double" }, { id: "37", color: "double" }, { id: "38", color: "double" }, { id: "39", color: "double" }, { id: "40", color: "double" }, { id: "41", color: "double" }, { id: "42", color: "double" }, { id: "43", color: "double" }, { id: "44", color: "double" }]
+
+        };
+    },
+    methods: {
+        lastClick: function lastClick(site) {
+            // this.log(site)
+            this.$emit('wasClicked', site);
+        },
+        log: function log(message) {
+            console.log(message);
+        },
+        continueAction: function continueAction() {
+            // console.log('ici')
+            this.$router.push('choose-ancient');
+        },
+        updateSites: function updateSites() {
+            var _this = this;
+
+            // Ajout des monstres sur la map
+            this.monsters.forEach(function (monster) {
+                // Pour chacun des monstres dans monsters
+                _this.sites.find(function (site) {
+                    // On ajoute ce montre au site correspondant
+                    if (site.id == monster.siteId) site.monster.push(monster.name);
+                });
+            });
+
+            // Ajout des INVESTIGATEURS sur la map
+            this.investigators.forEach(function (investigator) {
+                // Pour chacun des monstres dans monsters
+                _this.sites.find(function (site) {
+                    // On ajoute ce montre au site correspondant
+                    if (site.id == investigator.siteId) site.character.push(investigator.name);
+                });
+            });
+        }
+    },
+    mounted: function mounted() {
+
+        this.updateSites();
+        // Ajout des monstres sur la map
+        // this.monsters.forEach((monster) => {
+        // // Pour chacun des monstres dans monsters
+        //     this.sites.find(function(site) {
+        //         // On ajoute ce montre au site correspondant
+        //         if( site.id == monster.siteId ) site.monster.push(monster.name);
+        //     });
+        // });
+
+        // // Ajout des INVESTIGATEURS sur la map
+        // this.investigators.forEach((investigator) => {
+        // // Pour chacun des monstres dans monsters
+        //     this.sites.find(function(site) {
+        //         // On ajoute ce montre au site correspondant
+        //         if( site.id == investigator.siteId ) site.character.push(investigator.name);
+        //     });
+        // });
+    }
+});
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "z-depth-3", attrs: { id: "map-container" } },
+    [
+      _c(
+        "div",
+        { staticClass: "indigo lighten-5 right", attrs: { id: "ark-map" } },
+        [
+          _vm._l(_vm.sites, function(site) {
+            return _c(
+              "div",
+              {
+                staticClass: "card hoverable",
+                class: [site.color, site.type],
+                attrs: { id: "site" + site.id },
+                on: {
+                  click: function($event) {
+                    _vm.lastClick(site)
+                  }
+                }
+              },
+              [
+                _c("span", {
+                  domProps: { innerHTML: _vm._s(site.name + site.id) }
+                }),
+                _vm._v(" "),
+                site.clue != 0
+                  ? _c("div", {
+                      attrs: { id: "clue_token" },
+                      domProps: {
+                        innerHTML: _vm._s(site.clue > 1 ? "x" + site.clue : "")
+                      }
+                    })
+                  : _vm._e(),
+                _vm._v(" "),
+                _c(
+                  "transition-group",
+                  { attrs: { name: "fade" } },
+                  _vm._l(site.character, function(char, index) {
+                    return _c("div", {
+                      key: index,
+                      staticClass: "investigator",
+                      class: "investigator_" + (index + 1),
+                      attrs: { id: char.replace(" ", "_") },
+                      domProps: { innerHTML: _vm._s(char) }
+                    })
+                  })
+                ),
+                _vm._v(" "),
+                _c(
+                  "transition-group",
+                  { attrs: { name: "fade" } },
+                  _vm._l(site.monster, function(mons, index) {
+                    return _c("div", {
+                      key: index,
+                      staticClass: "monster truncate",
+                      class: "monster_" + (index + 1),
+                      attrs: { id: mons },
+                      domProps: { innerHTML: _vm._s(mons) }
+                    })
+                  })
+                ),
+                _vm._v(" "),
+                _c(
+                  "transition",
+                  { attrs: { name: "fade" } },
+                  _vm._l(site.portal, function(mark) {
+                    return _c(
+                      "div",
+                      { staticClass: "portal_token valign-wrapper" },
+                      [_c("span", { domProps: { innerHTML: _vm._s(mark) } })]
+                    )
+                  })
+                ),
+                _vm._v(" "),
+                _c(
+                  "transition-group",
+                  { attrs: { name: "fade" } },
+                  _vm._l(site.marker, function(port) {
+                    return _c(
+                      "div",
+                      {
+                        key: port,
+                        staticClass: "token center-align",
+                        class: port + "_token"
+                      },
+                      [_c("span", { domProps: { innerHTML: _vm._s(port) } })]
+                    )
+                  })
+                ),
+                _vm._v(" "),
+                _c(
+                  "transition-group",
+                  { attrs: { name: "fade" } },
+                  _vm._l(site.event, function(ev) {
+                    return _c(
+                      "div",
+                      {
+                        key: ev,
+                        staticClass: "token center-align",
+                        class: "event_token"
+                      },
+                      [_c("span", { domProps: { innerHTML: _vm._s(ev) } })]
+                    )
+                  })
+                )
+              ],
+              1
+            )
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.specials, function(special) {
+            return _c(
+              "div",
+              {
+                staticClass: "special_site card hoverable",
+                class: "special" + special.id
+              },
+              [
+                _c("span", { domProps: { innerHTML: _vm._s(special.name) } }),
+                _vm._v(" "),
+                _c(
+                  "transition-group",
+                  { attrs: { name: "fade" } },
+                  _vm._l(special.character, function(char, index) {
+                    return _c("div", {
+                      key: index,
+                      staticClass: "investigator",
+                      class: "investigator_" + (index + 1),
+                      attrs: { id: char.replace(" ", "_") },
+                      domProps: { innerHTML: _vm._s(char) }
+                    })
+                  })
+                ),
+                _vm._v(" "),
+                _c(
+                  "transition-group",
+                  { attrs: { name: "fade" } },
+                  _vm._l(special.monster, function(mons, index) {
+                    return _c("div", {
+                      key: index,
+                      staticClass: "monster truncate",
+                      class: "monster_" + (index + 1),
+                      attrs: { id: mons },
+                      domProps: { innerHTML: _vm._s(mons) }
+                    })
+                  })
+                )
+              ],
+              1
+            )
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.roads, function(road) {
+            return _c("div", {
+              class: road.way,
+              attrs: { id: "road" + road.id }
+            })
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.arrows, function(arrow) {
+            return _c("span", {
+              class: arrow.color + "-arrow",
+              attrs: { id: "arrow" + arrow.id },
+              domProps: {
+                innerHTML: _vm._s(
+                  arrow.color == "double" ? "&#10146;" : "&#10148;"
+                )
+              }
+            })
+          })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "indigo lighten-4 right", attrs: { id: "beyond-map" } },
+        _vm._l(_vm.beyond, function(world) {
+          return _c(
+            "div",
+            { staticClass: "world card center-align hoverable" },
+            [
+              _vm._l(world.steps, function(step) {
+                return _c(
+                  "div",
+                  { class: step.position == 1 ? "first" : "second" },
+                  [
+                    _c(
+                      "transition-group",
+                      { attrs: { name: "fade" } },
+                      _vm._l(step.character, function(char, index) {
+                        return _c("div", {
+                          key: index,
+                          staticClass: "beyond_investigator",
+                          class:
+                            step.position == 1 ? "inv_first" : "inv_second",
+                          attrs: { id: char.replace(" ", "_") },
+                          domProps: { innerHTML: _vm._s(char) }
+                        })
+                      })
+                    )
+                  ],
+                  1
+                )
+              }),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "other_world",
+                domProps: { innerHTML: _vm._s(world.name) }
+              })
+            ],
+            2
+          )
+        })
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-479a2f41", module.exports)
+  }
+}
+
+/***/ }),
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -18880,19 +19471,19 @@ if (false) {
 }
 
 /***/ }),
-/* 86 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(87)
+  __webpack_require__(92)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(89)
+var __vue_script__ = __webpack_require__(94)
 /* template */
-var __vue_template__ = __webpack_require__(90)
+var __vue_template__ = __webpack_require__(95)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -18931,13 +19522,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 87 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(88);
+var content = __webpack_require__(93);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -18957,7 +19548,7 @@ if(false) {
 }
 
 /***/ }),
-/* 88 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -18971,11 +19562,12 @@ exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n  
 
 
 /***/ }),
-/* 89 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -19074,7 +19666,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 90 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -19136,7 +19728,18 @@ var render = function() {
                     _vm._l(investigator.object, function(ob) {
                       return _c("li", [
                         _c("div", { staticClass: "card" }, [
-                          _vm._m(0, true),
+                          _c("div", { staticClass: "card-image" }, [
+                            _c("img", {
+                              staticClass: "responsive-img",
+                              staticStyle: { width: "159px", height: "245px" },
+                              attrs: {
+                                src:
+                                  "/image/card/common/" +
+                                  ob.replace(" ", "_") +
+                                  ".jpg"
+                              }
+                            })
+                          ]),
                           _vm._v(" "),
                           _c("div", { staticClass: "card-content" }, [
                             _c("p", { domProps: { innerHTML: _vm._s(ob) } })
@@ -19180,16 +19783,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-image" }, [
-      _c("img", { attrs: { src: "/image/card/common/Lance-Flammes.jpg" } })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -19200,19 +19794,19 @@ if (false) {
 }
 
 /***/ }),
-/* 91 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(92)
+  __webpack_require__(97)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(94)
+var __vue_script__ = __webpack_require__(99)
 /* template */
-var __vue_template__ = __webpack_require__(95)
+var __vue_template__ = __webpack_require__(100)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -19251,13 +19845,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 92 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(93);
+var content = __webpack_require__(98);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -19277,7 +19871,7 @@ if(false) {
 }
 
 /***/ }),
-/* 93 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -19285,17 +19879,18 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 94 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -19394,7 +19989,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 95 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -19456,7 +20051,18 @@ var render = function() {
                     _vm._l(investigator.object, function(ob) {
                       return _c("li", [
                         _c("div", { staticClass: "card" }, [
-                          _vm._m(0, true),
+                          _c("div", { staticClass: "card-image" }, [
+                            _c("img", {
+                              staticClass: "responsive-img",
+                              staticStyle: { width: "159px", height: "245px" },
+                              attrs: {
+                                src:
+                                  "/image/card/common/" +
+                                  ob.replace(" ", "_") +
+                                  ".jpg"
+                              }
+                            })
+                          ]),
                           _vm._v(" "),
                           _c("div", { staticClass: "card-content" }, [
                             _c("p", { domProps: { innerHTML: _vm._s(ob) } })
@@ -19500,16 +20106,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-image" }, [
-      _c("img", { attrs: { src: "/image/card/common/Lance-Flammes.jpg" } })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -19520,19 +20117,19 @@ if (false) {
 }
 
 /***/ }),
-/* 96 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(97)
+  __webpack_require__(102)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(99)
+var __vue_script__ = __webpack_require__(104)
 /* template */
-var __vue_template__ = __webpack_require__(100)
+var __vue_template__ = __webpack_require__(105)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -19571,13 +20168,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 97 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(98);
+var content = __webpack_require__(103);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -19597,7 +20194,7 @@ if(false) {
 }
 
 /***/ }),
-/* 98 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -19611,7 +20208,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 99 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19662,7 +20259,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 100 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -19742,19 +20339,19 @@ if (false) {
 }
 
 /***/ }),
-/* 101 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(102)
+  __webpack_require__(107)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(104)
+var __vue_script__ = __webpack_require__(109)
 /* template */
-var __vue_template__ = __webpack_require__(105)
+var __vue_template__ = __webpack_require__(110)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -19793,13 +20390,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 102 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(103);
+var content = __webpack_require__(108);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -19819,7 +20416,7 @@ if(false) {
 }
 
 /***/ }),
-/* 103 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -19833,7 +20430,7 @@ exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n  
 
 
 /***/ }),
-/* 104 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20037,7 +20634,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 105 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -20280,19 +20877,19 @@ if (false) {
 }
 
 /***/ }),
-/* 106 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(107)
+  __webpack_require__(112)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(109)
+var __vue_script__ = __webpack_require__(114)
 /* template */
-var __vue_template__ = __webpack_require__(110)
+var __vue_template__ = __webpack_require__(115)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -20331,13 +20928,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 107 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(108);
+var content = __webpack_require__(113);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -20357,7 +20954,7 @@ if(false) {
 }
 
 /***/ }),
-/* 108 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -20371,7 +20968,7 @@ exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n  
 
 
 /***/ }),
-/* 109 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20432,7 +21029,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 110 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -20510,19 +21107,19 @@ if (false) {
 }
 
 /***/ }),
-/* 111 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(112)
+  __webpack_require__(117)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(114)
+var __vue_script__ = __webpack_require__(119)
 /* template */
-var __vue_template__ = __webpack_require__(115)
+var __vue_template__ = __webpack_require__(120)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -20561,13 +21158,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 112 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(113);
+var content = __webpack_require__(118);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -20587,7 +21184,7 @@ if(false) {
 }
 
 /***/ }),
-/* 113 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -20601,7 +21198,7 @@ exports.push([module.i, "\nimg .card-image\n{\n    width: 100px;\n}\n", ""]);
 
 
 /***/ }),
-/* 114 */
+/* 119 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20655,7 +21252,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 115 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -20741,19 +21338,19 @@ if (false) {
 }
 
 /***/ }),
-/* 116 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(117)
+  __webpack_require__(122)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(119)
+var __vue_script__ = __webpack_require__(124)
 /* template */
-var __vue_template__ = __webpack_require__(120)
+var __vue_template__ = __webpack_require__(125)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -20792,13 +21389,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 117 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(118);
+var content = __webpack_require__(123);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -20818,7 +21415,7 @@ if(false) {
 }
 
 /***/ }),
-/* 118 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -20832,16 +21429,16 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 119 */
+/* 124 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Map_vue__);
 //
 //
@@ -20893,7 +21490,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             monsters: [],
             sites: [{ name: "Boutique<br>de<br>souvenir", id: "1", type: "site", character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Journal", id: "2", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Gare", id: "3", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Banque<br>d'Arkham", id: "4", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Asile<br>d'Arkham", id: "5", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Square de<br>l'indépen-<br>-dance", id: "6", type: "site", character: [], monster: [], event: [], clue: 1, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Relais<br>routier<br>de Hibb", id: "7", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Restaurant<br>de Velma", id: "8", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Poste<br>de<br>-polic9", id: "9", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "L'ile<br>inexplorée", id: "10", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Les<br>quais", id: "11", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "l'Inno-<br>-mable", id: "12", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Le<br>cimetière", id: "13", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "La Caverne<br>noire", id: "14", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Le<br>magasin", id: "15", type: "site", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Département<br>Scientifique", id: "16", type: "site", character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Adminis-<br>-tration", id: "17", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Biblio-<br>-thèque", id: "18", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Maison<br>de la<br>sorcière", id: "19", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Loge du<br>crépuscule<br>d'argent", id: "20", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Hôpital<br>Sainte<br>Marie", id: "21", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Vieille<br>échoppe<br>de magie", id: "22", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Les<br>bois", id: "23", type: "site", character: [], monster: [], event: [], clue: 1, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Pension<br>de Ma", id: "24", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Société<br>des<br>historiens", id: "25", type: "site", character: [], monster: [], event: [], clue: 1, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Eglise<br>méridionale", id: "26", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Quartier<br>Nord", id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 }, { name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivière", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Université<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>Résidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
             beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cité de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contrées<br>du rêve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
-            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: [] }, { name: 'Ciel', id: 2, monster: [] }, { name: 'Périphérie', id: 3, monster: [] }]
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: [] }, { name: 'Ciel', id: 37, monster: [] }, { name: 'Périphérie', id: 38, monster: [] }]
         };
     },
 
@@ -20907,7 +21504,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 120 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -20954,19 +21551,19 @@ if (false) {
 }
 
 /***/ }),
-/* 121 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(122)
+  __webpack_require__(127)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(124)
+var __vue_script__ = __webpack_require__(129)
 /* template */
-var __vue_template__ = __webpack_require__(125)
+var __vue_template__ = __webpack_require__(130)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -20983,7 +21580,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/js/components/mythstep/MythStep.vue"
+Component.options.__file = "resources/js/components/mythStep/MythStep.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -20992,9 +21589,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-59365e98", Component.options)
+    hotAPI.createRecord("data-v-83added8", Component.options)
   } else {
-    hotAPI.reload("data-v-59365e98", Component.options)
+    hotAPI.reload("data-v-83added8", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -21005,23 +21602,23 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 122 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(123);
+var content = __webpack_require__(128);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("7417c5ec", content, false, {});
+var update = __webpack_require__(2)("5a85736e", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-59365e98\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MythStep.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-59365e98\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MythStep.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-83added8\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MythStep.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-83added8\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MythStep.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -21031,7 +21628,7 @@ if(false) {
 }
 
 /***/ }),
-/* 123 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -21039,23 +21636,21 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 124 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Map_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Map_vue__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Map_vue__);
 //
 //
 //
@@ -21134,7 +21729,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -21143,8 +21758,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     // déclaration des composants utilisés
     components: {
         'app-sidebar': __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default.a,
-        'app-simple-modal': __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default.a,
-        'app-map': __WEBPACK_IMPORTED_MODULE_2__Map_vue___default.a
+        'app-map': __WEBPACK_IMPORTED_MODULE_1__Map_vue___default.a
     },
     data: function data() {
         return {
@@ -21163,9 +21777,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 // Types d'actions : add (ajout d'un indice), none (pas d'ajout:portail)
                 clue: { action: "add", siteName: "Boutique de souvenirs", siteId: 1 },
                 // Types d'action : simple (certains signes bougent), global(tous les signes bougent)n none (aucun)
-                move: { action: "simple", white: ["slash", "triangle", "star"], black: ["hexagon"] },
+                move: { action: "simple", white: ["slash", "triangle", "étoile"], black: ["hexagone"] },
                 // Types d'action : rumor, environment, headline (gros titre)
-                event: { action: "rumor", eventId: 1, name: "Les astres sont propices", siteId: 28 }
+                event: { action: "rumeur", eventId: 1, name: "Les astres sont propices", siteId: 28, siteName: "Rues du Centre Ville" }
             },
             investigators: [{ id: 1, name: "Joe Diamond", siteId: 3 }, { id: 2, name: "Francis Sailor", siteId: 1 }],
             monsters: [{ id: 1, name: "Chthonien", siteId: 11, symbol: "triangle", habilities: {} }, { id: 2, name: "Migo", siteId: 1, symbol: "cercle", habilities: {} }, { id: 3, name: "Cultiste", siteId: 3, symbol: "lune", habilities: {} }],
@@ -21173,7 +21787,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             /*'Migo'*/{ name: "Quartier<br>Nord", id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 },
             /*'Cultiste'*/{ name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivière", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Université<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>Résidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
             beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cité de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contrées<br>du rêve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
-            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: [] }, { name: 'Ciel', id: 2, monster: [] }, { name: 'Périphérie', id: 3, monster: [] }]
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: [] }, { name: 'Ciel', id: 37, monster: [] }, { name: 'Périphérie', id: 38, monster: [] }]
 
         };
     },
@@ -21287,8 +21901,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             console.log(message);
         },
         continueAction: function continueAction() {
-            console.log('ici');
-            // this.$router.push('choose-ancient')
+            // console.log('ici')
+            this.$router.push('upkeep-step');
         }
     },
 
@@ -21322,7 +21936,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 125 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -21359,6 +21973,9 @@ var render = function() {
                   [
                     _c("h4", [_vm._v("Phase de mythe")]),
                     _c("br"),
+                    _vm._v(" "),
+                    _c("div", [_vm._v("On pioche une carte mythe")]),
+                    _c("br"),
                     _c("br"),
                     _vm._v(" "),
                     _c("transition", { attrs: { name: "fade" } }, [
@@ -21385,7 +22002,7 @@ var render = function() {
       _c(
         "div",
         {
-          staticClass: "modal open modal-fixed-footer",
+          staticClass: "modal open modal-fixed-footer right",
           attrs: { id: "modal-myth-2", tabindex: "0" }
         },
         [
@@ -21395,10 +22012,6 @@ var render = function() {
             [
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col s12" }, [
-                  _c("div", [_vm._v("On pioche une carte mythe")]),
-                  _c("br"),
-                  _c("br"),
-                  _vm._v(" "),
                   _vm.mythStep > 0
                     ? _c("ul", { staticClass: "collection" }, [
                         _vm.mythStep >= 1
@@ -21413,7 +22026,7 @@ var render = function() {
                                         )
                                       }
                                     }),
-                                    _vm._v(" apparaît à/au "),
+                                    _vm._v(" apparaît à/au : "),
                                     _c("span", {
                                       domProps: {
                                         innerHTML: _vm._s(
@@ -21467,7 +22080,15 @@ var render = function() {
                                 ? _c("span", [
                                     _vm._v("Un monstre apparaît au même lieu."),
                                     _c("br"),
-                                    _vm._v("C'est un zombie.")
+                                    _vm._v("C'est un(e) "),
+                                    _c("span", {
+                                      domProps: {
+                                        innerHTML: _vm._s(
+                                          _vm.mythResume.monster.monsterName
+                                        )
+                                      }
+                                    }),
+                                    _vm._v(".")
                                   ])
                                 : _vm._e(),
                               _vm._v(" "),
@@ -21489,16 +22110,34 @@ var render = function() {
                           ? _c("li", { staticClass: "collection-item" }, [
                               _vm.mythResume.clue.action == "add"
                                 ? _c("span", [
-                                    _vm._v(
-                                      "Un indice apparaît à la boutique de souvenir."
-                                    )
+                                    _vm._v("Un indice apparaît à : "),
+                                    _c("br"),
+                                    _c("span", {
+                                      domProps: {
+                                        innerHTML: _vm._s(
+                                          _vm.mythResume.clue.siteName
+                                        )
+                                      }
+                                    })
                                   ])
                                 : _vm._e(),
                               _vm._v(" "),
                               _vm.mythResume.clue.action == "none"
                                 ? _c("span", [
                                     _vm._v(
-                                      "Un indice devrait apparaître à la boutique de souvenir mais un portail y est ouvert. Il n'est pas ajouté."
+                                      "\n                                Un indice devrait apparaître à :  "
+                                    ),
+                                    _c("span", {
+                                      domProps: {
+                                        innerHTML: _vm._s(
+                                          _vm.mythResume.clue.siteName
+                                        )
+                                      }
+                                    }),
+                                    _vm._v("."),
+                                    _c("br"),
+                                    _vm._v(
+                                      "\n                                Mais un portail y est ouvert. Il n'est pas ajouté.\n                            "
                                     )
                                   ])
                                 : _vm._e()
@@ -21508,22 +22147,104 @@ var render = function() {
                         _vm.mythStep >= 4
                           ? _c("li", { staticClass: "collection-item" }, [
                               _vm._v(
-                                "\n                        Les monstres se déplacent :\n                        "
+                                "\n                            Les monstres se déplacent :\n                            "
                               ),
-                              _vm._m(0)
+                              _c("ul", [
+                                _c(
+                                  "li",
+                                  [
+                                    _vm._v(
+                                      "-\n                                    "
+                                    ),
+                                    _vm._l(_vm.mythResume.move.white, function(
+                                      symbol,
+                                      index
+                                    ) {
+                                      return _c("span", [
+                                        _c("span", {
+                                          domProps: {
+                                            innerHTML: _vm._s(symbol)
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        index + 1 <
+                                        _vm.mythResume.move.white.length
+                                          ? _c("span", [_vm._v(" - ")])
+                                          : _vm._e()
+                                      ])
+                                    }),
+                                    _vm._v(" "),
+                                    _c("img", {
+                                      attrs: {
+                                        src:
+                                          "https://img.icons8.com/ios/24/000000/right.png"
+                                      }
+                                    }),
+                                    _vm._v(
+                                      " fleche blanche\n                                "
+                                    )
+                                  ],
+                                  2
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "li",
+                                  [
+                                    _vm._v(
+                                      "-\n                                    "
+                                    ),
+                                    _vm._l(_vm.mythResume.move.black, function(
+                                      symbol,
+                                      index
+                                    ) {
+                                      return _c("span", [
+                                        _c("span", {
+                                          domProps: {
+                                            innerHTML: _vm._s(symbol)
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        index + 1 <
+                                        _vm.mythResume.move.black.length
+                                          ? _c("span", [_vm._v(" - ")])
+                                          : _vm._e()
+                                      ])
+                                    }),
+                                    _vm._v(" "),
+                                    _c("img", {
+                                      attrs: {
+                                        src:
+                                          "https://img.icons8.com/ios/24/000000/right.png"
+                                      }
+                                    }),
+                                    _vm._v(
+                                      " flèche noir\n                                "
+                                    )
+                                  ],
+                                  2
+                                )
+                              ])
                             ])
                           : _vm._e(),
                         _vm._v(" "),
                         _vm.mythStep >= 5
                           ? _c("li", { staticClass: "collection-item" }, [
                               _vm._v(
-                                "\n                        C'est une rumeur ! " +
-                                  _vm._s(_vm.mythResume.event.name) +
-                                  "."
+                                "\n                            C'est un(e) " +
+                                  _vm._s(_vm.mythResume.event.action) +
+                                  " :"
                               ),
                               _c("br"),
+                              _vm._v(" "),
+                              _c("strong", [
+                                _vm._v(_vm._s(_vm.mythResume.event.name))
+                              ]),
+                              _vm._v("."),
+                              _c("br"),
                               _vm._v(
-                                "\n                        Lieu d'activité: Rues du Centre-ville\n                    "
+                                "\n                            Lieu d'activité: " +
+                                  _vm._s(_vm.mythResume.event.siteName) +
+                                  "\n                        "
                               )
                             ])
                           : _vm._e()
@@ -21538,8 +22259,7 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass:
-                  "modal-close waves-effect waves-green btn-flat green accent-1",
+                staticClass: "waves-effect waves-light btn-flat teal",
                 attrs: { disabled: _vm.mythStep == 5 },
                 on: { click: _vm.next }
               },
@@ -21549,8 +22269,7 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass:
-                  "modal-close waves-effect waves-green btn-flat green accent-1",
+                staticClass: "waves-effect waves-light btn-flat teal",
                 attrs: { disabled: _vm.mythStep < 5 },
                 on: { click: _vm.continueAction }
               },
@@ -21563,50 +22282,30 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", [
-      _c("li", [_vm._v("Slash, triangle, étoile => fleche blanche")]),
-      _vm._v(" "),
-      _c("li", [_vm._v("hexagone => flèche noir")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-59365e98", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-83added8", module.exports)
   }
 }
 
 /***/ }),
-/* 126 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(131)
+  __webpack_require__(132)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(133)
+var __vue_script__ = __webpack_require__(134)
 /* template */
-var __vue_template__ = __webpack_require__(134)
+var __vue_template__ = __webpack_require__(135)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -21623,7 +22322,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/js/components/Map.vue"
+Component.options.__file = "resources/js/components/upkeepStep/UpkeepStep.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -21632,9 +22331,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-479a2f41", Component.options)
+    hotAPI.createRecord("data-v-48270558", Component.options)
   } else {
-    hotAPI.reload("data-v-479a2f41", Component.options)
+    hotAPI.reload("data-v-48270558", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -21645,23 +22344,23 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(132);
+var content = __webpack_require__(133);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("2fe2bc16", content, false, {});
+var update = __webpack_require__(2)("40176f72", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-479a2f41\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Map.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-479a2f41\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Map.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48270558\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./UpkeepStep.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48270558\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./UpkeepStep.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -21671,7 +22370,7 @@ if(false) {
 }
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -21679,17 +22378,21 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/***** MAP*****/\n#map-container\n{\n    height : 780px;\n    width: 1090px;\n}\n#button-container\n{\n    height : 40px;\n    width: 100%;\n    margin-bottom: 25px;\n}\n#map-container, #button-container\n{\n    margin-left: auto;\n    margin-right: auto;\n}\n#ark-map\n{\n    position : relative;\n    height : 710px;\n    width: 975px;\n    /*background-color: lightgrey;*/\n    padding-top: -50px;\n}\n#beyond-map\n{\n    position : relative;\n    height : 710px;\n    width: 115px;\n    /*background-color: lightgrey;*/\n    padding: 5px;\n}\n\n/***** LIEUX *****/\ndiv .site, div .street, div .world, div .special_site\n{\n    position : absolute;\n    height: 80px;\n    text-align: center;\n    color: white;\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    z-index: 10;\n    text-shadow: 1px 1px 2px black;\n}\ndiv .site\n{\n    width : 80px;\n    border-radius: 20%;\n}\ndiv .street, div .special_site\n{\n    width: 80px;\n}\ndiv .card\n{\n    margin: 0;\n}\ndiv.world\n{\n    height:75px;\n    width: 105px;\n    background-color: white;\n    position: relative;\n    border-radius: 5px;\n    z-index: 0;\n    margin-top: 4px;\n    margin-bottom: 4px;\n}\ndiv.first, div.second\n{\n    width: 50%;\n    height: 100%;\n}\ndiv.first\n{\n    background-color: grey;\n    width: 50%;\n    border-radius: 5px 0 0 5px;\n}\nspan.other_world {\n    position: absolute;\n    z-index: 500;\n    /*left: 0%;\n    right: 0%;*/\n}\ndiv .special1\n{\n    bottom: 2px;\n    left: 2px;\n}\ndiv .special2\n{\n    bottom: 2px;\n    right: 2px;\n}\ndiv .special3\n{\n    bottom: 90px;\n    right: 2px;\n}\n\n\n\n/***** LIEU individuel *****/\ndiv #site1\n{\n    top: 5px;\n    left: 55px;\n}\ndiv #site2\n{\n    top: 5px;\n    left: 155px;\n}\ndiv #site3\n{\n    top: 5px;\n    left: 255px;\n}\ndiv #site4\n{\n    top: 5px;\n    left: 355px;\n}\ndiv #site5\n{\n    top: 5px;\n    left: 455px;\n}\ndiv #site6\n{\n    top: 5px;\n    left: 555px;\n}\ndiv #site7\n{\n    top: 5px;\n    right: 235px;\n}\ndiv #site8\n{\n    top: 5px;\n    right: 135px;\n}\ndiv #site9\n{\n    top: 5px;\n    right: 35px;\n}\ndiv #site10\n{\n    top: 145px;\n    left: 50px;\n}\ndiv #site11\n{\n    top: 245px;\n    left: 50px;\n}\ndiv #site12\n{\n    top: 345px;\n    left: 50px;\n}\ndiv #site13\n{\n    top: 135px;\n    right: 10px;\n}\ndiv #site14\n{\n    top: 235px;\n    right: 10px;\n}\ndiv #site15\n{\n    top: 335px;\n    right: 10px;\n}\ndiv #site16\n{\n    top: 365px;\n    left: 180px;\n}\ndiv #site17\n{\n    top: 465px;\n    left: 180px;\n}\ndiv #site18\n{\n    top: 465px;\n    left: 385px;\n}\ndiv #site19\n{\n    top: 395px;\n    right: 140px;\n}\ndiv #site20\n{\n    top: 495px;\n    right: 140px;\n}\ndiv #site21\n{\n    bottom: 5px;\n    left: 185px;\n}\ndiv #site22\n{\n    bottom: 5px;\n    left: 285px;\n}\ndiv #site23\n{\n    bottom: 5px;\n    left: 385px;\n}\ndiv #site24\n{\n    bottom: 5px;\n    right: 405px;\n}\ndiv #site25\n{\n    bottom: 5px;\n    right: 305px;\n}\ndiv #site26\n{\n    bottom: 5px;\n    right: 205px;\n}\ndiv #site27\n{\n    top: 105px;\n    left: 155px;\n}\ndiv #site28\n{\n    top: 105px;\n    left: 455px;\n}\ndiv #site29\n{\n    top: 105px;\n    right: 135px;\n}\ndiv #site30\n{\n    top: 245px;\n    left: 155px;\n}\ndiv #site31\n{\n    top: 235px;\n    right: 115px;\n}\ndiv #site32\n{\n    top: 365px;\n    left: 285px;\n}\ndiv #site33\n{\n    top: 395px;\n    right: 245px;\n}\ndiv #site34\n{\n    bottom: 105px;\n    left: 285px;\n}\ndiv #site35\n{\n    bottom: 105px;\n    right: 305px;\n}\n\n/***** COULEURS *****/\ndiv .orange\n{\n    background-color : orange;\n}\ndiv .white\n{\n    background-color : #B5B4B3; color: black;\n    text-shadow: 0px 0px 0px white;\n}\ndiv .grey\n{\n    background-color: #656364;\n}\ndiv .green\n{\n    background-color: #0b700b;\n}\ndiv .purple\n{\n    background-color: #633E87;\n}\ndiv .yellow\n{\n    background-color: #F9E46B;\n}\ndiv .blue\n{\n    background-color: #41a3ef;\n}\ndiv .red\n{\n    background-color: #CB191F;\n}\ndiv .brown\n{\n    background-color: #631E15;\n}\n/***** liens entre les lieux *****/\ndiv .bar-h, div .bar-v, div .bar-c\n{\n    background-color : white;\n    -webkit-box-shadow: 1px 2px 2px lightgrey;\n            box-shadow: 1px 2px 2px lightgrey;\n    position: absolute;\n    z-index: 0;\n}\ndiv .bar-h\n{\n    height: 4px;\n}\ndiv .bar-v, div .bar-c\n{\n    width: 4px;\n}\ndiv #road1\n{\n    width: 270px;\n    top: 135px;\n    left : 205px;\n}\ndiv #road2\n{\n    width: 270px;\n    top: 135px;\n    right : 205px;\n}\ndiv #road3\n{\n    width: 370px;\n    top: 415px;\n    right : 255px;\n}\ndiv #road4\n{\n    width: 280px;\n    bottom: 145px;\n    right : 355px;\n}\ndiv #road5\n{\n    width: 560px;\n    top: 280px;\n    right : 185px;\n}\ndiv #road6\n{\n    height: 80px;\n    top: 175px;\n    left : 195px;\n}\ndiv #road7\n{\n    height: 120px;\n    bottom: 170px;\n    left : 325px;\n}\ndiv #road8\n{\n    height: 180px;\n    bottom: 290px;\n    left : 275px;\n    -webkit-transform: rotate(-55deg);\n            transform: rotate(-55deg);\n}\ndiv #road9\n{\n    height: 200px;\n    bottom: 260px;\n    right : 215px;\n    -webkit-transform: rotate(55deg);\n            transform: rotate(55deg);\n}\ndiv #road10\n{\n    height: 120px;\n    bottom: 155px;\n    right : 305px;\n    -webkit-transform: rotate(45deg);\n            transform: rotate(45deg);\n}\ndiv #road11\n{\n    height: 350px;\n    top: 50px;\n    left : 315px;\n    -webkit-transform: rotate(65deg);\n            transform: rotate(65deg);\n}\ndiv #road12\n{\n    height: 80px;\n    top: 175px;\n    right : 160px;\n    -webkit-transform: rotate(-25deg);\n            transform: rotate(-25deg);\n}\ndiv #road13\n{\n    height: 50px;\n    top: 75px;\n    right : 175px;\n}\ndiv #road14\n{\n    height: 50px;\n    top: 75px;\n    right : 475px;\n}\ndiv #road15\n{\n    height: 50px;\n    top: 75px;\n    left : 195px;\n}\ndiv #road16\n{\n    height: 50px;\n    bottom: 75px;\n    left : 325px;\n}\ndiv #road17\n{\n    height: 50px;\n    bottom: 75px;\n    right : 345px;\n}\ndiv #road18\n{\n    height: 50px;\n    bottom: 245px;\n    right : 225px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road19\n{\n    height: 50px;\n    bottom: 275px;\n    left : 275px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road20\n{\n    height: 50px;\n    bottom: 395px;\n    left : 145px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road21\n{\n    height: 50px;\n    bottom: 405px;\n    right : 95px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road22\n{\n    height: 80px;\n    top: 45px;\n    left : 255px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road23\n{\n    height: 80px;\n    top: 40px;\n    left : 125px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road24\n{\n    height: 80px;\n    top: 40px;\n    left : 425px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road25\n{\n    height: 80px;\n    top: 40px;\n    right : 240px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road26\n{\n    height: 80px;\n    top: 40px;\n    right : 110px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road27\n{\n    height: 80px;\n    top: 40px;\n    right : 410px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road28\n{\n    height: 80px;\n    top: 175px;\n    right : 90px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road29\n{\n    height: 80px;\n    top: 295px;\n    right : 90px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road30\n{\n    height: 80px;\n    top: 180px;\n    left : 130px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road31\n{\n    height: 80px;\n    top: 300px;\n    left : 140px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road32\n{\n    height: 80px;\n    top: 420px;\n    left : 270px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road33\n{\n    height: 80px;\n    top: 420px;\n    left : 375px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road34\n{\n    height: 80px;\n    bottom: 50px;\n    left : 270px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road35\n{\n    height: 80px;\n    bottom: 50px;\n    left : 375px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road36\n{\n    height: 80px;\n    bottom: 50px;\n    right : 400px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road37\n{\n    height: 80px;\n    bottom: 50px;\n    right : 290px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road38\n{\n    height: 80px;\n    bottom: 180px;\n    right : 225px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n\n/****** FLECHES ******/\n.white-arrow, .black-arrow, .double-arrow\n{\n    position: absolute;\n    z-index: 0;\n}\n.white-arrow\n{\n    font-size: 25px;\n    color:white;\n    text-shadow: 1px 1px 2px black;\n}\n.black-arrow\n{\n    font-size: 25px;\n    color:black;\n}\n.double-arrow\n{\n    color:black;\n    font-size: 35px;\n}\n#arrow1\n{\n    left: 228px;\n    top: 116px;\n}\n#arrow2\n{\n    left: 529px;\n    top: 116px;\n}\n#arrow3\n{\n    right: 156px;\n    top: 172px;\n    -webkit-transform:rotate(70deg);\n            transform:rotate(70deg);\n}\n#arrow4\n{\n    right: 160px;\n    top: 302px;\n    -webkit-transform:rotate(150deg);\n            transform:rotate(150deg);\n}\n#arrow5\n{\n    right: 278px;\n    top: 465px;\n    -webkit-transform:rotate(140deg);\n            transform:rotate(140deg);\n}\n#arrow6\n{\n    right: 380px;\n    bottom: 125px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n#arrow7\n{\n    left: 312px;\n    bottom: 173px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow8\n{\n    left: 306px;\n    bottom: 330px;\n    -webkit-transform:rotate(-150deg);\n            transform:rotate(-150deg);\n}\n#arrow9\n{\n    left: 182px;\n    top: 220px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow10\n{\n    left: 436px;\n    top: 120px;\n    -webkit-transform:rotate(-180deg);\n            transform:rotate(-180deg);\n}\n#arrow11\n{\n    right: 209px;\n    top: 120px;\n    -webkit-transform:rotate(-180deg);\n            transform:rotate(-180deg);\n}\n#arrow12\n{\n    right: 144px;\n    top: 212px;\n    -webkit-transform:rotate(250deg);\n            transform:rotate(250deg);\n}\n#arrow13\n{\n    right: 262px;\n    top: 371px;\n    -webkit-transform:rotate(320deg);\n            transform:rotate(320deg);\n}\n#arrow14\n{\n    right: 322px;\n    top: 501px;\n    -webkit-transform:rotate(320deg);\n            transform:rotate(320deg);\n}\n#arrow15\n{\n    left: 359px;\n    bottom: 129px;\n}\n#arrow16\n{\n    left: 317px;\n    bottom: 240px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow17\n{\n    left: 229px;\n    bottom: 392px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow18\n{\n    left: 187px;\n    top: 173px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow19\n{\n    left: 118px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow20\n{\n    left: 182px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow21\n{\n    left: 242px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow22\n{\n    left: 417px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow23\n{\n    left: 483px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow24\n{\n    left: 542px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow25\n{\n    right: 218px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow26\n{\n    right: 158px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow27\n{\n    right: 96px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow28\n{\n    right: 73px;\n    top: 190px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow29\n{\n    right: 73px;\n    top: 256px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n#arrow30\n{\n    right: 75px;\n    top: 312px;\n    -webkit-transform:rotate(225deg);\n            transform:rotate(225deg);\n}\n#arrow31\n{\n    left: 116px;\n    top: 192px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow32\n{\n    left: 113px;\n    top: 262px;\n}\n#arrow33\n{\n    left: 113px;\n    top: 323px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow34\n{\n    left: 243px;\n    top: 382px;\n}\n#arrow35\n{\n    left: 243px;\n    top: 443px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow36\n{\n    left: 367px;\n    top: 443px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow37\n{\n    left: 247px;\n    bottom: 59px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow38\n{\n    left: 308px;\n    bottom: 57px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow39\n{\n    left: 367px;\n    bottom: 55px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow40\n{\n    right: 392px;\n    bottom: 60px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow41\n{\n    right: 332px;\n    bottom: 57px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow42\n{\n    right: 268px;\n    bottom: 55px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow43\n{\n    right: 205px;\n    bottom: 185px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow44\n{\n    right: 203px;\n    top: 416px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n\n/***** JETONS *****/\n#clue_token\n{\n    color: white;\n    top: -3px;\n    right: -4px;\n    height: 30px;\n    width: 30px;\n    background-color: lightgreen;\n    background-image: url(\"/image/token/clue.png\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    padding-top: 1rem;\n    font-size: 12px;\n    /*filter: opacity(70%);*/\n    /*-webkit-filter: opacity(70%);*/\n}\n.token\n{\n    height: 35px;\n    width: 35px;\n    background-color: lightgrey;\n}\n.token, #clue_token, .portal_token,\ndiv#Jenny_Barnes, div#Peggy_Green, div#Francis_Sailor, div#Joe_Diamond, div#Daisie_Walker, div#Anne_Hathaway\n{\n    position: absolute;\n    z-index: 999;\n    background-size: contain;\n    background-repeat: no-repeat;\n    border-radius: 50%;\n    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.65);\n    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.65);\n}\ndiv.monster\n{\n    position: absolute;\n    z-index: 999;\n    /*background-size: contain;*/\n    /*background-repeat: no-repeat;*/\n    border-radius: 5px;\n    -webkit-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.65);\n    box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.65);\n    /*font-size: 12px;*/\n    background-color: lightgrey;\n    height: 30px;\n    width: 42px;\n}\ndiv.monster_1\n{\n    top:-2px;\n    left:-2px;\n}\ndiv.monster_2\n{\n    top:-2px;\n    left:18px;\n}\ndiv.monster_3\n{\n    top:-2px;\n    left:38px;\n}\ndiv.monster_4\n{\n    top:-2px;\n    left:58px;\n}\ndiv.investigator, div.beyond_investigator\n{\n    background-color: grey;\n    height: 35px;\n    width: 35px;\n}\ndiv.investigator_1\n{\n    bottom: 0;\n    right: 5px;\n}\ndiv.investigator_2\n{\n    bottom: 0;\n    right: 20px;\n}\ndiv.investigator_3\n{\n    bottom: 0;\n    right: 35px;\n}\ndiv.investigator_4\n{\n    bottom: 0;\n    right: 50px;\n}\ndiv.investigator_5\n{\n    bottom: 30px;\n    right: 5px;\n}\ndiv.investigator_6\n{\n    bottom: 30px;\n    right: 20px;\n}\n.portal_token\n{\n    top: -2px;\n    right: 22px;\n    height: 45px;\n    width: 45px;\n    background-color: black;\n    color: white;\n    /*background-image: url(img/portal/hallCelano.png);*/\n}\ndiv.event_token\n{\n    background-color: red;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/*Modales*/\n#modal-myth-1\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-left: 25px;\n}\n#modal-myth-2\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-right: 25px;\n    height:100%;\n}\n\n        /*BOUTTONS GROUPES*/\n.btn-group {\n  position: relative;\n  display: -ms-inline-flexbox;\n  display: -webkit-inline-box;\n  display: inline-flex;\n  vertical-align: middle;\n}\n.btn-group>.btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group>.btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.btn-group>.btn:last-child:not(:first-child),\n.btn-group>.dropdown-toggle:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group>.btn-inactive {\n  background-color: #607d8b;\n}\n.btn-group>.btn {\n  -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);\n  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);\n}\n.btn-group>.btn-inactive:hover {\n  background-color: #728F9D;\n}\n.btn-group>.btn:hover {\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/*Modales*/\n#modal-upkeep\n{\n    z-index: 1003;\n    display: block;\n    opacity: 1;\n    top: 10%;\n    -webkit-transform: scaleX(1) scaleY(1);\n            transform: scaleX(1) scaleY(1);\n    height:450px;\n}\n#modal-upkeep-1\n{\n    width: 20%;\n    margin-left: 25px;\n    z-index: 1003;\n    display: block;\n    opacity: 1;\n    /*height:100%;*/\n}\n.btn\n{\n    margin: 2px;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Map_vue__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Map_vue__);
 //
 //
 //
@@ -21784,325 +22487,339 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ["investigators", "sites", "beyond", "specials", "monsters"],
+    // déclaration des composants utilisés
+    components: {
+        'app-sidebar': __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default.a,
+        'app-map': __WEBPACK_IMPORTED_MODULE_1__Map_vue___default.a
+    },
     data: function data() {
         return {
-
-            playerNumber: 2, // nombre de joueurs
-            investigatorPreview: "",
-            roads: [{ id: "1", way: "bar-h" }, { id: "2", way: "bar-h" }, { id: "3", way: "bar-h" }, { id: "4", way: "bar-h" }, { id: "5", way: "bar-h" }, { id: "6", way: "bar-v" }, { id: "7", way: "bar-v" }, { id: "8", way: "bar-v" }, { id: "9", way: "bar-v" }, { id: "10", way: "bar-v" }, { id: "11", way: "bar-v" }, { id: "12", way: "bar-v" }, { id: "13", way: "bar-c" }, { id: "14", way: "bar-c" }, { id: "15", way: "bar-c" }, { id: "16", way: "bar-c" }, { id: "17", way: "bar-c" }, { id: "18", way: "bar-c" }, { id: "19", way: "bar-c" }, { id: "20", way: "bar-c" }, { id: "21", way: "bar-c" }, { id: "22", way: "bar-c" }, { id: "23", way: "bar-c" }, { id: "24", way: "bar-c" }, { id: "25", way: "bar-c" }, { id: "26", way: "bar-c" }, { id: "27", way: "bar-c" }, { id: "28", way: "bar-c" }, { id: "29", way: "bar-c" }, { id: "30", way: "bar-c" }, { id: "31", way: "bar-c" }, { id: "32", way: "bar-c" }, { id: "33", way: "bar-c" }, { id: "34", way: "bar-c" }, { id: "35", way: "bar-c" }, { id: "36", way: "bar-c" }, { id: "37", way: "bar-c" }, { id: "38", way: "bar-c" }],
-            arrows: [{ id: "1", color: "white" }, { id: "2", color: "white" }, { id: "3", color: "white" }, { id: "4", color: "white" }, { id: "5", color: "white" }, { id: "6", color: "white" }, { id: "7", color: "white" }, { id: "8", color: "white" }, { id: "9", color: "white" }, { id: "10", color: "black" }, { id: "11", color: "black" }, { id: "12", color: "black" }, { id: "13", color: "black" }, { id: "14", color: "black" }, { id: "15", color: "black" }, { id: "16", color: "black" }, { id: "17", color: "black" }, { id: "18", color: "black" }, { id: "19", color: "double" }, { id: "20", color: "double" }, { id: "21", color: "double" }, { id: "22", color: "double" }, { id: "23", color: "double" }, { id: "24", color: "double" }, { id: "25", color: "double" }, { id: "26", color: "double" }, { id: "27", color: "double" }, { id: "28", color: "double" }, { id: "29", color: "double" }, { id: "30", color: "double" }, { id: "31", color: "double" }, { id: "32", color: "double" }, { id: "33", color: "double" }, { id: "34", color: "double" }, { id: "35", color: "double" }, { id: "36", color: "double" }, { id: "37", color: "double" }, { id: "38", color: "double" }, { id: "39", color: "double" }, { id: "40", color: "double" }, { id: "41", color: "double" }, { id: "42", color: "double" }, { id: "43", color: "double" }, { id: "44", color: "double" }]
+            pageTitle: 'Phase d\'entretien',
+            playerNumber: 4,
+            current: 0,
+            next: false,
+            upkeepStep: 0,
+            lostInvestigators: [],
+            lastClicked: "",
+            investigators: [{ id: 1, name: "Joe Diamond", siteId: 3, status: "ok" }, { id: 2, name: "Francis Sailor", siteId: 36, status: "lost" }, { id: 3, name: "Jenny Barnes", siteId: 9, status: "arrested" }, { id: 4, name: "Peggy Green", siteId: 6, status: "retarded" }, { id: 5, name: "Mark Harrigan", siteId: 36, status: "lost" }],
+            monsters: [{ id: 1, name: "Chthonien", siteId: 11, symbol: "triangle", habilities: {} }, { id: 2, name: "Migo", siteId: 1, symbol: "cercle", habilities: {} }, { id: 3, name: "Cultiste", siteId: 3, symbol: "lune", habilities: {} }],
+            sites: [{ name: "Boutique<br>de<br>souvenir", id: "1", type: "site", character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Journal", id: "2", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Gare", id: "3", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Banque<br>d'Arkham", id: "4", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Asile<br>d'Arkham", id: "5", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Square de<br>l'indépen-<br>-dance", id: "6", type: "site", character: [], monster: [], event: [], clue: 1, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Relais<br>routier<br>de Hibb", id: "7", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Restaurant<br>de Velma", id: "8", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Poste<br>de<br>-police", id: "9", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "L'ile<br>inexplorée", id: "10", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Les<br>quais", id: "11", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "l'Inno-<br>-mable", id: "12", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Le<br>cimetière", id: "13", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "La Caverne<br>noire", id: "14", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Le<br>magasin", id: "15", type: "site", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Département<br>Scientifique", id: "16", type: "site", character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Adminis-<br>-tration", id: "17", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Biblio-<br>-thèque", id: "18", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Maison<br>de la<br>sorcière", id: "19", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Loge du<br>crépuscule<br>d'argent", id: "20", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Hôpital<br>Sainte<br>Marie", id: "21", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Vieille<br>échoppe<br>de magie", id: "22", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Les<br>bois", id: "23", type: "site", character: [], monster: [], event: [], clue: 1, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Pension<br>de Ma", id: "24", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Société<br>des<br>historiens", id: "25", type: "site", character: [], monster: [], event: [], clue: 1, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Eglise<br>méridionale", id: "26", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 },
+            /*'Migo'*/{ name: "Quartier<br>Nord", id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 },
+            /*'Cultiste'*/{ name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivière", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Université<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>Résidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
+            beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cité de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contrées<br>du rêve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: ["Francis Sailor", "Mark Harrigan"] }, { name: 'Ciel', id: 37, monster: [] }, { name: 'Périphérie', id: 38, monster: [] }]
 
         };
     },
+
     methods: {
+        nextUpkeepStep: function nextUpkeepStep() {
+            if (this.upkeepStep < 4) this.upkeepStep++;
+        },
+        setNewSite: function setNewSite(data) {
+            if (this.upkeepStep == 1) {
+                // On définit le dernier site cliqué
+                this.lastClicked = data;
+                // définition du personage en cours
+                var currentCharacter = this.lostInvestigators[this.current];
+                currentCharacter.newSiteId = this.lastClicked.id;
+                currentCharacter.newSiteName = this.lastClicked.name;
+                console.log(currentCharacter);
+                this.nextCurrent();
+                // this.$refs.appmap.updateSites();
+
+                // on recherche le personnage avec l'id en cours
+                // var updatedCharacter = this.investigators.find(function(investigator){
+                //     return investigator.id == currentCharacter.id;
+                // });
+                // On lui donne un nouveau site et on redéfinit son statut à ok
+                // updatedCharacter.siteId = this.lastClicked.id;
+                // updatedCharacter.status = "ok";
+                // console.log(updatedCharacter)
+            }
+        },
+        nextCurrent: function nextCurrent() {
+            // Si le joueur actuel n'est pas le dernier
+            if (this.current + 1 < this.lostInvestigators.length) {
+                // Joueur suivant et apparition de son bouton
+                this.current++;
+                this.lostInvestigators[this.current].visible = true;
+            }
+            // Sinon apparition du bouton etape suivante
+            else if (this.current + 1 == this.lostInvestigators.length) {
+                    this.next = true;
+                    console.log('ici');
+                }
+        },
         log: function log(message) {
             console.log(message);
         },
         continueAction: function continueAction() {
-            // console.log('ici')
-            this.$router.push('choose-ancient');
+            console.log('ici');
+            // this.$router.push('choose-ancient')
         }
     },
+    updated: function updated() {},
     mounted: function mounted() {
-        var _this = this;
-
-        // Ajout des monstres sur la map
-        this.monsters.forEach(function (monster) {
-            // Pour chacun des monstres dans monsters
-            _this.sites.find(function (site) {
-                // On ajoute ce montre au site correspondant
-                if (site.id == monster.siteId) site.monster.push(monster.name);
-            });
+        var self = this;
+        // On récupère les investigateurs perdus dans le temps et l'espace
+        self.investigators.forEach(function (investigator) {
+            if (investigator.status == 'lost') self.lostInvestigators.push(investigator);
         });
-
-        // Ajout des INVESTIGATEURS sur la map
-        this.investigators.forEach(function (investigator) {
-            // Pour chacun des monstres dans monsters
-            _this.sites.find(function (site) {
-                // On ajoute ce montre au site correspondant
-                if (site.id == investigator.siteId) site.character.push(investigator.name);
-            });
+        // On ne rend visible que le bouton du premier
+        self.lostInvestigators.forEach(function (lost, index) {
+            if (index == 0) lost.visible = true;else lost.visible = false;
         });
     }
 });
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "map-container" } }, [
-    _c(
-      "div",
-      { staticClass: "indigo lighten-5 right", attrs: { id: "ark-map" } },
-      [
-        _vm._l(_vm.sites, function(site) {
-          return _c(
+  return _c(
+    "body",
+    [
+      _c("app-sidebar"),
+      _vm._v(" "),
+      _c("app-map", {
+        ref: "appmap",
+        attrs: {
+          investigators: _vm.investigators,
+          sites: _vm.sites,
+          beyond: _vm.beyond,
+          specials: _vm.specials,
+          monsters: _vm.monsters
+        },
+        on: {
+          wasClicked: function($event) {
+            _vm.setNewSite($event)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _vm.upkeepStep != 1
+        ? _c(
             "div",
             {
-              staticClass: "card hoverable",
-              class: [site.color, site.type],
-              attrs: { id: "site" + site.id }
+              staticClass: "modal open",
+              attrs: { id: "modal-upkeep", tabindex: "0" }
             },
             [
-              _c("span", {
-                domProps: { innerHTML: _vm._s(site.name + site.id) }
-              }),
-              _vm._v(" "),
-              site.clue != 0
-                ? _c("div", {
-                    attrs: { id: "clue_token" },
-                    domProps: {
-                      innerHTML: _vm._s(site.clue > 1 ? "x" + site.clue : "")
-                    }
-                  })
-                : _vm._e(),
-              _vm._v(" "),
               _c(
-                "transition-group",
-                { attrs: { name: "fade" } },
-                _vm._l(site.character, function(char, index) {
-                  return _c("div", {
-                    key: index,
-                    staticClass: "investigator",
-                    class: "investigator_" + (index + 1),
-                    attrs: { id: char },
-                    domProps: { innerHTML: _vm._s(char) }
-                  })
-                })
-              ),
-              _vm._v(" "),
-              _c(
-                "transition-group",
-                { attrs: { name: "fade" } },
-                _vm._l(site.monster, function(mons, index) {
-                  return _c("div", {
-                    key: index,
-                    staticClass: "monster truncate",
-                    class: "monster_" + (index + 1),
-                    attrs: { id: mons },
-                    domProps: { innerHTML: _vm._s(mons) }
-                  })
-                })
-              ),
-              _vm._v(" "),
-              _c(
-                "transition",
-                { attrs: { name: "fade" } },
-                _vm._l(site.portal, function(mark) {
-                  return _c(
-                    "div",
-                    { staticClass: "portal_token valign-wrapper" },
-                    [_c("span", { domProps: { innerHTML: _vm._s(mark) } })]
-                  )
-                })
-              ),
-              _vm._v(" "),
-              _c(
-                "transition-group",
-                { attrs: { name: "fade" } },
-                _vm._l(site.marker, function(port) {
-                  return _c(
-                    "div",
-                    {
-                      key: port,
-                      staticClass: "token center-align",
-                      class: port + "_token"
-                    },
-                    [_c("span", { domProps: { innerHTML: _vm._s(port) } })]
-                  )
-                })
-              ),
-              _vm._v(" "),
-              _c(
-                "transition-group",
-                { attrs: { name: "fade" } },
-                _vm._l(site.event, function(ev) {
-                  return _c(
-                    "div",
-                    {
-                      key: ev,
-                      staticClass: "token center-align",
-                      class: "event_token"
-                    },
-                    [_c("span", { domProps: { innerHTML: _vm._s(ev) } })]
-                  )
-                })
-              )
-            ],
-            1
-          )
-        }),
-        _vm._v(" "),
-        _vm._l(_vm.specials, function(special) {
-          return _c(
-            "div",
-            {
-              staticClass: "special_site card hoverable",
-              class: "special" + special.id
-            },
-            [
-              _c("span", { domProps: { innerHTML: _vm._s(special.name) } }),
-              _vm._v(" "),
-              _c(
-                "transition-group",
-                { attrs: { name: "fade" } },
-                _vm._l(special.character, function(char, index) {
-                  return _c("div", {
-                    key: index,
-                    staticClass: "investigator",
-                    class: "investigator_" + (index + 1),
-                    attrs: { id: char },
-                    domProps: { innerHTML: _vm._s(char) }
-                  })
-                })
-              ),
-              _vm._v(" "),
-              _c(
-                "transition-group",
-                { attrs: { name: "fade" } },
-                _vm._l(special.monster, function(mons, index) {
-                  return _c("div", {
-                    key: index,
-                    staticClass: "monster truncate",
-                    class: "monster_" + (index + 1),
-                    attrs: { id: mons },
-                    domProps: { innerHTML: _vm._s(mons) }
-                  })
-                })
-              )
-            ],
-            1
-          )
-        }),
-        _vm._v(" "),
-        _vm._l(_vm.roads, function(road) {
-          return _c("div", { class: road.way, attrs: { id: "road" + road.id } })
-        }),
-        _vm._v(" "),
-        _vm._l(_vm.arrows, function(arrow) {
-          return _c("span", {
-            class: arrow.color + "-arrow",
-            attrs: { id: "arrow" + arrow.id },
-            domProps: {
-              innerHTML: _vm._s(
-                arrow.color == "double" ? "&#10146;" : "&#10148;"
-              )
-            }
-          })
-        })
-      ],
-      2
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "indigo lighten-4 right", attrs: { id: "beyond-map" } },
-      _vm._l(_vm.beyond, function(world) {
-        return _c(
-          "div",
-          { staticClass: "world card center-align hoverable" },
-          [
-            _vm._l(world.steps, function(step) {
-              return _c(
                 "div",
-                { class: step.position == 1 ? "first" : "second" },
+                {
+                  staticClass: "modal-content",
+                  staticStyle: { height: "100%" }
+                },
                 [
+                  _c("h4", [_vm._v("Phase d'entretien")]),
+                  _c("br"),
+                  _vm._v(" "),
                   _c(
-                    "transition-group",
-                    { attrs: { name: "fade" } },
-                    _vm._l(step.character, function(char, index) {
-                      return _c("div", {
-                        key: index,
-                        staticClass: "beyond_investigator",
-                        class: step.position == 1 ? "inv_first" : "inv_second",
-                        attrs: { id: char },
-                        domProps: { innerHTML: _vm._s(char) }
-                      })
-                    })
+                    "transition",
+                    { attrs: { name: "fade", mode: "out-in" } },
+                    [
+                      _vm.upkeepStep == 0
+                        ? _c("div", { key: "0" }, [
+                            _c("p", [
+                              _vm._v(
+                                "Les joueurs qui ont été arrêtés, perdus dans le Temps et l’Espace ou qui passent leur tour au tour précédent ne sont pas concernés par la phase d’entretien."
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "ul",
+                              _vm._l(_vm.investigators, function(investigator) {
+                                return investigator.status != "ok"
+                                  ? _c("li", [
+                                      _c("span", [
+                                        _vm._v(
+                                          _vm._s(investigator.name) +
+                                            " est\n                                "
+                                        ),
+                                        investigator.status == "lost"
+                                          ? _c("span", [
+                                              _vm._v(
+                                                "perdu(e) dans le temps et l'espace"
+                                              )
+                                            ])
+                                          : _vm._e(),
+                                        _vm._v(" "),
+                                        investigator.status == "arrested"
+                                          ? _c("span", [_vm._v("arrêté(e)")])
+                                          : _vm._e(),
+                                        _vm._v(" "),
+                                        investigator.status == "retarded"
+                                          ? _c("span", [_vm._v("retardé(e)")])
+                                          : _vm._e()
+                                      ])
+                                    ])
+                                  : _vm._e()
+                              })
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.upkeepStep == 1
+                        ? _c("div", { key: "1" }, [
+                            _c("p", [
+                              _vm._v(
+                                "Les investigateurs perdus dans le Temps et l’Espace se déplacent sur le lieu d’Arkham de leur choix."
+                              )
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.upkeepStep == 2
+                        ? _c("div", { key: "2" }, [
+                            _c("p", [
+                              _vm._v("Restauration des cartes déchargées.")
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.upkeepStep == 3
+                        ? _c("div", { key: "3" }, [
+                            _c("p", [
+                              _vm._v(
+                                "Résolutions des actions d'entretien (vérification des bénédictions/malédictions, acompte, prêts bancaires, ...)"
+                              )
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.upkeepStep == 4
+                        ? _c("div", { key: "4" }, [
+                            _c("p", [
+                              _vm._v(
+                                "Ajustement de vos compétences en fonction de la valeur de Concentration."
+                              )
+                            ])
+                          ])
+                        : _vm._e()
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "btn waves-effect waves-light teal right-align",
+                      on: { click: _vm.nextUpkeepStep }
+                    },
+                    [_vm._v("ok")]
                   )
                 ],
                 1
               )
-            }),
-            _vm._v(" "),
-            _c("span", {
-              staticClass: "other_world",
-              domProps: { innerHTML: _vm._s(world.name) }
-            })
-          ],
-          2
-        )
-      })
-    )
-  ])
+            ]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.upkeepStep == 1
+        ? _c(
+            "div",
+            {
+              staticClass: "modal open",
+              attrs: { id: "modal-upkeep-1", tabindex: "0" }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "modal-content",
+                  staticStyle: { height: "100%" }
+                },
+                [
+                  _c("h4", [_vm._v("Phase d'entretien")]),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Les investigateurs perdus dans le Temps et l’Espace se déplacent sur le lieu d’Arkham de leur choix."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Choisir un lieu pour :")]),
+                  _vm._v(" "),
+                  _vm._l(_vm.lostInvestigators, function(investigator, index) {
+                    return _c("div", [
+                      investigator.visible == true
+                        ? _c("button", {
+                            staticClass: "waves-effect waves-light btn teal",
+                            domProps: { innerHTML: _vm._s(investigator.name) },
+                            on: {
+                              click: function($event) {
+                                _vm.current = index
+                              }
+                            }
+                          })
+                        : _vm._e(),
+                      _vm._v(" "),
+                      investigator.newSiteName
+                        ? _c("span", {
+                            domProps: {
+                              innerHTML: _vm._s(investigator.newSiteName)
+                            }
+                          })
+                        : _vm._e()
+                    ])
+                  }),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "btn waves-effect waves-light teal right-align",
+                      attrs: {
+                        disabled:
+                          _vm.current + 1 == _vm.lostInvestigators.length
+                      },
+                      on: { click: _vm.nextCurrent }
+                    },
+                    [
+                      _vm._v(
+                        "\n                Investigateur suivant\n            "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm.next == true
+                    ? _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn waves-effect waves-light teal right-align",
+                          on: { click: _vm.nextUpkeepStep }
+                        },
+                        [
+                          _vm._v(
+                            "\n                Continuer l'entretien\n            "
+                          )
+                        ]
+                      )
+                    : _vm._e()
+                ],
+                2
+              )
+            ]
+          )
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -22110,9 +22827,666 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-479a2f41", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-48270558", module.exports)
   }
 }
+
+/***/ }),
+/* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(137)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(139)
+/* template */
+var __vue_template__ = __webpack_require__(140)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/moveStep/MoveStep.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5a4c67b4", Component.options)
+  } else {
+    hotAPI.reload("data-v-5a4c67b4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(138);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("75b09135", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5a4c67b4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MoveStep.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5a4c67b4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MoveStep.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 138 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 139 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Map_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    // déclaration des composants utilisés
+    components: {
+        'app-sidebar': __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default.a,
+        'app-simple-modal': __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default.a,
+        'app-map': __WEBPACK_IMPORTED_MODULE_2__Map_vue___default.a
+    },
+    data: function data() {
+        return {
+            pageTitle: 'Phase de mouvement',
+            playerNumber: 2, // nombre de joueurs
+            modalTexts: {
+                title: "Mouvement",
+                content: "Phase de mouvement...",
+                buttonText: "Phase de rencontres à Arkham",
+                route: "arkham-encounter-step"
+            },
+            investigators: [{ id: 1, name: "Joe Diamond", siteId: 3 }, { id: 2, name: "Francis Sailor", siteId: 1 }],
+            monsters: [{ id: 1, name: "Chthonien", siteId: 11, symbol: "triangle", habilities: {} }, { id: 2, name: "Migo", siteId: 1, symbol: "cercle", habilities: {} }, { id: 3, name: "Cultiste", siteId: 3, symbol: "lune", habilities: {} }],
+            sites: [{ name: "Boutique<br>de<br>souvenir", id: "1", type: "site", character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Journal", id: "2", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Gare", id: "3", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Banque<br>d'Arkham", id: "4", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Asile<br>d'Arkham", id: "5", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Square de<br>l'indépen-<br>-dance", id: "6", type: "site", character: [], monster: [], event: [], clue: 1, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Relais<br>routier<br>de Hibb", id: "7", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Restaurant<br>de Velma", id: "8", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Poste<br>de<br>-polic9", id: "9", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "L'ile<br>inexplorée", id: "10", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Les<br>quais", id: "11", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "l'Inno-<br>-mable", id: "12", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Le<br>cimetière", id: "13", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "La Caverne<br>noire", id: "14", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Le<br>magasin", id: "15", type: "site", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Département<br>Scientifique", id: "16", type: "site", character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Adminis-<br>-tration", id: "17", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Biblio-<br>-thèque", id: "18", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Maison<br>de la<br>sorcière", id: "19", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Loge du<br>crépuscule<br>d'argent", id: "20", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Hôpital<br>Sainte<br>Marie", id: "21", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Vieille<br>échoppe<br>de magie", id: "22", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Les<br>bois", id: "23", type: "site", character: [], monster: [], event: [], clue: 1, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Pension<br>de Ma", id: "24", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Société<br>des<br>historiens", id: "25", type: "site", character: [], monster: [], event: [], clue: 1, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Eglise<br>méridionale", id: "26", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 },
+            /*'Migo'*/{ name: "Quartier<br>Nord", id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 },
+            /*'Cultiste'*/{ name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivière", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Université<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>Résidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
+            beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cité de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contrées<br>du rêve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: [] }, { name: 'Ciel', id: 2, monster: [] }, { name: 'Périphérie', id: 3, monster: [] }]
+
+        };
+    },
+
+    methods: {
+        log: function log(message) {
+            console.log(message);
+        },
+        continueAction: function continueAction() {
+            console.log('ici');
+            // this.$router.push('choose-ancient')
+        }
+    },
+
+    updated: function updated() {},
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "body",
+    [
+      _c("app-sidebar"),
+      _vm._v(" "),
+      _c("app-map", {
+        attrs: {
+          investigators: _vm.investigators,
+          sites: _vm.sites,
+          beyond: _vm.beyond,
+          specials: _vm.specials,
+          monsters: _vm.monsters
+        }
+      }),
+      _vm._v(" "),
+      _c("app-simple-modal", {
+        attrs: {
+          title: _vm.modalTexts.title,
+          content: _vm.modalTexts.content,
+          buttonText: _vm.modalTexts.buttonText,
+          route: _vm.modalTexts.route
+        }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5a4c67b4", module.exports)
+  }
+}
+
+/***/ }),
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(142)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(144)
+/* template */
+var __vue_template__ = __webpack_require__(145)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/arkhamEncounterStep/ArkhamEncounterStep.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1b070460", Component.options)
+  } else {
+    hotAPI.reload("data-v-1b070460", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 142 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(143);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("0bfa1812", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1b070460\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ArkhamEncounterStep.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1b070460\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ArkhamEncounterStep.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 143 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 144 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Map_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    // déclaration des composants utilisés
+    components: {
+        'app-sidebar': __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default.a,
+        'app-simple-modal': __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default.a,
+        'app-map': __WEBPACK_IMPORTED_MODULE_2__Map_vue___default.a
+    },
+    data: function data() {
+        return {
+            pageTitle: 'Rencontres à Arkham',
+            playerNumber: 2, // nombre de joueurs
+            modalTexts: {
+                title: "Rencontres à Arkham",
+                content: "Phase de Rencontres à Arkham...",
+                buttonText: "Phase de rencontres dans les autres mondes",
+                route: "beyond-encounter-step"
+            },
+            investigators: [{ id: 1, name: "Joe Diamond", siteId: 3 }, { id: 2, name: "Francis Sailor", siteId: 1 }],
+            monsters: [{ id: 1, name: "Chthonien", siteId: 11, symbol: "triangle", habilities: {} }, { id: 2, name: "Migo", siteId: 1, symbol: "cercle", habilities: {} }, { id: 3, name: "Cultiste", siteId: 3, symbol: "lune", habilities: {} }],
+            sites: [{ name: "Boutique<br>de<br>souvenir", id: "1", type: "site", character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Journal", id: "2", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Gare", id: "3", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Banque<br>d'Arkham", id: "4", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Asile<br>d'Arkham", id: "5", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Square de<br>l'indépen-<br>-dance", id: "6", type: "site", character: [], monster: [], event: [], clue: 1, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Relais<br>routier<br>de Hibb", id: "7", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Restaurant<br>de Velma", id: "8", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Poste<br>de<br>-polic9", id: "9", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "L'ile<br>inexplorée", id: "10", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Les<br>quais", id: "11", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "l'Inno-<br>-mable", id: "12", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Le<br>cimetière", id: "13", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "La Caverne<br>noire", id: "14", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Le<br>magasin", id: "15", type: "site", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Département<br>Scientifique", id: "16", type: "site", character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Adminis-<br>-tration", id: "17", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Biblio-<br>-thèque", id: "18", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Maison<br>de la<br>sorcière", id: "19", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Loge du<br>crépuscule<br>d'argent", id: "20", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Hôpital<br>Sainte<br>Marie", id: "21", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Vieille<br>échoppe<br>de magie", id: "22", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Les<br>bois", id: "23", type: "site", character: [], monster: [], event: [], clue: 1, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Pension<br>de Ma", id: "24", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Société<br>des<br>historiens", id: "25", type: "site", character: [], monster: [], event: [], clue: 1, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Eglise<br>méridionale", id: "26", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 },
+            /*'Migo'*/{ name: "Quartier<br>Nord", id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 },
+            /*'Cultiste'*/{ name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivière", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Université<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>Résidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
+            beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cité de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contrées<br>du rêve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: [] }, { name: 'Ciel', id: 2, monster: [] }, { name: 'Périphérie', id: 3, monster: [] }]
+
+        };
+    },
+
+    methods: {
+        log: function log(message) {
+            console.log(message);
+        },
+        continueAction: function continueAction() {
+            console.log('ici');
+            // this.$router.push('choose-ancient')
+        }
+    },
+
+    updated: function updated() {},
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "body",
+    [
+      _c("app-sidebar"),
+      _vm._v(" "),
+      _c("app-map", {
+        attrs: {
+          investigators: _vm.investigators,
+          sites: _vm.sites,
+          beyond: _vm.beyond,
+          specials: _vm.specials,
+          monsters: _vm.monsters
+        }
+      }),
+      _vm._v(" "),
+      _c("app-simple-modal", {
+        attrs: {
+          title: _vm.modalTexts.title,
+          content: _vm.modalTexts.content,
+          buttonText: _vm.modalTexts.buttonText,
+          route: _vm.modalTexts.route
+        }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1b070460", module.exports)
+  }
+}
+
+/***/ }),
+/* 146 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(147)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(149)
+/* template */
+var __vue_template__ = __webpack_require__(150)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/beyondEncounterStep/BeyondEncounterStep.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7f9529f6", Component.options)
+  } else {
+    hotAPI.reload("data-v-7f9529f6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 147 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(148);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("4e4c08a8", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7f9529f6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./BeyondEncounterStep.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7f9529f6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./BeyondEncounterStep.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 149 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Map_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    // d�claration des composants utilis�s
+    components: {
+        'app-sidebar': __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default.a,
+        'app-simple-modal': __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default.a,
+        'app-map': __WEBPACK_IMPORTED_MODULE_2__Map_vue___default.a
+    },
+    data: function data() {
+        return {
+            pageTitle: 'Rencontres dans les autres mondes',
+            playerNumber: 2, // nombre de joueurs
+            modalTexts: {
+                title: "Rencontres dans les autres mondes",
+                content: "Phase de Rencontres dans les autres mondes...",
+                buttonText: "Phase de mythes",
+                route: "myth-step"
+            },
+            investigators: [{ id: 1, name: "Joe Diamond", siteId: 3 }, { id: 2, name: "Francis Sailor", siteId: 1 }],
+            monsters: [{ id: 1, name: "Chthonien", siteId: 11, symbol: "triangle", habilities: {} }, { id: 2, name: "Migo", siteId: 1, symbol: "cercle", habilities: {} }, { id: 3, name: "Cultiste", siteId: 3, symbol: "lune", habilities: {} }],
+            sites: [{ name: "Boutique<br>de<br>souvenir", id: "1", type: "site", character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Journal", id: "2", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Gare", id: "3", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Banque<br>d'Arkham", id: "4", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Asile<br>d'Arkham", id: "5", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Square de<br>l'ind�pen-<br>-dance", id: "6", type: "site", character: [], monster: [], event: [], clue: 1, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Relais<br>routier<br>de Hibb", id: "7", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Restaurant<br>de Velma", id: "8", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Poste<br>de<br>-polic9", id: "9", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "L'ile<br>inexplor�e", id: "10", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Les<br>quais", id: "11", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "l'Inno-<br>-mable", id: "12", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Le<br>cimeti�re", id: "13", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "La Caverne<br>noire", id: "14", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Le<br>magasin", id: "15", type: "site", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "D�partement<br>Scientifique", id: "16", type: "site", character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Adminis-<br>-tration", id: "17", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Biblio-<br>-th�que", id: "18", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Maison<br>de la<br>sorci�re", id: "19", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Loge du<br>cr�puscule<br>d'argent", id: "20", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "H�pital<br>Sainte<br>Marie", id: "21", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Vieille<br>�choppe<br>de magie", id: "22", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Les<br>bois", id: "23", type: "site", character: [], monster: [], event: [], clue: 1, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Pension<br>de Ma", id: "24", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Soci�t�<br>des<br>historiens", id: "25", type: "site", character: [], monster: [], event: [], clue: 1, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Eglise<br>m�ridionale", id: "26", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 },
+            /*'Migo'*/{ name: "Quartier<br>Nord", id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 },
+            /*'Cultiste'*/{ name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivi�re", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Universit�<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>R�sidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
+            beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cit� de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contr�es<br>du r�ve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: [] }, { name: 'Ciel', id: 2, monster: [] }, { name: 'P�riph�rie', id: 3, monster: [] }]
+
+        };
+    },
+
+    methods: {
+        log: function log(message) {
+            console.log(message);
+        },
+        continueAction: function continueAction() {
+            console.log('ici');
+            // this.$router.push('choose-ancient')
+        }
+    },
+
+    updated: function updated() {},
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "body",
+    [
+      _c("app-sidebar"),
+      _vm._v(" "),
+      _c("app-map", {
+        attrs: {
+          investigators: _vm.investigators,
+          sites: _vm.sites,
+          beyond: _vm.beyond,
+          specials: _vm.specials,
+          monsters: _vm.monsters
+        }
+      }),
+      _vm._v(" "),
+      _c("app-simple-modal", {
+        attrs: {
+          title: _vm.modalTexts.title,
+          content: _vm.modalTexts.content,
+          buttonText: _vm.modalTexts.buttonText,
+          route: _vm.modalTexts.route
+        }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-7f9529f6", module.exports)
+  }
+}
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

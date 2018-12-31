@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import App from './views/App'
+
+// Settings
 import Home from './components/settings/Home'
 import ChoosePlayers from './components/settings/ChoosePlayers'
 import ChooseCharacters from './components/settings/ChooseCharacters'
@@ -18,7 +20,13 @@ import SetProperties from './components/settings/SetProperties'
 import SetUpMonsters from './components/settings/SetUpMonsters'
 import MixAncientPackage from './components/settings/MixAncientPackage'
 import PlaceInvestigators from './components/settings/PlaceInvestigators'
-import MythStep from './components/mythstep/MythStep'
+
+// Phases de tours
+import MythStep from './components/mythStep/MythStep'
+import UpkeepStep from './components/upkeepStep/UpkeepStep'
+import MoveStep from './components/moveStep/MoveStep'
+import ArkhamEncounterStep from './components/arkhamEncounterStep/ArkhamEncounterStep'
+import BeyondEncounterStep from './components/beyondEncounterStep/BeyondEncounterStep'
 
 const router = new VueRouter({
     mode: 'history',
@@ -97,6 +105,26 @@ const router = new VueRouter({
             path: '/myth-step',
             name: 'myth-step',
             component: MythStep,
+        },
+        {
+            path: '/upkeep-step',
+            name: 'upkeep-step',
+            component: UpkeepStep,
+        },
+        {
+            path: '/move-step',
+            name: 'move-step',
+            component: MoveStep,
+        },
+        {
+            path: '/arkham-encounter-step',
+            name: 'arkham-encounter-step',
+            component: ArkhamEncounterStep,
+        },
+        {
+            path: '/beyond-encounter-step',
+            name: 'beyond-encounter-step',
+            component: BeyondEncounterStep,
         },
 
     ],

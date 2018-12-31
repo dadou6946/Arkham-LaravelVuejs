@@ -3,47 +3,126 @@
             <app-sidebar></app-sidebar>
 
             <!-- ARKHAM MAP -->
-            <app-map
-                     :investigators="investigators"
-                     :monsters="monsters"
+            <app-map :investigators="investigators"
                      :sites="sites"
                      :beyond="beyond"
                      :specials="specials"
-                     ></app-map>
+                     :monsters="monsters"
+                     @wasClicked="setNewSite($event)"
+                     ref="appmap"></app-map>
 
-            <!-- Modale de simple message -->
-            <app-simple-modal :title="modalTexts.title"
-                              :content="modalTexts.content"
-                              :buttonText="modalTexts.buttonText"
-                              :route="modalTexts.route">
-            </app-simple-modal>
+            <!-- Modales d'entretien -->
+
+            <!-- Modale d'entretien -->
+            <div id="modal-upkeep"  v-if="upkeepStep!=1" class="modal open" tabindex="0">
+                <div class="modal-content" style="height:100%;">
+                    <h4>Phase d'entretien</h4><br>
+
+                    <!-- Affichage des personnages qui ne seront pas concernés par l'entretien -->
+                    <transition name="fade" mode="out-in">
+                        <div v-if="upkeepStep==0" key="0">
+                            <p>Les joueurs qui ont été arrêtés, perdus dans le Temps et l’Espace ou qui passent leur tour au tour précédent ne sont pas concernés par la phase d’entretien.</p>
+                            <ul>
+                                <!-- Affichage du status des investigateurs mis de côté -->
+                                <li v-for="investigator of investigators" v-if="investigator.status !='ok'">
+                                    <span>{{ investigator.name }} est
+                                        <span v-if="investigator.status=='lost'">perdu(e) dans le temps et l'espace</span>
+                                        <span v-if="investigator.status=='arrested'">arrêté(e)</span>
+                                        <span v-if="investigator.status=='retarded'">retardé(e)</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div v-if="upkeepStep==1" key="1">
+                            <p>Les investigateurs perdus dans le Temps et l’Espace se déplacent sur le lieu d’Arkham de leur choix.</p>
+                        </div>
+                        <div v-if="upkeepStep==2" key="2">
+                            <p>Restauration des cartes déchargées.</p>
+                        </div>
+                        <div v-if="upkeepStep==3" key="3">
+                            <p>Résolutions des actions d'entretien (vérification des bénédictions/malédictions, acompte, prêts bancaires, ...)</p>
+                        </div>
+                        <div v-if="upkeepStep==4" key="4">
+                          <p>Ajustement de vos compétences en fonction de la valeur de Concentration.</p>
+                        </div>
+                    </transition>
+
+                    <button class="btn waves-effect waves-light teal right-align" @click="nextUpkeepStep">ok</button>
+                </div>
+            </div>
+
+            <!-- Modale d'entretien -->
+            <div id="modal-upkeep-1" v-if="upkeepStep==1" class="modal open" tabindex="0">
+                <div class="modal-content" style="height:100%;">
+                    <h4>Phase d'entretien</h4><br>
+
+                    <!-- Affichage des personnages qui ne seront pas concernés par l'entretien -->
+                    <p>Les investigateurs perdus dans le Temps et l’Espace se déplacent sur le lieu d’Arkham de leur choix.</p>
+                    <p>Choisir un lieu pour :</p>
+                        <!-- Affichage du status des investigateurs mis de côté -->
+
+                        <div v-for="(investigator, index) of lostInvestigators">
+
+                            <button
+                                class="waves-effect waves-light btn teal"
+                                v-html="investigator.name"
+                                @click="current = index"
+                                v-if="investigator.visible == true">
+                                </button>
+                            <span v-if="investigator.newSiteName" v-html="investigator.newSiteName"></span>
+                        </div>
+
+                    <hr>
+
+                    <!-- A supprimer -->
+                    <button class="btn waves-effect waves-light teal right-align"
+                        @click="nextCurrent"
+                        v-bind:disabled="(current +1) == lostInvestigators.length">
+                        Investigateur suivant
+                    </button>
+
+                    <button class="btn waves-effect waves-light teal right-align"
+                        v-if="next == true"
+                        @click="nextUpkeepStep">
+                        Continuer l'entretien
+                    </button>
+                </div>
+            </div>
         </body>
 
 </template>
 
 <script>
     import Sidebar from '../Sidebar.vue'
-    import SimpleModal from '../SimpleModal.vue'
     import Map from '../Map.vue'
 
     export default {
         // déclaration des composants utilisés
         components: {
             'app-sidebar': Sidebar,
-            'app-simple-modal': SimpleModal,
             'app-map' : Map
         },
         data(){
             return {
-                pageTitle: 'Apparition des indices',
-                modalTexts: {
-                    title: "Apparition des indices",
-                    content: "Des indices sont apparus dans les lieux instables d'Arkham.",
-                    buttonText: "Etape suivante",
-                    route: "set-fixed-objects"
-                },
-                monsters: [],
-                investigators: [],
+                pageTitle: 'Phase d\'entretien',
+                playerNumber: 4,
+                current: 0,
+                next : false,
+                upkeepStep: 0,
+                lostInvestigators: [],
+                lastClicked: "",
+                investigators: [
+                    { id:1, name: "Joe Diamond"   , siteId:3, status:"ok" },
+                    { id:2, name: "Francis Sailor", siteId:36, status:"lost" },
+                    { id:3, name: "Jenny Barnes"  , siteId:9, status:"arrested" },
+                    { id:4, name: "Peggy Green", siteId:6, status:"retarded" },
+                    { id:5, name: "Mark Harrigan", siteId:36, status:"lost" },
+                ],
+                monsters: [
+                    { id:1, name:"Chthonien", siteId:11, symbol:"triangle", habilities: {}},
+                    { id:2, name:"Migo",      siteId:1,  symbol:"cercle",   habilities: {}},
+                    { id:3, name:"Cultiste",  siteId:3,  symbol:"lune",     habilities: {}}
+                ],
                 sites: [
                     { name: "Boutique<br>de<br>souvenir"        , id: "1" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white:27, black:27},
                     { name: "Journal"                           , id: "2" , type: "site",   character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:27, black:27},
@@ -53,7 +132,7 @@
                     { name: "Square de<br>l'indépen-<br>-dance" , id: "6" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "white" , portal: [], marker: [], white:28, black:28},
                     { name: "Relais<br>routier<br>de Hibb"      , id: "7" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "Restaurant<br>de Velma"            , id: "8" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
-                    { name: "Poste<br>de<br>-polic9"            , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
+                    { name: "Poste<br>de<br>-police"            , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "L'ile<br>inexplorée"               , id: "10", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "Les<br>quais"                      , id: "11", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "l'Inno-<br>-mable"                 , id: "12", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
@@ -71,8 +150,8 @@
                     { name: "Pension<br>de Ma"                  , id: "24", type: "site",   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
                     { name: "Société<br>des<br>historiens"      , id: "25", type: "site",   character: [], monster: [], event: [], clue: 1, color: "brown" , portal: [], marker: [], white:35, black:35},
                     { name: "Eglise<br>méridionale"             , id: "26", type: "site",   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
-                    { name: "Quartier<br>Nord"                  , id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:28, black:30},
-                    { name: "Centre<br>Ville"                   , id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white" , portal:  [], marker: [], white:29, black:27},
+    /*'Migo'*/      { name: "Quartier<br>Nord"                  , id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:28, black:30},
+    /*'Cultiste'*/  { name: "Centre<br>Ville"                   , id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white" , portal:  [], marker: [], white:29, black:27},
                     { name: "Quartier<br>Est"                   , id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey"  , portal:   [], marker: [], white:31, black:28},
                     { name: "Quartier<br>marchand"              , id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green" , portal:  [], marker: [], white:27, black:32},
                     { name: "Quartier<br>de la<br>rivière"      , id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white:33, black:29},
@@ -117,25 +196,119 @@
                                                                             ]}
                 ],
                 specials: [
-                    { name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: []},
+                    { name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: ["Francis Sailor","Mark Harrigan"]},
                     { name: 'Ciel',                                   id: 37, monster: []},
                     { name: 'Périphérie',                             id: 38, monster: []}
                 ],
+
             }
         },
         methods: {
-            log(name)
+            nextUpkeepStep()
             {
-                console.log(name);
+                if(this.upkeepStep<4)
+                this.upkeepStep++
+            },
+            setNewSite(data)
+            {
+                if(this.upkeepStep == 1)
+                {
+                    // On définit le dernier site cliqué
+                    this.lastClicked = data;
+                    // définition du personage en cours
+                    var currentCharacter = this.lostInvestigators[this.current];
+                    currentCharacter.newSiteId = this.lastClicked.id;
+                    currentCharacter.newSiteName = this.lastClicked.name;
+                    console.log(currentCharacter)
+                    this.nextCurrent();
+                    // this.$refs.appmap.updateSites();
+
+                    // on recherche le personnage avec l'id en cours
+                    // var updatedCharacter = this.investigators.find(function(investigator){
+                    //     return investigator.id == currentCharacter.id;
+                    // });
+                    // On lui donne un nouveau site et on redéfinit son statut à ok
+                    // updatedCharacter.siteId = this.lastClicked.id;
+                    // updatedCharacter.status = "ok";
+                    // console.log(updatedCharacter)
+                }
+            },
+            nextCurrent()
+            {
+                // Si le joueur actuel n'est pas le dernier
+                if((this.current +1) < this.lostInvestigators.length)
+                {
+                    // Joueur suivant et apparition de son bouton
+                    this.current++;
+                    this.lostInvestigators[this.current].visible = true;
+                }
+                // Sinon apparition du bouton etape suivante
+                else if((this.current +1) == this.lostInvestigators.length)
+                {
+                    this.next = true;
+                    console.log('ici')
+                }
+            },
+            log (message)
+            {
+                console.log(message);
+            },
+
+            continueAction () {
+                console.log('ici')
+                // this.$router.push('choose-ancient')
             }
-        }
-        ,
+        },
         updated(){
 
+        },
+        mounted(){
+            var self = this;
+            // On récupère les investigateurs perdus dans le temps et l'espace
+            self.investigators.forEach(function(investigator){
+                if(investigator.status == 'lost') self.lostInvestigators.push(investigator);
+            });
+            // On ne rend visible que le bouton du premier
+            self.lostInvestigators.forEach(function(lost, index){
+                if(index== 0) lost.visible = true;
+                else lost.visible = false;
+            });
         }
     }
 </script>
 
 <style>
+    /*TRANSITIONS*/
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .75s;
+    }
+    .fade-enter, .fade-leave-to
+    {
+        opacity: 0;
+    }
 
+    /*Modales*/
+    #modal-upkeep
+    {
+        z-index: 1003;
+        display: block;
+        opacity: 1;
+        top: 10%;
+        transform: scaleX(1) scaleY(1);
+        height:450px;
+    }
+
+    #modal-upkeep-1
+    {
+        width: 20%;
+        margin-left: 25px;
+        z-index: 1003;
+        display: block;
+        opacity: 1;
+        /*height:100%;*/
+    }
+    .btn
+    {
+        margin: 2px;
+    }
 </style>

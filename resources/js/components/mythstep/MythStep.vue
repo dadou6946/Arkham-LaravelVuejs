@@ -16,7 +16,9 @@
                 <div class="modal-content" style="height:100%">
                     <div class="row">
                         <div class="col s12">
-                            <h4>Phase de mythe</h4><br><br>
+
+                            <h4>Phase de mythe</h4><br>
+                            <div>On pioche une carte mythe</div><br><br>
                             <!-- Image de la carte à trouver -->
                             <transition name="fade">
                                 <img class="responsive-img"
@@ -25,50 +27,69 @@
                                     v-if="!hide.mythImage"
                                     v-bind:style="{ width: '100%' }"/>
                             </transition>
+
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Modale des étapes de mythe -->
-            <div id="modal-myth-2" class="modal open modal-fixed-footer" tabindex="0">
+            <div id="modal-myth-2" class="modal open modal-fixed-footer right" tabindex="0">
                 <div class="modal-content" style="height:100%">
                     <div class="row">
+
                         <div class="col s12">
-                            <div>On pioche une carte mythe</div><br><br>
                             <ul class="collection" v-if="mythStep>0">
-                            <li class="collection-item" v-if="mythStep>=1">
-                                <span v-if="mythResume.portal.action=='add'">Un portail vers <span v-html="mythResume.portal.portalName"></span> apparaît à/au <span v-html="mythResume.portal.siteName"></span>.</span>
-                                <span v-if="mythResume.portal.action=='already'">Un portail devrait apparaître à/au <span v-html="mythResume.portal.siteName"></span> mais il y en a déjà un!</span>
-                                <span v-if="mythResume.portal.action=='none'">Un portail devrait apparaître à/au <span v-html="mythResume.portal.siteName"></span> mais il y a un Signe des Anciens. Aucun portail n'apparaît.</span>
-                            </li>
-                            <li class="collection-item" v-if="mythStep>=2">
-                                <span v-if="mythResume.monster.action=='add'">Un monstre apparaît au même lieu.<br>C'est un zombie.</span>
-                                <span v-if="mythResume.monster.action=='wave'">Une vague de montres se produit.</span>
-                                <span v-if="mythResume.monster.action=='none'">Aucun monstre n'apparaît.</span>
-                            </li>
-                            <li class="collection-item" v-if="mythStep>=3">
-                                <span v-if="mythResume.clue.action=='add'">Un indice apparaît à la boutique de souvenir.</span>
-                                <span v-if="mythResume.clue.action=='none'">Un indice devrait apparaître à la boutique de souvenir mais un portail y est ouvert. Il n'est pas ajouté.</span>
-                            </li>
-                            <li class="collection-item" v-if="mythStep>=4">
-                                Les monstres se déplacent :
-                                <ul>
-                                <li>Slash, triangle, étoile => fleche blanche</li>
-                                <li>hexagone => flèche noir</li>
-                                </ul>
-                            </li>
-                            <li class="collection-item" v-if="mythStep>=5">
-                                C'est une rumeur ! {{mythResume.event.name}}.<br>
-                                Lieu d'activité: Rues du Centre-ville
-                            </li>
+                                <li class="collection-item" v-if="mythStep>=1">
+                                    <span v-if="mythResume.portal.action=='add'">Un portail vers <span v-html="mythResume.portal.portalName"></span> apparaît à/au : <span v-html="mythResume.portal.siteName"></span>.</span>
+                                    <span v-if="mythResume.portal.action=='already'">Un portail devrait apparaître à/au <span v-html="mythResume.portal.siteName"></span> mais il y en a déjà un!</span>
+                                    <span v-if="mythResume.portal.action=='none'">Un portail devrait apparaître à/au <span v-html="mythResume.portal.siteName"></span> mais il y a un Signe des Anciens. Aucun portail n'apparaît.</span>
+                                </li>
+                                <li class="collection-item" v-if="mythStep>=2">
+                                    <span v-if="mythResume.monster.action=='add'">Un monstre apparaît au même lieu.<br>C'est un(e) <span v-html="mythResume.monster.monsterName"></span>.</span>
+                                    <span v-if="mythResume.monster.action=='wave'">Une vague de montres se produit.</span>
+                                    <span v-if="mythResume.monster.action=='none'">Aucun monstre n'apparaît.</span>
+                                </li>
+                                <li class="collection-item" v-if="mythStep>=3">
+                                    <span v-if="mythResume.clue.action=='add'">Un indice apparaît à : <br><span v-html="mythResume.clue.siteName"></span></span>
+                                    <span v-if="mythResume.clue.action=='none'">
+                                        Un indice devrait apparaître à :  <span v-html="mythResume.clue.siteName"></span>.<br>
+                                        Mais un portail y est ouvert. Il n'est pas ajouté.
+                                    </span>
+                                </li>
+
+                                <li class="collection-item" v-if="mythStep>=4">
+                                    Les monstres se déplacent :
+                                    <ul>
+                                        <li>-
+                                            <span v-for="(symbol, index) of mythResume.move.white">
+                                                <span v-html="symbol"></span>
+                                                <span v-if="index+1 < mythResume.move.white.length"> - </span>
+                                            </span>
+                                            <img src="https://img.icons8.com/ios/24/000000/right.png"> fleche blanche
+                                        </li>
+                                        <li>-
+                                            <span v-for="(symbol, index) of mythResume.move.black">
+                                                <span v-html="symbol"></span>
+                                                <span v-if="index+1 < mythResume.move.black.length"> - </span>
+                                            </span>
+                                            <img src="https://img.icons8.com/ios/24/000000/right.png"> flèche noir
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="collection-item" v-if="mythStep>=5">
+                                    C'est un(e) {{ mythResume.event.action }} :<br> <strong>{{mythResume.event.name}}</strong>.<br>
+                                    Lieu d'activité: {{ mythResume.event.siteName }}
+                                </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button v-bind:disabled="mythStep==5" @click="next" class="modal-close waves-effect waves-green btn-flat green accent-1">Ok</button>
-                    <button v-bind:disabled="mythStep<5" @click="continueAction" class="modal-close waves-effect waves-green btn-flat green accent-1">Etape suivante</button>
+                    <button v-bind:disabled="mythStep==5" @click="next" class="waves-effect waves-light btn-flat teal">Ok</button>
+                    <button v-bind:disabled="mythStep<5" @click="continueAction" class="waves-effect waves-light btn-flat teal">Etape suivante</button>
                 </div>
             </div>
 
@@ -78,14 +99,12 @@
 
 <script>
     import Sidebar from '../Sidebar.vue'
-    import SimpleModal from '../SimpleModal.vue'
     import Map from '../Map.vue'
 
     export default {
         // déclaration des composants utilisés
         components: {
             'app-sidebar': Sidebar,
-            'app-simple-modal': SimpleModal,
             'app-map' : Map
         },
         data(){
@@ -105,9 +124,9 @@
                         // Types d'actions : add (ajout d'un indice), none (pas d'ajout:portail)
                         clue:{ action:"add", siteName: "Boutique de souvenirs", siteId:1 },
                         // Types d'action : simple (certains signes bougent), global(tous les signes bougent)n none (aucun)
-                        move:{ action:"simple", white: ["slash", "triangle", "star"], black:["hexagon"] },
+                        move:{ action:"simple", white: ["slash", "triangle", "étoile"], black:["hexagone"] },
                         // Types d'action : rumor, environment, headline (gros titre)
-                        event:{ action:"rumor", eventId:1, name: "Les astres sont propices", siteId: 28}
+                        event:{ action:"rumeur", eventId:1, name: "Les astres sont propices", siteId: 28, siteName: "Rues du Centre Ville" }
                     },
                 investigators: [
                     { id:1, name: "Joe Diamond"   , siteId:3 },
@@ -191,9 +210,9 @@
                                                                             ]}
                 ],
                 specials: [
-                    { name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: []},
-                    { name: 'Ciel',                                   id: 2, monster: []},
-                    { name: 'Périphérie',                             id: 3, monster: []}
+                    { name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: []},
+                    { name: 'Ciel',                                   id: 37, monster: []},
+                    { name: 'Périphérie',                             id: 38, monster: []}
                 ],
 
             }
@@ -313,8 +332,8 @@
             },
 
             continueAction () {
-                console.log('ici')
-                // this.$router.push('choose-ancient')
+                // console.log('ici')
+                this.$router.push('upkeep-step');
             }
         }
         ,
@@ -353,5 +372,7 @@
 </script>
 
 <style>
+
+
 
 </style>

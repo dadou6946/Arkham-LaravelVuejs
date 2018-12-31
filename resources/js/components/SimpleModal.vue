@@ -4,7 +4,7 @@
             <h4>{{ title }}</h4>
             <p class="text-center">{{ content }}</p>
             <div class="right-align">
-                <button class="modal-close waves-effect waves-light btn teal" @click="continueAction">{{ buttonText }}</button>
+                <button class="waves-effect waves-light btn teal" @click="continueAction">{{ buttonText }}</button>
             </div>
         </div>
     </div>
