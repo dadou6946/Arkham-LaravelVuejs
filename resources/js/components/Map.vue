@@ -267,10 +267,30 @@
             {
                 console.log(message);
             },
-
             continueAction () {
                 // console.log('ici')
                 this.$router.push('choose-ancient')
+            },
+            // Mise a jour de l'affichage des monstres et investigateurs
+            updateMap()
+            {
+                // Penser a vider perdu dans le temps et l'espace
+                // et à vérifier si l'on ne perd pas des joueurs qui devraient y rester
+                this.rebootMap();
+                this.rebootLost()
+                this.updateSites();
+            },
+            rebootMap()
+            {
+                this.sites.forEach(function(site) {
+                    site.monster = [];
+                    site.character = [];
+                });
+            },
+            // Remise a zero de des joueurs perdus dans le temps et l'espace
+            rebootLost()
+            {
+                this.specials[0].character = [];
             },
             updateSites()
             {
@@ -296,23 +316,6 @@
         mounted(){
 
             this.updateSites();
-            // Ajout des monstres sur la map
-            // this.monsters.forEach((monster) => {
-            // // Pour chacun des monstres dans monsters
-            //     this.sites.find(function(site) {
-            //         // On ajoute ce montre au site correspondant
-            //         if( site.id == monster.siteId ) site.monster.push(monster.name);
-            //     });
-            // });
-
-            // // Ajout des INVESTIGATEURS sur la map
-            // this.investigators.forEach((investigator) => {
-            // // Pour chacun des monstres dans monsters
-            //     this.sites.find(function(site) {
-            //         // On ajoute ce montre au site correspondant
-            //         if( site.id == investigator.siteId ) site.character.push(investigator.name);
-            //     });
-            // });
         }
     }
 

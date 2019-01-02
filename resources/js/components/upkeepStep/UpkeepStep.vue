@@ -24,8 +24,8 @@
                             <p>Les joueurs qui ont été arrêtés, perdus dans le Temps et l’Espace ou qui passent leur tour au tour précédent ne sont pas concernés par la phase d’entretien.</p>
                             <ul>
                                 <!-- Affichage du status des investigateurs mis de côté -->
-                                <li v-for="investigator of investigators" v-if="investigator.status !='ok'">
-                                    <span>{{ investigator.name }} est
+                                <li v-for="investigator of investigators" v-if="investigator.status !='ok'" class="center-align">
+                                    <span >{{ investigator.name }} est
                                         <span v-if="investigator.status=='lost'">perdu(e) dans le temps et l'espace</span>
                                         <span v-if="investigator.status=='arrested'">arrêté(e)</span>
                                         <span v-if="investigator.status=='retarded'">retardé(e)</span>
@@ -47,7 +47,7 @@
                         </div>
                     </transition>
 
-                    <button class="btn waves-effect waves-light teal right-align" @click="nextUpkeepStep">ok</button>
+                    <button class="btn waves-effect waves-light teal right-align right" @click="nextUpkeepStep">ok</button>
                 </div>
             </div>
 
@@ -63,29 +63,25 @@
 
                         <div v-for="(investigator, index) of lostInvestigators">
 
-                            <button
-                                class="waves-effect waves-light btn teal"
-                                v-html="investigator.name"
-                                @click="current = index"
-                                v-if="investigator.visible == true">
+                            <button class="waves-effect waves-light btn-small teal btn-investigator"
+                                v-if="investigator.visible == true"
+                                :disabled="(current!=index)&&(next==false)"
+                                @click="resetSite(index)"
+                                v-html="investigator.name">
                                 </button>
-                            <span v-if="investigator.newSiteName" v-html="investigator.newSiteName"></span>
+                            <span class="teal darken-4 white-text right-align"
+                                style="display:block;border-radius:3px;padding-right:5px;margin-left:15px;"
+                                v-if="investigator.newSiteName !=''"
+                                v-html="investigator.newSiteNameText">
+                                </span>
                         </div>
 
-                    <hr>
-
-                    <!-- A supprimer -->
-                    <button class="btn waves-effect waves-light teal right-align"
-                        @click="nextCurrent"
-                        v-bind:disabled="(current +1) == lostInvestigators.length">
-                        Investigateur suivant
-                    </button>
-
-                    <button class="btn waves-effect waves-light teal right-align"
-                        v-if="next == true"
-                        @click="nextUpkeepStep">
-                        Continuer l'entretien
-                    </button>
+                        <button class="btn waves-effect waves-light teal right-align"
+                            style="position: absolute; bottom:25px;"
+                            :disabled="next == false"
+                            @click="nextUpkeepStep">
+                            valider les déplacements
+                        </button>
                 </div>
             </div>
         </body>
@@ -151,14 +147,14 @@
                     { name: "Société<br>des<br>historiens"      , id: "25", type: "site",   character: [], monster: [], event: [], clue: 1, color: "brown" , portal: [], marker: [], white:35, black:35},
                     { name: "Eglise<br>méridionale"             , id: "26", type: "site",   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
     /*'Migo'*/      { name: "Quartier<br>Nord"                  , id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:28, black:30},
-    /*'Cultiste'*/  { name: "Centre<br>Ville"                   , id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white" , portal:  [], marker: [], white:29, black:27},
-                    { name: "Quartier<br>Est"                   , id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey"  , portal:   [], marker: [], white:31, black:28},
-                    { name: "Quartier<br>marchand"              , id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green" , portal:  [], marker: [], white:27, black:32},
+    /*'Cultiste'*/  { name: "Centre<br>Ville"                   , id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white" , portal: [], marker: [], white:29, black:27},
+                    { name: "Quartier<br>Est"                   , id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey"  , portal: [], marker: [], white:31, black:28},
+                    { name: "Quartier<br>marchand"              , id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green" , portal: [], marker: [], white:27, black:32},
                     { name: "Quartier<br>de la<br>rivière"      , id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white:33, black:29},
                     { name: "Université<br>Miskatonik"          , id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white:30, black:34},
-                    { name: "French<br>Hill"                    , id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue"  , portal:   [], marker: [], white:35, black:31},
-                    { name: "Quartier<br>Résidentiel"           , id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red"   , portal:    [], marker: [], white:32, black:35},
-                    { name: "Quartier<br>sud"                   , id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown" , portal:  [], marker: [], white:34, black:33},
+                    { name: "French<br>Hill"                    , id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue"  , portal: [], marker: [], white:35, black:31},
+                    { name: "Quartier<br>Résidentiel"           , id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red"   , portal: [], marker: [], white:32, black:35},
+                    { name: "Quartier<br>sud"                   , id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:34, black:33},
 
                 ],
                 beyond : [
@@ -207,8 +203,38 @@
             nextUpkeepStep()
             {
                 if(this.upkeepStep<4)
-                this.upkeepStep++
+                {
+                    this.upkeepStep++
+                    // console.log(this.upkeepStep)
+                    // Phase de rechargement des cartes
+                    if(this.upkeepStep == 2 )
+                    {
+                        var self = this;
+                        // Modification de site des investigateurs perdus dans le temps et l'espace
+                        self.lostInvestigators.forEach(function(lost)
+                        {
+                            var lostId = lost.id;
+                            // on recherche le personnage avec l'id en cours
+                            var updatedCharacter = self.getInvestigator(lostId);
+                            // On lui donne un nouveau site et on redéfinit son statut à ok
+                            updatedCharacter.siteId = lost.newSiteId;
+                            updatedCharacter.status = "ok";
+                            console.log(updatedCharacter)
+                        });
+                        this.$refs.appmap.updateMap();
+
+
+                    }
+                }
             },
+            // Récupère l'investigateur dont l'id est passé en paramètre
+            getInvestigator(id)
+            {
+                return this.investigators.find(function(investigator){
+                    return investigator.id == id;
+                });
+            },
+            // Définit un nouveau site, appelé au clique sur un site
             setNewSite(data)
             {
                 if(this.upkeepStep == 1)
@@ -217,20 +243,13 @@
                     this.lastClicked = data;
                     // définition du personage en cours
                     var currentCharacter = this.lostInvestigators[this.current];
+                    // définition du nouveau site
                     currentCharacter.newSiteId = this.lastClicked.id;
                     currentCharacter.newSiteName = this.lastClicked.name;
-                    console.log(currentCharacter)
-                    this.nextCurrent();
-                    // this.$refs.appmap.updateSites();
+                    currentCharacter.newSiteNameText = this.lastClicked.name.replace('-<br>-', '').replace('<br>', ' ');
 
-                    // on recherche le personnage avec l'id en cours
-                    // var updatedCharacter = this.investigators.find(function(investigator){
-                    //     return investigator.id == currentCharacter.id;
-                    // });
-                    // On lui donne un nouveau site et on redéfinit son statut à ok
-                    // updatedCharacter.siteId = this.lastClicked.id;
-                    // updatedCharacter.status = "ok";
-                    // console.log(updatedCharacter)
+                    // Prochain joueur
+                    this.nextCurrent();
                 }
             },
             nextCurrent()
@@ -246,8 +265,18 @@
                 else if((this.current +1) == this.lostInvestigators.length)
                 {
                     this.next = true;
-                    console.log('ici')
                 }
+            },
+            resetSite(id)
+            {
+                console.log('reset');
+                console.log(id);
+                // changement du joueur en cours et reset de ses valeurs newsite
+                this.current = id;
+                this.lostInvestigators[this.current].newSiteId = "";
+                this.lostInvestigators[this.current].newSiteName = "";
+                this.lostInvestigators[this.current].newSiteNameText = "";
+                this.next = false;
             },
             log (message)
             {
@@ -268,8 +297,8 @@
             self.investigators.forEach(function(investigator){
                 if(investigator.status == 'lost') self.lostInvestigators.push(investigator);
             });
-            // On ne rend visible que le bouton du premier
             self.lostInvestigators.forEach(function(lost, index){
+                // On ne rend visible que le bouton du premier
                 if(index== 0) lost.visible = true;
                 else lost.visible = false;
             });
@@ -311,4 +340,10 @@
     {
         margin: 2px;
     }
+
+    .btn-investigator
+    {
+        margin: 5px;
+    }
+
 </style>
