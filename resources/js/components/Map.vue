@@ -89,8 +89,8 @@
                     <div class="investigator"
                         v-for="(char,index) of special.character"
                         v-bind:class="'investigator_'+(index+1)"
-                        v-bind:id="char.replace(' ','_')"
-                        v-html="char"
+                        v-bind:id="char.name.replace(' ','_')"
+                        v-html="char.name"
                         v-bind:key="index">
                     </div>
                 </transition-group>
@@ -100,8 +100,8 @@
                     <div  class="monster truncate"
                         v-for="(mons,index) of special.monster"
                         v-bind:class="'monster_'+(index+1)"
-                        v-bind:id="mons"
-                        v-html="mons"
+                        v-bind:id="mons.name"
+                        v-html="mons.name"
                         v-bind:key="index">
                     </div>
                 </transition-group>
@@ -160,7 +160,8 @@
             "sites",
             "beyond",
             "specials",
-            "monsters"
+            "monsters",
+            "objects"
         ],
         data: function(){
             return {
@@ -274,12 +275,11 @@
             // Mise a jour de l'affichage des monstres et investigateurs
             updateMap()
             {
-                // Penser a vider perdu dans le temps et l'espace
-                // et à vérifier si l'on ne perd pas des joueurs qui devraient y rester
+                // remise à zero et affichage
                 this.rebootMap();
-                this.rebootLost()
                 this.updateSites();
             },
+            // Vide de chaque lieux
             rebootMap()
             {
                 this.sites.forEach(function(site) {
@@ -287,11 +287,12 @@
                     site.character = [];
                 });
             },
-            // Remise a zero de des joueurs perdus dans le temps et l'espace
+            // Remise a zero des joueurs perdus dans le temps et l'espace
             rebootLost()
             {
                 this.specials[0].character = [];
             },
+            // Affichage des investigateurs et monstres
             updateSites()
             {
                 // Ajout des monstres sur la map
@@ -302,7 +303,6 @@
                         if( site.id == monster.siteId ) site.monster.push(monster.name);
                     });
                 });
-
                 // Ajout des INVESTIGATEURS sur la map
                 this.investigators.forEach((investigator) => {
                 // Pour chacun des monstres dans monsters
@@ -418,14 +418,19 @@
         div .special36
         {
             bottom: 2px;
-            left: 2px;
+            right: 2px;
         }
         div .special37
         {
             bottom: 2px;
-            right: 2px;
+            left: 2px;
         }
         div .special38
+        {
+            bottom: 90px;
+            left: 2px;
+        }
+        div .special39
         {
             bottom: 90px;
             right: 2px;
@@ -1325,8 +1330,7 @@
         }
         .portal_token
         {
-            top: -2px;
-            right: 22px;
+            top: 15px;
             height: 45px;
             width: 45px;
             background-color: black;

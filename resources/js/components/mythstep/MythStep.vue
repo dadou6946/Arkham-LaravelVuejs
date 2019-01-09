@@ -212,7 +212,8 @@
                 specials: [
                     { name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: []},
                     { name: 'Ciel',                                   id: 37, monster: []},
-                    { name: 'Périphérie',                             id: 38, monster: []}
+                    { name: 'Périphérie',                             id: 38, monster: []},
+                    { name: 'Cellule de prison',                      id: 39, monster: []}
                 ],
 
             }
@@ -343,9 +344,10 @@
         mounted(){
 
             // Affichage de la carte mythe au bout d'une seconde
-            var self = this;
-            setTimeout(function(){
-                self.hide.mythImage = false;
+            setTimeout(() => {
+                this.hide.mythImage = false;
+                // passage à la séquence de mythe suivante
+                this.next();
             },1000);
 
 

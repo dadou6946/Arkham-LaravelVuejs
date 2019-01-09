@@ -8,6 +8,7 @@
                      :beyond="beyond"
                      :specials="specials"
                      :monsters="monsters"
+                     :objects="objects"
                      @wasClicked="setNewSite($event)"
                      ref="appmap"></app-map>
 
@@ -114,6 +115,13 @@
                     { id:4, name: "Peggy Green", siteId:6, status:"retarded" },
                     { id:5, name: "Mark Harrigan", siteId:36, status:"lost" },
                 ],
+                objects: [
+                    {
+                        id: 1,
+                        nom: "Lance-flamme",
+                        status: false
+                    }
+                ],
                 monsters: [
                     { id:1, name:"Chthonien", siteId:11, symbol:"triangle", habilities: {}},
                     { id:2, name:"Migo",      siteId:1,  symbol:"cercle",   habilities: {}},
@@ -158,43 +166,44 @@
 
                 ],
                 beyond : [
-                    { name: 'Une autre<br>dimension',   colors: [], steps: [
+                    { id: 1, name: 'Une autre<br>dimension',   colors: [], steps: [
                                                                                 { id: 1, position: 1, character: [], monster: []},
                                                                                 { id: 2, position: 2, character: [], monster: []}
                                                                             ]},
-                    { name: 'Les Abysses',              colors: [], steps: [
+                    { id: 2, name: 'Les Abysses',              colors: [], steps: [
                                                                                 { id: 3, position: 1, character: [], monster: []},
                                                                                 { id: 4, position: 2, character: [], monster: []}
                                                                             ]},
-                    { name: 'Cité de la<br>Grand Race', colors: [], steps: [
+                    { id: 3, name: 'Cité de la<br>Grand Race', colors: [], steps: [
                                                                                 { id: 5, position: 1, character: [], monster: []},
                                                                                 { id: 6, position: 2, character: [], monster: []}
                                                                             ]},
-                    { name: 'Yuggoth',                  colors: [], steps: [
+                    { id: 4, name: 'Yuggoth',                  colors: [], steps: [
                                                                                 { id: 7, position: 1, character: [], monster: []},
                                                                                 { id: 8, position: 2, character: [], monster: []}
                                                                             ]},
-                    { name: 'Grand Hall<br>de Celeano', colors: [], steps: [
+                    { id: 5, name: 'Grand Hall<br>de Celeano', colors: [], steps: [
                                                                                 { id: 9, position: 1, character: [], monster: []},
                                                                                 { id: 10, position: 2, character: [], monster: []}
                                                                             ]},
-                    { name: 'Les contrées<br>du rêve',  colors: [], steps: [
+                    { id: 6, name: 'Les contrées<br>du rêve',  colors: [], steps: [
                                                                                 { id: 11, position: 1, character: [], monster: []},
                                                                                 { id: 12, position: 2, character: [], monster: []}
                                                                             ]},
-                    { name: 'Plateau<br>de Leng',       colors: [], steps: [
+                    { id: 7, name: 'Plateau<br>de Leng',       colors: [], steps: [
                                                                                 { id: 13, position: 1, character: [], monster: []},
                                                                                 { id: 14, position: 2, character: [], monster: []}
                                                                             ]},
-                    { name: 'R\'lyeh',                  colors: [], steps: [
+                    { id: 8, name: 'R\'lyeh',                  colors: [], steps: [
                                                                                 { id: 15, position: 1, character: [], monster: []},
                                                                                 { id: 16, position: 2, character: [], monster: []}
                                                                             ]}
                 ],
                 specials: [
-                    { name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: ["Francis Sailor","Mark Harrigan"]},
+                    { name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: [{id: 2, name: "Francis Sailor"},{id: 5, name: "Mark Harrigan"}]},
                     { name: 'Ciel',                                   id: 37, monster: []},
-                    { name: 'Périphérie',                             id: 38, monster: []}
+                    { name: 'Périphérie',                             id: 38, monster: []},
+                    { name: 'Cellule de prison',                      id: 39, monster: []}
                 ],
 
             }
@@ -205,33 +214,53 @@
                 if(this.upkeepStep<4)
                 {
                     this.upkeepStep++
-                    // console.log(this.upkeepStep)
-                    // Phase de rechargement des cartes
-                    if(this.upkeepStep == 2 )
+                    switch(this.upkeepStep)
                     {
-                        var self = this;
-                        // Modification de site des investigateurs perdus dans le temps et l'espace
-                        self.lostInvestigators.forEach(function(lost)
-                        {
-                            var lostId = lost.id;
-                            // on recherche le personnage avec l'id en cours
-                            var updatedCharacter = self.getInvestigator(lostId);
-                            // On lui donne un nouveau site et on redéfinit son statut à ok
-                            updatedCharacter.siteId = lost.newSiteId;
-                            updatedCharacter.status = "ok";
-                            console.log(updatedCharacter)
-                        });
-                        this.$refs.appmap.updateMap();
+                        case 2:
+                            // Début de phase de rechargement des cartes (donc prise en compte du mouvement des investigateurs qui sortent de perdu dans le temps et l'espace)
+                            // Modification de site des investigateurs perdus dans le temps et l'espace
+                            this.lostInvestigators.forEach((lost) =>
+                            {
+                                // on recherche le personnage avec l'id en cours
+                                var updatedCharacter = this.getInvestigator(lost.id);
+                                // Enregistremet de l'id de l'ancien site
+                                var oldSite = updatedCharacter.siteId;
+                                // On donne au personnage en cours le nouveau site et on redéfinit son statut à ok
+                                updatedCharacter.siteId = lost.newSiteId;
+                                updatedCharacter.status = "ok";
+                                // vide des joueurs perdus dans le temps et l'espace
+                                // Reste à vérifier si l'on ne perd pas des joueurs qui devraient y rester : voir s'il y a des règles qui font que certains devraient rester
+                                this.deleteLost(updatedCharacter.id);
+                            });
+                            this.$refs.appmap.updateMap();
+                            // Rechargement de tous les objets
+                            this.objects.forEach((object) => {
+                                object.status = true;
 
-
+                            });
+                        break;
+                        case 3:
+                            // activation des actions d'entretien
+                            console.log("actions d'entretien");
+                        break;
                     }
+
                 }
             },
             // Récupère l'investigateur dont l'id est passé en paramètre
             getInvestigator(id)
             {
-                return this.investigators.find(function(investigator){
+                return this.investigators.find((investigator) => {
                     return investigator.id == id;
+                });
+            },
+            // Supression de l'investigateur dont l'id est en paramètres de "perdu dans le temps et l'espace"
+            deleteLost(id)
+            {
+                // pour chaque investigateur perdu dans le temps et l'espace
+                this.specials[0].character.forEach((char, index) => {
+                    // si son id est celui recherché, on le supprime du lieu perdu dans le temps et l'espace
+                    if(char.id == id) this.specials[0].character.splice(index, 1);
                 });
             },
             // Définit un nouveau site, appelé au clique sur un site
@@ -269,8 +298,6 @@
             },
             resetSite(id)
             {
-                console.log('reset');
-                console.log(id);
                 // changement du joueur en cours et reset de ses valeurs newsite
                 this.current = id;
                 this.lostInvestigators[this.current].newSiteId = "";
@@ -289,15 +316,13 @@
             }
         },
         updated(){
-
         },
         mounted(){
-            var self = this;
             // On récupère les investigateurs perdus dans le temps et l'espace
-            self.investigators.forEach(function(investigator){
-                if(investigator.status == 'lost') self.lostInvestigators.push(investigator);
+            this.investigators.forEach((investigator) => {
+                if(investigator.status == 'lost') this.lostInvestigators.push(investigator);
             });
-            self.lostInvestigators.forEach(function(lost, index){
+            this.lostInvestigators.forEach((lost, index) => {
                 // On ne rend visible que le bouton du premier
                 if(index== 0) lost.visible = true;
                 else lost.visible = false;
