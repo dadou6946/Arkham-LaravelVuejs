@@ -211,7 +211,7 @@
         methods: {
             nextUpkeepStep()
             {
-                if(this.upkeepStep<4)
+                if(this.upkeepStep<5)
                 {
                     this.upkeepStep++
                     switch(this.upkeepStep)
@@ -242,6 +242,11 @@
                         case 3:
                             // activation des actions d'entretien
                             console.log("actions d'entretien");
+                        break;
+                        case 5:
+                            // activation des actions d'entretien
+                            console.log("actions d'entretien");
+                            this.$router.push('move-step');
                         break;
                     }
 

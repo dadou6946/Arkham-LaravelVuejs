@@ -7,16 +7,118 @@
                 style="transform: translateX(0px);z-index:980;"
                 v-if="navbar.investigator">
 
-                    <div class="waves-effect waves-light valign-wrapper"
+                    <div class="waves-effect waves-light"
                         v-for="(investigator, index) of investigators"
-                        style="margin:7px;border-radius:5px;margin-top:-15px;padding-top:-15px;font-size:15px;"
+                        style="margin:3px;border-radius:5px;font-size:14px;"
                         @click="showInvestigator(investigator.name)">
                         <span v-html="investigator.name"></span>
                     </div>
 
                     <div v-if="investigatorPreview!=''">
-                        <div class="card teal lighten-4"
-                            v-html="investigatorPreview"></div>
+                        <div class="">
+
+                            <!-- Début de la fiche personnage -->
+                            <!-- ---------------------------- -->
+                            <div id="investigator_container_1" class="investigator_container row panel-body">
+                                <div class="text-center">
+                                    <div id="photo_1" class="pull-left">
+                                        <img class="photo" src="fw\assets\img\characters\portraits\JennyBarnes.png" alt="">
+                                    </div>
+
+                                    <div id="top_comp" class="pull-right text-center">
+                                        <h3 id="name1">{{investigatorPreview}}</h3>
+                                        <!-- <h3 id="name2">Barnes</h3> -->
+                                        <h5>La Dilettante</h5><hr>
+                                        <h5>Santé mentale: 6/6</h5>
+                                        <h5>Résistance: 4/4</h5><hr>
+                                    </div>
+
+                                    <div id="equipment" class="text-left col-md-12 col-lg-12">
+                                        <span id="house">Maison: </span><span>Gare</span>
+                                        <h5>Possessions fixes</h5>
+                                        <span>10$</span>
+                                        <h5>Possessions aléatoires</h5>
+                                        <span>1@Compétence, 1@Sort, 1@Objet Unique, 2@Objets Communs</span>
+                                        <h5>Concentration: 1</h5><hr>
+                                    </div>
+
+                                    <div id="capacity" class="text-left col-md-12 col-lg-12"><h5>Héritage</h5>
+                                                <span>
+                            <b>Entretien:</b> Jenny gagne 1$.</span></div>
+
+                                    <div id="compétence" class="text-left col-md-6 col-lg-6">
+                                        <ul class="list-unstyled">
+                                            <li>Discression</li>
+                                            <li>Vitesse</li>
+                                            <br>
+                                            <li>Combat</li>
+                                            <li>Volonté</li>
+                                            <br>
+                                            <li>Savoir</li>
+                                            <li>Chance</li>
+                                        </ul>
+                                    </div>
+
+                                    <div id="numbers" class="text-left col-md-6 col-lg-6">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li class="marker_top">1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li class="marker_bot">3</li>
+                                                    <li>2</li>
+                                                    <li>1</li>
+                                                    <li>0</li>
+                                                </ul>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li>3</li>
+                                                    <li>2</li>
+                                                    <li class="marker_top">1</li>
+                                                    <li>0</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li class="marker_bot">4</li>
+                                                    <li>5</li>
+                                                </ul>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li class="marker_top">5</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li>5</li>
+                                                    <li>4</li>
+                                                    <li>3</li>
+                                                    <li class="marker_bot">2</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
             </nav>
         </transition>
