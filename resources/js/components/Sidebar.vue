@@ -3,123 +3,104 @@
         <!-- Sidebars apparaisant au clique sur les boutons -->
         <!-- Investigateurs -->
         <transition name="fade">
-            <nav id="sidebar-investigator" class="teal lighten-3 sidenav sidenav-fixed center-align"
-                style="transform: translateX(0px);z-index:980;"
+            <nav id="sidebar-investigator" class="teal lighten-3 sidenav sidenav-fixed"
+                style="transform: translateX(0px);z-index:980;width:370px;line-height:8pt;"
                 v-if="navbar.investigator">
 
-                    <div class="waves-effect waves-light"
+                    <div class="center-align">
+                        <button class="waves-effect waves-teal btn-flat btn-small"
                         v-for="(investigator, index) of investigators"
-                        style="margin:3px;border-radius:5px;font-size:14px;"
+                        style="margin:3px;border-radius:5px;font-size:10px;line-height: normal;"
                         @click="showInvestigator(investigator.name)">
-                        <span v-html="investigator.name"></span>
+                        <span v-html="investigator.name"></span></button>
                     </div>
+                    <hr>
 
-                    <div v-if="investigatorPreview!=''">
-                        <div class="">
-
-                            <!-- Début de la fiche personnage -->
-                            <!-- ---------------------------- -->
-                            <div id="investigator_container_1" class="investigator_container row panel-body">
-                                <div class="text-center">
-                                    <div id="photo_1" class="pull-left">
-                                        <img class="photo" src="fw\assets\img\characters\portraits\JennyBarnes.png" alt="">
+                    <transition name="fade" mode="out-in">
+                        <div v-for="investigator of investigators"
+                            v-if="investigatorPreview!='' && investigator.name == investigatorPreview"
+                            :key="investigator.name">
+                            <div class="row center-align lh-15">
+                                <img class="col-md-6 grey lighten-3 z-depth-3" :src="'/image/sheet/character/head/'+investigatorPreview.replace(' ', '')+'.png'"
+                                    :alt="investigatorPreview"
+                                    style="padding:12px;height:165px; width:auto;">
+                                <div class="col-md-6">
+                                    <h5 id="name">{{investigator.name}}</h5>
+                                    <span id="profession">La Diletante</span>
+                                    <hr>
+                                    <span id="sanity">Santé mentale: 6/6</span><br>
+                                    <span id="stamina">Résistance: 4/4</span><br>
+                                    <hr>
+                                    <span id="statut">Statut: ok</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <!-- Objets, maison et concentration -->
+                                <div class="col-md-6 lh-15" style="border-right: 1px solid #eee;">
+                                    <span id="house">Maison: </span><span>Gare</span>
+                                    <hr>
+                                    <span>Possessions fixes :</span><br>
+                                    <span>10$</span><br>
+                                    <span>Possessions aléatoires :</span><br>
+                                    <span>1 Compétence, 1 Sort, 1 Objet Unique, 2 Objets Communs</span>
+                                    <hr>
+                                    <span>Concentration: 1</span>
+                                </div>
+                                <!-- Compétences spéciales -->
+                                <div class="col-md-6" style="text-align:justify;">
+                                    <span class="lh-15">Héritage</span><br><br>
+                                    <span class="" style="font-size:13px;line-height:11pt;">
+                                        <!-- <b>Entretien:</b> Jenny gagne 1$. -->
+                                        <b>Entretien:</b> Les monstres et les portails ne peuvent pas apparaitre a l'endroit ou se trouve Kate à cause de son stabilitisateur de flux. Les monstres et les portails ne disparaissent cependant pas quand elle rentre dans un lieu, et les monstres peuvent entre normalement dans un lieu ou elle se trouve.
+                                    </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row lh-15">
+                                <!-- textes d'aptitudes -->
+                                <div class="col-xs-4">
+                                    <div class="skills mt-5">
+                                        <div>vitesse :</div>
+                                        <div>discretion:</div>
                                     </div>
-
-                                    <div id="top_comp" class="pull-right text-center">
-                                        <h3 id="name1">{{investigatorPreview}}</h3>
-                                        <!-- <h3 id="name2">Barnes</h3> -->
-                                        <h5>La Dilettante</h5><hr>
-                                        <h5>Santé mentale: 6/6</h5>
-                                        <h5>Résistance: 4/4</h5><hr>
+                                    <div class="skills mt-25">
+                                        <div>vigueur:</div>
+                                        <div>volonté:</div>
                                     </div>
-
-                                    <div id="equipment" class="text-left col-md-12 col-lg-12">
-                                        <span id="house">Maison: </span><span>Gare</span>
-                                        <h5>Possessions fixes</h5>
-                                        <span>10$</span>
-                                        <h5>Possessions aléatoires</h5>
-                                        <span>1@Compétence, 1@Sort, 1@Objet Unique, 2@Objets Communs</span>
-                                        <h5>Concentration: 1</h5><hr>
+                                    <div class="skills mt-25">
+                                        <div>savoir:</div>
+                                        <div>chance:</div>
                                     </div>
-
-                                    <div id="capacity" class="text-left col-md-12 col-lg-12"><h5>Héritage</h5>
-                                                <span>
-                            <b>Entretien:</b> Jenny gagne 1$.</span></div>
-
-                                    <div id="compétence" class="text-left col-md-6 col-lg-6">
-                                        <ul class="list-unstyled">
-                                            <li>Discression</li>
-                                            <li>Vitesse</li>
-                                            <br>
-                                            <li>Combat</li>
-                                            <li>Volonté</li>
-                                            <br>
-                                            <li>Savoir</li>
-                                            <li>Chance</li>
-                                        </ul>
+                                </div>
+                                <!-- valeurs -->
+                                <div class="col-xs-8">
+                                    <div v-for="(skills,index) of investigator.availableSkills" class="row row-skills text-center">
+                                        <div v-for="(value) of skills"
+                                            class="col-xs-3 skill"
+                                            v-html="value"
+                                            v-bind:class="investigator.skills[index] == value?globule(index):''"
+                                        >
+                                        </div>
+                                        <br>
+                                        <div v-if="index =='discretion' || index =='volonte'" v-html="'<br>'"></div>
                                     </div>
-
-                                    <div id="numbers" class="text-left col-md-6 col-lg-6">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="marker_top">1</li>
-                                                    <li>2</li>
-                                                    <li>3</li>
-                                                    <li>4</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="marker_bot">3</li>
-                                                    <li>2</li>
-                                                    <li>1</li>
-                                                    <li>0</li>
-                                                </ul>
-                                            </li>
-                                            <br>
-                                            <li>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li>3</li>
-                                                    <li>2</li>
-                                                    <li class="marker_top">1</li>
-                                                    <li>0</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li>2</li>
-                                                    <li>3</li>
-                                                    <li class="marker_bot">4</li>
-                                                    <li>5</li>
-                                                </ul>
-                                            </li>
-                                            <br>
-                                            <li>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li>2</li>
-                                                    <li>3</li>
-                                                    <li>4</li>
-                                                    <li class="marker_top">5</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li>5</li>
-                                                    <li>4</li>
-                                                    <li>3</li>
-                                                    <li class="marker_bot">2</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row lh-15">
+                                <span id="objets">Objets</span>
+                                <div class="row">
+                                    <div v-for="(object, index) of investigator.objects"
+                                        style="height:65px;"
+                                        class="card teal col-md-3"
+                                        v-html="object">
                                     </div>
-
                                 </div>
                             </div>
 
-
                         </div>
-                    </div>
+                    </transition>
             </nav>
         </transition>
 
@@ -152,7 +133,7 @@
             </nav>
         </transition>
 
-        <!-- Herault -->
+        <!-- Heraut -->
         <transition name="fade">
             <nav id="sidebar-herald" class="orange lighten-3"
                  style="z-index:990;height:100%;width:280px;position:absolute;right:0;"
@@ -202,11 +183,31 @@
                         herald: false,
                     },
                 investigators: [
-                    { name: "Joe Diamond"},
-                    { name: "Francis Sailor"},
-                    { name: "Jenny Barnes"},
-                    { name: "Daisie Walker"},
-                    { name: "Peggy Green"},
+                    { name: "Joe Diamond",
+                      skills: { vitesse: 3, discretion:4, vigueur:2, volonte:3, savoir:0, chance:3},
+                      availableSkills: { vitesse: [3,4,5,6], discretion:[4,3,2,1], vigueur:[2,3,4,5], volonte:[3,2,1,0], savoir:[0,1,2,3], chance:[3,2,1,0]},
+                      objects : ['Automatique 45']
+                    },
+                    { name: "Francis Sailor",
+                      skills: { vitesse: 1, discretion:5, vigueur:1, volonte:3, savoir:1, chance:5},
+                      availableSkills: { vitesse: [1,2,3,4], discretion:[5,4,3,2], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[1,2,3,4], chance:[5,4,3,2]},
+                      objects : ['Manteau sombre', 'Motocyclette']
+                    },
+                    { name: "Jenny Barnes",
+                      skills: { vitesse: 0, discretion:3, vigueur:2, volonte:3, savoir:0, chance:4},
+                      availableSkills: { vitesse: [0,1,2,3], discretion:[3,2,1,0], vigueur:[2,3,4,5], volonte:[3,2,1,0], savoir:[0,1,2,3], chance:[4,3,2,0]},
+                      objects : ['Dynamite', 'Lance-flammes', 'Hache', 'Grigri']
+                    },
+                    { name: "Daisy Walker",
+                      skills: { vitesse: 1, discretion:4, vigueur:1, volonte:3, savoir:2, chance:5},
+                      availableSkills: { vitesse: [1,2,3,4], discretion:[4,3,2,1], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[2,3,4,5], chance:[5,4,3,2]},
+                      objects : ['Croix', 'Lanterne']
+                    },
+                    { name: "Peggy Green",
+                      skills: { vitesse: 1, discretion:4, vigueur:1, volonte:3, savoir:2, chance:5},
+                      availableSkills: { vitesse: [1,2,3,4], discretion:[4,3,2,1], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[2,3,4,5], chance:[5,4,3,2]},
+                      objects : ['Porte bonheur']
+                    }
                 ],
                 investigatorPreview: "",
 
@@ -229,6 +230,16 @@
             continueAction () {
                 // console.log('ici')
                 // this.$router.push('choose-ancient')
+            },
+            globule(index)
+            {
+                switch(index)
+                {
+                    case "vitesse": case "vigueur": case "savoir":
+                        return "glob-top";
+                    case "discretion": case "volonte": case "chance":
+                        return "glob-bot";
+                }
             }
         }
     }
@@ -236,12 +247,47 @@
 </script>
 
 <style>
-        /*TRANSITIONS*/
-        .fade-enter-active, .fade-leave-active {
-            transition: opacity .75s;
-        }
-        .fade-enter, .fade-leave-to
-        {
-            opacity: 0;
-        }
+    /*TRANSITIONS*/
+    .fade-enter-active, .fade-leave-active
+    {
+        transition: opacity .75s;
+    }
+    .fade-enter, .fade-leave-to
+    {
+        opacity: 0;
+    }
+    /*aptitudes*/
+    .row-skills
+    {
+        margin-bottom: 0;
+    }
+    .lh-15
+    {
+        line-height:15pt;
+    }
+    .mt-25
+    {
+        margin-top: 25px;
+    }
+    .mt-5
+    {
+        margin-top: 5px;
+    }
+    .glob-top
+    {
+        border: 3px solid;
+        border-color: red red transparent red;
+        border-radius: 8px 8px 0 0;
+    }
+    .glob-bot
+    {
+        border: 3px solid;
+        border-color: transparent blue blue blue;
+        border-radius: 0 0 8px 8px;
+    }
+    hr
+    {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 </style>

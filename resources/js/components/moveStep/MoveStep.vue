@@ -16,8 +16,6 @@
                               :route="modalTexts.route">
             </app-simple-modal>
         </body>
-
-
 </template>
 
 <script>

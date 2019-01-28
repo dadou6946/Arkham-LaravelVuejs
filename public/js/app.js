@@ -18434,7 +18434,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active\n{\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n/*aptitudes*/\n.row-skills\n{\n    margin-bottom: 0;\n}\n.lh-15\n{\n    line-height:15pt;\n}\n.mt-25\n{\n    margin-top: 25px;\n}\n.mt-5\n{\n    margin-top: 5px;\n}\n.glob-top\n{\n    border: 3px solid;\n    border-color: red red transparent red;\n    border-radius: 8px 8px 0 0;\n}\n.glob-bot\n{\n    border: 3px solid;\n    border-color: transparent blue blue blue;\n    border-radius: 0 0 8px 8px;\n}\nhr\n{\n    margin-top: 10px;\n    margin-bottom: 10px;\n}\n", ""]);
 
 // exports
 
@@ -18445,25 +18445,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -18647,7 +18628,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 guardian: false,
                 herald: false
             },
-            investigators: [{ name: "Joe Diamond" }, { name: "Francis Sailor" }, { name: "Jenny Barnes" }, { name: "Daisie Walker" }, { name: "Peggy Green" }],
+            investigators: [{ name: "Joe Diamond",
+                skills: { vitesse: 3, discretion: 4, vigueur: 2, volonte: 3, savoir: 0, chance: 3 },
+                availableSkills: { vitesse: [3, 4, 5, 6], discretion: [4, 3, 2, 1], vigueur: [2, 3, 4, 5], volonte: [3, 2, 1, 0], savoir: [0, 1, 2, 3], chance: [3, 2, 1, 0] },
+                objects: ['Automatique 45']
+            }, { name: "Francis Sailor",
+                skills: { vitesse: 1, discretion: 5, vigueur: 1, volonte: 3, savoir: 1, chance: 5 },
+                availableSkills: { vitesse: [1, 2, 3, 4], discretion: [5, 4, 3, 2], vigueur: [1, 2, 3, 4], volonte: [3, 2, 1, 0], savoir: [1, 2, 3, 4], chance: [5, 4, 3, 2] },
+                objects: ['Manteau sombre', 'Motocyclette']
+            }, { name: "Jenny Barnes",
+                skills: { vitesse: 0, discretion: 3, vigueur: 2, volonte: 3, savoir: 0, chance: 4 },
+                availableSkills: { vitesse: [0, 1, 2, 3], discretion: [3, 2, 1, 0], vigueur: [2, 3, 4, 5], volonte: [3, 2, 1, 0], savoir: [0, 1, 2, 3], chance: [4, 3, 2, 0] },
+                objects: ['Dynamite', 'Lance-flammes', 'Hache', 'Grigri']
+            }, { name: "Daisy Walker",
+                skills: { vitesse: 1, discretion: 4, vigueur: 1, volonte: 3, savoir: 2, chance: 5 },
+                availableSkills: { vitesse: [1, 2, 3, 4], discretion: [4, 3, 2, 1], vigueur: [1, 2, 3, 4], volonte: [3, 2, 1, 0], savoir: [2, 3, 4, 5], chance: [5, 4, 3, 2] },
+                objects: ['Croix', 'Lanterne']
+            }, { name: "Peggy Green",
+                skills: { vitesse: 1, discretion: 4, vigueur: 1, volonte: 3, savoir: 2, chance: 5 },
+                availableSkills: { vitesse: [1, 2, 3, 4], discretion: [4, 3, 2, 1], vigueur: [1, 2, 3, 4], volonte: [3, 2, 1, 0], savoir: [2, 3, 4, 5], chance: [5, 4, 3, 2] },
+                objects: ['Porte bonheur']
+            }],
             investigatorPreview: ""
 
         };
@@ -18665,6 +18666,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         continueAction: function continueAction() {
             // console.log('ici')
             // this.$router.push('choose-ancient')
+        },
+        globule: function globule(index) {
+            switch (index) {
+                case "vitesse":case "vigueur":case "savoir":
+                    return "glob-top";
+                case "discretion":case "volonte":case "chance":
+                    return "glob-bot";
+            }
         }
     }
 });
@@ -18685,319 +18694,264 @@ var render = function() {
           ? _c(
               "nav",
               {
-                staticClass:
-                  "teal lighten-3 sidenav sidenav-fixed center-align",
-                staticStyle: { transform: "translateX(0px)", "z-index": "980" },
+                staticClass: "teal lighten-3 sidenav sidenav-fixed",
+                staticStyle: {
+                  transform: "translateX(0px)",
+                  "z-index": "980",
+                  width: "370px",
+                  "line-height": "8pt"
+                },
                 attrs: { id: "sidebar-investigator" }
               },
               [
-                _vm._l(_vm.investigators, function(investigator, index) {
-                  return _c(
-                    "div",
-                    {
-                      staticClass: "waves-effect waves-light",
-                      staticStyle: {
-                        margin: "3px",
-                        "border-radius": "5px",
-                        "font-size": "14px"
-                      },
-                      on: {
-                        click: function($event) {
-                          _vm.showInvestigator(investigator.name)
+                _c(
+                  "div",
+                  { staticClass: "center-align" },
+                  _vm._l(_vm.investigators, function(investigator, index) {
+                    return _c(
+                      "button",
+                      {
+                        staticClass:
+                          "waves-effect waves-teal btn-flat btn-small",
+                        staticStyle: {
+                          margin: "3px",
+                          "border-radius": "5px",
+                          "font-size": "10px",
+                          "line-height": "normal"
+                        },
+                        on: {
+                          click: function($event) {
+                            _vm.showInvestigator(investigator.name)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _c("span", {
-                        domProps: { innerHTML: _vm._s(investigator.name) }
-                      })
-                    ]
-                  )
-                }),
+                      },
+                      [
+                        _c("span", {
+                          domProps: { innerHTML: _vm._s(investigator.name) }
+                        })
+                      ]
+                    )
+                  })
+                ),
                 _vm._v(" "),
-                _vm.investigatorPreview != ""
-                  ? _c("div", [
-                      _c("div", {}, [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "investigator_container row panel-body",
-                            attrs: { id: "investigator_container_1" }
-                          },
-                          [
-                            _c("div", { staticClass: "text-center" }, [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "pull-left",
-                                  attrs: { id: "photo_1" }
-                                },
-                                [
-                                  _c("img", {
-                                    staticClass: "photo",
-                                    attrs: {
-                                      src:
-                                        "fw\\assets\\img\\characters\\portraits\\JennyBarnes.png",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              ),
+                _c("hr"),
+                _vm._v(" "),
+                _c(
+                  "transition",
+                  { attrs: { name: "fade", mode: "out-in" } },
+                  _vm._l(_vm.investigators, function(investigator) {
+                    return _vm.investigatorPreview != "" &&
+                      investigator.name == _vm.investigatorPreview
+                      ? _c("div", { key: investigator.name }, [
+                          _c("div", { staticClass: "row center-align lh-15" }, [
+                            _c("img", {
+                              staticClass: "col-md-6 grey lighten-3 z-depth-3",
+                              staticStyle: {
+                                padding: "12px",
+                                height: "165px",
+                                width: "auto"
+                              },
+                              attrs: {
+                                src:
+                                  "/image/sheet/character/head/" +
+                                  _vm.investigatorPreview.replace(" ", "") +
+                                  ".png",
+                                alt: _vm.investigatorPreview
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _c("h5", { attrs: { id: "name" } }, [
+                                _vm._v(_vm._s(investigator.name))
+                              ]),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "pull-right text-center",
-                                  attrs: { id: "top_comp" }
-                                },
-                                [
-                                  _c("h3", { attrs: { id: "name1" } }, [
-                                    _vm._v(_vm._s(_vm.investigatorPreview))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("La Dilettante")]),
-                                  _c("hr"),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("Santé mentale: 6/6")]),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("Résistance: 4/4")]),
-                                  _c("hr")
-                                ]
-                              ),
+                              _c("span", { attrs: { id: "profession" } }, [
+                                _vm._v("La Diletante")
+                              ]),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "text-left col-md-12 col-lg-12",
-                                  attrs: { id: "equipment" }
-                                },
-                                [
-                                  _c("span", { attrs: { id: "house" } }, [
-                                    _vm._v("Maison: ")
-                                  ]),
-                                  _c("span", [_vm._v("Gare")]),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("Possessions fixes")]),
-                                  _vm._v(" "),
-                                  _c("span", [_vm._v("10$")]),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("Possessions aléatoires")]),
-                                  _vm._v(" "),
-                                  _c("span", [
-                                    _vm._v(
-                                      "1@Compétence, 1@Sort, 1@Objet Unique, 2@Objets Communs"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("Concentration: 1")]),
-                                  _c("hr")
-                                ]
-                              ),
+                              _c("hr"),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "text-left col-md-12 col-lg-12",
-                                  attrs: { id: "capacity" }
-                                },
-                                [
-                                  _c("h5", [_vm._v("Héritage")]),
-                                  _vm._v(" "),
-                                  _c("span", [
-                                    _c("b", [_vm._v("Entretien:")]),
-                                    _vm._v(" Jenny gagne 1$.")
-                                  ])
-                                ]
-                              ),
+                              _c("span", { attrs: { id: "sanity" } }, [
+                                _vm._v("Santé mentale: 6/6")
+                              ]),
+                              _c("br"),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "text-left col-md-6 col-lg-6",
-                                  attrs: { id: "compétence" }
-                                },
-                                [
-                                  _c("ul", { staticClass: "list-unstyled" }, [
-                                    _c("li", [_vm._v("Discression")]),
-                                    _vm._v(" "),
-                                    _c("li", [_vm._v("Vitesse")]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(" "),
-                                    _c("li", [_vm._v("Combat")]),
-                                    _vm._v(" "),
-                                    _c("li", [_vm._v("Volonté")]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(" "),
-                                    _c("li", [_vm._v("Savoir")]),
-                                    _vm._v(" "),
-                                    _c("li", [_vm._v("Chance")])
-                                  ])
-                                ]
-                              ),
+                              _c("span", { attrs: { id: "stamina" } }, [
+                                _vm._v("Résistance: 4/4")
+                              ]),
+                              _c("br"),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "text-left col-md-6 col-lg-6",
-                                  attrs: { id: "numbers" }
-                                },
-                                [
-                                  _c("ul", { staticClass: "list-unstyled" }, [
-                                    _c("li", [
-                                      _c(
-                                        "ul",
-                                        {
-                                          staticClass:
-                                            "list-unstyled list-inline"
-                                        },
-                                        [
-                                          _c(
-                                            "li",
-                                            { staticClass: "marker_top" },
-                                            [_vm._v("1")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("2")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("3")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("4")])
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("li", [
-                                      _c(
-                                        "ul",
-                                        {
-                                          staticClass:
-                                            "list-unstyled list-inline"
-                                        },
-                                        [
-                                          _c(
-                                            "li",
-                                            { staticClass: "marker_bot" },
-                                            [_vm._v("3")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("2")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("1")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("0")])
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(" "),
-                                    _c("li", [
-                                      _c(
-                                        "ul",
-                                        {
-                                          staticClass:
-                                            "list-unstyled list-inline"
-                                        },
-                                        [
-                                          _c("li", [_vm._v("3")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("2")]),
-                                          _vm._v(" "),
-                                          _c(
-                                            "li",
-                                            { staticClass: "marker_top" },
-                                            [_vm._v("1")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("0")])
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("li", [
-                                      _c(
-                                        "ul",
-                                        {
-                                          staticClass:
-                                            "list-unstyled list-inline"
-                                        },
-                                        [
-                                          _c("li", [_vm._v("2")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("3")]),
-                                          _vm._v(" "),
-                                          _c(
-                                            "li",
-                                            { staticClass: "marker_bot" },
-                                            [_vm._v("4")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("5")])
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(" "),
-                                    _c("li", [
-                                      _c(
-                                        "ul",
-                                        {
-                                          staticClass:
-                                            "list-unstyled list-inline"
-                                        },
-                                        [
-                                          _c("li", [_vm._v("2")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("3")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("4")]),
-                                          _vm._v(" "),
-                                          _c(
-                                            "li",
-                                            { staticClass: "marker_top" },
-                                            [_vm._v("5")]
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("li", [
-                                      _c(
-                                        "ul",
-                                        {
-                                          staticClass:
-                                            "list-unstyled list-inline"
-                                        },
-                                        [
-                                          _c("li", [_vm._v("5")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("4")]),
-                                          _vm._v(" "),
-                                          _c("li", [_vm._v("3")]),
-                                          _vm._v(" "),
-                                          _c(
-                                            "li",
-                                            { staticClass: "marker_bot" },
-                                            [_vm._v("2")]
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ])
-                                ]
-                              )
+                              _c("hr"),
+                              _vm._v(" "),
+                              _c("span", { attrs: { id: "statut" } }, [
+                                _vm._v("Statut: ok")
+                              ])
                             ])
-                          ]
-                        )
-                      ])
-                    ])
-                  : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("hr"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "col-md-6 lh-15",
+                                staticStyle: {
+                                  "border-right": "1px solid #eee"
+                                }
+                              },
+                              [
+                                _c("span", { attrs: { id: "house" } }, [
+                                  _vm._v("Maison: ")
+                                ]),
+                                _c("span", [_vm._v("Gare")]),
+                                _vm._v(" "),
+                                _c("hr"),
+                                _vm._v(" "),
+                                _c("span", [_vm._v("Possessions fixes :")]),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("span", [_vm._v("10$")]),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("span", [
+                                  _vm._v("Possessions aléatoires :")
+                                ]),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("span", [
+                                  _vm._v(
+                                    "1 Compétence, 1 Sort, 1 Objet Unique, 2 Objets Communs"
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("hr"),
+                                _vm._v(" "),
+                                _c("span", [_vm._v("Concentration: 1")])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "col-md-6",
+                                staticStyle: { "text-align": "justify" }
+                              },
+                              [
+                                _c("span", { staticClass: "lh-15" }, [
+                                  _vm._v("Héritage")
+                                ]),
+                                _c("br"),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticStyle: {
+                                      "font-size": "13px",
+                                      "line-height": "11pt"
+                                    }
+                                  },
+                                  [
+                                    _c("b", [_vm._v("Entretien:")]),
+                                    _vm._v(
+                                      " Les monstres et les portails ne peuvent pas apparaitre a l'endroit ou se trouve Kate à cause de son stabilitisateur de flux. Les monstres et les portails ne disparaissent cependant pas quand elle rentre dans un lieu, et les monstres peuvent entre normalement dans un lieu ou elle se trouve.\n                                "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("hr"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "row lh-15" }, [
+                            _c("div", { staticClass: "col-xs-4" }, [
+                              _c("div", { staticClass: "skills mt-5" }, [
+                                _c("div", [_vm._v("vitesse :")]),
+                                _vm._v(" "),
+                                _c("div", [_vm._v("discretion:")])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "skills mt-25" }, [
+                                _c("div", [_vm._v("vigueur:")]),
+                                _vm._v(" "),
+                                _c("div", [_vm._v("volonté:")])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "skills mt-25" }, [
+                                _c("div", [_vm._v("savoir:")]),
+                                _vm._v(" "),
+                                _c("div", [_vm._v("chance:")])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "col-xs-8" },
+                              _vm._l(investigator.availableSkills, function(
+                                skills,
+                                index
+                              ) {
+                                return _c(
+                                  "div",
+                                  { staticClass: "row row-skills text-center" },
+                                  [
+                                    _vm._l(skills, function(value) {
+                                      return _c("div", {
+                                        staticClass: "col-xs-3 skill",
+                                        class:
+                                          investigator.skills[index] == value
+                                            ? _vm.globule(index)
+                                            : "",
+                                        domProps: { innerHTML: _vm._s(value) }
+                                      })
+                                    }),
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    index == "discretion" || index == "volonte"
+                                      ? _c("div", {
+                                          domProps: {
+                                            innerHTML: _vm._s("<br>")
+                                          }
+                                        })
+                                      : _vm._e()
+                                  ],
+                                  2
+                                )
+                              })
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("hr"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "row lh-15" }, [
+                            _c("span", { attrs: { id: "objets" } }, [
+                              _vm._v("Objets")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "row" },
+                              _vm._l(investigator.objects, function(
+                                object,
+                                index
+                              ) {
+                                return _c("div", {
+                                  staticClass: "card teal col-md-3",
+                                  staticStyle: { height: "65px" },
+                                  domProps: { innerHTML: _vm._s(object) }
+                                })
+                              })
+                            )
+                          ])
+                        ])
+                      : _vm._e()
+                  })
+                )
               ],
-              2
+              1
             )
           : _vm._e()
       ]),
@@ -23348,7 +23302,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -23365,8 +23319,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Map_vue__);
-//
-//
 //
 //
 //
@@ -23565,7 +23517,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -23632,7 +23584,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             /*'Migo'*/{ name: "Quartier<br>Nord", id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 },
             /*'Cultiste'*/{ name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivière", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Université<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>Résidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
             beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cité de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contrées<br>du rêve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
-            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: [] }, { name: 'Ciel', id: 2, monster: [] }, { name: 'Périphérie', id: 3, monster: [] }]
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: [] }, { name: 'Ciel', id: 37, monster: [] }, { name: 'Périphérie', id: 38, monster: [] }, { name: 'Cellule de prison', id: 39, monster: [] }]
 
         };
     },
@@ -23782,7 +23734,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -23827,7 +23779,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    // d�claration des composants utilis�s
+    // déclaration des composants utilisés
     components: {
         'app-sidebar': __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default.a,
         'app-simple-modal': __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default.a,
@@ -23845,11 +23797,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             },
             investigators: [{ id: 1, name: "Joe Diamond", siteId: 3 }, { id: 2, name: "Francis Sailor", siteId: 1 }],
             monsters: [{ id: 1, name: "Chthonien", siteId: 11, symbol: "triangle", habilities: {} }, { id: 2, name: "Migo", siteId: 1, symbol: "cercle", habilities: {} }, { id: 3, name: "Cultiste", siteId: 3, symbol: "lune", habilities: {} }],
-            sites: [{ name: "Boutique<br>de<br>souvenir", id: "1", type: "site", character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Journal", id: "2", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Gare", id: "3", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Banque<br>d'Arkham", id: "4", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Asile<br>d'Arkham", id: "5", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Square de<br>l'ind�pen-<br>-dance", id: "6", type: "site", character: [], monster: [], event: [], clue: 1, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Relais<br>routier<br>de Hibb", id: "7", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Restaurant<br>de Velma", id: "8", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Poste<br>de<br>-polic9", id: "9", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "L'ile<br>inexplor�e", id: "10", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Les<br>quais", id: "11", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "l'Inno-<br>-mable", id: "12", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Le<br>cimeti�re", id: "13", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "La Caverne<br>noire", id: "14", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Le<br>magasin", id: "15", type: "site", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "D�partement<br>Scientifique", id: "16", type: "site", character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Adminis-<br>-tration", id: "17", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Biblio-<br>-th�que", id: "18", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Maison<br>de la<br>sorci�re", id: "19", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Loge du<br>cr�puscule<br>d'argent", id: "20", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "H�pital<br>Sainte<br>Marie", id: "21", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Vieille<br>�choppe<br>de magie", id: "22", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Les<br>bois", id: "23", type: "site", character: [], monster: [], event: [], clue: 1, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Pension<br>de Ma", id: "24", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Soci�t�<br>des<br>historiens", id: "25", type: "site", character: [], monster: [], event: [], clue: 1, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Eglise<br>m�ridionale", id: "26", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 },
+            sites: [{ name: "Boutique<br>de<br>souvenir", id: "1", type: "site", character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Journal", id: "2", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Gare", id: "3", type: "site", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Banque<br>d'Arkham", id: "4", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Asile<br>d'Arkham", id: "5", type: "site", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Square de<br>l'indépen-<br>-dance", id: "6", type: "site", character: [], monster: [], event: [], clue: 1, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Relais<br>routier<br>de Hibb", id: "7", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Restaurant<br>de Velma", id: "8", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Poste<br>de<br>-polic9", id: "9", type: "site", character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "L'ile<br>inexplorée", id: "10", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Les<br>quais", id: "11", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "l'Inno-<br>-mable", id: "12", type: "site", character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Le<br>cimetière", id: "13", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "La Caverne<br>noire", id: "14", type: "site", character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Le<br>magasin", id: "15", type: "site", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Département<br>Scientifique", id: "16", type: "site", character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Adminis-<br>-tration", id: "17", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Biblio-<br>-thèque", id: "18", type: "site", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Maison<br>de la<br>sorcière", id: "19", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Loge du<br>crépuscule<br>d'argent", id: "20", type: "site", character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Hôpital<br>Sainte<br>Marie", id: "21", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Vieille<br>échoppe<br>de magie", id: "22", type: "site", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Les<br>bois", id: "23", type: "site", character: [], monster: [], event: [], clue: 1, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Pension<br>de Ma", id: "24", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Société<br>des<br>historiens", id: "25", type: "site", character: [], monster: [], event: [], clue: 1, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Eglise<br>méridionale", id: "26", type: "site", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 },
             /*'Migo'*/{ name: "Quartier<br>Nord", id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 },
-            /*'Cultiste'*/{ name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivi�re", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Universit�<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>R�sidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
-            beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cit� de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contr�es<br>du r�ve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
-            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 1, character: [] }, { name: 'Ciel', id: 2, monster: [] }, { name: 'P�riph�rie', id: 3, monster: [] }]
+            /*'Cultiste'*/{ name: "Centre<br>Ville", id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivière", id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Université<br>Miskatonik", id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>Résidentiel", id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
+            beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cité de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contrées<br>du rêve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: [{ id: 2, name: "Francis Sailor" }, { id: 5, name: "Mark Harrigan" }] }, { name: 'Ciel', id: 37, monster: [] }, { name: 'Périphérie', id: 38, monster: [] }, { name: 'Cellule de prison', id: 39, monster: [] }]
 
         };
     },
