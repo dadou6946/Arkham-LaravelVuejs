@@ -4,15 +4,14 @@
         <!-- Investigateurs -->
         <transition name="fade">
             <nav id="sidebar-investigator" class="teal lighten-3 sidenav sidenav-fixed"
-                style="transform: translateX(0px);z-index:980;width:370px;line-height:8pt;"
                 v-if="navbar.investigator">
 
                     <div class="center-align">
-                        <button class="waves-effect waves-teal btn-flat btn-small"
-                        v-for="(investigator, index) of investigators"
-                        style="margin:3px;border-radius:5px;font-size:10px;line-height: normal;"
-                        @click="showInvestigator(investigator.name)">
-                        <span v-html="investigator.name"></span></button>
+                        <button class="waves-effect waves-teal btn-flat btn-small character-button"
+                            v-for="(investigator, index) of investigators"
+                            @click="showInvestigator(investigator.name)">
+                            <span v-html="investigator.name"></span>
+                        </button>
                     </div>
                     <hr>
 
@@ -21,9 +20,9 @@
                             v-if="investigatorPreview!='' && investigator.name == investigatorPreview"
                             :key="investigator.name">
                             <div class="row center-align lh-15">
-                                <img class="col-md-6 grey lighten-3 z-depth-3" :src="'/image/sheet/character/head/'+investigatorPreview.replace(' ', '')+'.png'"
-                                    :alt="investigatorPreview"
-                                    style="padding:12px;height:165px; width:auto;">
+                                <img class="col-md-6 grey lighten-3 z-depth-3 photo-character"
+                                    :src="'/image/sheet/character/head/'+investigatorPreview.replace(' ', '')+'.png'"
+                                    :alt="investigatorPreview">
                                 <div class="col-md-6">
                                     <h5 id="name">{{investigator.name}}</h5>
                                     <span id="profession">La Diletante</span>
@@ -37,7 +36,7 @@
                             <hr>
                             <div class="row">
                                 <!-- Objets, maison et concentration -->
-                                <div class="col-md-6 lh-15" style="border-right: 1px solid #eee;">
+                                <div class="col-md-6 lh-15" id="left-content">
                                     <span id="house">Maison: </span><span>Gare</span>
                                     <hr>
                                     <span>Possessions fixes :</span><br>
@@ -48,9 +47,9 @@
                                     <span>Concentration: 1</span>
                                 </div>
                                 <!-- Compétences spéciales -->
-                                <div class="col-md-6" style="text-align:justify;">
+                                <div class="col-md-6 justified-text">
                                     <span class="lh-15">Héritage</span><br><br>
-                                    <span class="" style="font-size:13px;line-height:11pt;">
+                                    <span id="capacity-text">
                                         <!-- <b>Entretien:</b> Jenny gagne 1$. -->
                                         <b>Entretien:</b> Les monstres et les portails ne peuvent pas apparaitre a l'endroit ou se trouve Kate à cause de son stabilitisateur de flux. Les monstres et les portails ne disparaissent cependant pas quand elle rentre dans un lieu, et les monstres peuvent entre normalement dans un lieu ou elle se trouve.
                                     </span>
@@ -89,15 +88,40 @@
                             </div>
                             <hr>
                             <div class="row lh-15">
-                                <span id="objets">Objets</span>
-                                <div class="row">
-                                    <div v-for="(object, index) of investigator.objects"
-                                        style="height:65px;"
-                                        class="card teal col-md-3"
-                                        v-html="object">
-                                    </div>
+                                <div class="col-md-6">
+                                    <span>Argent : 10$</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <span>Indices : <img id="clue-token-img" :src="'/image/token/clue.png'" alt="indices"> X 2</span><br>
+                                </div>
+                                <div class="col-md-12">
+                                    <span>Position : Journal</span>
                                 </div>
                             </div>
+
+                            <div class="row lh-15 text-center">
+                                <div class="col-md-6">
+                                    <button class="waves-effect waves-teal btn btn-small character-button">Compétences</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="waves-effect waves-teal btn btn-small character-button">Alliés</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="waves-effect waves-teal btn btn-small character-button">Objets</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="waves-effect waves-teal btn btn-small character-button">Trophés</button>
+                                </div>
+                            </div>
+
+
+                                <!-- <span id="objets">Objets</span><br>
+                                <div class="row">
+                                    <div v-for="(object, index) of investigator.objects"
+                                        class="card-panel col-md-3 black-text truncate text-center hoverable object-card"
+                                        v-html="object">
+                                    </div>
+                                </div> -->
 
                         </div>
                     </transition>
@@ -107,7 +131,6 @@
         <!-- gardien -->
         <transition name="fade">
             <nav id="sidebar-guardian" class="sidenav blue lighten-3"
-                style="transform: translateX(0px);z-index:990;height:100%;width:280px;position:absolute;right:0;"
                 v-if="navbar.guardian">
             </nav>
         </transition>
@@ -115,29 +138,67 @@
         <!-- Infos de partie -->
         <transition name="fade">
             <nav id="sidebar-game" class="cyan lighten-3"
-                 style="z-index:1000;width:100%;height:300px;position:absolute;bottom:0;"
                  v-if="navbar.game">
-                <div>
-                    <span>Tour n° 2</span><br>
-                    <span>Phase : mouvement</span><br>
-                    <span>Premier joueur : joueur 1 - Francis Sailor</span>
+                <div class="container">
+                    <div class="row lh-15 mt-25">
+                        <div class="col-md-6">
+                            <span>Tour n° 2</span><br>
+                            <span>Phase : Mouvement</span><br>
+                            <span>Premier joueur : joueur 1 - Francis Sailor</span><br>
+                            <span>Joueur actuel : joueur 1 - Francis Sailor</span><br>
+                            <span>Nombre de joueurs : 4</span><br>
+                            <button class="waves-effect waves-teal btn btn-small character-button">Conditions de victoire</button>
+                            <button class="waves-effect waves-teal btn btn-small character-button">Conditions de Défaite</button>
+                            <!-- <ul>
+                                <li>Sceller 6 portails</li>
+                                <li>Battre le grand Ancien</li>
+                                <li></li>
+                                <li></li>
+                            </ul> -->
+
+                        </div>
+                        <div class="col-md-6">
+                            <span>Environnement actif : aucun</span><br>
+                            <span>Rumeur active : aucune</span><br>
+                            <span>Niveau de terreur : 1/12</span><br>
+                            <span>Lieux fermés : aucun</span><br>
+                            <span>Echelle de l'ancien : 1/12</span><br>
+                            <span>Monstres en jeu/ nombre maximum : 2 / 6</span><br>
+                            <span>Monstres dans la périphérie/ nombre maximum : 0 / 6</span><br>
+                            <span>Portail actifs / nombre maximum : 1 / 6</span><br>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </transition>
 
         <!-- Ancient -->
         <transition name="fade">
-            <nav id="sidebar-ancient" class="red lighten-3"
-                 style="z-index:980;height:100%;width:300px;position:absolute;right:0;"
-                 v-if="navbar.ancient">
+            <nav id="sidebar-ancient"
+                class="red lighten-3"
+                v-if="navbar.ancient">
+                <div class="row">
+                    <img :src="'/image/sheet/ancient/head/'+ ancient.name +'.png'"
+                        class="col-md-12 grey lighten-3 z-depth-3"
+                        style="padding:6px;"
+                        :alt="ancient.name">
+                    <div class="col-md-12">
+                        <h5 id="name">{{ancient.name}}</h5>
+                    </div>
+                    <div class="col-md-6">
+                        <span id="combatValue">{{ancient.combatValue}}</span>
+                    </div>
+                    <div class="col-md-6">
+                        <span id="defensiveAbility">{{ancient.defensiveAbility.join(', ')}}</span>
+                    </div>
+                </div>
             </nav>
         </transition>
 
         <!-- Heraut -->
         <transition name="fade">
             <nav id="sidebar-herald" class="orange lighten-3"
-                 style="z-index:990;height:100%;width:280px;position:absolute;right:0;"
-                 v-if="navbar.herald">
+                v-if="navbar.herald">
             </nav>
         </transition>
 
@@ -167,7 +228,6 @@
         </div>
     </div>
 </template>
-
 
 <script>
     export default {
@@ -210,6 +270,25 @@
                     }
                 ],
                 investigatorPreview: "",
+                ancient :
+                {
+                    name: "Yig",
+                    combatValue: "-3",
+                    defensiveAbility: ["Résistance magique"],
+                    adorer: {
+                        text: ""
+                    },
+                    power: {
+
+                    },
+                    attack: {
+
+                    },
+                    ladder: {
+                        current: 1,
+                        maximum: 10
+                    }
+                }
 
             }
         },
@@ -247,6 +326,62 @@
 </script>
 
 <style>
+
+    /* BOUTONS */
+    button.character-button
+    {
+        margin:3px;
+        border-radius:5px;
+        font-size:10px;
+        line-height: normal;
+    }
+
+    /* SIDEBARS */
+    #sidebar-investigator
+    {
+        transform: translateX(0px);
+        z-index:980;
+        width:370px;
+        line-height:8pt;
+    }
+
+    #sidebar-guardian
+    {
+        transform: translateX(0px);
+        z-index:990;
+        height:100%;
+        width:280px;
+        position:absolute;
+        right:0;
+    }
+
+    #sidebar-game
+    {
+        z-index:1000;
+        width:100%;
+        height:300px;
+        position:absolute;
+        bottom:0;
+    }
+
+    #sidebar-ancient
+    {
+        z-index:980;
+        height:100%;
+        width:300px;
+        position:absolute;
+        right:0;
+    }
+
+    #sidebar-herald
+    {
+        z-index:990;
+        height:100%;
+        width:280px;
+        position:absolute;
+        right:0;
+    }
+
     /*TRANSITIONS*/
     .fade-enter-active, .fade-leave-active
     {
@@ -256,23 +391,19 @@
     {
         opacity: 0;
     }
+
+    /* Présentation */
+    img.photo-character
+    {
+        padding:12px;height:165px; width:auto;
+    }
+
     /*aptitudes*/
     .row-skills
     {
         margin-bottom: 0;
     }
-    .lh-15
-    {
-        line-height:15pt;
-    }
-    .mt-25
-    {
-        margin-top: 25px;
-    }
-    .mt-5
-    {
-        margin-top: 5px;
-    }
+
     .glob-top
     {
         border: 3px solid;
@@ -285,9 +416,57 @@
         border-color: transparent blue blue blue;
         border-radius: 0 0 8px 8px;
     }
+
+    #capacity-text
+    {
+        font-size:13px;
+        line-height:11pt;
+    }
+
+    #left-content
+    {
+        border-right: 1px solid #eee;
+    }
+
+    /* OBJETS */
+    div.object-card
+    {
+        height:45px;
+        margin-left:2px;
+        padding:10px;
+    }
+
+    #clue-token-img
+    {
+        height:20px;
+        width:auto;
+    }
+
+    /* general */
+    .lh-15
+    {
+        line-height:15pt;
+    }
+
+    .mt-25
+    {
+        margin-top: 25px;
+    }
+
+    .mt-5
+    {
+        margin-top: 5px;
+    }
+
     hr
     {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
+    div.justified-text
+    {
+        text-align:justify;
+    }
+
 </style>

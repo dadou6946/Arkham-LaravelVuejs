@@ -18434,7 +18434,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active\n{\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n/*aptitudes*/\n.row-skills\n{\n    margin-bottom: 0;\n}\n.lh-15\n{\n    line-height:15pt;\n}\n.mt-25\n{\n    margin-top: 25px;\n}\n.mt-5\n{\n    margin-top: 5px;\n}\n.glob-top\n{\n    border: 3px solid;\n    border-color: red red transparent red;\n    border-radius: 8px 8px 0 0;\n}\n.glob-bot\n{\n    border: 3px solid;\n    border-color: transparent blue blue blue;\n    border-radius: 0 0 8px 8px;\n}\nhr\n{\n    margin-top: 10px;\n    margin-bottom: 10px;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* BOUTONS */\nbutton.character-button\n{\n    margin:3px;\n    border-radius:5px;\n    font-size:10px;\n    line-height: normal;\n}\n\n/* SIDEBARS */\n#sidebar-investigator\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:980;\n    width:370px;\n    line-height:8pt;\n}\n#sidebar-guardian\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n#sidebar-game\n{\n    z-index:1000;\n    width:100%;\n    height:300px;\n    position:absolute;\n    bottom:0;\n}\n#sidebar-ancient\n{\n    z-index:980;\n    height:100%;\n    width:300px;\n    position:absolute;\n    right:0;\n}\n#sidebar-herald\n{\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active\n{\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/* Présentation */\nimg.photo-character\n{\n    padding:12px;height:165px; width:auto;\n}\n\n/*aptitudes*/\n.row-skills\n{\n    margin-bottom: 0;\n}\n.glob-top\n{\n    border: 3px solid;\n    border-color: red red transparent red;\n    border-radius: 8px 8px 0 0;\n}\n.glob-bot\n{\n    border: 3px solid;\n    border-color: transparent blue blue blue;\n    border-radius: 0 0 8px 8px;\n}\n#capacity-text\n{\n    font-size:13px;\n    line-height:11pt;\n}\n#left-content\n{\n    border-right: 1px solid #eee;\n}\n\n/* OBJETS */\ndiv.object-card\n{\n    height:45px;\n    margin-left:2px;\n    padding:10px;\n}\n#clue-token-img\n{\n    height:20px;\n    width:auto;\n}\n\n/* general */\n.lh-15\n{\n    line-height:15pt;\n}\n.mt-25\n{\n    margin-top: 25px;\n}\n.mt-5\n{\n    margin-top: 5px;\n}\nhr\n{\n    margin-top: 10px;\n    margin-bottom: 10px;\n}\ndiv.justified-text\n{\n    text-align:justify;\n}\n\n", ""]);
 
 // exports
 
@@ -18445,6 +18445,66 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -18649,7 +18709,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 availableSkills: { vitesse: [1, 2, 3, 4], discretion: [4, 3, 2, 1], vigueur: [1, 2, 3, 4], volonte: [3, 2, 1, 0], savoir: [2, 3, 4, 5], chance: [5, 4, 3, 2] },
                 objects: ['Porte bonheur']
             }],
-            investigatorPreview: ""
+            investigatorPreview: "",
+            ancient: {
+                name: "Yig",
+                combatValue: "-3",
+                defensiveAbility: ["Résistance magique"],
+                adorer: {
+                    text: ""
+                },
+                power: {},
+                attack: {},
+                ladder: {
+                    current: 1,
+                    maximum: 10
+                }
+            }
 
         };
     },
@@ -18695,12 +18769,6 @@ var render = function() {
               "nav",
               {
                 staticClass: "teal lighten-3 sidenav sidenav-fixed",
-                staticStyle: {
-                  transform: "translateX(0px)",
-                  "z-index": "980",
-                  width: "370px",
-                  "line-height": "8pt"
-                },
                 attrs: { id: "sidebar-investigator" }
               },
               [
@@ -18712,13 +18780,7 @@ var render = function() {
                       "button",
                       {
                         staticClass:
-                          "waves-effect waves-teal btn-flat btn-small",
-                        staticStyle: {
-                          margin: "3px",
-                          "border-radius": "5px",
-                          "font-size": "10px",
-                          "line-height": "normal"
-                        },
+                          "waves-effect waves-teal btn-flat btn-small character-button",
                         on: {
                           click: function($event) {
                             _vm.showInvestigator(investigator.name)
@@ -18745,12 +18807,8 @@ var render = function() {
                       ? _c("div", { key: investigator.name }, [
                           _c("div", { staticClass: "row center-align lh-15" }, [
                             _c("img", {
-                              staticClass: "col-md-6 grey lighten-3 z-depth-3",
-                              staticStyle: {
-                                padding: "12px",
-                                height: "165px",
-                                width: "auto"
-                              },
+                              staticClass:
+                                "col-md-6 grey lighten-3 z-depth-3 photo-character",
                               attrs: {
                                 src:
                                   "/image/sheet/character/head/" +
@@ -18796,9 +18854,7 @@ var render = function() {
                               "div",
                               {
                                 staticClass: "col-md-6 lh-15",
-                                staticStyle: {
-                                  "border-right": "1px solid #eee"
-                                }
+                                attrs: { id: "left-content" }
                               },
                               [
                                 _c("span", { attrs: { id: "house" } }, [
@@ -18833,10 +18889,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "div",
-                              {
-                                staticClass: "col-md-6",
-                                staticStyle: { "text-align": "justify" }
-                              },
+                              { staticClass: "col-md-6 justified-text" },
                               [
                                 _c("span", { staticClass: "lh-15" }, [
                                   _vm._v("Héritage")
@@ -18844,21 +18897,12 @@ var render = function() {
                                 _c("br"),
                                 _c("br"),
                                 _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticStyle: {
-                                      "font-size": "13px",
-                                      "line-height": "11pt"
-                                    }
-                                  },
-                                  [
-                                    _c("b", [_vm._v("Entretien:")]),
-                                    _vm._v(
-                                      " Les monstres et les portails ne peuvent pas apparaitre a l'endroit ou se trouve Kate à cause de son stabilitisateur de flux. Les monstres et les portails ne disparaissent cependant pas quand elle rentre dans un lieu, et les monstres peuvent entre normalement dans un lieu ou elle se trouve.\n                                "
-                                    )
-                                  ]
-                                )
+                                _c("span", { attrs: { id: "capacity-text" } }, [
+                                  _c("b", [_vm._v("Entretien:")]),
+                                  _vm._v(
+                                    " Les monstres et les portails ne peuvent pas apparaitre a l'endroit ou se trouve Kate à cause de son stabilitisateur de flux. Les monstres et les portails ne disparaissent cependant pas quand elle rentre dans un lieu, et les monstres peuvent entre normalement dans un lieu ou elle se trouve.\n                                "
+                                  )
+                                ])
                               ]
                             )
                           ]),
@@ -18927,24 +18971,74 @@ var render = function() {
                           _c("hr"),
                           _vm._v(" "),
                           _c("div", { staticClass: "row lh-15" }, [
-                            _c("span", { attrs: { id: "objets" } }, [
-                              _vm._v("Objets")
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _c("span", [_vm._v("Argent : 10$")])
                             ]),
                             _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "row" },
-                              _vm._l(investigator.objects, function(
-                                object,
-                                index
-                              ) {
-                                return _c("div", {
-                                  staticClass: "card teal col-md-3",
-                                  staticStyle: { height: "65px" },
-                                  domProps: { innerHTML: _vm._s(object) }
-                                })
-                              })
-                            )
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _c("span", [
+                                _vm._v("Indices : "),
+                                _c("img", {
+                                  attrs: {
+                                    id: "clue-token-img",
+                                    src: "/image/token/clue.png",
+                                    alt: "indices"
+                                  }
+                                }),
+                                _vm._v(" X 2")
+                              ]),
+                              _c("br")
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-12" }, [
+                              _c("span", [_vm._v("Position : Journal")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "row lh-15 text-center" }, [
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "waves-effect waves-teal btn btn-small character-button"
+                                },
+                                [_vm._v("Compétences")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "waves-effect waves-teal btn btn-small character-button"
+                                },
+                                [_vm._v("Alliés")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "waves-effect waves-teal btn btn-small character-button"
+                                },
+                                [_vm._v("Objets")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "waves-effect waves-teal btn btn-small character-button"
+                                },
+                                [_vm._v("Trophés")]
+                              )
+                            ])
                           ])
                         ])
                       : _vm._e()
@@ -18960,14 +19054,6 @@ var render = function() {
         _vm.navbar.guardian
           ? _c("nav", {
               staticClass: "sidenav blue lighten-3",
-              staticStyle: {
-                transform: "translateX(0px)",
-                "z-index": "990",
-                height: "100%",
-                width: "280px",
-                position: "absolute",
-                right: "0"
-              },
               attrs: { id: "sidebar-guardian" }
             })
           : _vm._e()
@@ -18977,27 +19063,82 @@ var render = function() {
         _vm.navbar.game
           ? _c(
               "nav",
-              {
-                staticClass: "cyan lighten-3",
-                staticStyle: {
-                  "z-index": "1000",
-                  width: "100%",
-                  height: "300px",
-                  position: "absolute",
-                  bottom: "0"
-                },
-                attrs: { id: "sidebar-game" }
-              },
+              { staticClass: "cyan lighten-3", attrs: { id: "sidebar-game" } },
               [
-                _c("div", [
-                  _c("span", [_vm._v("Tour n° 2")]),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Phase : mouvement")]),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("span", [
-                    _vm._v("Premier joueur : joueur 1 - Francis Sailor")
+                _c("div", { staticClass: "container" }, [
+                  _c("div", { staticClass: "row lh-15 mt-25" }, [
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("span", [_vm._v("Tour n° 2")]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Phase : Mouvement")]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [
+                        _vm._v("Premier joueur : joueur 1 - Francis Sailor")
+                      ]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [
+                        _vm._v("Joueur actuel : joueur 1 - Francis Sailor")
+                      ]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Nombre de joueurs : 4")]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "waves-effect waves-teal btn btn-small character-button"
+                        },
+                        [_vm._v("Conditions de victoire")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "waves-effect waves-teal btn btn-small character-button"
+                        },
+                        [_vm._v("Conditions de Défaite")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("span", [_vm._v("Environnement actif : aucun")]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Rumeur active : aucune")]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Niveau de terreur : 1/12")]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Lieux fermés : aucun")]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Echelle de l'ancien : 1/12")]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [
+                        _vm._v("Monstres en jeu/ nombre maximum : 2 / 6")
+                      ]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [
+                        _vm._v(
+                          "Monstres dans la périphérie/ nombre maximum : 0 / 6"
+                        )
+                      ]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [
+                        _vm._v("Portail actifs / nombre maximum : 1 / 6")
+                      ]),
+                      _c("br")
+                    ])
                   ])
                 ])
               ]
@@ -19007,17 +19148,46 @@ var render = function() {
       _vm._v(" "),
       _c("transition", { attrs: { name: "fade" } }, [
         _vm.navbar.ancient
-          ? _c("nav", {
-              staticClass: "red lighten-3",
-              staticStyle: {
-                "z-index": "980",
-                height: "100%",
-                width: "300px",
-                position: "absolute",
-                right: "0"
+          ? _c(
+              "nav",
+              {
+                staticClass: "red lighten-3",
+                attrs: { id: "sidebar-ancient" }
               },
-              attrs: { id: "sidebar-ancient" }
-            })
+              [
+                _c("div", { staticClass: "row" }, [
+                  _c("img", {
+                    staticClass: "col-md-12 grey lighten-3 z-depth-3",
+                    staticStyle: { padding: "6px" },
+                    attrs: {
+                      src:
+                        "/image/sheet/ancient/head/" +
+                        _vm.ancient.name +
+                        ".png",
+                      alt: _vm.ancient.name
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("h5", { attrs: { id: "name" } }, [
+                      _vm._v(_vm._s(_vm.ancient.name))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("span", { attrs: { id: "combatValue" } }, [
+                      _vm._v(_vm._s(_vm.ancient.combatValue))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("span", { attrs: { id: "defensiveAbility" } }, [
+                      _vm._v(_vm._s(_vm.ancient.defensiveAbility.join(", ")))
+                    ])
+                  ])
+                ])
+              ]
+            )
           : _vm._e()
       ]),
       _vm._v(" "),
@@ -19025,13 +19195,6 @@ var render = function() {
         _vm.navbar.herald
           ? _c("nav", {
               staticClass: "orange lighten-3",
-              staticStyle: {
-                "z-index": "990",
-                height: "100%",
-                width: "280px",
-                position: "absolute",
-                right: "0"
-              },
               attrs: { id: "sidebar-herald" }
             })
           : _vm._e()
