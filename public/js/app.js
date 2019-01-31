@@ -18434,7 +18434,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* BOUTONS */\nbutton.character-button\n{\n    margin:3px;\n    border-radius:5px;\n    font-size:10px;\n    line-height: normal;\n}\n\n/* SIDEBARS */\n#sidebar-investigator\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:980;\n    width:370px;\n    line-height:8pt;\n}\n#sidebar-guardian\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n#sidebar-game\n{\n    z-index:1000;\n    width:100%;\n    height:300px;\n    position:absolute;\n    bottom:0;\n}\n#sidebar-ancient\n{\n    z-index:980;\n    height:100%;\n    width:300px;\n    position:absolute;\n    right:0;\n}\n#sidebar-herald\n{\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active\n{\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/* Présentation */\nimg.photo-character\n{\n    padding:12px;height:165px; width:auto;\n}\n\n/*aptitudes*/\n.row-skills\n{\n    margin-bottom: 0;\n}\n.glob-top\n{\n    border: 3px solid;\n    border-color: red red transparent red;\n    border-radius: 8px 8px 0 0;\n}\n.glob-bot\n{\n    border: 3px solid;\n    border-color: transparent blue blue blue;\n    border-radius: 0 0 8px 8px;\n}\n#capacity-text\n{\n    font-size:13px;\n    line-height:11pt;\n}\n#left-content\n{\n    border-right: 1px solid #eee;\n}\n\n/* OBJETS */\ndiv.object-card\n{\n    height:45px;\n    margin-left:2px;\n    padding:10px;\n}\n#clue-token-img\n{\n    height:20px;\n    width:auto;\n}\n\n/* general */\n.lh-15\n{\n    line-height:15pt;\n}\n.mt-25\n{\n    margin-top: 25px;\n}\n.mt-5\n{\n    margin-top: 5px;\n}\nhr\n{\n    margin-top: 10px;\n    margin-bottom: 10px;\n}\ndiv.justified-text\n{\n    text-align:justify;\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* BOUTONS */\nbutton.character-button\n{\n    margin:3px;\n    border-radius:5px;\n    font-size:10px;\n    line-height: normal;\n}\nimg.button-icon\n{\n    height:25px;\n    margin-right:7px;\n}\n\n/* SIDEBARS */\n#sidebar-investigator\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:980;\n    width:370px;\n    line-height:8pt;\n}\n#sidebar-guardian\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n#sidebar-game\n{\n    z-index:1000;\n    width:100%;\n    height:300px;\n    position:absolute;\n    bottom:0;\n}\n#sidebar-ancient\n{\n    z-index:980;\n    height:100%;\n    width:370px;\n    position:absolute;\n    right:0;\n}\n#sidebar-herald\n{\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active\n{\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/* Présentation */\nimg.photo-character\n{\n    padding:12px;height:165px; width:auto;\n}\n\n/*aptitudes*/\n.row-skills\n{\n    margin-bottom: 0;\n}\n.glob-top\n{\n    border: 3px solid;\n    border-color: red red transparent red;\n    border-radius: 8px 8px 0 0;\n}\n.glob-bot\n{\n    border: 3px solid;\n    border-color: transparent blue blue blue;\n    border-radius: 0 0 8px 8px;\n}\n#capacity-text\n{\n    font-size:13px;\n    line-height:11pt;\n}\n#left-content\n{\n    border-right: 1px solid #eee;\n}\n\n/* OBJETS */\ndiv.object-card\n{\n    height:45px;\n    margin-left:2px;\n    padding:10px;\n}\n#clue-token-img\n{\n    height:20px;\n    width:auto;\n}\n\n/* general */\n.lh-15\n{\n    line-height:15pt;\n}\n.mt-25\n{\n    margin-top: 25px;\n}\n.mt-5\n{\n    margin-top: 5px;\n}\nhr\n{\n    margin-top: 10px;\n    margin-bottom: 10px;\n}\ndiv.justified-text\n{\n    text-align:justify;\n}\n\n", ""]);
 
 // exports
 
@@ -18445,6 +18445,58 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -18713,12 +18765,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             ancient: {
                 name: "Yig",
                 combatValue: "-3",
-                defensiveAbility: ["Résistance magique"],
+                defensiveAbility: ["Aucun"],
                 adorer: {
-                    text: ""
+                    text: "Les adorateurs de Yig sont en réalité des membres du Peuple Serpent déguisés. Leur morsure est très venimeuse. Les <b>Cultistes</b> ont une valeur de combat de +0 et des dégâts de combat de 4 résistances."
                 },
-                power: {},
-                attack: {},
+                power: {
+                    title: "La colère de Yig",
+                    text: "Tant que Yig est plongé dans son sommeil, il gagne un pion destin quand un cultiste est battu ou quand un investigateur est perdu dans le temps et l'espace."
+                },
+                battleEvent: {
+                    text: "Chaque investigateur est Maudit. Un investigateur qui est déjà Maudit est dévoré."
+                },
+                attack: {
+                    text: "Chaque investigateur doit réussir un <b>test de Vitesse</b> (+1) ou perdre 1 Santé Mentale et 1 Résistance. Le modificateur de test diminue de 1 à chaque tour (+0 au deuxième tour, -1 au troisième, etc.)"
+                },
                 ladder: {
                     current: 1,
                     maximum: 10
@@ -19151,13 +19211,14 @@ var render = function() {
           ? _c(
               "nav",
               {
-                staticClass: "red lighten-3",
+                staticClass: "red lighten-3 lh-15",
                 attrs: { id: "sidebar-ancient" }
               },
               [
-                _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "row text-center" }, [
                   _c("img", {
-                    staticClass: "col-md-12 grey lighten-3 z-depth-3",
+                    staticClass:
+                      "col-md-10 col-md-offset-1 grey lighten-3 z-depth-3",
                     staticStyle: { padding: "6px" },
                     attrs: {
                       src:
@@ -19185,6 +19246,93 @@ var render = function() {
                       _vm._v(_vm._s(_vm.ancient.defensiveAbility.join(", ")))
                     ])
                   ])
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "justified-text" }, [
+                      _c("b", [_vm._v("Adorateurs")]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(_vm.ancient.adorer.text))])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "justified-text" }, [
+                      _c("b", [_vm._v(_vm._s(_vm.ancient.power.title))]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(_vm.ancient.power.text))]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _vm.ancient.battleEvent
+                        ? _c("b", [_vm._v("Début de bataille")])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.ancient.battleEvent
+                        ? _c("span", [
+                            _vm._v(_vm._s(_vm.ancient.battleEvent.text))
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("b", [_vm._v("Attaque")]),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(_vm.ancient.attack.text))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c(
+                    "div",
+                    { staticClass: "col-md-12" },
+                    _vm._l(_vm.ancient.ladder.maximum, function(n) {
+                      return _c("div", { staticClass: "col-md-2" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "green",
+                            staticStyle: {
+                              height: "35px",
+                              width: "35px",
+                              "border-radius": "50%",
+                              display: "inline-block"
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(n) +
+                                "\n                            "
+                            ),
+                            n == _vm.ancient.ladder.current
+                              ? _c("div", {
+                                  staticClass: "red",
+                                  staticStyle: {
+                                    height: "35px",
+                                    width: "35px",
+                                    "border-radius": "50%",
+                                    display: "inline-block"
+                                  }
+                                })
+                              : _vm._e()
+                          ]
+                        )
+                      ])
+                    })
+                  )
                 ])
               ]
             )
@@ -19207,77 +19355,109 @@ var render = function() {
           attrs: { id: "button-container" }
         },
         [
-          _c("button", {
-            staticClass: "waves-effect waves-light btn teal",
-            domProps: {
-              innerHTML: _vm._s(
-                _vm.navbar.investigator == false ? "joueurs +" : "joueurs -"
-              )
-            },
-            on: {
-              click: function($event) {
-                _vm.switchNavbar("investigator")
+          _c(
+            "button",
+            {
+              staticClass: "waves-effect waves-light btn teal",
+              on: {
+                click: function($event) {
+                  _vm.switchNavbar("investigator")
+                }
               }
-            }
-          }),
+            },
+            [
+              _c("img", {
+                staticClass: "button-icon",
+                attrs: { src: "/image/icon/characters.png", alt: "joueurs" }
+              }),
+              _vm._v("\n            joueurs "),
+              _c("b", [
+                _vm._v(_vm._s(_vm.navbar.investigator == false ? "+" : "-"))
+              ])
+            ]
+          ),
           _vm._v(" "),
-          _c("button", {
-            staticClass: "waves-effect waves-light btn  blue lighten-1",
-            domProps: {
-              innerHTML: _vm._s(
-                _vm.navbar.guardian == false ? "Gardien +" : "Gardien -"
-              )
-            },
-            on: {
-              click: function($event) {
-                _vm.switchNavbar("guardian")
+          _c(
+            "button",
+            {
+              staticClass: "waves-effect waves-light btn  blue lighten-1",
+              on: {
+                click: function($event) {
+                  _vm.switchNavbar("guardian")
+                }
               }
-            }
-          }),
+            },
+            [
+              _c("img", {
+                staticClass: "button-icon",
+                attrs: { src: "/image/icon/guardian.png", alt: "gardien" }
+              }),
+              _vm._v("\n            Gardien "),
+              _c("b", [
+                _vm._v(_vm._s(_vm.navbar.guardian == false ? "+" : "-"))
+              ])
+            ]
+          ),
           _vm._v(" "),
-          _c("button", {
-            staticClass: "waves-effect waves-light btn cyan lighten-2",
-            domProps: {
-              innerHTML: _vm._s(
-                _vm.navbar.game == false
-                  ? "Informations sur la partie +"
-                  : "Informations sur la partie -"
-              )
-            },
-            on: {
-              click: function($event) {
-                _vm.switchNavbar("game")
+          _c(
+            "button",
+            {
+              staticClass: "waves-effect waves-light btn cyan lighten-2",
+              on: {
+                click: function($event) {
+                  _vm.switchNavbar("game")
+                }
               }
-            }
-          }),
+            },
+            [
+              _c("img", {
+                staticClass: "button-icon",
+                attrs: { src: "/image/icon/info.png", alt: "informations" }
+              }),
+              _vm._v("\n            Informations sur la partie "),
+              _c("b", [_vm._v(_vm._s(_vm.navbar.game == false ? "+" : "-"))])
+            ]
+          ),
           _vm._v(" "),
-          _c("button", {
-            staticClass: "waves-effect waves-light btn red",
-            domProps: {
-              innerHTML: _vm._s(
-                _vm.navbar.ancient == false ? "Ancien +" : "Ancien -"
-              )
-            },
-            on: {
-              click: function($event) {
-                _vm.switchNavbar("ancient")
+          _c(
+            "button",
+            {
+              staticClass: "waves-effect waves-light btn red",
+              on: {
+                click: function($event) {
+                  _vm.switchNavbar("ancient")
+                }
               }
-            }
-          }),
+            },
+            [
+              _c("img", {
+                staticClass: "button-icon",
+                attrs: { src: "/image/icon/cthulhu.png", alt: "ancien" }
+              }),
+              _vm._v("\n            Ancien "),
+              _c("b", [_vm._v(_vm._s(_vm.navbar.ancient == false ? "+" : "-"))])
+            ]
+          ),
           _vm._v(" "),
-          _c("button", {
-            staticClass: "waves-effect waves-light btn orange lighten-1",
-            domProps: {
-              innerHTML: _vm._s(
-                _vm.navbar.herald == false ? "Héraut +" : "Héraut -"
-              )
-            },
-            on: {
-              click: function($event) {
-                _vm.switchNavbar("herald")
+          _c(
+            "button",
+            {
+              staticClass: "waves-effect waves-light btn orange lighten-1",
+              on: {
+                click: function($event) {
+                  _vm.switchNavbar("herald")
+                }
               }
-            }
-          })
+            },
+            [
+              _c("img", {
+                staticClass: "button-icon",
+                attrs: { src: "/image/icon/herald.png", alt: "heraut" }
+              }),
+              _vm._v("\n            Héraut "),
+              _c("b", [_vm._v(_vm._s(_vm.navbar.herald == false ? "+" : "-"))])
+            ]
+          )
         ]
       )
     ],

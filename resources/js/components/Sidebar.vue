@@ -174,12 +174,11 @@
 
         <!-- Ancient -->
         <transition name="fade">
-            <nav id="sidebar-ancient"
-                class="red lighten-3"
+            <nav id="sidebar-ancient" class="red lighten-3 lh-15"
                 v-if="navbar.ancient">
-                <div class="row">
+                <div class="row text-center">
                     <img :src="'/image/sheet/ancient/head/'+ ancient.name +'.png'"
-                        class="col-md-12 grey lighten-3 z-depth-3"
+                        class="col-md-10 col-md-offset-1 grey lighten-3 z-depth-3"
                         style="padding:6px;"
                         :alt="ancient.name">
                     <div class="col-md-12">
@@ -192,6 +191,44 @@
                         <span id="defensiveAbility">{{ancient.defensiveAbility.join(', ')}}</span>
                     </div>
                 </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="justified-text">
+                            <b>Adorateurs</b><br>
+                            <span>{{ ancient.adorer.text }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="justified-text">
+                            <b>{{ ancient.power.title }}</b><br>
+                            <span>{{ ancient.power.text }}</span><br>
+                            <b v-if="ancient.battleEvent">Début de bataille</b>
+                            <span v-if="ancient.battleEvent">{{ ancient.battleEvent.text }}</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <b>Attaque</b><br>
+                        <p>{{ ancient.attack.text }}</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- <p>Echelle de l'ancien</p> :  {{ ancient.ladder.current }} / {{ ancient.ladder.maximum }} -->
+                        <div class="col-md-2" v-for="n in ancient.ladder.maximum">
+                            <div class="green"
+                                style="height: 35px;width: 35px;border-radius:50%;display: inline-block;">
+                                {{ n }}
+                                <div v-if="n == ancient.ladder.current" class="red" style="height: 35px;width: 35px;border-radius:50%;display: inline-block;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </nav>
         </transition>
 
@@ -206,25 +243,40 @@
         <!-- BOUTONS POUR AFFICHER LES SIDEBARS-->
         <div id="button-container" class="center-align teal darken-3 card">
 
+            <!-- INVESTIGATEURS -->
             <button class="waves-effect waves-light btn teal"
-                v-html="navbar.investigator==false?'joueurs +':'joueurs -'"
-                @click="switchNavbar('investigator')"></button>
+                @click="switchNavbar('investigator')">
+                <img class="button-icon" :src="'/image/icon/characters.png'" alt="joueurs">
+                joueurs <b>{{ navbar.investigator==false?'+':'-' }}</b>
+            </button>
 
-            </button><button class="waves-effect waves-light btn  blue lighten-1"
-                v-html="navbar.guardian==false?'Gardien +':'Gardien -'"
-                @click="switchNavbar('guardian')"></button>
+            <!-- GARDIEN -->
+            <button class="waves-effect waves-light btn  blue lighten-1"
+                @click="switchNavbar('guardian')">
+                <img class="button-icon" :src="'/image/icon/guardian.png'" alt="gardien">
+                Gardien <b>{{ navbar.guardian==false?'+':'-' }}</b>
+            </button>
 
+            <!-- INFORMATIONS DE LA PARTIE -->
             <button class="waves-effect waves-light btn cyan lighten-2"
-                v-html="navbar.game==false?'Informations sur la partie +':'Informations sur la partie -'"
-                @click="switchNavbar('game')"></button>
+                @click="switchNavbar('game')">
+                <img class="button-icon" :src="'/image/icon/info.png'" alt="informations">
+                Informations sur la partie <b>{{ navbar.game==false?'+':'-' }}</b>
+            </button>
 
+            <!-- ANCIEN -->
             <button class="waves-effect waves-light btn red"
-                v-html="navbar.ancient==false?'Ancien +':'Ancien -'"
-                @click="switchNavbar('ancient')"></button>
+                @click="switchNavbar('ancient')">
+                <img class="button-icon" :src="'/image/icon/cthulhu.png'" alt="ancien">
+                Ancien <b>{{ navbar.ancient==false?'+':'-'}}</b>
+            </button>
 
+            <!-- HERAUT -->
             <button class="waves-effect waves-light btn orange lighten-1"
-                v-html="navbar.herald==false?'Héraut +':'Héraut -'"
-                @click="switchNavbar('herald')"></button>
+                @click="switchNavbar('herald')">
+                <img class="button-icon" :src="'/image/icon/herald.png'" alt="heraut">
+                Héraut <b>{{ navbar.herald==false?'+':'-' }}</b>
+            </button>
         </div>
     </div>
 </template>
@@ -274,15 +326,19 @@
                 {
                     name: "Yig",
                     combatValue: "-3",
-                    defensiveAbility: ["Résistance magique"],
+                    defensiveAbility: ["Aucun"],
                     adorer: {
-                        text: ""
+                        text: "Les adorateurs de Yig sont en réalité des membres du Peuple Serpent déguisés. Leur morsure est très venimeuse. Les <b>Cultistes</b> ont une valeur de combat de +0 et des dégâts de combat de 4 résistances."
                     },
                     power: {
-
+                        title: "La colère de Yig",
+                        text: "Tant que Yig est plongé dans son sommeil, il gagne un pion destin quand un cultiste est battu ou quand un investigateur est perdu dans le temps et l'espace."
+                    },
+                    battleEvent: {
+                        text: "Chaque investigateur est Maudit. Un investigateur qui est déjà Maudit est dévoré."
                     },
                     attack: {
-
+                        text: "Chaque investigateur doit réussir un <b>test de Vitesse</b> (+1) ou perdre 1 Santé Mentale et 1 Résistance. Le modificateur de test diminue de 1 à chaque tour (+0 au deuxième tour, -1 au troisième, etc.)"
                     },
                     ladder: {
                         current: 1,
@@ -336,6 +392,12 @@
         line-height: normal;
     }
 
+    img.button-icon
+    {
+        height:25px;
+        margin-right:7px;
+    }
+
     /* SIDEBARS */
     #sidebar-investigator
     {
@@ -368,7 +430,7 @@
     {
         z-index:980;
         height:100%;
-        width:300px;
+        width:370px;
         position:absolute;
         right:0;
     }
