@@ -18434,7 +18434,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* BOUTONS */\nbutton.character-button\n{\n    margin:3px;\n    border-radius:5px;\n    font-size:10px;\n    line-height: normal;\n}\nimg.button-icon\n{\n    height:25px;\n    margin-right:7px;\n}\n\n/* SIDEBARS */\n#sidebar-investigator\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:980;\n    width:370px;\n    line-height:8pt;\n}\n#sidebar-guardian\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n#sidebar-game\n{\n    z-index:1000;\n    width:100%;\n    height:300px;\n    position:absolute;\n    bottom:0;\n}\n#sidebar-ancient\n{\n    z-index:980;\n    height:100%;\n    width:370px;\n    position:absolute;\n    right:0;\n}\n#sidebar-herald\n{\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active\n{\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/* Présentation */\nimg.photo-character\n{\n    padding:12px;height:165px; width:auto;\n}\n\n/*aptitudes*/\n.row-skills\n{\n    margin-bottom: 0;\n}\n.glob-top\n{\n    border: 3px solid;\n    border-color: red red transparent red;\n    border-radius: 8px 8px 0 0;\n}\n.glob-bot\n{\n    border: 3px solid;\n    border-color: transparent blue blue blue;\n    border-radius: 0 0 8px 8px;\n}\n#capacity-text\n{\n    font-size:13px;\n    line-height:11pt;\n}\n#left-content\n{\n    border-right: 1px solid #eee;\n}\n\n/* OBJETS */\ndiv.object-card\n{\n    height:45px;\n    margin-left:2px;\n    padding:10px;\n}\n#clue-token-img\n{\n    height:20px;\n    width:auto;\n}\n\n/* general */\n.lh-15\n{\n    line-height:15pt;\n}\n.mt-25\n{\n    margin-top: 25px;\n}\n.mt-5\n{\n    margin-top: 5px;\n}\nhr\n{\n    margin-top: 10px;\n    margin-bottom: 10px;\n}\ndiv.justified-text\n{\n    text-align:justify;\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* BOUTONS */\nbutton.character-button\n{\n    margin:3px;\n    border-radius:5px;\n    font-size:10px;\n    line-height: normal;\n}\nimg.button-icon\n{\n    height:25px;\n    margin-right:7px;\n}\nimg.button-icon-small\n{\n    height:15px;\n    margin-left:7px;\n}\n\n/* SIDEBARS */\n#sidebar-investigator\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:980;\n    width:370px;\n    line-height:8pt;\n}\n#sidebar-guardian\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n#sidebar-game\n{\n    z-index:1000;\n    width:100%;\n    height:300px;\n    position:absolute;\n    bottom:0;\n}\n#sidebar-ancient\n{\n    z-index:980;\n    height:100%;\n    width:370px;\n    position:absolute;\n    right:0;\n}\n#sidebar-herald\n{\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active\n{\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/* PRÉSENTATION */\nimg.photo-character\n{\n    padding:12px;height:165px; width:auto;\n}\n\n/*APTITUDES*/\n.row-skills\n{\n    margin-bottom: 0;\n}\n.glob-top\n{\n    border: 3px solid;\n    border-color: red red transparent red;\n    border-radius: 8px 8px 0 0;\n}\n.glob-bot\n{\n    border: 3px solid;\n    border-color: transparent blue blue blue;\n    border-radius: 0 0 8px 8px;\n}\n#capacity-text\n{\n    font-size:13px;\n    line-height:11pt;\n}\ndiv.left-content\n{\n    border-right: 1px solid #eee;\n}\n\n/* OBJETS */\ndiv.object-card\n{\n    height:45px;\n    margin-left:2px;\n    padding:10px;\n}\n#clue-token-img\n{\n    height:20px;\n    width:auto;\n}\n\n/* ANCIEN */\nimg.destiny-token\n{\n    height: 35px;\n    width: 35px;\n    border-radius:50%;\n    display: inline-block;\n    position: absolute;\n    top:0;\n    left:0;\n}\ndiv.ancient-number-ladder\n{\n    height: 35px;\n    width: 35px;\n    border-radius:50%;\n    display: inline-block;\n    position: relative;\n    margin-bottom:15px;\n    padding-top:5px;\n}\n\n/* GENERAL */\n.lh-15\n{\n    line-height:15pt;\n}\n.mt-25\n{\n    margin-top: 25px;\n}\n.mt-5\n{\n    margin-top: 5px;\n}\nhr\n{\n    margin-top: 10px;\n    margin-bottom: 10px;\n}\ndiv.justified-text\n{\n    text-align:justify;\n}\n\n", ""]);
 
 // exports
 
@@ -18445,6 +18445,34 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -18767,7 +18795,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 combatValue: "-3",
                 defensiveAbility: ["Aucun"],
                 adorer: {
-                    text: "Les adorateurs de Yig sont en réalité des membres du Peuple Serpent déguisés. Leur morsure est très venimeuse. Les <b>Cultistes</b> ont une valeur de combat de +0 et des dégâts de combat de 4 résistances."
+                    text: "Les adorateurs de Yig sont en réalité des membres du Peuple Serpent déguisés. Leur morsure est très venimeuse. Les Cultistes ont une valeur de combat de +0 et des dégâts de combat de 4 résistances."
                 },
                 power: {
                     title: "La colère de Yig",
@@ -18777,11 +18805,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     text: "Chaque investigateur est Maudit. Un investigateur qui est déjà Maudit est dévoré."
                 },
                 attack: {
-                    text: "Chaque investigateur doit réussir un <b>test de Vitesse</b> (+1) ou perdre 1 Santé Mentale et 1 Résistance. Le modificateur de test diminue de 1 à chaque tour (+0 au deuxième tour, -1 au troisième, etc.)"
+                    text: "Chaque investigateur doit réussir un test de Vitesse (+1) ou perdre 1 Santé Mentale et 1 Résistance. Le modificateur de test diminue de 1 à chaque tour (+0 au deuxième tour, -1 au troisième, etc.)"
                 },
                 ladder: {
-                    current: 1,
-                    maximum: 10
+                    current: 3,
+                    maximum: 14
                 }
             }
 
@@ -18803,9 +18831,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         globule: function globule(index) {
             switch (index) {
-                case "vitesse":case "vigueur":case "savoir":
+                case "vitesse":
+                case "vigueur":
+                case "savoir":
                     return "glob-top";
-                case "discretion":case "volonte":case "chance":
+                case "discretion":
+                case "volonte":
+                case "chance":
                     return "glob-bot";
             }
         }
@@ -18828,7 +18860,7 @@ var render = function() {
           ? _c(
               "nav",
               {
-                staticClass: "teal lighten-3 sidenav sidenav-fixed",
+                staticClass: "grey sidenav sidenav-fixed",
                 attrs: { id: "sidebar-investigator" }
               },
               [
@@ -18840,7 +18872,7 @@ var render = function() {
                       "button",
                       {
                         staticClass:
-                          "waves-effect waves-teal btn-flat btn-small character-button",
+                          "waves-effect waves-grey grey darken-2 btn btn-small character-button",
                         on: {
                           click: function($event) {
                             _vm.showInvestigator(investigator.name)
@@ -18912,10 +18944,7 @@ var render = function() {
                           _c("div", { staticClass: "row" }, [
                             _c(
                               "div",
-                              {
-                                staticClass: "col-md-6 lh-15",
-                                attrs: { id: "left-content" }
-                              },
+                              { staticClass: "col-md-6 lh-15 left-content" },
                               [
                                 _c("span", { attrs: { id: "house" } }, [
                                   _vm._v("Maison: ")
@@ -19056,47 +19085,107 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("div", { staticClass: "row lh-15 text-center" }, [
-                            _c("div", { staticClass: "col-md-6" }, [
+                            _c("div", { staticClass: "col-md-12" }, [
                               _c(
                                 "button",
                                 {
                                   staticClass:
-                                    "waves-effect waves-teal btn btn-small character-button"
+                                    "waves-effect waves-green green darken-1 btn character-button"
                                 },
-                                [_vm._v("Compétences")]
+                                [
+                                  _vm._v(
+                                    "\n                                    Compétences\n                                    "
+                                  ),
+                                  _c("img", {
+                                    staticClass: "button-icon-small",
+                                    attrs: {
+                                      src: "/image/icon/parchment.png",
+                                      alt: "competences"
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "waves-effect waves-green green darken-1 btn character-button"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                    Objets\n                                    "
+                                  ),
+                                  _c("img", {
+                                    staticClass: "button-icon-small",
+                                    attrs: {
+                                      src: "/image/icon/object.png",
+                                      alt: "objets"
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "waves-effect waves-green green darken-1 btn character-button"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                    Alliés\n                                    "
+                                  ),
+                                  _c("img", {
+                                    staticClass: "button-icon-small",
+                                    attrs: {
+                                      src: "/image/icon/ally.png",
+                                      alt: "allies"
+                                    }
+                                  })
+                                ]
                               )
                             ]),
                             _vm._v(" "),
-                            _c("div", { staticClass: "col-md-6" }, [
+                            _c("div", { staticClass: "col-md-12" }, [
                               _c(
                                 "button",
                                 {
                                   staticClass:
-                                    "waves-effect waves-teal btn btn-small character-button"
+                                    "waves-effect waves-green green darken-1 btn character-button"
                                 },
-                                [_vm._v("Alliés")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col-md-6" }, [
+                                [
+                                  _vm._v(
+                                    "\n                                    Trophés\n                                    "
+                                  ),
+                                  _c("img", {
+                                    staticClass: "button-icon-small",
+                                    attrs: {
+                                      src: "/image/icon/trophy.png",
+                                      alt: "trophees"
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
                               _c(
                                 "button",
                                 {
                                   staticClass:
-                                    "waves-effect waves-teal btn btn-small character-button"
+                                    "waves-effect waves-green green darken-1 btn character-button"
                                 },
-                                [_vm._v("Objets")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col-md-6" }, [
-                              _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "waves-effect waves-teal btn btn-small character-button"
-                                },
-                                [_vm._v("Trophés")]
+                                [
+                                  _vm._v(
+                                    "\n                                    Objets spéciaux\n                                    "
+                                  ),
+                                  _c("img", {
+                                    staticClass: "button-icon-small",
+                                    attrs: {
+                                      src: "/image/icon/special.png",
+                                      alt: "objets speciaux"
+                                    }
+                                  })
+                                ]
                               )
                             ])
                           ])
@@ -19113,7 +19202,7 @@ var render = function() {
       _c("transition", { attrs: { name: "fade" } }, [
         _vm.navbar.guardian
           ? _c("nav", {
-              staticClass: "sidenav blue lighten-3",
+              staticClass: "sidenav grey green darken-1",
               attrs: { id: "sidebar-guardian" }
             })
           : _vm._e()
@@ -19123,7 +19212,7 @@ var render = function() {
         _vm.navbar.game
           ? _c(
               "nav",
-              { staticClass: "cyan lighten-3", attrs: { id: "sidebar-game" } },
+              { staticClass: "grey darken-2", attrs: { id: "sidebar-game" } },
               [
                 _c("div", { staticClass: "container" }, [
                   _c("div", { staticClass: "row lh-15 mt-25" }, [
@@ -19207,13 +19296,19 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("transition", { attrs: { name: "fade" } }, [
+        _vm.navbar.herald
+          ? _c("nav", {
+              staticClass: "grey green darken-1",
+              attrs: { id: "sidebar-herald" }
+            })
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c("transition", { attrs: { name: "fade" } }, [
         _vm.navbar.ancient
           ? _c(
               "nav",
-              {
-                staticClass: "red lighten-3 lh-15",
-                attrs: { id: "sidebar-ancient" }
-              },
+              { staticClass: "grey lh-15", attrs: { id: "sidebar-ancient" } },
               [
                 _c("div", { staticClass: "row text-center" }, [
                   _c("img", {
@@ -19266,7 +19361,7 @@ var render = function() {
                       _c("br"),
                       _vm._v(" "),
                       _c("span", [_vm._v(_vm._s(_vm.ancient.power.text))]),
-                      _c("br"),
+                      _c("hr"),
                       _vm._v(" "),
                       _vm.ancient.battleEvent
                         ? _c("b", [_vm._v("Début de bataille")])
@@ -19297,40 +19392,38 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c(
                     "div",
-                    { staticClass: "col-md-12" },
+                    { staticClass: "col-md-12 mt-25" },
                     _vm._l(_vm.ancient.ladder.maximum, function(n) {
-                      return _c("div", { staticClass: "col-md-2" }, [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "green",
-                            staticStyle: {
-                              height: "35px",
-                              width: "35px",
-                              "border-radius": "50%",
-                              display: "inline-block"
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "\n                            " +
-                                _vm._s(n) +
-                                "\n                            "
-                            ),
-                            n == _vm.ancient.ladder.current
-                              ? _c("div", {
-                                  staticClass: "red",
-                                  staticStyle: {
-                                    height: "35px",
-                                    width: "35px",
-                                    "border-radius": "50%",
-                                    display: "inline-block"
-                                  }
-                                })
-                              : _vm._e()
-                          ]
-                        )
-                      ])
+                      return _c(
+                        "div",
+                        { staticClass: "col-md-2 text-center" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "green valign-wrapper z-depth-3 ancient-number-ladder"
+                            },
+                            [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(n) +
+                                  "\n                            "
+                              ),
+                              _vm._v(" "),
+                              n <= _vm.ancient.ladder.current
+                                ? _c("img", {
+                                    staticClass: "destiny-token",
+                                    attrs: {
+                                      src: "/image/token/destin.jpg",
+                                      alt: "marqueur_destin"
+                                    }
+                                  })
+                                : _vm._e()
+                            ]
+                          )
+                        ]
+                      )
                     })
                   )
                 ])
@@ -19339,26 +19432,18 @@ var render = function() {
           : _vm._e()
       ]),
       _vm._v(" "),
-      _c("transition", { attrs: { name: "fade" } }, [
-        _vm.navbar.herald
-          ? _c("nav", {
-              staticClass: "orange lighten-3",
-              attrs: { id: "sidebar-herald" }
-            })
-          : _vm._e()
-      ]),
-      _vm._v(" "),
       _c(
         "div",
         {
-          staticClass: "center-align teal darken-3 card",
+          staticClass: "center-align green card",
           attrs: { id: "button-container" }
         },
         [
           _c(
             "button",
             {
-              staticClass: "waves-effect waves-light btn teal",
+              staticClass: "waves-effect waves-light btn grey",
+              class: _vm.navbar.investigator ? "darken-2" : "",
               on: {
                 click: function($event) {
                   _vm.switchNavbar("investigator")
@@ -19380,7 +19465,8 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "waves-effect waves-light btn  blue lighten-1",
+              staticClass: "waves-effect waves-light btn grey",
+              class: _vm.navbar.guardian ? "darken-2" : "",
               on: {
                 click: function($event) {
                   _vm.switchNavbar("guardian")
@@ -19402,7 +19488,8 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "waves-effect waves-light btn cyan lighten-2",
+              staticClass: "waves-effect waves-light btn grey",
+              class: _vm.navbar.game ? "darken-2" : "",
               on: {
                 click: function($event) {
                   _vm.switchNavbar("game")
@@ -19422,27 +19509,8 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "waves-effect waves-light btn red",
-              on: {
-                click: function($event) {
-                  _vm.switchNavbar("ancient")
-                }
-              }
-            },
-            [
-              _c("img", {
-                staticClass: "button-icon",
-                attrs: { src: "/image/icon/cthulhu.png", alt: "ancien" }
-              }),
-              _vm._v("\n            Ancien "),
-              _c("b", [_vm._v(_vm._s(_vm.navbar.ancient == false ? "+" : "-"))])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "waves-effect waves-light btn orange lighten-1",
+              staticClass: "waves-effect waves-light btn grey",
+              class: _vm.navbar.herald ? "darken-2" : "",
               on: {
                 click: function($event) {
                   _vm.switchNavbar("herald")
@@ -19456,6 +19524,27 @@ var render = function() {
               }),
               _vm._v("\n            Héraut "),
               _c("b", [_vm._v(_vm._s(_vm.navbar.herald == false ? "+" : "-"))])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "waves-effect waves-light btn grey",
+              class: _vm.navbar.ancient ? "darken-2" : "",
+              on: {
+                click: function($event) {
+                  _vm.switchNavbar("ancient")
+                }
+              }
+            },
+            [
+              _c("img", {
+                staticClass: "button-icon",
+                attrs: { src: "/image/icon/cthulhu.png", alt: "ancien" }
+              }),
+              _vm._v("\n            Ancien "),
+              _c("b", [_vm._v(_vm._s(_vm.navbar.ancient == false ? "+" : "-"))])
             ]
           )
         ]

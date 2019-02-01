@@ -1,13 +1,15 @@
 <template>
     <div>
-        <!-- Sidebars apparaisant au clique sur les boutons -->
-        <!-- Investigateurs -->
+        <!-- SIDEBARS APPARAISANT AU CLIQUE SUR LES BOUTONS -->
+
+        <!-- PANNEAU INVESTIGATEURS -->
         <transition name="fade">
-            <nav id="sidebar-investigator" class="teal lighten-3 sidenav sidenav-fixed"
+            <nav id="sidebar-investigator" class="grey sidenav sidenav-fixed"
                 v-if="navbar.investigator">
 
                     <div class="center-align">
-                        <button class="waves-effect waves-teal btn-flat btn-small character-button"
+                        <!-- BOUTONS D'INVESTIGATEURS -->
+                        <button class="waves-effect waves-grey grey darken-2 btn btn-small character-button"
                             v-for="(investigator, index) of investigators"
                             @click="showInvestigator(investigator.name)">
                             <span v-html="investigator.name"></span>
@@ -20,9 +22,11 @@
                             v-if="investigatorPreview!='' && investigator.name == investigatorPreview"
                             :key="investigator.name">
                             <div class="row center-align lh-15">
+                                <!-- IMAGE DE L'INVESTIGATEUR -->
                                 <img class="col-md-6 grey lighten-3 z-depth-3 photo-character"
                                     :src="'/image/sheet/character/head/'+investigatorPreview.replace(' ', '')+'.png'"
                                     :alt="investigatorPreview">
+                                <!-- INFORMATIONS DE L'INVESTIGATEUR -->
                                 <div class="col-md-6">
                                     <h5 id="name">{{investigator.name}}</h5>
                                     <span id="profession">La Diletante</span>
@@ -35,8 +39,8 @@
                             </div>
                             <hr>
                             <div class="row">
-                                <!-- Objets, maison et concentration -->
-                                <div class="col-md-6 lh-15" id="left-content">
+                                <!-- POSSESSIONS, MAISON ET CONCENTRATION -->
+                                <div class="col-md-6 lh-15 left-content">
                                     <span id="house">Maison: </span><span>Gare</span>
                                     <hr>
                                     <span>Possessions fixes :</span><br>
@@ -46,7 +50,7 @@
                                     <hr>
                                     <span>Concentration: 1</span>
                                 </div>
-                                <!-- Compétences spéciales -->
+                                <!-- COMPÉTENCES SPÉCIALES -->
                                 <div class="col-md-6 justified-text">
                                     <span class="lh-15">Héritage</span><br><br>
                                     <span id="capacity-text">
@@ -57,7 +61,7 @@
                             </div>
                             <hr>
                             <div class="row lh-15">
-                                <!-- textes d'aptitudes -->
+                                <!-- TEXTES D'APTITUDES -->
                                 <div class="col-xs-4">
                                     <div class="skills mt-5">
                                         <div>vitesse :</div>
@@ -72,14 +76,13 @@
                                         <div>chance:</div>
                                     </div>
                                 </div>
-                                <!-- valeurs -->
+                                <!-- VALEURS ET GLOBULES -->
                                 <div class="col-xs-8">
                                     <div v-for="(skills,index) of investigator.availableSkills" class="row row-skills text-center">
                                         <div v-for="(value) of skills"
                                             class="col-xs-3 skill"
                                             v-html="value"
-                                            v-bind:class="investigator.skills[index] == value?globule(index):''"
-                                        >
+                                            v-bind:class="investigator.skills[index] == value?globule(index):''">
                                         </div>
                                         <br>
                                         <div v-if="index =='discretion' || index =='volonte'" v-html="'<br>'"></div>
@@ -87,6 +90,7 @@
                                 </div>
                             </div>
                             <hr>
+                            <!-- ARGENT, INDICES ET POSITION -->
                             <div class="row lh-15">
                                 <div class="col-md-6">
                                     <span>Argent : 10$</span>
@@ -99,21 +103,33 @@
                                 </div>
                             </div>
 
+                            <!-- BOUTONS D'OBJETS -->
                             <div class="row lh-15 text-center">
-                                <div class="col-md-6">
-                                    <button class="waves-effect waves-teal btn btn-small character-button">Compétences</button>
+                                <div class="col-md-12">
+                                    <button class="waves-effect waves-green green darken-1 btn character-button">
+                                        Compétences
+                                        <img class="button-icon-small" :src="'/image/icon/parchment.png'" alt="competences">
+                                    </button>
+                                    <button class="waves-effect waves-green green darken-1 btn character-button">
+                                        Objets
+                                        <img class="button-icon-small" :src="'/image/icon/object.png'" alt="objets">
+                                    </button>
+                                    <button class="waves-effect waves-green green darken-1 btn character-button">
+                                        Alliés
+                                        <img class="button-icon-small" :src="'/image/icon/ally.png'" alt="allies">
+                                    </button>
                                 </div>
-                                <div class="col-md-6">
-                                    <button class="waves-effect waves-teal btn btn-small character-button">Alliés</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button class="waves-effect waves-teal btn btn-small character-button">Objets</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button class="waves-effect waves-teal btn btn-small character-button">Trophés</button>
+                                <div class="col-md-12">
+                                    <button class="waves-effect waves-green green darken-1 btn character-button">
+                                        Trophés
+                                        <img class="button-icon-small" :src="'/image/icon/trophy.png'" alt="trophees">
+                                    </button>
+                                    <button class="waves-effect waves-green green darken-1 btn character-button">
+                                        Objets spéciaux
+                                        <img class="button-icon-small" :src="'/image/icon/special.png'" alt="objets speciaux">
+                                    </button>
                                 </div>
                             </div>
-
 
                                 <!-- <span id="objets">Objets</span><br>
                                 <div class="row">
@@ -128,16 +144,16 @@
             </nav>
         </transition>
 
-        <!-- gardien -->
+        <!-- PANNEAU GARDIEN -->
         <transition name="fade">
-            <nav id="sidebar-guardian" class="sidenav blue lighten-3"
+            <nav id="sidebar-guardian" class="sidenav grey green darken-1"
                 v-if="navbar.guardian">
             </nav>
         </transition>
 
-        <!-- Infos de partie -->
+        <!-- PANNEAU INFOS DE PARTIE -->
         <transition name="fade">
-            <nav id="sidebar-game" class="cyan lighten-3"
+            <nav id="sidebar-game" class="grey darken-2"
                  v-if="navbar.game">
                 <div class="container">
                     <div class="row lh-15 mt-25">
@@ -172,15 +188,24 @@
             </nav>
         </transition>
 
-        <!-- Ancient -->
+        <!-- PANNEAU HERAUT -->
         <transition name="fade">
-            <nav id="sidebar-ancient" class="red lighten-3 lh-15"
+            <nav id="sidebar-herald" class="grey green darken-1"
+                v-if="navbar.herald">
+            </nav>
+        </transition>
+
+        <!-- PANNEAU ANCIENT -->
+        <transition name="fade">
+            <nav id="sidebar-ancient" class="grey lh-15"
                 v-if="navbar.ancient">
                 <div class="row text-center">
+                    <!-- IMAGE DE L'ANCIEN -->
                     <img :src="'/image/sheet/ancient/head/'+ ancient.name +'.png'"
                         class="col-md-10 col-md-offset-1 grey lighten-3 z-depth-3"
                         style="padding:6px;"
                         :alt="ancient.name">
+                    <!-- INFORMATIONS SUR L'ANCIEN -->
                     <div class="col-md-12">
                         <h5 id="name">{{ancient.name}}</h5>
                     </div>
@@ -192,6 +217,7 @@
                     </div>
                 </div>
                 <hr>
+                <!-- TEXTES DE COMPÉTENCES D'ANCIEN -->
                 <div class="row">
                     <div class="col-md-6">
                         <div class="justified-text">
@@ -202,7 +228,7 @@
                     <div class="col-md-6">
                         <div class="justified-text">
                             <b>{{ ancient.power.title }}</b><br>
-                            <span>{{ ancient.power.text }}</span><br>
+                            <span>{{ ancient.power.text }}</span><hr>
                             <b v-if="ancient.battleEvent">Début de bataille</b>
                             <span v-if="ancient.battleEvent">{{ ancient.battleEvent.text }}</span>
                         </div>
@@ -216,14 +242,18 @@
                     </div>
                 </div>
                 <hr>
+                <!-- ECHELLE DE L'ANCIEN -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <!-- <p>Echelle de l'ancien</p> :  {{ ancient.ladder.current }} / {{ ancient.ladder.maximum }} -->
-                        <div class="col-md-2" v-for="n in ancient.ladder.maximum">
-                            <div class="green"
-                                style="height: 35px;width: 35px;border-radius:50%;display: inline-block;">
+                    <div class="col-md-12 mt-25">
+                        <div class="col-md-2 text-center" v-for="n in ancient.ladder.maximum">
+                            <div class="green valign-wrapper z-depth-3 ancient-number-ladder">
                                 {{ n }}
-                                <div v-if="n == ancient.ladder.current" class="red" style="height: 35px;width: 35px;border-radius:50%;display: inline-block;"></div>
+                                <!-- PIONS DESTIN -->
+                                <img :src="'/image/token/destin.jpg'"
+                                    v-if="n <= ancient.ladder.current"
+                                    class="destiny-token"
+                                    style=""
+                                    alt="marqueur_destin">
                             </div>
                         </div>
                     </div>
@@ -232,50 +262,48 @@
             </nav>
         </transition>
 
-        <!-- Heraut -->
-        <transition name="fade">
-            <nav id="sidebar-herald" class="orange lighten-3"
-                v-if="navbar.herald">
-            </nav>
-        </transition>
-
 
         <!-- BOUTONS POUR AFFICHER LES SIDEBARS-->
-        <div id="button-container" class="center-align teal darken-3 card">
+        <div id="button-container" class="center-align green card">
 
             <!-- INVESTIGATEURS -->
-            <button class="waves-effect waves-light btn teal"
+            <button class="waves-effect waves-light btn grey"
+                :class="(navbar.investigator ? 'darken-2' : '')"
                 @click="switchNavbar('investigator')">
                 <img class="button-icon" :src="'/image/icon/characters.png'" alt="joueurs">
                 joueurs <b>{{ navbar.investigator==false?'+':'-' }}</b>
             </button>
 
             <!-- GARDIEN -->
-            <button class="waves-effect waves-light btn  blue lighten-1"
+            <button class="waves-effect waves-light btn grey"
+                :class="(navbar.guardian ? 'darken-2' : '')"
                 @click="switchNavbar('guardian')">
                 <img class="button-icon" :src="'/image/icon/guardian.png'" alt="gardien">
                 Gardien <b>{{ navbar.guardian==false?'+':'-' }}</b>
             </button>
 
             <!-- INFORMATIONS DE LA PARTIE -->
-            <button class="waves-effect waves-light btn cyan lighten-2"
+            <button class="waves-effect waves-light btn grey"
+                :class="(navbar.game ? 'darken-2' : '')"
                 @click="switchNavbar('game')">
                 <img class="button-icon" :src="'/image/icon/info.png'" alt="informations">
                 Informations sur la partie <b>{{ navbar.game==false?'+':'-' }}</b>
             </button>
 
-            <!-- ANCIEN -->
-            <button class="waves-effect waves-light btn red"
-                @click="switchNavbar('ancient')">
-                <img class="button-icon" :src="'/image/icon/cthulhu.png'" alt="ancien">
-                Ancien <b>{{ navbar.ancient==false?'+':'-'}}</b>
-            </button>
-
             <!-- HERAUT -->
-            <button class="waves-effect waves-light btn orange lighten-1"
+            <button class="waves-effect waves-light btn grey"
+                :class="(navbar.herald ? 'darken-2' : '')"
                 @click="switchNavbar('herald')">
                 <img class="button-icon" :src="'/image/icon/herald.png'" alt="heraut">
                 Héraut <b>{{ navbar.herald==false?'+':'-' }}</b>
+            </button>
+
+            <!-- ANCIEN -->
+            <button class="waves-effect waves-light btn grey"
+                :class="(navbar.ancient ? 'darken-2' : '')"
+                @click="switchNavbar('ancient')">
+                <img class="button-icon" :src="'/image/icon/cthulhu.png'" alt="ancien">
+                Ancien <b>{{ navbar.ancient==false?'+':'-'}}</b>
             </button>
         </div>
     </div>
@@ -328,7 +356,7 @@
                     combatValue: "-3",
                     defensiveAbility: ["Aucun"],
                     adorer: {
-                        text: "Les adorateurs de Yig sont en réalité des membres du Peuple Serpent déguisés. Leur morsure est très venimeuse. Les <b>Cultistes</b> ont une valeur de combat de +0 et des dégâts de combat de 4 résistances."
+                        text: "Les adorateurs de Yig sont en réalité des membres du Peuple Serpent déguisés. Leur morsure est très venimeuse. Les Cultistes ont une valeur de combat de +0 et des dégâts de combat de 4 résistances."
                     },
                     power: {
                         title: "La colère de Yig",
@@ -338,11 +366,11 @@
                         text: "Chaque investigateur est Maudit. Un investigateur qui est déjà Maudit est dévoré."
                     },
                     attack: {
-                        text: "Chaque investigateur doit réussir un <b>test de Vitesse</b> (+1) ou perdre 1 Santé Mentale et 1 Résistance. Le modificateur de test diminue de 1 à chaque tour (+0 au deuxième tour, -1 au troisième, etc.)"
+                        text: "Chaque investigateur doit réussir un test de Vitesse (+1) ou perdre 1 Santé Mentale et 1 Résistance. Le modificateur de test diminue de 1 à chaque tour (+0 au deuxième tour, -1 au troisième, etc.)"
                     },
                     ladder: {
-                        current: 1,
-                        maximum: 10
+                        current: 3,
+                        maximum: 14
                     }
                 }
 
@@ -370,9 +398,13 @@
             {
                 switch(index)
                 {
-                    case "vitesse": case "vigueur": case "savoir":
+                    case "vitesse":
+                    case "vigueur":
+                    case "savoir":
                         return "glob-top";
-                    case "discretion": case "volonte": case "chance":
+                    case "discretion":
+                    case "volonte":
+                    case "chance":
                         return "glob-bot";
                 }
             }
@@ -396,6 +428,12 @@
     {
         height:25px;
         margin-right:7px;
+    }
+
+    img.button-icon-small
+    {
+        height:15px;
+        margin-left:7px;
     }
 
     /* SIDEBARS */
@@ -454,13 +492,13 @@
         opacity: 0;
     }
 
-    /* Présentation */
+    /* PRÉSENTATION */
     img.photo-character
     {
         padding:12px;height:165px; width:auto;
     }
 
-    /*aptitudes*/
+    /*APTITUDES*/
     .row-skills
     {
         margin-bottom: 0;
@@ -485,7 +523,7 @@
         line-height:11pt;
     }
 
-    #left-content
+    div.left-content
     {
         border-right: 1px solid #eee;
     }
@@ -504,7 +542,30 @@
         width:auto;
     }
 
-    /* general */
+    /* ANCIEN */
+    img.destiny-token
+    {
+        height: 35px;
+        width: 35px;
+        border-radius:50%;
+        display: inline-block;
+        position: absolute;
+        top:0;
+        left:0;
+    }
+
+    div.ancient-number-ladder
+    {
+        height: 35px;
+        width: 35px;
+        border-radius:50%;
+        display: inline-block;
+        position: relative;
+        margin-bottom:15px;
+        padding-top:5px;
+    }
+
+    /* GENERAL */
     .lh-15
     {
         line-height:15pt;
