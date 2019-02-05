@@ -1351,27 +1351,6 @@
             opacity: 0;
         }
 
-        /*Modales*/
-        #modal-myth-1
-        {
-            z-index: 999;
-            display: block;
-            opacity: 1;
-            top: 5%;
-            width: 20%;
-            margin-left: 25px;
-        }
-        #modal-myth-2
-        {
-            z-index: 999;
-            display: block;
-            opacity: 1;
-            top: 5%;
-            width: 20%;
-            margin-right: 25px;
-            height:100%;
-        }
-
                 /*BOUTTONS GROUPES*/
         .btn-group {
           position: relative;

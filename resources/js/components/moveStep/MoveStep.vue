@@ -1,21 +1,43 @@
 <template>
-        <body>
-            <app-sidebar></app-sidebar>
+    <body>
+        <app-sidebar></app-sidebar>
 
-            <!-- ARKHAM MAP -->
-            <app-map :investigators="investigators"
-                     :sites="sites"
-                     :beyond="beyond"
-                     :specials="specials"
-                     :monsters="monsters"></app-map>
+        <!-- ARKHAM MAP -->
+        <app-map :investigators="investigators"
+                 :sites="sites"
+                 :beyond="beyond"
+                 :specials="specials"
+                 :monsters="monsters"></app-map>
 
-            <!-- Modale de simple message -->
-            <app-simple-modal :title="modalTexts.title"
-                              :content="modalTexts.content"
-                              :buttonText="modalTexts.buttonText"
-                              :route="modalTexts.route">
-            </app-simple-modal>
-        </body>
+        <!-- MODALE DE SIMPLE MESSAGE -->
+        <app-simple-modal :title="modalTexts.title"
+                          :content="modalTexts.content"
+                          :buttonText="modalTexts.buttonText"
+                          :route="modalTexts.route">
+                          <div class="btn teal" @click="test">test</div>
+        </app-simple-modal>
+
+        <div id="modal-movement-1" class="modal" tabindex="0">
+                <div class="modal-content" style="height:100%">
+                    <div class="row">
+                        <div class="col s12">
+                            <h5>Mouvement</h5>
+                            <transition name="fade" mode="out-in">
+                                <div v-for="investigator of investigators"
+                                    v-if="investigator.id == currentPlayer"
+                                    :key="investigator.name">
+                                    <span>{{ investigator.name }}</span>
+                                    <span>Mouvement: 3</span>
+                                </div>
+                            </transition>
+                            <span class="btn">Confirmer le déplacement</span>
+                            <span class="btn">Annuler le déplacement</span>
+                            <span class="btn" @click="currentPlayer++">Joueur suivant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
 </template>
 
 <script>
@@ -34,6 +56,7 @@
             return {
                 pageTitle: 'Phase de mouvement',
                 playerNumber: 2, // nombre de joueurs
+                currentPlayer: 1,
                 modalTexts: {
                     title: "Mouvement",
                     content: "Phase de mouvement...",
@@ -41,8 +64,11 @@
                     route: "arkham-encounter-step"
                 },
                 investigators: [
-                    { id:1, name: "Joe Diamond"   , siteId:3 },
-                    { id:2, name: "Francis Sailor", siteId:1 }
+                    { id:1, name: "Joe Diamond"   , siteId:3, status:"ok" },
+                    { id:2, name: "Francis Sailor", siteId:36, status:"lost" },
+                    { id:3, name: "Jenny Barnes"  , siteId:9, status:"arrested" },
+                    { id:4, name: "Peggy Green"   , siteId:6, status:"retarded" },
+                    { id:5, name: "Mark Harrigan" , siteId:36, status:"lost" },
                 ],
                 monsters: [
                     { id:1, name:"Chthonien", siteId:11, symbol:"triangle", habilities: {}},
@@ -58,7 +84,7 @@
                     { name: "Square de<br>l'indépen-<br>-dance" , id: "6" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "white" , portal: [], marker: [], white:28, black:28},
                     { name: "Relais<br>routier<br>de Hibb"      , id: "7" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "Restaurant<br>de Velma"            , id: "8" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
-                    { name: "Poste<br>de<br>-polic9"            , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
+                    { name: "Poste<br>de<br>-police"            , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "L'ile<br>inexplorée"               , id: "10", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "Les<br>quais"                      , id: "11", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "l'Inno-<br>-mable"                 , id: "12", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
@@ -127,11 +153,112 @@
                     { name: 'Périphérie',                             id: 38, monster: []},
                     { name: 'Cellule de prison',                      id: 39, monster: []}
                 ],
+                adjacentSites: [
+                    { id: 1 , sites: [27]},
+                    { id: 2 , sites: [27]},
+                    { id: 3 , sites: [27]},
+                    { id: 4 , sites: [28]},
+                    { id: 5 , sites: [28]},
+                    { id: 6 , sites: [28]},
+                    { id: 7 , sites: [29]},
+                    { id: 8 , sites: [29]},
+                    { id: 9 , sites: [29]},
+                    { id: 10, sites: [30]},
+                    { id: 11, sites: [30]},
+                    { id: 12, sites: [30]},
+                    { id: 13, sites: [31]},
+                    { id: 14, sites: [31]},
+                    { id: 15, sites: [31]},
+                    { id: 16, sites: [32]},
+                    { id: 17, sites: [32]},
+                    { id: 18, sites: [32]},
+                    { id: 19, sites: [33]},
+                    { id: 20, sites: [33]},
+                    { id: 21, sites: [34]},
+                    { id: 22, sites: [34]},
+                    { id: 23, sites: [34]},
+                    { id: 24, sites: [35]},
+                    { id: 25, sites: [35]},
+                    { id: 26, sites: [35]}, //fin des lieux
+                    { id: 27, sites: [1,2,3,28,30]},
+                    { id: 28, sites: [4,5,6,27,29]},
+                    { id: 29, sites: [7,8,9,28,31]},
+                    { id: 30, sites: [10,11,12,27,28,31,32]},
+                    { id: 31, sites: [13,14,15,29,30,33]},
+                    { id: 32, sites: [16,17,18,30,33,34]},
+                    { id: 33, sites: [19,20,31,32,35]},
+                    { id: 34, sites: [21,22,23,32,35]},
+                    { id: 35, sites: [24,25,26,33,34]}
+                ]
 
             }
         },
         methods: {
 
+            test()
+            {
+                this.log(this.getAvailableSites(17,4));
+            },
+            // Récupération des lieux adjacents à celui dont l'id est spécifié
+            getAdjacentSites (id)
+            {
+                var adjacentSite = this.adjacentSites.find((adj) => {
+                    return adj.id == id;
+                });
+                return adjacentSite.sites;
+            },
+            // Retourne les lieux à la distance speed du lieu numéro id
+            getAvailableSites (id,speed)
+            {
+                // on définit les variables
+                var getAvailableSites = [];
+                var find = [];
+                var last = [];
+                // pour chaque point de mouvement
+                for(var i = 0; i<speed; i++)
+                {
+                    // si premier point de mouvement
+                    if(i==0)
+                    {
+                        // Recherche des lieux adjacents
+                        var adjacentSites = this.getAdjacentSites(id);
+                        // Sauvegarde de l'objet à retourner
+                        getAvailableSites.push({ rang: (i+1), sites: adjacentSites });
+                        // Sauvegarde des lieux trouvés
+                        adjacentSites.forEach((adj) => {
+                            find.push(adj)
+                        });
+                        // Sauvegarde des derniers lieux trouvés
+                        last = adjacentSites;
+                    }
+                    // Si points de mouvement suivants
+                    else
+                    {
+                        // Création de l'objet à mettre dans ce qu'on retourne
+                        var result = { rang: (i+1), sites: [] };
+                        // Pour chacun des derniers sites trouvés
+                        last.forEach((element) => {
+                            // Recherche des lieux adjacents
+                            var adj = this.getAdjacentSites(element);
+                            // Pour chacun de ces lieux trouvés
+                            adj.forEach((site) => {
+                                // Si pas encore trouvé et si pas le lieu de départ
+                                // Ajout au tableau des lieux trouvés et dans l'objet à retourner
+                                if(find.indexOf(site) == -1 && site != id)
+                                {
+                                    find.push(site);
+                                    result.sites.push(site);
+                                }
+                            });
+                        });
+                        // Sauvegarde de l'objet à retourner
+                        getAvailableSites.push(result);
+                        // Sauvegarde des derniers lieux trouvés
+                        last = result.sites
+                    }
+                }
+                return getAvailableSites
+            },
             log (message)
             {
                 console.log(message);
@@ -152,5 +279,26 @@
 </script>
 
 <style>
+
+    /*Modales*/
+    #modal-movement-1
+    {
+        z-index: 999;
+        display: block;
+        opacity: 1;
+        top: 5%;
+        width: 20%;
+        margin-left: 25px;
+        height: 400px;
+    }
+
+    /*TRANSITIONS*/
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .75s;
+    }
+    .fade-enter, .fade-leave-to
+    {
+        opacity: 0;
+    }
 
 </style>

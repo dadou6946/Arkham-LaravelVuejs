@@ -287,7 +287,7 @@
                 :class="(navbar.game ? 'darken-2' : '')"
                 @click="switchNavbar('game')">
                 <img class="button-icon" :src="'/image/icon/info.png'" alt="informations">
-                Informations sur la partie <b>{{ navbar.game==false?'+':'-' }}</b>
+                Informations <b>{{ navbar.game==false?'+':'-' }}</b>
             </button>
 
             <!-- HERAUT -->
@@ -590,6 +590,11 @@
     div.justified-text
     {
         text-align:justify;
+    }
+
+    b.bold
+    {
+        font-weight: 900;
     }
 
 </style>

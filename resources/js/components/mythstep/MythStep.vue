@@ -146,7 +146,7 @@
                     { name: "Square de<br>l'indépen-<br>-dance" , id: "6" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "white" , portal: [], marker: [], white:28, black:28},
                     { name: "Relais<br>routier<br>de Hibb"      , id: "7" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "Restaurant<br>de Velma"            , id: "8" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
-                    { name: "Poste<br>de<br>-polic9"            , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
+                    { name: "Poste<br>de<br>-police"            , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "L'ile<br>inexplorée"               , id: "10", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "Les<br>quais"                      , id: "11", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "l'Inno-<br>-mable"                 , id: "12", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
@@ -349,32 +349,31 @@
                 // passage à la séquence de mythe suivante
                 this.next();
             },1000);
-
-
-
-            // // Ajout des monstres sur la map
-            // this.monsters.forEach((monster) => {
-            // // Pour chacun des monstres dans monsters
-            //     this.sites.find(function(site) {
-            //         // On ajoute ce montre au site correspondant
-            //         if( site.id == monster.siteId ) site.monster.push(monster.name);
-            //     });
-            // });
-
-            // // Ajout des INVESTIGATEURS sur la map
-            // this.investigators.forEach((investigator) => {
-            // // Pour chacun des monstres dans monsters
-            //     this.sites.find(function(site) {
-            //         // On ajoute ce montre au site correspondant
-            //         if( site.id == investigator.siteId ) site.character.push(investigator.name);
-            //     });
-            // });
         }
     }
 </script>
 
 <style>
 
-
+    /*Modales*/
+    #modal-myth-1
+    {
+        z-index: 999;
+        display: block;
+        opacity: 1;
+        top: 5%;
+        width: 20%;
+        margin-left: 25px;
+    }
+    #modal-myth-2
+    {
+        z-index: 999;
+        display: block;
+        opacity: 1;
+        top: 5%;
+        width: 20%;
+        margin-right: 25px;
+        height:100%;
+    }
 
 </style>

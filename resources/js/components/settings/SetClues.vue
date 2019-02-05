@@ -53,7 +53,7 @@
                     { name: "Square de<br>l'indépen-<br>-dance" , id: "6" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "white" , portal: [], marker: [], white:28, black:28},
                     { name: "Relais<br>routier<br>de Hibb"      , id: "7" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "Restaurant<br>de Velma"            , id: "8" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
-                    { name: "Poste<br>de<br>-polic9"            , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
+                    { name: "Poste<br>de<br>-police"            , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "L'ile<br>inexplorée"               , id: "10", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "Les<br>quais"                      , id: "11", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "l'Inno-<br>-mable"                 , id: "12", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},

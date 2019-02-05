@@ -3,6 +3,7 @@
         <div class="modal-content">
             <h4>{{ title }}</h4>
             <p class="text-center">{{ content }}</p>
+            <slot></slot>
             <div class="right-align">
                 <button class="waves-effect waves-light btn teal" @click="continueAction">{{ buttonText }}</button>
             </div>
