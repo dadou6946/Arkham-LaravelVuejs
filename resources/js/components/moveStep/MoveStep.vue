@@ -21,7 +21,8 @@
                 <div class="modal-content" style="height:100%">
                     <div class="row">
                         <div class="col s12">
-                            <h5>Mouvement</h5>
+                            <h5>Phase de mouvement</h5>
+                            <span>Les investigateurs peuvent se déplacer en fonction de leur <b>vitesse</b>, le premier joueur commence:</span><br>
                             <transition name="fade" mode="out-in">
                                 <div v-for="investigator of investigators"
                                     v-if="investigator.id == currentPlayer"
@@ -30,6 +31,7 @@
                                     <span>Mouvement: 3</span>
                                 </div>
                             </transition>
+
                             <span class="btn">Confirmer le déplacement</span>
                             <span class="btn">Annuler le déplacement</span>
                             <span class="btn" @click="currentPlayer++">Joueur suivant</span>
@@ -64,10 +66,16 @@
                     route: "arkham-encounter-step"
                 },
                 investigators: [
-                    { id:1, name: "Joe Diamond"   , siteId:3, status:"ok" },
+                    { name: 'Joe Diamond',    skills: { vitesse: 3, discretion:4, vigueur:2, volonte:3, savoir:0, chance:3}, availableSkills: { vitesse: [3,4,5,6], discretion:[4,3,2,1], vigueur:[2,3,4,5], volonte:[3,2,1,0], savoir:[0,1,2,3], chance:[3,2,1,0]}},
+                    { name: 'Peggy Green',    skills: { vitesse: 1, discretion:5, vigueur:1, volonte:3, savoir:1, chance:5}, availableSkills: { vitesse: [1,2,3,4], discretion:[5,4,3,2], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[1,2,3,4], chance:[5,4,3,2]}},
+                    { name: 'Jenny Barnes',   skills: { vitesse: 0, discretion:3, vigueur:2, volonte:3, savoir:0, chance:4}, availableSkills: { vitesse: [0,1,2,3], discretion:[3,2,1,0], vigueur:[2,3,4,5], volonte:[3,2,1,0], savoir:[0,1,2,3], chance:[4,3,2,0]}},
+                    { name: 'Francis Sailor', skills: { vitesse: 1, discretion:4, vigueur:1, volonte:3, savoir:2, chance:5}, availableSkills: { vitesse: [1,2,3,4], discretion:[4,3,2,1], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[2,3,4,5], chance:[5,4,3,2]}}
+                ]
+                [
+                    { id:1, name: "Joe Diamond"   , siteId:3,  status:"ok" },
                     { id:2, name: "Francis Sailor", siteId:36, status:"lost" },
-                    { id:3, name: "Jenny Barnes"  , siteId:9, status:"arrested" },
-                    { id:4, name: "Peggy Green"   , siteId:6, status:"retarded" },
+                    { id:3, name: "Jenny Barnes"  , siteId:9,  status:"arrested" },
+                    { id:4, name: "Peggy Green"   , siteId:6,  status:"retarded" },
                     { id:5, name: "Mark Harrigan" , siteId:36, status:"lost" },
                 ],
                 monsters: [
@@ -84,7 +92,7 @@
                     { name: "Square de<br>l'indépen-<br>-dance" , id: "6" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "white" , portal: [], marker: [], white:28, black:28},
                     { name: "Relais<br>routier<br>de Hibb"      , id: "7" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "Restaurant<br>de Velma"            , id: "8" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
-                    { name: "Poste<br>de<br>-police"            , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
+                    { name: "Poste<br>de<br>police"             , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
                     { name: "L'ile<br>inexplorée"               , id: "10", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "Les<br>quais"                      , id: "11", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
                     { name: "l'Inno-<br>-mable"                 , id: "12", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
@@ -103,14 +111,14 @@
                     { name: "Société<br>des<br>historiens"      , id: "25", type: "site",   character: [], monster: [], event: [], clue: 1, color: "brown" , portal: [], marker: [], white:35, black:35},
                     { name: "Eglise<br>méridionale"             , id: "26", type: "site",   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
     /*'Migo'*/      { name: "Quartier<br>Nord"                  , id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:28, black:30},
-    /*'Cultiste'*/  { name: "Centre<br>Ville"                   , id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white" , portal:  [], marker: [], white:29, black:27},
-                    { name: "Quartier<br>Est"                   , id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey"  , portal:   [], marker: [], white:31, black:28},
-                    { name: "Quartier<br>marchand"              , id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green" , portal:  [], marker: [], white:27, black:32},
+    /*'Cultiste'*/  { name: "Centre<br>Ville"                   , id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white" , portal: [], marker: [], white:29, black:27},
+                    { name: "Quartier<br>Est"                   , id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey"  , portal: [], marker: [], white:31, black:28},
+                    { name: "Quartier<br>marchand"              , id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green" , portal: [], marker: [], white:27, black:32},
                     { name: "Quartier<br>de la<br>rivière"      , id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white:33, black:29},
                     { name: "Université<br>Miskatonik"          , id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white:30, black:34},
-                    { name: "French<br>Hill"                    , id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue"  , portal:   [], marker: [], white:35, black:31},
-                    { name: "Quartier<br>Résidentiel"           , id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red"   , portal:    [], marker: [], white:32, black:35},
-                    { name: "Quartier<br>sud"                   , id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown" , portal:  [], marker: [], white:34, black:33},
+                    { name: "French<br>Hill"                    , id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue"  , portal: [], marker: [], white:35, black:31},
+                    { name: "Quartier<br>Résidentiel"           , id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red"   , portal: [], marker: [], white:32, black:35},
+                    { name: "Quartier<br>sud"                   , id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:34, black:33},
 
                 ],
                 beyond : [
@@ -202,9 +210,11 @@
             // Récupération des lieux adjacents à celui dont l'id est spécifié
             getAdjacentSites (id)
             {
+                // Recherche le lieu avec l'id en paramètre
                 var adjacentSite = this.adjacentSites.find((adj) => {
                     return adj.id == id;
                 });
+                // Retourne les lieux adjacents
                 return adjacentSite.sites;
             },
             // Retourne les lieux à la distance speed du lieu numéro id
@@ -289,7 +299,7 @@
         top: 5%;
         width: 20%;
         margin-left: 25px;
-        height: 400px;
+        height: 550px;
     }
 
     /*TRANSITIONS*/

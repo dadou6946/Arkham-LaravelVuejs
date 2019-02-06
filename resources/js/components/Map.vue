@@ -33,7 +33,7 @@
                     </div>
                 </transition-group>
 
-                <!-- Monstres -->
+²                <!-- Monstres -->
                 <transition-group name="fade">
                     <div  class="monster truncate"
                         v-for="(mons,index) of site.monster"
@@ -73,9 +73,6 @@
                 </transition-group>
 
             </div>
-
-
-
 
             <!-- Lieux spéciaux -->
             <div class="special_site card hoverable"
@@ -154,6 +151,7 @@
 </template>
 
 <script>
+
     export default {
         props: [
             "investigators",
