@@ -8,10 +8,10 @@
             <!-- Lieux -->
             <div class="card hoverable"
                 v-for="site of sites"
-                v-bind:class="[site.color, site.type]"
+                v-bind:class="[site.color, site.type, adjacent(site)]"
                 v-bind:id="'site'+site.id"
                 @click="lastClick(site)"
-                >
+                :key="site.id">
 
                 <span v-html="site.name+site.id"></span>
 
@@ -33,7 +33,7 @@
                     </div>
                 </transition-group>
 
-²                <!-- Monstres -->
+                <!-- Monstres -->
                 <transition-group name="fade">
                     <div  class="monster truncate"
                         v-for="(mons,index) of site.monster"
@@ -47,7 +47,8 @@
                 <!-- Portails -->
                 <transition name="fade">
                     <div class="portal_token valign-wrapper"
-                        v-for="mark of site.portal">
+                        v-for="mark of site.portal"
+                        :key="mark">
                         <span v-html="mark"></span>
                     </div>
                 </transition>
@@ -77,7 +78,8 @@
             <!-- Lieux spéciaux -->
             <div class="special_site card hoverable"
                 v-for="special of specials"
-                v-bind:class="'special'+special.id">
+                v-bind:class="'special'+special.id"
+                :key="special.id">
 
                 <span v-html="special.name"></span>
 
@@ -106,8 +108,7 @@
             </div>
 
             <!-- liaisons entre les rues -->
-            <div
-                v-for="road of roads"
+            <div v-for="road of roads"
                 v-bind:id="'road'+road.id"
                 v-bind:class="road.way">
             </div>
@@ -159,7 +160,7 @@
             "beyond",
             "specials",
             "monsters",
-            "objects"
+            "objects",
         ],
         data: function(){
             return {
@@ -295,24 +296,26 @@
             {
                 // Ajout des monstres sur la map
                 this.monsters.forEach((monster) => {
-                // Pour chacun des monstres dans monsters
+                // Pour chacun des monstres dans monsters, on ajoute ce montre au site correspondant
                     this.sites.find(function(site) {
-                        // On ajoute ce montre au site correspondant
                         if( site.id == monster.siteId ) site.monster.push(monster.name);
                     });
                 });
-                // Ajout des INVESTIGATEURS sur la map
+                // Ajout des investigateurs sur la map
                 this.investigators.forEach((investigator) => {
-                // Pour chacun des monstres dans monsters
+                // Pour chacun des investigateurs, on l'ajoute au site correspondant
                     this.sites.find(function(site) {
-                        // On ajoute ce montre au site correspondant
                         if( site.id == investigator.siteId ) site.character.push(investigator.name);
                     });
                 });
+            },
+            adjacent(site)
+            {
+                // if(this.availableSites[0].sites.indexOf(site.id) == -1)
+                // return 'adjacent';
             }
         },
         mounted(){
-
             this.updateSites();
         }
     }

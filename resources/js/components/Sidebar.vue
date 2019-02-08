@@ -287,7 +287,7 @@
                 :class="(navbar.game ? 'darken-2' : '')"
                 @click="switchNavbar('game')">
                 <img class="button-icon" :src="'/image/icon/info.png'" alt="informations">
-                Informations <b>{{ navbar.game==false?'+':'-' }}</b>
+                Infos <b>{{ navbar.game==false?'+':'-' }}</b>
             </button>
 
             <!-- HERAUT -->

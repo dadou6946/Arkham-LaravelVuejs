@@ -19501,7 +19501,7 @@ var render = function() {
                 staticClass: "button-icon",
                 attrs: { src: "/image/icon/info.png", alt: "informations" }
               }),
-              _vm._v("\n            Informations "),
+              _vm._v("\n            Infos "),
               _c("b", [_vm._v(_vm._s(_vm.navbar.game == false ? "+" : "-"))])
             ]
           ),
@@ -19721,7 +19721,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/***** MAP*****/\n#map-container\n{\n    height : 710px;\n    width: 1090px;\n}\n#button-container\n{\n    height : 40px;\n    width: 100%;\n    margin-bottom: 25px;\n}\n#map-container, #button-container\n{\n    margin-left: auto;\n    margin-right: auto;\n}\n#ark-map\n{\n    position : relative;\n    height : 710px;\n    width: 975px;\n    /*background-color: lightgrey;*/\n    padding-top: -50px;\n}\n#beyond-map\n{\n    position : relative;\n    height : 710px;\n    width: 115px;\n    /*background-color: lightgrey;*/\n    padding: 5px;\n    padding-top: 30px\n}\n\n/***** LIEUX *****/\ndiv .site, div .street, div .world, div .special_site\n{\n    position : absolute;\n    height: 80px;\n    text-align: center;\n    color: white;\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    z-index: 10;\n    text-shadow: 1px 1px 2px black;\n}\ndiv .site\n{\n    width : 80px;\n    border-radius: 20%;\n}\ndiv .street, div .special_site\n{\n    width: 80px;\n}\ndiv .card\n{\n    margin: 0;\n}\ndiv.world\n{\n    height:75px;\n    width: 105px;\n    background-color: white;\n    position: relative;\n    border-radius: 5px;\n    z-index: 0;\n    margin-top: 4px;\n    margin-bottom: 4px;\n}\ndiv.first, div.second\n{\n    width: 50%;\n    height: 100%;\n}\ndiv.first\n{\n    background-color: grey;\n    width: 50%;\n    border-radius: 5px 0 0 5px;\n}\nspan.other_world {\n    position: absolute;\n    z-index: 500;\n    /*left: 0%;\n    right: 0%;*/\n}\ndiv .special36\n{\n    bottom: 2px;\n    right: 2px;\n}\ndiv .special37\n{\n    bottom: 2px;\n    left: 2px;\n}\ndiv .special38\n{\n    bottom: 90px;\n    left: 2px;\n}\ndiv .special39\n{\n    bottom: 90px;\n    right: 2px;\n}\n\n\n\n/***** LIEU individuel *****/\ndiv #site1\n{\n    top: 5px;\n    left: 55px;\n}\ndiv #site2\n{\n    top: 5px;\n    left: 155px;\n}\ndiv #site3\n{\n    top: 5px;\n    left: 255px;\n}\ndiv #site4\n{\n    top: 5px;\n    left: 355px;\n}\ndiv #site5\n{\n    top: 5px;\n    left: 455px;\n}\ndiv #site6\n{\n    top: 5px;\n    left: 555px;\n}\ndiv #site7\n{\n    top: 5px;\n    right: 235px;\n}\ndiv #site8\n{\n    top: 5px;\n    right: 135px;\n}\ndiv #site9\n{\n    top: 5px;\n    right: 35px;\n}\ndiv #site10\n{\n    top: 145px;\n    left: 50px;\n}\ndiv #site11\n{\n    top: 245px;\n    left: 50px;\n}\ndiv #site12\n{\n    top: 345px;\n    left: 50px;\n}\ndiv #site13\n{\n    top: 135px;\n    right: 10px;\n}\ndiv #site14\n{\n    top: 235px;\n    right: 10px;\n}\ndiv #site15\n{\n    top: 335px;\n    right: 10px;\n}\ndiv #site16\n{\n    top: 365px;\n    left: 180px;\n}\ndiv #site17\n{\n    top: 465px;\n    left: 180px;\n}\ndiv #site18\n{\n    top: 465px;\n    left: 385px;\n}\ndiv #site19\n{\n    top: 395px;\n    right: 140px;\n}\ndiv #site20\n{\n    top: 495px;\n    right: 140px;\n}\ndiv #site21\n{\n    bottom: 5px;\n    left: 185px;\n}\ndiv #site22\n{\n    bottom: 5px;\n    left: 285px;\n}\ndiv #site23\n{\n    bottom: 5px;\n    left: 385px;\n}\ndiv #site24\n{\n    bottom: 5px;\n    right: 405px;\n}\ndiv #site25\n{\n    bottom: 5px;\n    right: 305px;\n}\ndiv #site26\n{\n    bottom: 5px;\n    right: 205px;\n}\ndiv #site27\n{\n    top: 105px;\n    left: 155px;\n}\ndiv #site28\n{\n    top: 105px;\n    left: 455px;\n}\ndiv #site29\n{\n    top: 105px;\n    right: 135px;\n}\ndiv #site30\n{\n    top: 245px;\n    left: 155px;\n}\ndiv #site31\n{\n    top: 235px;\n    right: 115px;\n}\ndiv #site32\n{\n    top: 365px;\n    left: 285px;\n}\ndiv #site33\n{\n    top: 395px;\n    right: 245px;\n}\ndiv #site34\n{\n    bottom: 105px;\n    left: 285px;\n}\ndiv #site35\n{\n    bottom: 105px;\n    right: 305px;\n}\n\n/***** COULEURS *****/\ndiv .orange\n{\n    background-color : orange;\n}\ndiv .white\n{\n    background-color : #B5B4B3; color: black;\n    text-shadow: 0px 0px 0px white;\n}\ndiv .grey\n{\n    background-color: #656364;\n}\ndiv .green\n{\n    background-color: #0b700b;\n}\ndiv .purple\n{\n    background-color: #633E87;\n}\ndiv .yellow\n{\n    background-color: #F9E46B;\n}\ndiv .blue\n{\n    background-color: #41a3ef;\n}\ndiv .red\n{\n    background-color: #CB191F;\n}\ndiv .brown\n{\n    background-color: #631E15;\n}\n/***** liens entre les lieux *****/\ndiv .bar-h, div .bar-v, div .bar-c\n{\n    background-color : white;\n    -webkit-box-shadow: 1px 2px 2px lightgrey;\n            box-shadow: 1px 2px 2px lightgrey;\n    position: absolute;\n    z-index: 0;\n}\ndiv .bar-h\n{\n    height: 4px;\n}\ndiv .bar-v, div .bar-c\n{\n    width: 4px;\n}\ndiv #road1\n{\n    width: 270px;\n    top: 135px;\n    left : 205px;\n}\ndiv #road2\n{\n    width: 270px;\n    top: 135px;\n    right : 205px;\n}\ndiv #road3\n{\n    width: 370px;\n    top: 415px;\n    right : 255px;\n}\ndiv #road4\n{\n    width: 280px;\n    bottom: 145px;\n    right : 355px;\n}\ndiv #road5\n{\n    width: 560px;\n    top: 280px;\n    right : 185px;\n}\ndiv #road6\n{\n    height: 80px;\n    top: 175px;\n    left : 195px;\n}\ndiv #road7\n{\n    height: 120px;\n    bottom: 170px;\n    left : 325px;\n}\ndiv #road8\n{\n    height: 180px;\n    bottom: 290px;\n    left : 275px;\n    -webkit-transform: rotate(-55deg);\n            transform: rotate(-55deg);\n}\ndiv #road9\n{\n    height: 200px;\n    bottom: 260px;\n    right : 215px;\n    -webkit-transform: rotate(55deg);\n            transform: rotate(55deg);\n}\ndiv #road10\n{\n    height: 120px;\n    bottom: 155px;\n    right : 305px;\n    -webkit-transform: rotate(45deg);\n            transform: rotate(45deg);\n}\ndiv #road11\n{\n    height: 350px;\n    top: 50px;\n    left : 315px;\n    -webkit-transform: rotate(65deg);\n            transform: rotate(65deg);\n}\ndiv #road12\n{\n    height: 80px;\n    top: 175px;\n    right : 160px;\n    -webkit-transform: rotate(-25deg);\n            transform: rotate(-25deg);\n}\ndiv #road13\n{\n    height: 50px;\n    top: 75px;\n    right : 175px;\n}\ndiv #road14\n{\n    height: 50px;\n    top: 75px;\n    right : 475px;\n}\ndiv #road15\n{\n    height: 50px;\n    top: 75px;\n    left : 195px;\n}\ndiv #road16\n{\n    height: 50px;\n    bottom: 75px;\n    left : 325px;\n}\ndiv #road17\n{\n    height: 50px;\n    bottom: 75px;\n    right : 345px;\n}\ndiv #road18\n{\n    height: 50px;\n    bottom: 245px;\n    right : 225px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road19\n{\n    height: 50px;\n    bottom: 275px;\n    left : 275px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road20\n{\n    height: 50px;\n    bottom: 395px;\n    left : 145px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road21\n{\n    height: 50px;\n    bottom: 405px;\n    right : 95px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road22\n{\n    height: 80px;\n    top: 45px;\n    left : 255px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road23\n{\n    height: 80px;\n    top: 40px;\n    left : 125px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road24\n{\n    height: 80px;\n    top: 40px;\n    left : 425px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road25\n{\n    height: 80px;\n    top: 40px;\n    right : 240px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road26\n{\n    height: 80px;\n    top: 40px;\n    right : 110px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road27\n{\n    height: 80px;\n    top: 40px;\n    right : 410px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road28\n{\n    height: 80px;\n    top: 175px;\n    right : 90px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road29\n{\n    height: 80px;\n    top: 295px;\n    right : 90px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road30\n{\n    height: 80px;\n    top: 180px;\n    left : 130px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road31\n{\n    height: 80px;\n    top: 300px;\n    left : 140px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road32\n{\n    height: 80px;\n    top: 420px;\n    left : 270px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road33\n{\n    height: 80px;\n    top: 420px;\n    left : 375px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road34\n{\n    height: 80px;\n    bottom: 50px;\n    left : 270px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road35\n{\n    height: 80px;\n    bottom: 50px;\n    left : 375px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road36\n{\n    height: 80px;\n    bottom: 50px;\n    right : 400px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road37\n{\n    height: 80px;\n    bottom: 50px;\n    right : 290px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road38\n{\n    height: 80px;\n    bottom: 180px;\n    right : 225px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n\n/****** FLECHES ******/\n.white-arrow, .black-arrow, .double-arrow\n{\n    position: absolute;\n    z-index: 0;\n}\n.white-arrow\n{\n    font-size: 25px;\n    color:white;\n    text-shadow: 1px 1px 2px black;\n}\n.black-arrow\n{\n    font-size: 25px;\n    color:black;\n}\n.double-arrow\n{\n    color:black;\n    font-size: 35px;\n}\n#arrow1\n{\n    left: 228px;\n    top: 116px;\n}\n#arrow2\n{\n    left: 529px;\n    top: 116px;\n}\n#arrow3\n{\n    right: 156px;\n    top: 172px;\n    -webkit-transform:rotate(70deg);\n            transform:rotate(70deg);\n}\n#arrow4\n{\n    right: 160px;\n    top: 302px;\n    -webkit-transform:rotate(150deg);\n            transform:rotate(150deg);\n}\n#arrow5\n{\n    right: 278px;\n    top: 465px;\n    -webkit-transform:rotate(140deg);\n            transform:rotate(140deg);\n}\n#arrow6\n{\n    right: 380px;\n    bottom: 125px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n#arrow7\n{\n    left: 312px;\n    bottom: 173px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow8\n{\n    left: 306px;\n    bottom: 330px;\n    -webkit-transform:rotate(-150deg);\n            transform:rotate(-150deg);\n}\n#arrow9\n{\n    left: 182px;\n    top: 220px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow10\n{\n    left: 436px;\n    top: 120px;\n    -webkit-transform:rotate(-180deg);\n            transform:rotate(-180deg);\n}\n#arrow11\n{\n    right: 209px;\n    top: 120px;\n    -webkit-transform:rotate(-180deg);\n            transform:rotate(-180deg);\n}\n#arrow12\n{\n    right: 144px;\n    top: 212px;\n    -webkit-transform:rotate(250deg);\n            transform:rotate(250deg);\n}\n#arrow13\n{\n    right: 262px;\n    top: 371px;\n    -webkit-transform:rotate(320deg);\n            transform:rotate(320deg);\n}\n#arrow14\n{\n    right: 322px;\n    top: 501px;\n    -webkit-transform:rotate(320deg);\n            transform:rotate(320deg);\n}\n#arrow15\n{\n    left: 359px;\n    bottom: 129px;\n}\n#arrow16\n{\n    left: 317px;\n    bottom: 240px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow17\n{\n    left: 229px;\n    bottom: 392px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow18\n{\n    left: 187px;\n    top: 173px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow19\n{\n    left: 118px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow20\n{\n    left: 182px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow21\n{\n    left: 242px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow22\n{\n    left: 417px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow23\n{\n    left: 483px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow24\n{\n    left: 542px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow25\n{\n    right: 218px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow26\n{\n    right: 158px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow27\n{\n    right: 96px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow28\n{\n    right: 73px;\n    top: 190px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow29\n{\n    right: 73px;\n    top: 256px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n#arrow30\n{\n    right: 75px;\n    top: 312px;\n    -webkit-transform:rotate(225deg);\n            transform:rotate(225deg);\n}\n#arrow31\n{\n    left: 116px;\n    top: 192px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow32\n{\n    left: 113px;\n    top: 262px;\n}\n#arrow33\n{\n    left: 113px;\n    top: 323px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow34\n{\n    left: 243px;\n    top: 382px;\n}\n#arrow35\n{\n    left: 243px;\n    top: 443px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow36\n{\n    left: 367px;\n    top: 443px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow37\n{\n    left: 247px;\n    bottom: 59px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow38\n{\n    left: 308px;\n    bottom: 57px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow39\n{\n    left: 367px;\n    bottom: 55px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow40\n{\n    right: 392px;\n    bottom: 60px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow41\n{\n    right: 332px;\n    bottom: 57px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow42\n{\n    right: 268px;\n    bottom: 55px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow43\n{\n    right: 205px;\n    bottom: 185px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow44\n{\n    right: 203px;\n    top: 416px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n\n/***** JETONS *****/\n#clue_token\n{\n    color: white;\n    top: -3px;\n    right: -4px;\n    height: 30px;\n    width: 30px;\n    background-color: lightgreen;\n    background-image: url(\"/image/token/clue.png\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    padding-top: 1rem;\n    font-size: 12px;\n    /*filter: opacity(70%);*/\n    /*-webkit-filter: opacity(70%);*/\n}\n.token\n{\n    height: 35px;\n    width: 35px;\n    background-color: lightgrey;\n}\n.token, #clue_token, .portal_token,\ndiv#Jenny_Barnes, div#Peggy_Green, div#Francis_Sailor, div#Joe_Diamond, div#Daisie_Walker, div#Anne_Hathaway, div#Mark_Harrigan\n{\n    position: absolute;\n    z-index: 999;\n    background-size: contain;\n    background-repeat: no-repeat;\n    border-radius: 50%;\n    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.65);\n    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.65);\n}\ndiv.monster\n{\n    position: absolute;\n    z-index: 999;\n    /*background-size: contain;*/\n    /*background-repeat: no-repeat;*/\n    border-radius: 5px;\n    -webkit-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.65);\n    box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.65);\n    /*font-size: 12px;*/\n    background-color: lightgrey;\n    height: 30px;\n    width: 42px;\n}\ndiv.monster_1\n{\n    top:-2px;\n    left:-2px;\n}\ndiv.monster_2\n{\n    top:-2px;\n    left:18px;\n}\ndiv.monster_3\n{\n    top:-2px;\n    left:38px;\n}\ndiv.monster_4\n{\n    top:-2px;\n    left:58px;\n}\ndiv.investigator, div.beyond_investigator\n{\n    background-color: grey;\n    height: 35px;\n    width: 35px;\n}\ndiv.investigator_1\n{\n    bottom: 0;\n    right: 5px;\n}\ndiv.investigator_2\n{\n    bottom: 0;\n    right: 20px;\n}\ndiv.investigator_3\n{\n    bottom: 0;\n    right: 35px;\n}\ndiv.investigator_4\n{\n    bottom: 0;\n    right: 50px;\n}\ndiv.investigator_5\n{\n    bottom: 30px;\n    right: 5px;\n}\ndiv.investigator_6\n{\n    bottom: 30px;\n    right: 20px;\n}\n.portal_token\n{\n    top: 15px;\n    height: 45px;\n    width: 45px;\n    background-color: black;\n    color: white;\n    /*background-image: url(img/portal/hallCelano.png);*/\n}\ndiv.event_token\n{\n    background-color: red;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n        /*BOUTTONS GROUPES*/\n.btn-group {\n  position: relative;\n  display: -ms-inline-flexbox;\n  display: -webkit-inline-box;\n  display: inline-flex;\n  vertical-align: middle;\n}\n.btn-group>.btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group>.btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.btn-group>.btn:last-child:not(:first-child),\n.btn-group>.dropdown-toggle:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group>.btn-inactive {\n  background-color: #607d8b;\n}\n.btn-group>.btn {\n  -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);\n  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);\n}\n.btn-group>.btn-inactive:hover {\n  background-color: #728F9D;\n}\n.btn-group>.btn:hover {\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/***** MAP*****/\n#map-container\n{\n    height : 710px;\n    width: 1090px;\n}\n#button-container\n{\n    height : 40px;\n    width: 100%;\n    margin-bottom: 25px;\n}\n#map-container, #button-container\n{\n    margin-left: auto;\n    margin-right: auto;\n}\n#ark-map\n{\n    position : relative;\n    height : 710px;\n    width: 975px;\n    /*background-color: lightgrey;*/\n    padding-top: -50px;\n}\n#beyond-map\n{\n    position : relative;\n    height : 710px;\n    width: 115px;\n    /*background-color: lightgrey;*/\n    padding: 5px;\n    padding-top: 30px\n}\n\n/***** LIEUX *****/\ndiv .site, div .street, div .world, div .special_site\n{\n    position : absolute;\n    height: 80px;\n    text-align: center;\n    color: white;\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    z-index: 10;\n    text-shadow: 1px 1px 2px black;\n}\ndiv .site\n{\n    width : 80px;\n    border-radius: 20%;\n}\ndiv .street, div .special_site\n{\n    width: 80px;\n}\ndiv .card\n{\n    margin: 0;\n}\ndiv.world\n{\n    height:75px;\n    width: 105px;\n    background-color: white;\n    position: relative;\n    border-radius: 5px;\n    z-index: 0;\n    margin-top: 4px;\n    margin-bottom: 4px;\n}\ndiv.first, div.second\n{\n    width: 50%;\n    height: 100%;\n}\ndiv.first\n{\n    background-color: grey;\n    width: 50%;\n    border-radius: 5px 0 0 5px;\n}\nspan.other_world {\n    position: absolute;\n    z-index: 500;\n    /*left: 0%;\n    right: 0%;*/\n}\ndiv .special36\n{\n    bottom: 2px;\n    right: 2px;\n}\ndiv .special37\n{\n    bottom: 2px;\n    left: 2px;\n}\ndiv .special38\n{\n    bottom: 90px;\n    left: 2px;\n}\ndiv .special39\n{\n    bottom: 90px;\n    right: 2px;\n}\n\n\n\n/***** LIEU individuel *****/\ndiv #site1\n{\n    top: 5px;\n    left: 55px;\n}\ndiv #site2\n{\n    top: 5px;\n    left: 155px;\n}\ndiv #site3\n{\n    top: 5px;\n    left: 255px;\n}\ndiv #site4\n{\n    top: 5px;\n    left: 355px;\n}\ndiv #site5\n{\n    top: 5px;\n    left: 455px;\n}\ndiv #site6\n{\n    top: 5px;\n    left: 555px;\n}\ndiv #site7\n{\n    top: 5px;\n    right: 235px;\n}\ndiv #site8\n{\n    top: 5px;\n    right: 135px;\n}\ndiv #site9\n{\n    top: 5px;\n    right: 35px;\n}\ndiv #site10\n{\n    top: 145px;\n    left: 50px;\n}\ndiv #site11\n{\n    top: 245px;\n    left: 50px;\n}\ndiv #site12\n{\n    top: 345px;\n    left: 50px;\n}\ndiv #site13\n{\n    top: 135px;\n    right: 10px;\n}\ndiv #site14\n{\n    top: 235px;\n    right: 10px;\n}\ndiv #site15\n{\n    top: 335px;\n    right: 10px;\n}\ndiv #site16\n{\n    top: 365px;\n    left: 180px;\n}\ndiv #site17\n{\n    top: 465px;\n    left: 180px;\n}\ndiv #site18\n{\n    top: 465px;\n    left: 385px;\n}\ndiv #site19\n{\n    top: 395px;\n    right: 140px;\n}\ndiv #site20\n{\n    top: 495px;\n    right: 140px;\n}\ndiv #site21\n{\n    bottom: 5px;\n    left: 185px;\n}\ndiv #site22\n{\n    bottom: 5px;\n    left: 285px;\n}\ndiv #site23\n{\n    bottom: 5px;\n    left: 385px;\n}\ndiv #site24\n{\n    bottom: 5px;\n    right: 405px;\n}\ndiv #site25\n{\n    bottom: 5px;\n    right: 305px;\n}\ndiv #site26\n{\n    bottom: 5px;\n    right: 205px;\n}\ndiv #site27\n{\n    top: 105px;\n    left: 155px;\n}\ndiv #site28\n{\n    top: 105px;\n    left: 455px;\n}\ndiv #site29\n{\n    top: 105px;\n    right: 135px;\n}\ndiv #site30\n{\n    top: 245px;\n    left: 155px;\n}\ndiv #site31\n{\n    top: 235px;\n    right: 115px;\n}\ndiv #site32\n{\n    top: 365px;\n    left: 285px;\n}\ndiv #site33\n{\n    top: 395px;\n    right: 245px;\n}\ndiv #site34\n{\n    bottom: 105px;\n    left: 285px;\n}\ndiv #site35\n{\n    bottom: 105px;\n    right: 305px;\n}\n\n/***** COULEURS *****/\ndiv .orange\n{\n    background-color : orange;\n}\ndiv .white\n{\n    background-color : #B5B4B3; color: black;\n    text-shadow: 0px 0px 0px white;\n}\ndiv .grey\n{\n    background-color: #656364;\n}\ndiv .green\n{\n    background-color: #0b700b;\n}\ndiv .purple\n{\n    background-color: #633E87;\n}\ndiv .yellow\n{\n    background-color: #F9E46B;\n}\ndiv .blue\n{\n    background-color: #41a3ef;\n}\ndiv .red\n{\n    background-color: #CB191F;\n}\ndiv .brown\n{\n    background-color: #631E15;\n}\n/***** liens entre les lieux *****/\ndiv .bar-h, div .bar-v, div .bar-c\n{\n    background-color : white;\n    -webkit-box-shadow: 1px 2px 2px lightgrey;\n            box-shadow: 1px 2px 2px lightgrey;\n    position: absolute;\n    z-index: 0;\n}\ndiv .bar-h\n{\n    height: 4px;\n}\ndiv .bar-v, div .bar-c\n{\n    width: 4px;\n}\ndiv #road1\n{\n    width: 270px;\n    top: 135px;\n    left : 205px;\n}\ndiv #road2\n{\n    width: 270px;\n    top: 135px;\n    right : 205px;\n}\ndiv #road3\n{\n    width: 370px;\n    top: 415px;\n    right : 255px;\n}\ndiv #road4\n{\n    width: 280px;\n    bottom: 145px;\n    right : 355px;\n}\ndiv #road5\n{\n    width: 560px;\n    top: 280px;\n    right : 185px;\n}\ndiv #road6\n{\n    height: 80px;\n    top: 175px;\n    left : 195px;\n}\ndiv #road7\n{\n    height: 120px;\n    bottom: 170px;\n    left : 325px;\n}\ndiv #road8\n{\n    height: 180px;\n    bottom: 290px;\n    left : 275px;\n    -webkit-transform: rotate(-55deg);\n            transform: rotate(-55deg);\n}\ndiv #road9\n{\n    height: 200px;\n    bottom: 260px;\n    right : 215px;\n    -webkit-transform: rotate(55deg);\n            transform: rotate(55deg);\n}\ndiv #road10\n{\n    height: 120px;\n    bottom: 155px;\n    right : 305px;\n    -webkit-transform: rotate(45deg);\n            transform: rotate(45deg);\n}\ndiv #road11\n{\n    height: 350px;\n    top: 50px;\n    left : 315px;\n    -webkit-transform: rotate(65deg);\n            transform: rotate(65deg);\n}\ndiv #road12\n{\n    height: 80px;\n    top: 175px;\n    right : 160px;\n    -webkit-transform: rotate(-25deg);\n            transform: rotate(-25deg);\n}\ndiv #road13\n{\n    height: 50px;\n    top: 75px;\n    right : 175px;\n}\ndiv #road14\n{\n    height: 50px;\n    top: 75px;\n    right : 475px;\n}\ndiv #road15\n{\n    height: 50px;\n    top: 75px;\n    left : 195px;\n}\ndiv #road16\n{\n    height: 50px;\n    bottom: 75px;\n    left : 325px;\n}\ndiv #road17\n{\n    height: 50px;\n    bottom: 75px;\n    right : 345px;\n}\ndiv #road18\n{\n    height: 50px;\n    bottom: 245px;\n    right : 225px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road19\n{\n    height: 50px;\n    bottom: 275px;\n    left : 275px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road20\n{\n    height: 50px;\n    bottom: 395px;\n    left : 145px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road21\n{\n    height: 50px;\n    bottom: 405px;\n    right : 95px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\ndiv #road22\n{\n    height: 80px;\n    top: 45px;\n    left : 255px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road23\n{\n    height: 80px;\n    top: 40px;\n    left : 125px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road24\n{\n    height: 80px;\n    top: 40px;\n    left : 425px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road25\n{\n    height: 80px;\n    top: 40px;\n    right : 240px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road26\n{\n    height: 80px;\n    top: 40px;\n    right : 110px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road27\n{\n    height: 80px;\n    top: 40px;\n    right : 410px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road28\n{\n    height: 80px;\n    top: 175px;\n    right : 90px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road29\n{\n    height: 80px;\n    top: 295px;\n    right : 90px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road30\n{\n    height: 80px;\n    top: 180px;\n    left : 130px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road31\n{\n    height: 80px;\n    top: 300px;\n    left : 140px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road32\n{\n    height: 80px;\n    top: 420px;\n    left : 270px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road33\n{\n    height: 80px;\n    top: 420px;\n    left : 375px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road34\n{\n    height: 80px;\n    bottom: 50px;\n    left : 270px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road35\n{\n    height: 80px;\n    bottom: 50px;\n    left : 375px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road36\n{\n    height: 80px;\n    bottom: 50px;\n    right : 400px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\ndiv #road37\n{\n    height: 80px;\n    bottom: 50px;\n    right : 290px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\ndiv #road38\n{\n    height: 80px;\n    bottom: 180px;\n    right : 225px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n\n/****** FLECHES ******/\n.white-arrow, .black-arrow, .double-arrow\n{\n    position: absolute;\n    z-index: 0;\n}\n.white-arrow\n{\n    font-size: 25px;\n    color:white;\n    text-shadow: 1px 1px 2px black;\n}\n.black-arrow\n{\n    font-size: 25px;\n    color:black;\n}\n.double-arrow\n{\n    color:black;\n    font-size: 35px;\n}\n#arrow1\n{\n    left: 228px;\n    top: 116px;\n}\n#arrow2\n{\n    left: 529px;\n    top: 116px;\n}\n#arrow3\n{\n    right: 156px;\n    top: 172px;\n    -webkit-transform:rotate(70deg);\n            transform:rotate(70deg);\n}\n#arrow4\n{\n    right: 160px;\n    top: 302px;\n    -webkit-transform:rotate(150deg);\n            transform:rotate(150deg);\n}\n#arrow5\n{\n    right: 278px;\n    top: 465px;\n    -webkit-transform:rotate(140deg);\n            transform:rotate(140deg);\n}\n#arrow6\n{\n    right: 380px;\n    bottom: 125px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n#arrow7\n{\n    left: 312px;\n    bottom: 173px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow8\n{\n    left: 306px;\n    bottom: 330px;\n    -webkit-transform:rotate(-150deg);\n            transform:rotate(-150deg);\n}\n#arrow9\n{\n    left: 182px;\n    top: 220px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow10\n{\n    left: 436px;\n    top: 120px;\n    -webkit-transform:rotate(-180deg);\n            transform:rotate(-180deg);\n}\n#arrow11\n{\n    right: 209px;\n    top: 120px;\n    -webkit-transform:rotate(-180deg);\n            transform:rotate(-180deg);\n}\n#arrow12\n{\n    right: 144px;\n    top: 212px;\n    -webkit-transform:rotate(250deg);\n            transform:rotate(250deg);\n}\n#arrow13\n{\n    right: 262px;\n    top: 371px;\n    -webkit-transform:rotate(320deg);\n            transform:rotate(320deg);\n}\n#arrow14\n{\n    right: 322px;\n    top: 501px;\n    -webkit-transform:rotate(320deg);\n            transform:rotate(320deg);\n}\n#arrow15\n{\n    left: 359px;\n    bottom: 129px;\n}\n#arrow16\n{\n    left: 317px;\n    bottom: 240px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow17\n{\n    left: 229px;\n    bottom: 392px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow18\n{\n    left: 187px;\n    top: 173px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow19\n{\n    left: 118px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow20\n{\n    left: 182px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow21\n{\n    left: 242px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow22\n{\n    left: 417px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow23\n{\n    left: 483px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow24\n{\n    left: 542px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow25\n{\n    right: 218px;\n    top: 58px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow26\n{\n    right: 158px;\n    top: 60px;\n    -webkit-transform:rotate(90deg);\n            transform:rotate(90deg);\n}\n#arrow27\n{\n    right: 96px;\n    top: 60px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow28\n{\n    right: 73px;\n    top: 190px;\n    -webkit-transform:rotate(135deg);\n            transform:rotate(135deg);\n}\n#arrow29\n{\n    right: 73px;\n    top: 256px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n#arrow30\n{\n    right: 75px;\n    top: 312px;\n    -webkit-transform:rotate(225deg);\n            transform:rotate(225deg);\n}\n#arrow31\n{\n    left: 116px;\n    top: 192px;\n    -webkit-transform:rotate(45deg);\n            transform:rotate(45deg);\n}\n#arrow32\n{\n    left: 113px;\n    top: 262px;\n}\n#arrow33\n{\n    left: 113px;\n    top: 323px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow34\n{\n    left: 243px;\n    top: 382px;\n}\n#arrow35\n{\n    left: 243px;\n    top: 443px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow36\n{\n    left: 367px;\n    top: 443px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow37\n{\n    left: 247px;\n    bottom: 59px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow38\n{\n    left: 308px;\n    bottom: 57px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow39\n{\n    left: 367px;\n    bottom: 55px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow40\n{\n    right: 392px;\n    bottom: 60px;\n    -webkit-transform:rotate(-45deg);\n            transform:rotate(-45deg);\n}\n#arrow41\n{\n    right: 332px;\n    bottom: 57px;\n    -webkit-transform:rotate(-90deg);\n            transform:rotate(-90deg);\n}\n#arrow42\n{\n    right: 268px;\n    bottom: 55px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow43\n{\n    right: 205px;\n    bottom: 185px;\n    -webkit-transform:rotate(-135deg);\n            transform:rotate(-135deg);\n}\n#arrow44\n{\n    right: 203px;\n    top: 416px;\n    -webkit-transform:rotate(180deg);\n            transform:rotate(180deg);\n}\n\n/***** JETONS *****/\n#clue_token\n{\n    color: white;\n    top: -3px;\n    right: -4px;\n    height: 30px;\n    width: 30px;\n    background-color: lightgreen;\n    background-image: url(\"/image/token/clue.png\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    padding-top: 1rem;\n    font-size: 12px;\n    /*filter: opacity(70%);*/\n    /*-webkit-filter: opacity(70%);*/\n}\n.token\n{\n    height: 35px;\n    width: 35px;\n    background-color: lightgrey;\n}\n.token, #clue_token, .portal_token,\ndiv#Jenny_Barnes, div#Peggy_Green, div#Francis_Sailor, div#Joe_Diamond, div#Daisie_Walker, div#Anne_Hathaway, div#Mark_Harrigan\n{\n    position: absolute;\n    z-index: 999;\n    background-size: contain;\n    background-repeat: no-repeat;\n    border-radius: 50%;\n    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.65);\n    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.65);\n}\ndiv.monster\n{\n    position: absolute;\n    z-index: 999;\n    /*background-size: contain;*/\n    /*background-repeat: no-repeat;*/\n    border-radius: 5px;\n    -webkit-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.65);\n    box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.65);\n    /*font-size: 12px;*/\n    background-color: lightgrey;\n    height: 30px;\n    width: 42px;\n}\ndiv.monster_1\n{\n    top:-2px;\n    left:-2px;\n}\ndiv.monster_2\n{\n    top:-2px;\n    left:18px;\n}\ndiv.monster_3\n{\n    top:-2px;\n    left:38px;\n}\ndiv.monster_4\n{\n    top:-2px;\n    left:58px;\n}\ndiv.investigator, div.beyond_investigator\n{\n    background-color: grey;\n    height: 35px;\n    width: 35px;\n}\ndiv.investigator_1\n{\n    bottom: 0;\n    right: 5px;\n}\ndiv.investigator_2\n{\n    bottom: 0;\n    right: 20px;\n}\ndiv.investigator_3\n{\n    bottom: 0;\n    right: 35px;\n}\ndiv.investigator_4\n{\n    bottom: 0;\n    right: 50px;\n}\ndiv.investigator_5\n{\n    bottom: 30px;\n    right: 5px;\n}\ndiv.investigator_6\n{\n    bottom: 30px;\n    right: 20px;\n}\n.portal_token\n{\n    top: 15px;\n    height: 45px;\n    width: 45px;\n    background-color: black;\n    color: white;\n    /*background-image: url(img/portal/hallCelano.png);*/\n}\ndiv.event_token\n{\n    background-color: red;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n        /*BOUTTONS GROUPES*/\n.btn-group {\n  position: relative;\n  display: -ms-inline-flexbox;\n  display: -webkit-inline-box;\n  display: inline-flex;\n  vertical-align: middle;\n}\n.btn-group>.btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.btn-group>.btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.btn-group>.btn:last-child:not(:first-child),\n.btn-group>.dropdown-toggle:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group>.btn-inactive {\n  background-color: #607d8b;\n}\n.btn-group>.btn {\n  -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);\n  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);\n}\n.btn-group>.btn-inactive:hover {\n  background-color: #728F9D;\n}\n.btn-group>.btn:hover {\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);\n}\n\n", ""]);
 
 // exports
 
@@ -19732,6 +19732,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -19937,24 +19938,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             // Ajout des monstres sur la map
             this.monsters.forEach(function (monster) {
-                // Pour chacun des monstres dans monsters
+                // Pour chacun des monstres dans monsters, on ajoute ce montre au site correspondant
                 _this.sites.find(function (site) {
-                    // On ajoute ce montre au site correspondant
                     if (site.id == monster.siteId) site.monster.push(monster.name);
                 });
             });
-            // Ajout des INVESTIGATEURS sur la map
+            // Ajout des investigateurs sur la map
             this.investigators.forEach(function (investigator) {
-                // Pour chacun des monstres dans monsters
+                // Pour chacun des investigateurs, on l'ajoute au site correspondant
                 _this.sites.find(function (site) {
-                    // On ajoute ce montre au site correspondant
                     if (site.id == investigator.siteId) site.character.push(investigator.name);
                 });
             });
+        },
+        adjacent: function adjacent(site) {
+            // if(this.availableSites[0].sites.indexOf(site.id) == -1)
+            // return 'adjacent';
         }
     },
     mounted: function mounted() {
-
         this.updateSites();
     }
 });
@@ -19979,8 +19981,9 @@ var render = function() {
             return _c(
               "div",
               {
+                key: site.id,
                 staticClass: "card hoverable",
-                class: [site.color, site.type],
+                class: [site.color, site.type, _vm.adjacent(site)],
                 attrs: { id: "site" + site.id },
                 on: {
                   click: function($event) {
@@ -20015,7 +20018,6 @@ var render = function() {
                     })
                   })
                 ),
-                _vm._v("\n\n²                "),
                 _vm._v(" "),
                 _c(
                   "transition-group",
@@ -20037,7 +20039,7 @@ var render = function() {
                   _vm._l(site.portal, function(mark) {
                     return _c(
                       "div",
-                      { staticClass: "portal_token valign-wrapper" },
+                      { key: mark, staticClass: "portal_token valign-wrapper" },
                       [_c("span", { domProps: { innerHTML: _vm._s(mark) } })]
                     )
                   })
@@ -20083,6 +20085,7 @@ var render = function() {
             return _c(
               "div",
               {
+                key: special.id,
                 staticClass: "special_site card hoverable",
                 class: "special" + special.id
               },
@@ -23725,16 +23728,222 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*Modales*/\n#modal-movement-1\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-left: 25px;\n    height: 550px;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*Modales*/\n#modal-movement-1\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-left: 25px;\n    height: 550px;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 139 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: C:/Users/ddaoduy/Desktop/Nouveau dossier/ark-spa-LV/resources/js/components/moveStep/MoveStep.vue: Unexpected token (80:12)\n\n\u001b[0m \u001b[90m 78 | \u001b[39m                { id\u001b[33m:\u001b[39m\u001b[35m4\u001b[39m\u001b[33m,\u001b[39m name\u001b[33m:\u001b[39m \u001b[32m\"Peggy Green\"\u001b[39m   \u001b[33m,\u001b[39m siteId\u001b[33m:\u001b[39m\u001b[35m6\u001b[39m\u001b[33m,\u001b[39m  status\u001b[33m:\u001b[39m\u001b[32m\"retarded\"\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 79 | \u001b[39m                { id\u001b[33m:\u001b[39m\u001b[35m5\u001b[39m\u001b[33m,\u001b[39m name\u001b[33m:\u001b[39m \u001b[32m\"Mark Harrigan\"\u001b[39m \u001b[33m,\u001b[39m siteId\u001b[33m:\u001b[39m\u001b[35m36\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m\u001b[32m\"lost\"\u001b[39m }\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 80 | \u001b[39m            ]\u001b[33m,\u001b[39m\n \u001b[90m    | \u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 81 | \u001b[39m            monsters\u001b[33m:\u001b[39m [\n \u001b[90m 82 | \u001b[39m                { id\u001b[33m:\u001b[39m\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m name\u001b[33m:\u001b[39m\u001b[32m\"Chthonien\"\u001b[39m\u001b[33m,\u001b[39m siteId\u001b[33m:\u001b[39m\u001b[35m11\u001b[39m\u001b[33m,\u001b[39m symbol\u001b[33m:\u001b[39m\u001b[32m\"triangle\"\u001b[39m\u001b[33m,\u001b[39m habilities\u001b[33m:\u001b[39m {}}\u001b[33m,\u001b[39m\n \u001b[90m 83 | \u001b[39m                { id\u001b[33m:\u001b[39m\u001b[35m2\u001b[39m\u001b[33m,\u001b[39m name\u001b[33m:\u001b[39m\u001b[32m\"Migo\"\u001b[39m\u001b[33m,\u001b[39m      siteId\u001b[33m:\u001b[39m\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m  symbol\u001b[33m:\u001b[39m\u001b[32m\"cercle\"\u001b[39m\u001b[33m,\u001b[39m   habilities\u001b[33m:\u001b[39m {}}\u001b[33m,\u001b[39m\u001b[0m\n");
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Map_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    // déclaration des composants utilisés
+    components: {
+        'app-sidebar': __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default.a,
+        'app-simple-modal': __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default.a,
+        'app-map': __WEBPACK_IMPORTED_MODULE_2__Map_vue___default.a
+    },
+    data: function data() {
+        return {
+            pageTitle: 'Phase de mouvement',
+            playerNumber: 2, // nombre de joueurs
+            currentPlayer: 1,
+            availableSites: [],
+            investigators: [{ id: 1, name: 'Joe Diamond', siteId: 3, status: "ok", skills: { vitesse: 3, discretion: 4, vigueur: 2, volonte: 3, savoir: 0, chance: 3 }, availableSkills: { vitesse: [3, 4, 5, 6], discretion: [4, 3, 2, 1], vigueur: [2, 3, 4, 5], volonte: [3, 2, 1, 0], savoir: [0, 1, 2, 3], chance: [3, 2, 1, 0] } }, { id: 2, name: 'Peggy Green', siteId: 8, status: "lost", skills: { vitesse: 1, discretion: 5, vigueur: 1, volonte: 3, savoir: 1, chance: 5 }, availableSkills: { vitesse: [1, 2, 3, 4], discretion: [5, 4, 3, 2], vigueur: [1, 2, 3, 4], volonte: [3, 2, 1, 0], savoir: [1, 2, 3, 4], chance: [5, 4, 3, 2] } }, { id: 3, name: 'Jenny Barnes', siteId: 9, status: "arrested", skills: { vitesse: 0, discretion: 3, vigueur: 2, volonte: 3, savoir: 0, chance: 4 }, availableSkills: { vitesse: [0, 1, 2, 3], discretion: [3, 2, 1, 0], vigueur: [2, 3, 4, 5], volonte: [3, 2, 1, 0], savoir: [0, 1, 2, 3], chance: [4, 3, 2, 0] } }, { id: 4, name: 'Francis Sailor', siteId: 6, status: "retarded", skills: { vitesse: 1, discretion: 4, vigueur: 1, volonte: 3, savoir: 2, chance: 5 }, availableSkills: { vitesse: [1, 2, 3, 4], discretion: [4, 3, 2, 1], vigueur: [1, 2, 3, 4], volonte: [3, 2, 1, 0], savoir: [2, 3, 4, 5], chance: [5, 4, 3, 2] } }, { id: 5, name: 'Mark Harrigan', siteId: 7, status: "lost", skills: { vitesse: 1, discretion: 4, vigueur: 1, volonte: 3, savoir: 2, chance: 5 }, availableSkills: { vitesse: [1, 2, 3, 4], discretion: [4, 3, 2, 1], vigueur: [1, 2, 3, 4], volonte: [3, 2, 1, 0], savoir: [2, 3, 4, 5], chance: [5, 4, 3, 2] } }],
+            monsters: [{ id: 1, name: "Chthonien", siteId: 11, symbol: "triangle", habilities: {} }, { id: 2, name: "Migo", siteId: 1, symbol: "cercle", habilities: {} }, { id: 3, name: "Cultiste", siteId: 3, symbol: "lune", habilities: {} }],
+            sites: [{ name: "Boutique<br>de<br>souvenir", id: "1", type: "site", adjacentSites: [27], character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Journal", id: "2", type: "site", adjacentSites: [27], character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Gare", id: "3", type: "site", adjacentSites: [27], character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 27, black: 27 }, { name: "Banque<br>d'Arkham", id: "4", type: "site", adjacentSites: [28], character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Asile<br>d'Arkham", id: "5", type: "site", adjacentSites: [28], character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Square de<br>l'indépen-<br>-dance", id: "6", type: "site", adjacentSites: [28], character: [], monster: [], event: [], clue: 1, color: "white", portal: [], marker: [], white: 28, black: 28 }, { name: "Relais<br>routier<br>de Hibb", id: "7", type: "site", adjacentSites: [29], character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Restaurant<br>de Velma", id: "8", type: "site", adjacentSites: [29], character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "Poste<br>de<br>police", id: "9", type: "site", adjacentSites: [29], character: [], monster: [], event: [], clue: 1, color: "grey", portal: [], marker: [], white: 29, black: 29 }, { name: "L'ile<br>inexplorée", id: "10", type: "site", adjacentSites: [30], character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Les<br>quais", id: "11", type: "site", adjacentSites: [30], character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "l'Inno-<br>-mable", id: "12", type: "site", adjacentSites: [30], character: [], monster: [], event: [], clue: 1, color: "green", portal: [], marker: [], white: 30, black: 30 }, { name: "Le<br>cimetière", id: "13", type: "site", adjacentSites: [31], character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "La Caverne<br>noire", id: "14", type: "site", adjacentSites: [31], character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Le<br>magasin", id: "15", type: "site", adjacentSites: [31], character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 31, black: 31 }, { name: "Département<br>Scientifique", id: "16", type: "site", adjacentSites: [32], character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Adminis-<br>-tration", id: "17", type: "site", adjacentSites: [32], character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Biblio-<br>-thèque", id: "18", type: "site", adjacentSites: [32], character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 32, black: 32 }, { name: "Maison<br>de la<br>sorcière", id: "19", type: "site", adjacentSites: [33], character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Loge du<br>crépuscule<br>d'argent", id: "20", type: "site", adjacentSites: [33], character: [], monster: [], event: [], clue: 1, color: "blue", portal: [], marker: [], white: 33, black: 33 }, { name: "Hôpital<br>Sainte<br>Marie", id: "21", type: "site", adjacentSites: [34], character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Vieille<br>échoppe<br>de magie", id: "22", type: "site", adjacentSites: [34], character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Les<br>bois", id: "23", type: "site", adjacentSites: [34], character: [], monster: [], event: [], clue: 1, color: "red", portal: [], marker: [], white: 34, black: 34 }, { name: "Pension<br>de Ma", id: "24", type: "site", adjacentSites: [35], character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Société<br>des<br>historiens", id: "25", type: "site", adjacentSites: [35], character: [], monster: [], event: [], clue: 1, color: "brown", portal: [], marker: [], white: 35, black: 35 }, { name: "Eglise<br>méridionale", id: "26", type: "site", adjacentSites: [35], character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 35, black: 35 },
+            /*'Migo'*/{ name: "Quartier<br>Nord", id: "27", type: "street", adjacentSites: [1, 2, 3, 28, 30], character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white: 28, black: 30 },
+            /*'Cultiste'*/{ name: "Centre<br>Ville", id: "28", type: "street", adjacentSites: [4, 5, 6, 27, 29], character: [], monster: [], event: [], clue: 0, color: "white", portal: [], marker: [], white: 29, black: 27 }, { name: "Quartier<br>Est", id: "29", type: "street", adjacentSites: [7, 8, 9, 28, 31], character: [], monster: [], event: [], clue: 0, color: "grey", portal: [], marker: [], white: 31, black: 28 }, { name: "Quartier<br>marchand", id: "30", type: "street", adjacentSites: [10, 11, 12, 27, 28, 31, 32], character: [], monster: [], event: [], clue: 0, color: "green", portal: [], marker: [], white: 27, black: 32 }, { name: "Quartier<br>de la<br>rivière", id: "31", type: "street", adjacentSites: [13, 14, 15, 29, 30, 33], character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white: 33, black: 29 }, { name: "Université<br>Miskatonik", id: "32", type: "street", adjacentSites: [16, 17, 18, 30, 33, 34], character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white: 30, black: 34 }, { name: "French<br>Hill", id: "33", type: "street", adjacentSites: [19, 20, 31, 32, 35], character: [], monster: [], event: [], clue: 0, color: "blue", portal: [], marker: [], white: 35, black: 31 }, { name: "Quartier<br>Résidentiel", id: "34", type: "street", adjacentSites: [21, 22, 23, 32, 35], character: [], monster: [], event: [], clue: 0, color: "red", portal: [], marker: [], white: 32, black: 35 }, { name: "Quartier<br>sud", id: "35", type: "street", adjacentSites: [24, 25, 26, 33, 34], character: [], monster: [], event: [], clue: 0, color: "brown", portal: [], marker: [], white: 34, black: 33 }],
+            beyond: [{ name: 'Une autre<br>dimension', colors: [], steps: [{ id: 1, position: 1, character: [], monster: [] }, { id: 2, position: 2, character: [], monster: [] }] }, { name: 'Les Abysses', colors: [], steps: [{ id: 3, position: 1, character: [], monster: [] }, { id: 4, position: 2, character: [], monster: [] }] }, { name: 'Cité de la<br>Grand Race', colors: [], steps: [{ id: 5, position: 1, character: [], monster: [] }, { id: 6, position: 2, character: [], monster: [] }] }, { name: 'Yuggoth', colors: [], steps: [{ id: 7, position: 1, character: [], monster: [] }, { id: 8, position: 2, character: [], monster: [] }] }, { name: 'Grand Hall<br>de Celeano', colors: [], steps: [{ id: 9, position: 1, character: [], monster: [] }, { id: 10, position: 2, character: [], monster: [] }] }, { name: 'Les contrées<br>du rêve', colors: [], steps: [{ id: 11, position: 1, character: [], monster: [] }, { id: 12, position: 2, character: [], monster: [] }] }, { name: 'Plateau<br>de Leng', colors: [], steps: [{ id: 13, position: 1, character: [], monster: [] }, { id: 14, position: 2, character: [], monster: [] }] }, { name: 'R\'lyeh', colors: [], steps: [{ id: 15, position: 1, character: [], monster: [] }, { id: 16, position: 2, character: [], monster: [] }] }],
+            specials: [{ name: 'Perdu dans<br>le temps<br>et l\'espace', id: 36, character: [{ id: 2, name: "Francis Sailor" }, { id: 5, name: "Mark Harrigan" }] }, { name: 'Ciel', id: 37, monster: [] }, { name: 'Périphérie', id: 38, monster: [] }, { name: 'Cellule de prison', id: 39, monster: [] }]
+            // adjacentSites: [
+            //     { id: 1 , adjacentSites: [27]},
+            //     { id: 2 , adjacentSites: [27]},
+            //     { id: 3 , adjacentSites: [27]},
+            //     { id: 4 , adjacentSites: [28]},
+            //     { id: 5 , adjacentSites: [28]},
+            //     { id: 6 , adjacentSites: [28]},
+            //     { id: 7 , adjacentSites: [29]},
+            //     { id: 8 , adjacentSites: [29]},
+            //     { id: 9 , adjacentSites: [29]},
+            //     { id: 10, adjacentSites: [30]},
+            //     { id: 11, adjacentSites: [30]},
+            //     { id: 12, adjacentSites: [30]},
+            //     { id: 13, adjacentSites: [31]},
+            //     { id: 14, adjacentSites: [31]},
+            //     { id: 15, adjacentSites: [31]},
+            //     { id: 16, adjacentSites: [32]},
+            //     { id: 17, adjacentSites: [32]},
+            //     { id: 18, adjacentSites: [32]},
+            //     { id: 19, adjacentSites: [33]},
+            //     { id: 20, adjacentSites: [33]},
+            //     { id: 21, adjacentSites: [34]},
+            //     { id: 22, adjacentSites: [34]},
+            //     { id: 23, adjacentSites: [34]},
+            //     { id: 24, adjacentSites: [35]},
+            //     { id: 25, adjacentSites: [35]},
+            //     { id: 26, adjacentSites: [35]}, //fin des lieux
+            //     { id: 27, adjacentSites: [1,2,3,28,30]},
+            //     { id: 28, adjacentSites: [4,5,6,27,29]},
+            //     { id: 29, adjacentSites: [7,8,9,28,31]},
+            //     { id: 30, adjacentSites: [10,11,12,27,28,31,32]},
+            //     { id: 31, adjacentSites: [13,14,15,29,30,33]},
+            //     { id: 32, adjacentSites: [16,17,18,30,33,34]},
+            //     { id: 33, adjacentSites: [19,20,31,32,35]},
+            //     { id: 34, adjacentSites: [21,22,23,32,35]},
+            //     { id: 35, adjacentSites: [24,25,26,33,34]}
+            // ]
+
+        };
+    },
+
+    methods: {
+        test: function test() {
+            this.log(this.getAvailableSites(17, 4));
+        },
+
+        // Récupération des lieux adjacents à celui dont l'id est spécifié
+        getAdjacentSites: function getAdjacentSites(id) {
+            // Recherche le lieu avec l'id en paramètre
+            var adjacentSite = this.sites.find(function (site) {
+                return site.id == id;
+            });
+            // Retourne les lieux adjacents
+            return adjacentSite.adjacentSites;
+        },
+
+        // Retourne les lieux à la distance speed du lieu numéro id
+        getAvailableSites: function getAvailableSites(id, speed) {
+            var _this = this;
+
+            // on définit les variables
+            var getAvailableSites = [];
+            var find = [];
+            var last = [];
+            // pour chaque point de mouvement
+            for (var i = 0; i < speed; i++) {
+                // si premier point de mouvement
+                if (i == 0) {
+                    // Recherche des lieux adjacents
+                    var adjacentSites = this.getAdjacentSites(id);
+                    // Sauvegarde de l'objet à retourner
+                    getAvailableSites.push({ rang: i + 1, sites: adjacentSites });
+                    // Sauvegarde des lieux trouvés
+                    adjacentSites.forEach(function (adj) {
+                        find.push(adj);
+                    });
+                    // Sauvegarde des derniers lieux trouvés
+                    last = adjacentSites;
+                }
+                // Si points de mouvement suivants
+                else {
+                        // Création de l'objet à mettre dans ce qu'on retourne
+                        var result = { rang: i + 1, sites: [] };
+                        // Pour chacun des derniers sites trouvés
+                        last.forEach(function (element) {
+                            // Recherche des lieux adjacents
+                            var adj = _this.getAdjacentSites(element);
+                            // Pour chacun de ces lieux trouvés
+                            adj.forEach(function (site) {
+                                // Si pas encore trouvé et si pas le lieu de départ
+                                // Ajout au tableau des lieux trouvés et dans l'objet à retourner
+                                if (find.indexOf(site) == -1 && site != id) {
+                                    find.push(site);
+                                    result.sites.push(site);
+                                }
+                            });
+                        });
+                        // Sauvegarde de l'objet à retourner
+                        getAvailableSites.push(result);
+                        // Sauvegarde des derniers lieux trouvés
+                        last = result.sites;
+                    }
+            }
+            return getAvailableSites;
+        },
+        move: function move(site) {
+            var currentInvestigator = this.getInvestigator(this.currentPlayer);
+            var availableSites = this.getAvailableSites(currentInvestigator.siteId, currentInvestigator.skills.vitesse);
+        },
+
+        // Récupère l'investigateur dont l'id est passé en paramètre
+        getInvestigator: function getInvestigator(id) {
+            return this.investigators.find(function (investigator) {
+                return investigator.id == id;
+            });
+        },
+        log: function log(message) {
+            console.log(message);
+        },
+        nextStep: function nextStep() {
+            // console.log('ici');
+            this.$router.push('arkham-encounter-step');
+        }
+    },
+
+    updated: function updated() {},
+    mounted: function mounted() {
+        var currentInvestigator = this.getInvestigator(this.currentPlayer);
+        this.availableSites = this.getAvailableSites(currentInvestigator.siteId, currentInvestigator.skills.vitesse);
+    }
+});
 
 /***/ }),
 /* 140 */
@@ -23756,25 +23965,13 @@ var render = function() {
           beyond: _vm.beyond,
           specials: _vm.specials,
           monsters: _vm.monsters
+        },
+        on: {
+          wasClicked: function($event) {
+            _vm.move($event)
+          }
         }
       }),
-      _vm._v(" "),
-      _c(
-        "app-simple-modal",
-        {
-          attrs: {
-            title: _vm.modalTexts.title,
-            content: _vm.modalTexts.content,
-            buttonText: _vm.modalTexts.buttonText,
-            route: _vm.modalTexts.route
-          }
-        },
-        [
-          _c("div", { staticClass: "btn teal", on: { click: _vm.test } }, [
-            _vm._v("test")
-          ])
-        ]
-      ),
       _vm._v(" "),
       _c(
         "div",
@@ -23805,24 +24002,29 @@ var render = function() {
                           ? _c("div", { key: investigator.name }, [
                               _c("span", [_vm._v(_vm._s(investigator.name))]),
                               _vm._v(" "),
-                              _c("span", [_vm._v("Mouvement: 3")])
+                              _c("span", [
+                                _vm._v(
+                                  "Mouvement: " +
+                                    _vm._s(investigator.skills.vitesse)
+                                )
+                              ])
                             ])
                           : _vm._e()
                       })
                     ),
                     _vm._v(" "),
-                    _c("span", { staticClass: "btn" }, [
-                      _vm._v("Confirmer le déplacement")
+                    _c("span", { staticClass: "btn-small" }, [
+                      _vm._v("Confirmer")
                     ]),
                     _vm._v(" "),
-                    _c("span", { staticClass: "btn" }, [
-                      _vm._v("Annuler le déplacement")
+                    _c("span", { staticClass: "btn-small" }, [
+                      _vm._v("Annuler")
                     ]),
                     _vm._v(" "),
                     _c(
                       "span",
                       {
-                        staticClass: "btn",
+                        staticClass: "btn-small",
                         on: {
                           click: function($event) {
                             _vm.currentPlayer++
@@ -23830,7 +24032,26 @@ var render = function() {
                         }
                       },
                       [_vm._v("Joueur suivant")]
-                    )
+                    ),
+                    _vm._v(" "),
+                    _c("hr"),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "right-align" }, [
+                      _c(
+                        "div",
+                        { staticClass: "btn teal", on: { click: _vm.test } },
+                        [_vm._v("test")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "waves-effect waves-light btn teal",
+                          on: { click: _vm.nextStep }
+                        },
+                        [_vm._v("Phase de rencontres à Arkham")]
+                      )
+                    ])
                   ],
                   1
                 )

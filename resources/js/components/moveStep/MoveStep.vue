@@ -7,15 +7,8 @@
                  :sites="sites"
                  :beyond="beyond"
                  :specials="specials"
-                 :monsters="monsters"></app-map>
-
-        <!-- MODALE DE SIMPLE MESSAGE -->
-        <app-simple-modal :title="modalTexts.title"
-                          :content="modalTexts.content"
-                          :buttonText="modalTexts.buttonText"
-                          :route="modalTexts.route">
-                          <div class="btn teal" @click="test">test</div>
-        </app-simple-modal>
+                 :monsters="monsters"
+                 @wasClicked="move($event)"></app-map>
 
         <div id="modal-movement-1" class="modal" tabindex="0">
                 <div class="modal-content" style="height:100%">
@@ -28,13 +21,19 @@
                                     v-if="investigator.id == currentPlayer"
                                     :key="investigator.name">
                                     <span>{{ investigator.name }}</span>
-                                    <span>Mouvement: 3</span>
+                                    <span>Mouvement: {{ investigator.skills.vitesse }}</span>
                                 </div>
                             </transition>
 
-                            <span class="btn">Confirmer le déplacement</span>
-                            <span class="btn">Annuler le déplacement</span>
-                            <span class="btn" @click="currentPlayer++">Joueur suivant</span>
+                            <span class="btn-small">Confirmer</span>
+                            <span class="btn-small">Annuler</span>
+                            <span class="btn-small" @click="currentPlayer++">Joueur suivant</span>
+
+                            <hr>
+                            <div class="right-align">
+                                <div class="btn teal" @click="test">test</div>
+                                <button class="waves-effect waves-light btn teal" @click="nextStep">Phase de rencontres à Arkham</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,24 +58,13 @@
                 pageTitle: 'Phase de mouvement',
                 playerNumber: 2, // nombre de joueurs
                 currentPlayer: 1,
-                modalTexts: {
-                    title: "Mouvement",
-                    content: "Phase de mouvement...",
-                    buttonText: "Phase de rencontres à Arkham",
-                    route: "arkham-encounter-step"
-                },
+                availableSites: [],
                 investigators: [
-                    { name: 'Joe Diamond',    skills: { vitesse: 3, discretion:4, vigueur:2, volonte:3, savoir:0, chance:3}, availableSkills: { vitesse: [3,4,5,6], discretion:[4,3,2,1], vigueur:[2,3,4,5], volonte:[3,2,1,0], savoir:[0,1,2,3], chance:[3,2,1,0]}},
-                    { name: 'Peggy Green',    skills: { vitesse: 1, discretion:5, vigueur:1, volonte:3, savoir:1, chance:5}, availableSkills: { vitesse: [1,2,3,4], discretion:[5,4,3,2], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[1,2,3,4], chance:[5,4,3,2]}},
-                    { name: 'Jenny Barnes',   skills: { vitesse: 0, discretion:3, vigueur:2, volonte:3, savoir:0, chance:4}, availableSkills: { vitesse: [0,1,2,3], discretion:[3,2,1,0], vigueur:[2,3,4,5], volonte:[3,2,1,0], savoir:[0,1,2,3], chance:[4,3,2,0]}},
-                    { name: 'Francis Sailor', skills: { vitesse: 1, discretion:4, vigueur:1, volonte:3, savoir:2, chance:5}, availableSkills: { vitesse: [1,2,3,4], discretion:[4,3,2,1], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[2,3,4,5], chance:[5,4,3,2]}}
-                ]
-                [
-                    { id:1, name: "Joe Diamond"   , siteId:3,  status:"ok" },
-                    { id:2, name: "Francis Sailor", siteId:36, status:"lost" },
-                    { id:3, name: "Jenny Barnes"  , siteId:9,  status:"arrested" },
-                    { id:4, name: "Peggy Green"   , siteId:6,  status:"retarded" },
-                    { id:5, name: "Mark Harrigan" , siteId:36, status:"lost" },
+                    { id: 1, name: 'Joe Diamond',    siteId:3 ,  status:"ok",         skills: { vitesse: 3, discretion:4, vigueur:2, volonte:3, savoir:0, chance:3}, availableSkills: { vitesse: [3,4,5,6], discretion:[4,3,2,1], vigueur:[2,3,4,5], volonte:[3,2,1,0], savoir:[0,1,2,3], chance:[3,2,1,0]}},
+                    { id: 2, name: 'Peggy Green',    siteId:8,  status:"lost",        skills: { vitesse: 1, discretion:5, vigueur:1, volonte:3, savoir:1, chance:5}, availableSkills: { vitesse: [1,2,3,4], discretion:[5,4,3,2], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[1,2,3,4], chance:[5,4,3,2]}},
+                    { id: 3, name: 'Jenny Barnes',   siteId:9 ,  status:"arrested",   skills: { vitesse: 0, discretion:3, vigueur:2, volonte:3, savoir:0, chance:4}, availableSkills: { vitesse: [0,1,2,3], discretion:[3,2,1,0], vigueur:[2,3,4,5], volonte:[3,2,1,0], savoir:[0,1,2,3], chance:[4,3,2,0]}},
+                    { id: 4, name: 'Francis Sailor', siteId:6 ,  status:"retarded",   skills: { vitesse: 1, discretion:4, vigueur:1, volonte:3, savoir:2, chance:5}, availableSkills: { vitesse: [1,2,3,4], discretion:[4,3,2,1], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[2,3,4,5], chance:[5,4,3,2]}},
+                    { id: 5, name: 'Mark Harrigan',  siteId:7,  status:"lost",        skills: { vitesse: 1, discretion:4, vigueur:1, volonte:3, savoir:2, chance:5}, availableSkills: { vitesse: [1,2,3,4], discretion:[4,3,2,1], vigueur:[1,2,3,4], volonte:[3,2,1,0], savoir:[2,3,4,5], chance:[5,4,3,2]}}
                 ],
                 monsters: [
                     { id:1, name:"Chthonien", siteId:11, symbol:"triangle", habilities: {}},
@@ -84,41 +72,41 @@
                     { id:3, name:"Cultiste",  siteId:3,  symbol:"lune",     habilities: {}}
                 ],
                 sites: [
-                    { name: "Boutique<br>de<br>souvenir"        , id: "1" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white:27, black:27},
-                    { name: "Journal"                           , id: "2" , type: "site",   character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:27, black:27},
-                    { name: "Gare"                              , id: "3" , type: "site",   character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:27, black:27},
-                    { name: "Banque<br>d'Arkham"                , id: "4" , type: "site",   character: [], monster: [], event: [], clue: 0, color: "white" , portal: [], marker: [], white:28, black:28},
-                    { name: "Asile<br>d'Arkham"                 , id: "5" , type: "site",   character: [], monster: [], event: [], clue: 0, color: "white" , portal: [], marker: [], white:28, black:28},
-                    { name: "Square de<br>l'indépen-<br>-dance" , id: "6" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "white" , portal: [], marker: [], white:28, black:28},
-                    { name: "Relais<br>routier<br>de Hibb"      , id: "7" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
-                    { name: "Restaurant<br>de Velma"            , id: "8" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
-                    { name: "Poste<br>de<br>police"             , id: "9" , type: "site",   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
-                    { name: "L'ile<br>inexplorée"               , id: "10", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
-                    { name: "Les<br>quais"                      , id: "11", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
-                    { name: "l'Inno-<br>-mable"                 , id: "12", type: "site",   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
-                    { name: "Le<br>cimetière"                   , id: "13", type: "site",   character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white:31, black:31},
-                    { name: "La Caverne<br>noire"               , id: "14", type: "site",   character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white:31, black:31},
-                    { name: "Le<br>magasin"                     , id: "15", type: "site",   character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white:31, black:31},
-                    { name: "Département<br>Scientifique"       , id: "16", type: "site",   character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white:32, black:32},
-                    { name: "Adminis-<br>-tration"              , id: "17", type: "site",   character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white:32, black:32},
-                    { name: "Biblio-<br>-thèque"                , id: "18", type: "site",   character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white:32, black:32},
-                    { name: "Maison<br>de la<br>sorcière"       , id: "19", type: "site",   character: [], monster: [], event: [], clue: 1, color: "blue"  , portal: [], marker: [], white:33, black:33},
-                    { name: "Loge du<br>crépuscule<br>d'argent" , id: "20", type: "site",   character: [], monster: [], event: [], clue: 1, color: "blue"  , portal: [], marker: [], white:33, black:33},
-                    { name: "Hôpital<br>Sainte<br>Marie"        , id: "21", type: "site",   character: [], monster: [], event: [], clue: 0, color: "red"   , portal: [], marker: [], white:34, black:34},
-                    { name: "Vieille<br>échoppe<br>de magie"    , id: "22", type: "site",   character: [], monster: [], event: [], clue: 0, color: "red"   , portal: [], marker: [], white:34, black:34},
-                    { name: "Les<br>bois"                       , id: "23", type: "site",   character: [], monster: [], event: [], clue: 1, color: "red"   , portal: [], marker: [], white:34, black:34},
-                    { name: "Pension<br>de Ma"                  , id: "24", type: "site",   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
-                    { name: "Société<br>des<br>historiens"      , id: "25", type: "site",   character: [], monster: [], event: [], clue: 1, color: "brown" , portal: [], marker: [], white:35, black:35},
-                    { name: "Eglise<br>méridionale"             , id: "26", type: "site",   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
-    /*'Migo'*/      { name: "Quartier<br>Nord"                  , id: "27", type: "street", character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:28, black:30},
-    /*'Cultiste'*/  { name: "Centre<br>Ville"                   , id: "28", type: "street", character: [], monster: [], event: [], clue: 0, color: "white" , portal: [], marker: [], white:29, black:27},
-                    { name: "Quartier<br>Est"                   , id: "29", type: "street", character: [], monster: [], event: [], clue: 0, color: "grey"  , portal: [], marker: [], white:31, black:28},
-                    { name: "Quartier<br>marchand"              , id: "30", type: "street", character: [], monster: [], event: [], clue: 0, color: "green" , portal: [], marker: [], white:27, black:32},
-                    { name: "Quartier<br>de la<br>rivière"      , id: "31", type: "street", character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white:33, black:29},
-                    { name: "Université<br>Miskatonik"          , id: "32", type: "street", character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white:30, black:34},
-                    { name: "French<br>Hill"                    , id: "33", type: "street", character: [], monster: [], event: [], clue: 0, color: "blue"  , portal: [], marker: [], white:35, black:31},
-                    { name: "Quartier<br>Résidentiel"           , id: "34", type: "street", character: [], monster: [], event: [], clue: 0, color: "red"   , portal: [], marker: [], white:32, black:35},
-                    { name: "Quartier<br>sud"                   , id: "35", type: "street", character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:34, black:33},
+                    { name: "Boutique<br>de<br>souvenir"        , id: "1" , type: "site",   adjacentSites: [27],                   character: [], monster: [], event: [], clue: 1, color: "orange", portal: [], marker: [], white:27, black:27},
+                    { name: "Journal"                           , id: "2" , type: "site",   adjacentSites: [27],                   character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:27, black:27},
+                    { name: "Gare"                              , id: "3" , type: "site",   adjacentSites: [27],                   character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:27, black:27},
+                    { name: "Banque<br>d'Arkham"                , id: "4" , type: "site",   adjacentSites: [28],                   character: [], monster: [], event: [], clue: 0, color: "white" , portal: [], marker: [], white:28, black:28},
+                    { name: "Asile<br>d'Arkham"                 , id: "5" , type: "site",   adjacentSites: [28],                   character: [], monster: [], event: [], clue: 0, color: "white" , portal: [], marker: [], white:28, black:28},
+                    { name: "Square de<br>l'indépen-<br>-dance" , id: "6" , type: "site",   adjacentSites: [28],                   character: [], monster: [], event: [], clue: 1, color: "white" , portal: [], marker: [], white:28, black:28},
+                    { name: "Relais<br>routier<br>de Hibb"      , id: "7" , type: "site",   adjacentSites: [29],                   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
+                    { name: "Restaurant<br>de Velma"            , id: "8" , type: "site",   adjacentSites: [29],                   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
+                    { name: "Poste<br>de<br>police"             , id: "9" , type: "site",   adjacentSites: [29],                   character: [], monster: [], event: [], clue: 1, color: "grey"  , portal: [], marker: [], white:29, black:29},
+                    { name: "L'ile<br>inexplorée"               , id: "10", type: "site",   adjacentSites: [30],                   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
+                    { name: "Les<br>quais"                      , id: "11", type: "site",   adjacentSites: [30],                   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
+                    { name: "l'Inno-<br>-mable"                 , id: "12", type: "site",   adjacentSites: [30],                   character: [], monster: [], event: [], clue: 1, color: "green" , portal: [], marker: [], white:30, black:30},
+                    { name: "Le<br>cimetière"                   , id: "13", type: "site",   adjacentSites: [31],                   character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white:31, black:31},
+                    { name: "La Caverne<br>noire"               , id: "14", type: "site",   adjacentSites: [31],                   character: [], monster: [], event: [], clue: 1, color: "purple", portal: [], marker: [], white:31, black:31},
+                    { name: "Le<br>magasin"                     , id: "15", type: "site",   adjacentSites: [31],                   character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white:31, black:31},
+                    { name: "Département<br>Scientifique"       , id: "16", type: "site",   adjacentSites: [32],                   character: [], monster: [], event: [], clue: 1, color: "yellow", portal: [], marker: [], white:32, black:32},
+                    { name: "Adminis-<br>-tration"              , id: "17", type: "site",   adjacentSites: [32],                   character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white:32, black:32},
+                    { name: "Biblio-<br>-thèque"                , id: "18", type: "site",   adjacentSites: [32],                   character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white:32, black:32},
+                    { name: "Maison<br>de la<br>sorcière"       , id: "19", type: "site",   adjacentSites: [33],                   character: [], monster: [], event: [], clue: 1, color: "blue"  , portal: [], marker: [], white:33, black:33},
+                    { name: "Loge du<br>crépuscule<br>d'argent" , id: "20", type: "site",   adjacentSites: [33],                   character: [], monster: [], event: [], clue: 1, color: "blue"  , portal: [], marker: [], white:33, black:33},
+                    { name: "Hôpital<br>Sainte<br>Marie"        , id: "21", type: "site",   adjacentSites: [34],                   character: [], monster: [], event: [], clue: 0, color: "red"   , portal: [], marker: [], white:34, black:34},
+                    { name: "Vieille<br>échoppe<br>de magie"    , id: "22", type: "site",   adjacentSites: [34],                   character: [], monster: [], event: [], clue: 0, color: "red"   , portal: [], marker: [], white:34, black:34},
+                    { name: "Les<br>bois"                       , id: "23", type: "site",   adjacentSites: [34],                   character: [], monster: [], event: [], clue: 1, color: "red"   , portal: [], marker: [], white:34, black:34},
+                    { name: "Pension<br>de Ma"                  , id: "24", type: "site",   adjacentSites: [35],                   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
+                    { name: "Société<br>des<br>historiens"      , id: "25", type: "site",   adjacentSites: [35],                   character: [], monster: [], event: [], clue: 1, color: "brown" , portal: [], marker: [], white:35, black:35},
+                    { name: "Eglise<br>méridionale"             , id: "26", type: "site",   adjacentSites: [35],                   character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:35, black:35},
+    /*'Migo'*/      { name: "Quartier<br>Nord"                  , id: "27", type: "street", adjacentSites: [1,2,3,28,30],          character: [], monster: [], event: [], clue: 0, color: "orange", portal: [], marker: [], white:28, black:30},
+    /*'Cultiste'*/  { name: "Centre<br>Ville"                   , id: "28", type: "street", adjacentSites: [4,5,6,27,29],          character: [], monster: [], event: [], clue: 0, color: "white" , portal: [], marker: [], white:29, black:27},
+                    { name: "Quartier<br>Est"                   , id: "29", type: "street", adjacentSites: [7,8,9,28,31],          character: [], monster: [], event: [], clue: 0, color: "grey"  , portal: [], marker: [], white:31, black:28},
+                    { name: "Quartier<br>marchand"              , id: "30", type: "street", adjacentSites: [10,11,12,27,28,31,32], character: [], monster: [], event: [], clue: 0, color: "green" , portal: [], marker: [], white:27, black:32},
+                    { name: "Quartier<br>de la<br>rivière"      , id: "31", type: "street", adjacentSites: [13,14,15,29,30,33],    character: [], monster: [], event: [], clue: 0, color: "purple", portal: [], marker: [], white:33, black:29},
+                    { name: "Université<br>Miskatonik"          , id: "32", type: "street", adjacentSites: [16,17,18,30,33,34],    character: [], monster: [], event: [], clue: 0, color: "yellow", portal: [], marker: [], white:30, black:34},
+                    { name: "French<br>Hill"                    , id: "33", type: "street", adjacentSites: [19,20,31,32,35],       character: [], monster: [], event: [], clue: 0, color: "blue"  , portal: [], marker: [], white:35, black:31},
+                    { name: "Quartier<br>Résidentiel"           , id: "34", type: "street", adjacentSites: [21,22,23,32,35],       character: [], monster: [], event: [], clue: 0, color: "red"   , portal: [], marker: [], white:32, black:35},
+                    { name: "Quartier<br>sud"                   , id: "35", type: "street", adjacentSites: [24,25,26,33,34],       character: [], monster: [], event: [], clue: 0, color: "brown" , portal: [], marker: [], white:34, black:33},
 
                 ],
                 beyond : [
@@ -160,44 +148,44 @@
                     { name: 'Ciel',                                   id: 37, monster: []},
                     { name: 'Périphérie',                             id: 38, monster: []},
                     { name: 'Cellule de prison',                      id: 39, monster: []}
-                ],
-                adjacentSites: [
-                    { id: 1 , sites: [27]},
-                    { id: 2 , sites: [27]},
-                    { id: 3 , sites: [27]},
-                    { id: 4 , sites: [28]},
-                    { id: 5 , sites: [28]},
-                    { id: 6 , sites: [28]},
-                    { id: 7 , sites: [29]},
-                    { id: 8 , sites: [29]},
-                    { id: 9 , sites: [29]},
-                    { id: 10, sites: [30]},
-                    { id: 11, sites: [30]},
-                    { id: 12, sites: [30]},
-                    { id: 13, sites: [31]},
-                    { id: 14, sites: [31]},
-                    { id: 15, sites: [31]},
-                    { id: 16, sites: [32]},
-                    { id: 17, sites: [32]},
-                    { id: 18, sites: [32]},
-                    { id: 19, sites: [33]},
-                    { id: 20, sites: [33]},
-                    { id: 21, sites: [34]},
-                    { id: 22, sites: [34]},
-                    { id: 23, sites: [34]},
-                    { id: 24, sites: [35]},
-                    { id: 25, sites: [35]},
-                    { id: 26, sites: [35]}, //fin des lieux
-                    { id: 27, sites: [1,2,3,28,30]},
-                    { id: 28, sites: [4,5,6,27,29]},
-                    { id: 29, sites: [7,8,9,28,31]},
-                    { id: 30, sites: [10,11,12,27,28,31,32]},
-                    { id: 31, sites: [13,14,15,29,30,33]},
-                    { id: 32, sites: [16,17,18,30,33,34]},
-                    { id: 33, sites: [19,20,31,32,35]},
-                    { id: 34, sites: [21,22,23,32,35]},
-                    { id: 35, sites: [24,25,26,33,34]}
                 ]
+                // adjacentSites: [
+                //     { id: 1 , adjacentSites: [27]},
+                //     { id: 2 , adjacentSites: [27]},
+                //     { id: 3 , adjacentSites: [27]},
+                //     { id: 4 , adjacentSites: [28]},
+                //     { id: 5 , adjacentSites: [28]},
+                //     { id: 6 , adjacentSites: [28]},
+                //     { id: 7 , adjacentSites: [29]},
+                //     { id: 8 , adjacentSites: [29]},
+                //     { id: 9 , adjacentSites: [29]},
+                //     { id: 10, adjacentSites: [30]},
+                //     { id: 11, adjacentSites: [30]},
+                //     { id: 12, adjacentSites: [30]},
+                //     { id: 13, adjacentSites: [31]},
+                //     { id: 14, adjacentSites: [31]},
+                //     { id: 15, adjacentSites: [31]},
+                //     { id: 16, adjacentSites: [32]},
+                //     { id: 17, adjacentSites: [32]},
+                //     { id: 18, adjacentSites: [32]},
+                //     { id: 19, adjacentSites: [33]},
+                //     { id: 20, adjacentSites: [33]},
+                //     { id: 21, adjacentSites: [34]},
+                //     { id: 22, adjacentSites: [34]},
+                //     { id: 23, adjacentSites: [34]},
+                //     { id: 24, adjacentSites: [35]},
+                //     { id: 25, adjacentSites: [35]},
+                //     { id: 26, adjacentSites: [35]}, //fin des lieux
+                //     { id: 27, adjacentSites: [1,2,3,28,30]},
+                //     { id: 28, adjacentSites: [4,5,6,27,29]},
+                //     { id: 29, adjacentSites: [7,8,9,28,31]},
+                //     { id: 30, adjacentSites: [10,11,12,27,28,31,32]},
+                //     { id: 31, adjacentSites: [13,14,15,29,30,33]},
+                //     { id: 32, adjacentSites: [16,17,18,30,33,34]},
+                //     { id: 33, adjacentSites: [19,20,31,32,35]},
+                //     { id: 34, adjacentSites: [21,22,23,32,35]},
+                //     { id: 35, adjacentSites: [24,25,26,33,34]}
+                // ]
 
             }
         },
@@ -211,11 +199,11 @@
             getAdjacentSites (id)
             {
                 // Recherche le lieu avec l'id en paramètre
-                var adjacentSite = this.adjacentSites.find((adj) => {
-                    return adj.id == id;
+                var adjacentSite = this.sites.find((site) => {
+                    return site.id == id;
                 });
                 // Retourne les lieux adjacents
-                return adjacentSite.sites;
+                return adjacentSite.adjacentSites;
             },
             // Retourne les lieux à la distance speed du lieu numéro id
             getAvailableSites (id,speed)
@@ -264,19 +252,32 @@
                         // Sauvegarde de l'objet à retourner
                         getAvailableSites.push(result);
                         // Sauvegarde des derniers lieux trouvés
-                        last = result.sites
+                        last = result.sites;
                     }
                 }
-                return getAvailableSites
+                return getAvailableSites;
+            },
+            move(site)
+            {
+                var currentInvestigator = this.getInvestigator(this.currentPlayer);
+                var availableSites = this.getAvailableSites(currentInvestigator.siteId, currentInvestigator.skills.vitesse);
+
+            },
+            // Récupère l'investigateur dont l'id est passé en paramètre
+            getInvestigator(id)
+            {
+                return this.investigators.find((investigator) => {
+                    return investigator.id == id;
+                });
             },
             log (message)
             {
                 console.log(message);
             },
 
-            continueAction () {
-                console.log('ici')
-                // this.$router.push('choose-ancient')
+            nextStep () {
+                // console.log('ici');
+                this.$router.push('arkham-encounter-step');
             }
         }
         ,
@@ -284,6 +285,9 @@
 
         },
         mounted(){
+            var currentInvestigator = this.getInvestigator(this.currentPlayer);
+            this.availableSites = this.getAvailableSites(currentInvestigator.siteId, currentInvestigator.skills.vitesse);
+
         }
     }
 </script>
