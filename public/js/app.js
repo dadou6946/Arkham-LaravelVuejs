@@ -15648,7 +15648,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.jumbotron\n{\n    margin-top: 0;\n    margin-bottom: 15px;\n    padding: 25px;\n}\nbody\n{\n    background-color: #e8eaf6;\n    /*background-color: #586C99;*/\n}\n", ""]);
+exports.push([module.i, "\nbody\n{\n    background-color: #e8eaf6;\n    /*background-color: #586C99;*/\n}\n", ""]);
 
 // exports
 
@@ -15792,18 +15792,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             pageTitle: 'Accueil'
         };
-    },
-    methods: {
-        submit: function submit() {
-            //Diriger vers le nouveau composant
-            console.log('début');
-        }
     }
 });
 
@@ -15816,24 +15811,22 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
+    _c("br"),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c(
           "div",
-          { staticClass: "form-group text-center" },
+          { staticClass: "center-align" },
           [
             _c(
               "router-link",
               {
                 staticClass: "waves-effect waves-light btn",
-                attrs: { to: { path: "/choose-players" } },
-                on: { click: _vm.submit }
+                attrs: { to: { path: "/choose-players" } }
               },
               [_vm._v("Nouvelle partie")]
             ),
@@ -15962,12 +15955,6 @@ exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n  
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -16962,36 +16949,35 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
+    _c("br"),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-3" }, [
-        _c("div", { staticClass: "form-group text-center" }, [
+      _c("div", { staticClass: "col m3" }, [
+        _c("div", { staticClass: "center-align" }, [
           _c("label", { attrs: { for: "" } }, [_vm._v("Nombre de joueurs")]),
           _vm._v(" "),
           _c("div", [
             _c(
               "div",
               {
-                staticClass: "btn btn-primary",
+                staticClass: "btn",
                 attrs: { disabled: _vm.playerNumber == 1 },
                 on: { click: _vm.down }
               },
               [_vm._v("-")]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "btn btn-default" }, [
+            _c("div", { staticClass: "btn" }, [
               _vm._v(_vm._s(_vm.playerNumber))
             ]),
             _vm._v(" "),
             _c(
               "div",
               {
-                staticClass: "btn btn-success",
+                staticClass: "btn",
                 attrs: { disabled: _vm.playerNumber > 5 },
                 on: { click: _vm.up }
               },
@@ -17000,13 +16986,14 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("hr")
+        _c("br"),
+        _c("div", { staticClass: "divider" })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-9" }, [
+      _c("div", { staticClass: "col m9" }, [
         _c(
           "div",
-          { staticClass: "form-group text-center" },
+          { staticClass: "center-align" },
           _vm._l(_vm.players, function(player, index) {
             return _c("div", [
               _c("label", [_vm._v("Joueur " + _vm._s(index + 1))]),
@@ -17020,7 +17007,6 @@ var render = function() {
                     expression: "player.name"
                   }
                 ],
-                staticClass: "form-control",
                 attrs: { type: "text" },
                 domProps: { value: player.name },
                 on: {
@@ -17036,19 +17022,15 @@ var render = function() {
           })
         ),
         _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("input", {
-            staticClass: "form-control btn btn-success",
-            attrs: {
-              type: "submit",
-              disabled: !_vm.allowConfirm,
-              value: "Confirmer"
-            },
-            on: { click: _vm.submit }
-          })
-        ])
+        _c("input", {
+          staticClass: "btn",
+          attrs: {
+            type: "submit",
+            disabled: !_vm.allowConfirm,
+            value: "Confirmer"
+          },
+          on: { click: _vm.submit }
+        })
       ])
     ])
   ])
@@ -17149,7 +17131,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n    /*color: white;\n    background-color: teal;*/\n}\n.selected {\n    border: 3px solid lightgreen;\n    -webkit-box-shadow: -3px -2px 5px 0px lightgreen;\n    box-shadow: -3px -2px 5px 0px lightgreen;\n}\n#image_content\n{\n    height: 550px;\n    width: 100%;\n    /*background-color: teal;*/\n}\n#image-preview {\n    height: 100%;\n    width: auto;\n    margin: auto;\n}\n.character-resume\n{\n    margin: 2px;\n}\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n}\n.selected {\n    border: 3px solid lightgreen;\n    -webkit-box-shadow: -3px -2px 5px 0px lightgreen;\n    box-shadow: -3px -2px 5px 0px lightgreen;\n}\n#image_content {\n    height: 550px;\n    width: 100%;\n}\n#image-preview {\n    height: 100%;\n    width: auto;\n    margin: auto;\n}\n.character-resume {\n    margin: 4px;\n}\n\n\n/*TRANSITIONS*/\n.fade-enter-active,\n.fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter,\n.fade-leave-to {\n    opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -17160,11 +17142,6 @@ exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n  
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
 //
 //
 //
@@ -17245,14 +17222,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             // waitSubmit: true,
             preview: '',
             imagePath: '',
-            available: [{ disabled: '', name: 'Joe Diamond' }, { disabled: '', name: 'Jenny Barnes' }, { disabled: '', name: 'Mark Harrigan' }, { disabled: '', name: 'Michael McGlen' }, { disabled: '', name: 'Peggy Green' }, { disabled: '', name: 'Francis Sailor' }]
+            available: [{
+                disabled: '',
+                name: 'Joe Diamond'
+            }, {
+                disabled: '',
+                name: 'Jenny Barnes'
+            }, {
+                disabled: '',
+                name: 'Mark Harrigan'
+            }, {
+                disabled: '',
+                name: 'Michael McGlen'
+            }, {
+                disabled: '',
+                name: 'Peggy Green'
+            }, {
+                disabled: '',
+                name: 'Francis Sailor'
+            }]
         };
     },
     methods: {
         choose: function choose(player) {
             if (player.disabled == "") {
                 if (this.current <= this.playerNumber) {
-                    this.investigators.push({ player: this.current, name: player.name });
+                    this.investigators.push({
+                        player: this.current,
+                        name: player.name
+                    });
                     player.disabled = "disabled";
                     if (this.current < this.playerNumber) this.current++;else if (this.current == this.playerNumber) {
                         this.enableSubmit = true;
@@ -17286,7 +17284,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.$router.push('mix-ally-package');
         }
     },
-
     updated: function updated() {
 
         this.recapMessage = this.playerNumber == 1 ? 'Le joueur 1 a été choisi. Vous pouvez le réattribuer ou passer à l\'étape suivante.' : 'Les joueurs ont été choisis. Vous pouvez les réattribuer ou passer à l\'étape suivante.';
@@ -17304,103 +17301,56 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle2))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle2))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-7" },
-        [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-6" }, [
+      _c("div", { staticClass: "col m7" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "col m12" }, [
+              _c("span", [
+                _vm._v(
+                  "Le joueur " + _vm._s(_vm.first) + " commencera la partie"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col m12" }, [
               !_vm.enableSubmit
                 ? _c("div", [
                     _vm._v(
-                      "\n                    Le joueur " +
+                      "\n                            Le joueur " +
                         _vm._s(_vm.current) +
                         " doit choisir son investivateur :"
                     )
                   ])
                 : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("span", { staticClass: "badge teal white-text" }, [
-                _vm._v(
-                  "Le joueur " + _vm._s(_vm.first) + " commencera la partie"
-                )
-              ])
             ])
-          ]),
-          _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _vm._l(_vm.available, function(player) {
-            return _c(
-              "button",
-              {
-                staticClass: "btn",
-                class: player.disabled,
-                on: {
-                  click: function($event) {
-                    _vm.choose(player)
-                  },
-                  mouseover: function($event) {
-                    _vm.mouseOver(player.name)
-                  },
-                  mouseleave: function($event) {
-                    _vm.hovered = ""
-                  }
-                }
-              },
-              [
-                _vm._v(
-                  "\n                " + _vm._s(player.name) + "\n            "
-                )
-              ]
-            )
-          }),
-          _vm._v(" "),
-          _c("br"),
-          _c("br"),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-success",
-              attrs: { disabled: !_vm.enableSubmit },
-              on: { click: _vm.continueAction }
-            },
-            [_vm._v("Confirmer")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "btn btn-success", on: { click: _vm.reboot } },
-            [_vm._v("Réattribuer les personnages")]
-          ),
-          _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "row" },
-            _vm._l(_vm.investigators, function(investigator) {
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row center-align" },
+          [
+            _vm._l(_vm.available, function(player) {
               return _c(
-                "div",
+                "button",
                 {
-                  staticClass:
-                    "col-md-5 character-resume alert alert-success text-center",
-                  attrs: { role: "alert" },
+                  staticClass: "btn",
+                  class: player.disabled,
                   on: {
+                    click: function($event) {
+                      _vm.choose(player)
+                    },
                     mouseover: function($event) {
-                      _vm.mouseOver(investigator.name)
+                      _vm.mouseOver(player.name)
                     },
                     mouseleave: function($event) {
                       _vm.hovered = ""
@@ -17409,40 +17359,100 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\n                    Joueur " +
-                      _vm._s(investigator.player) +
-                      " : " +
-                      _vm._s(investigator.name) +
-                      "\n                "
+                    "\n                        " +
+                      _vm._s(player.name) +
+                      "\n                    "
                   )
                 ]
               )
-            })
-          ),
-          _vm._v(" "),
-          _vm.enableSubmit
-            ? _c("blockquote", [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm.recapMessage) +
-                    "\n            "
-                )
-              ])
-            : _vm._e()
-        ],
-        2
-      ),
+            }),
+            _vm._v(" "),
+            _c("br"),
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn",
+                attrs: { disabled: !_vm.enableSubmit },
+                on: { click: _vm.continueAction }
+              },
+              [_vm._v("Confirmer")]
+            ),
+            _vm._v(" "),
+            _c("button", { staticClass: "btn", on: { click: _vm.reboot } }, [
+              _vm._v("Réattribuer les personnages")
+            ])
+          ],
+          2
+        ),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row" },
+          _vm._l(_vm.investigators, function(investigator) {
+            return _c(
+              "div",
+              {
+                staticClass:
+                  "col m5 character-resume center-align card teal lighten-3",
+                attrs: { role: "alert" },
+                on: {
+                  mouseover: function($event) {
+                    _vm.mouseOver(investigator.name)
+                  },
+                  mouseleave: function($event) {
+                    _vm.hovered = ""
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "card-content" }, [
+                  _c("p", [
+                    _vm._v("Joueur " + _vm._s(investigator.player) + " :"),
+                    _c("br"),
+                    _vm._v(
+                      " " +
+                        _vm._s(investigator.name) +
+                        "\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          })
+        ),
+        _vm._v(" "),
+        _vm.enableSubmit
+          ? _c("blockquote", [
+              _vm._v(
+                "\n                " +
+                  _vm._s(_vm.recapMessage) +
+                  "\n            "
+              )
+            ])
+          : _vm._e()
+      ]),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "col-md-5 text-center" },
+        { staticClass: "col m5 center-align" },
         [
+          _c("br"),
+          _c("br"),
+          _vm._v(" "),
           _c("transition", { attrs: { name: "fade" } }, [
             _vm.hovered != ""
               ? _c(
                   "div",
                   {
-                    staticClass: "center-align",
+                    staticClass: "center-align card",
                     attrs: { id: "image_content" }
                   },
                   [
@@ -17460,9 +17470,7 @@ var render = function() {
         ],
         1
       )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" })
+    ])
   ])
 }
 var staticRenderFns = []

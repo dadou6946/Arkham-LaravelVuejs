@@ -1,39 +1,33 @@
 <template>
     <div class="container">
 
-        <h1 class="jumbotron text-center">{{ pageTitle }}</h1>
-        <hr>
+        <h1 class="center-align">{{ pageTitle }}</h1>
+        <div class="divider"></div><br>
 
         <div class="row">
-            <div class="col-md-3">
-                <div class="form-group text-center">
+            <div class="col m3">
+                <div class="center-align">
                   <label for="">Nombre de joueurs</label>
                   <div>
-                    <div class="btn btn-primary" @click="down" :disabled="playerNumber==1">-</div>
-                    <div class="btn btn-default">{{playerNumber}}</div>
-                    <div class="btn btn-success" @click="up" :disabled="playerNumber>5">+</div>
+                    <div class="btn" @click="down" :disabled="playerNumber==1">-</div>
+                    <div class="btn">{{playerNumber}}</div>
+                    <div class="btn" @click="up" :disabled="playerNumber>5">+</div>
                   </div>
                 </div>
 
-                <hr>
+                <br><div class="divider"></div>
             </div>
 
-            <div class="col-md-9">
+            <div class="col m9">
 
-                <div class="form-group text-center">
+                <div class="center-align">
                   <div v-for="(player, index) of players">
                     <label>Joueur {{index + 1}}</label>
-                    <input type="text" class="form-control" v-model="player.name">
+                    <input type="text" v-model="player.name">
                   </div>
                 </div>
 
-                <hr>
-
-                <div class="form-group">
-                  <input type="submit" class="form-control btn btn-success" @click="submit" :disabled="!allowConfirm" value="Confirmer">
-                </div>
-
-                <!--<div v-if="keptData!=''">{{keptData}}</div>-->
+                <input type="submit" class="btn" @click="submit" :disabled="!allowConfirm" value="Confirmer">
 
             </div>
 
