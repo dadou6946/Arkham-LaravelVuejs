@@ -1,12 +1,12 @@
 <template>
     <div class="container">
 
-        <h1 class="jumbotron text-center">{{ pageTitle2 }}</h1>
-        <hr>
+        <h1 class="center-align">{{ pageTitle2 }}</h1>
+        <div class="divider"></div><br>
 
         <div class="row">
 
-            <div class="col-xs-2">
+            <div class="col s2">
                 <div v-for="bu of button"
                     v-if="bu.hidden != false"
                     @click="changeCharacter(bu.number)"
@@ -16,7 +16,7 @@
                     </div>
             </div>
 
-            <div class="col-xs-10 text-center">
+            <div class="col s10 center-align">
                 <div class="row">
                     <div v-for="(investigator,index) of investigators"
                         v-if="index+1 == current">
@@ -24,7 +24,7 @@
                         <br><br><br>
 
                         <!-- textes d'aptitudes -->
-                        <div class="col-xs-4 col-xs-offset-1">
+                        <div class="col s4 col offset-s1">
                             <div class="skills">
                                 <div>vitesse :</div>
                                 <div>discretion:</div>
@@ -40,7 +40,7 @@
                         </div>
 
                         <!-- Fleche gauche -->
-                        <div class="col-xs-1">
+                        <div class="col s1">
                             <img class="arrows" @click="changeSkills('vidi', 'left')" src="https://png.icons8.com/material/40/16a085/sort-left.png">
                             <img class="arrows" @click="changeSkills('vivo', 'left')" src="https://png.icons8.com/material/40/16a085/sort-left.png">
                             <img class="arrows" @click="changeSkills('sach', 'left')" src="https://png.icons8.com/material/40/16a085/sort-left.png">
@@ -48,11 +48,11 @@
 
 
                         <!-- valeurs -->
-                        <div class="col-xs-4">
+                        <div class="col s4">
                             <div v-for="(skills,index) of investigator.availableSkills" class="row row-skills"
                             >
                                 <div v-for="(value) of skills"
-                                    class="col-xs-3"
+                                    class="col s3"
                                     v-html="value"
                                     v-bind:class="investigator.skills[index] == value?globule(index):''"
                                 >
@@ -66,7 +66,7 @@
                         </div>
 
                         <!-- Fleche droite -->
-                        <div class="col-xs-1">
+                        <div class="col s1">
                             <img class="arrows" @click="changeSkills('vidi', 'right')" src="https://png.icons8.com/material/40/16a085/sort-right.png">
                             <img class="arrows" @click="changeSkills('vivo', 'right')" src="https://png.icons8.com/material/40/16a085/sort-right.png">
                             <img class="arrows" @click="changeSkills('sach', 'right')" src="https://png.icons8.com/material/40/16a085/sort-right.png">
@@ -76,7 +76,8 @@
                     </div>
                 </div>
 
-                <br>
+                
+                <div class="divider"></div><br>
 
                 <button v-if="current!=4"
                     class="waves-effect waves-light btn teal"

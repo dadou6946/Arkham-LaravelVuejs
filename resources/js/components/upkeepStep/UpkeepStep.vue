@@ -15,9 +15,9 @@
             <!-- Modales d'entretien -->
 
             <!-- Modale d'entretien -->
-            <div id="modal-upkeep"  v-if="upkeepStep!=1" class="modal open" tabindex="0">
+            <div id="modal-upkeep"  v-if="upkeepStep!=1" class="modal open center-align" tabindex="0">
                 <div class="modal-content" style="height:100%;">
-                    <h4>Phase d'entretien</h4><br>
+                    <h4 class="">Phase d'entretien</h4><br>
 
                     <!-- Affichage des personnages qui ne seront pas concernés par l'entretien -->
                     <transition name="fade" mode="out-in">
@@ -25,7 +25,7 @@
                             <p>Les joueurs qui ont été arrêtés, perdus dans le Temps et l’Espace ou qui passent leur tour au tour précédent ne sont pas concernés par la phase d’entretien.</p>
                             <ul>
                                 <!-- Affichage du status des investigateurs mis de côté -->
-                                <li v-for="investigator of investigators" v-if="investigator.status !='ok'" class="center-align">
+                                <li v-for="investigator of investigators" v-if="investigator.status !='ok'" class="">
                                     <span >{{ investigator.name }} est
                                         <span v-if="investigator.status=='lost'">perdu(e) dans le temps et l'espace</span>
                                         <span v-if="investigator.status=='arrested'">arrêté(e)</span>
@@ -34,9 +34,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <div v-if="upkeepStep==1" key="1">
+                        <!-- <div v-if="upkeepStep==1" key="1">
                             <p>Les investigateurs perdus dans le Temps et l’Espace se déplacent sur le lieu d’Arkham de leur choix.</p>
-                        </div>
+                        </div> -->
                         <div v-if="upkeepStep==2" key="2">
                             <p>Restauration des cartes déchargées.</p>
                         </div>
@@ -70,19 +70,21 @@
                                 @click="resetSite(index)"
                                 v-html="investigator.name">
                                 </button>
-                            <span class="teal darken-4 white-text right-align"
-                                style="display:block;border-radius:3px;padding-right:5px;margin-left:15px;"
-                                v-if="investigator.newSiteName !=''"
-                                v-html="investigator.newSiteNameText">
-                                </span>
+                            <blockquote v-if="investigator.newSiteName !=''">
+                                <span  class=""
+                                       v-html="investigator.newSiteNameText"></span>
+                            </blockquote>
                         </div>
-
-                        <button class="btn waves-effect waves-light teal right-align"
-                            style="position: absolute; bottom:25px;"
-                            :disabled="next == false"
-                            @click="nextUpkeepStep">
-                            valider les déplacements
-                        </button>
+                        <br>
+                        <div class="modal-footer right-align">
+                            
+                            <button class="btn waves-effect waves-light teal "
+                                style=" display: inline-block;"
+                                :disabled="next == false"
+                                @click="nextUpkeepStep">
+                                valider les déplacements
+                            </button>
+                        </div>
                 </div>
             </div>
         </body>
@@ -360,17 +362,17 @@
     #modal-upkeep-1
     {
         width: 20%;
+        top: 10%;
         margin-left: 25px;
         z-index: 1003;
         display: block;
         opacity: 1;
-        /*height:100%;*/
+        height:100%;
     }
     .btn
     {
         margin: 2px;
     }
-
     .btn-investigator
     {
         margin: 5px;

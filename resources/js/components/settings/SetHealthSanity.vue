@@ -1,15 +1,15 @@
 <template>
     <div class="container">
 
-        <h1 class="jumbotron text-center">{{ pageTitle }}</h1>
-        <hr>
+        <h1 class="center-align">{{ pageTitle }}</h1>
+        <div class="divider"></div>
 
-        <div class="row">
+        <div class="row"><br>
 
-            <div class="col-md-12 text-center">
+            <div class="col m12 center-align">
 
                 <div v-for="(investigator,index) of investigators">
-                    <span v-html="investigator.name"></span> (joueur <span v-html="index + 1"></span>) commence la partie avec : <span v-html="investigator.resistance"></span> <img src="https://png.icons8.com/material/40/c0392b/hearts.png"> et <span v-html="investigator.sanity"></span> <img src="https://png.icons8.com/material/40/2980b9/hearts.png" alt="" />.
+                    <span v-html="investigator.name"></span> (joueur <span v-html="index + 1"></span>) commence la partie avec : <span v-html="investigator.resistance"></span>  <img src="https://png.icons8.com/material/40/c0392b/hearts.png"> et <span v-html="investigator.sanity"></span> <img src="https://png.icons8.com/material/40/2980b9/hearts.png" alt="" />.
                     <br><br>
                 </div>
 

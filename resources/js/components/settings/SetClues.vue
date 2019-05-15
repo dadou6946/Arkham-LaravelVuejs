@@ -1,7 +1,6 @@
 <template>
         <body>
             <app-sidebar></app-sidebar>
-
             <!-- ARKHAM MAP -->
             <app-map
                      :investigators="investigators"

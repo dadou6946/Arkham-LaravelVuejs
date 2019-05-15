@@ -4,143 +4,145 @@
 
         <!-- PANNEAU INVESTIGATEURS -->
         <transition name="fade">
-            <nav id="sidebar-investigator" class="grey sidenav sidenav-fixed"
-                v-if="navbar.investigator">
+            <nav id="sidebar-investigator"
+                v-if="navbar.investigator"
+                class="grey sidenav sidenav-fixed">
 
-                    <div class="center-align">
-                        <!-- BOUTONS D'INVESTIGATEURS -->
-                        <button class="waves-effect waves-grey grey darken-2 btn btn-small character-button"
-                            v-for="(investigator, index) of investigators"
-                            @click="showInvestigator(investigator.name)">
-                            <span v-html="investigator.name"></span>
-                        </button>
-                    </div>
-                    <hr>
+                <!-- BOUTONS D'INVESTIGATEURS -->
+                <div class="center-align">
+                    <button class="waves-effect waves-grey grey darken-2 btn btn-small character-button"
+                        v-for="(investigator, index) of investigators"
+                        @click="showInvestigator(investigator.name)"
+                        :key="index">
+                        <span v-html="investigator.name"></span>
+                    </button>
+                </div>
 
-                    <transition name="fade" mode="out-in">
-                        <div v-for="investigator of investigators"
-                            v-if="investigatorPreview!='' && investigator.name == investigatorPreview"
-                            :key="investigator.name">
-                            <div class="row center-align lh-15">
-                                <!-- IMAGE DE L'INVESTIGATEUR -->
-                                <img class="col-md-6 grey lighten-3 z-depth-3 photo-character"
-                                    :src="'/image/sheet/character/head/'+investigatorPreview.replace(' ', '')+'.png'"
-                                    :alt="investigatorPreview">
-                                <!-- INFORMATIONS DE L'INVESTIGATEUR -->
-                                <div class="col-md-6">
-                                    <h5 id="name">{{investigator.name}}</h5>
-                                    <span id="profession">La Diletante</span>
-                                    <hr>
-                                    <span id="sanity">Santé mentale: 6/6</span><br>
-                                    <span id="stamina">Résistance: 4/4</span><br>
-                                    <hr>
-                                    <span id="statut">Statut: ok</span>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <!-- POSSESSIONS, MAISON ET CONCENTRATION -->
-                                <div class="col-md-6 lh-15 left-content">
-                                    <span id="house">Maison: </span><span>Gare</span>
-                                    <hr>
-                                    <span>Possessions fixes :</span><br>
-                                    <span>10$</span><br>
-                                    <span>Possessions aléatoires :</span><br>
-                                    <span>1 Compétence, 1 Sort, 1 Objet Unique, 2 Objets Communs</span>
-                                    <hr>
-                                    <span>Concentration: 1</span>
-                                </div>
-                                <!-- COMPÉTENCES SPÉCIALES -->
-                                <div class="col-md-6 justified-text">
-                                    <span class="lh-15">Héritage</span><br><br>
-                                    <span id="capacity-text">
-                                        <!-- <b>Entretien:</b> Jenny gagne 1$. -->
-                                        <b>Entretien:</b> Les monstres et les portails ne peuvent pas apparaitre a l'endroit ou se trouve Kate à cause de son stabilitisateur de flux. Les monstres et les portails ne disparaissent cependant pas quand elle rentre dans un lieu, et les monstres peuvent entre normalement dans un lieu ou elle se trouve.
-                                    </span>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row lh-15">
-                                <!-- TEXTES D'APTITUDES -->
-                                <div class="col-xs-4">
-                                    <div class="skills mt-5">
-                                        <div>vitesse :</div>
-                                        <div>discretion:</div>
-                                    </div>
-                                    <div class="skills mt-25">
-                                        <div>vigueur:</div>
-                                        <div>volonté:</div>
-                                    </div>
-                                    <div class="skills mt-25">
-                                        <div>savoir:</div>
-                                        <div>chance:</div>
-                                    </div>
-                                </div>
-                                <!-- VALEURS ET GLOBULES -->
-                                <div class="col-xs-8">
-                                    <div v-for="(skills,index) of investigator.availableSkills" class="row row-skills text-center">
-                                        <div v-for="(value) of skills"
-                                            class="col-xs-3 skill"
-                                            v-html="value"
-                                            v-bind:class="investigator.skills[index] == value?globule(index):''">
-                                        </div>
-                                        <br>
-                                        <div v-if="index =='discretion' || index =='volonte'" v-html="'<br>'"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <!-- ARGENT, INDICES ET POSITION -->
-                            <div class="row lh-15">
-                                <div class="col-md-6">
-                                    <span>Argent : 10$</span>
-                                </div>
-                                <div class="col-md-6">
-                                    <span>Indices : <img id="clue-token-img" :src="'/image/token/clue.png'" alt="indices"> X 2</span><br>
-                                </div>
-                                <div class="col-md-12">
-                                    <span>Position : Journal</span>
-                                </div>
-                            </div>
+                <div class="divider"></div>
 
-                            <!-- BOUTONS D'OBJETS -->
-                            <div class="row lh-15 text-center">
-                                <div class="col-md-12">
-                                    <button class="waves-effect waves-green green darken-1 btn character-button">
-                                        Compétences
-                                        <img class="button-icon-small" :src="'/image/icon/parchment.png'" alt="competences">
-                                    </button>
-                                    <button class="waves-effect waves-green green darken-1 btn character-button">
-                                        Objets
-                                        <img class="button-icon-small" :src="'/image/icon/object.png'" alt="objets">
-                                    </button>
-                                    <button class="waves-effect waves-green green darken-1 btn character-button">
-                                        Alliés
-                                        <img class="button-icon-small" :src="'/image/icon/ally.png'" alt="allies">
-                                    </button>
-                                </div>
-                                <div class="col-md-12">
-                                    <button class="waves-effect waves-green green darken-1 btn character-button">
-                                        Trophés
-                                        <img class="button-icon-small" :src="'/image/icon/trophy.png'" alt="trophees">
-                                    </button>
-                                    <button class="waves-effect waves-green green darken-1 btn character-button">
-                                        Objets spéciaux
-                                        <img class="button-icon-small" :src="'/image/icon/special.png'" alt="objets speciaux">
-                                    </button>
-                                </div>
+                <!-- Fiche INVESTIGATEUR -->
+                <transition name="fade" mode="out-in">
+                    <div v-for="investigator of investigators"
+                        v-if="investigatorPreview!='' && investigator.name == investigatorPreview"
+                        :key="investigator.name">
+                        <div class="row center-align lh-15">
+                            <!-- IMAGE -->
+                            <img class="grey lighten-3 z-depth-3 photo-character"
+                                :src="'/image/sheet/character/head/'+investigatorPreview.replace(' ', '')+'.png'"
+                                :alt="investigatorPreview">
+                            <!-- INFORMATIONS  -->
+                            <div class="col m6">
+                                <h5 id="name">{{investigator.name}}</h5>
+                                <span id="profession">La Diletante</span>
+                                <div class="divider"></div>
+                                <span id="sanity">Santé mentale: 6/6</span><br>
+                                <span id="stamina">Résistance: 4/4</span><br>
+                                <div class="divider"></div>
+                                <span id="statut">Statut: ok</span>
                             </div>
-
-                                <!-- <span id="objets">Objets</span><br>
-                                <div class="row">
-                                    <div v-for="(object, index) of investigator.objects"
-                                        class="card-panel col-md-3 black-text truncate text-center hoverable object-card"
-                                        v-html="object">
-                                    </div>
-                                </div> -->
-
                         </div>
-                    </transition>
+
+                        <div class="divider"></div>
+
+                        <div class="row">
+                            <!-- POSSESSIONS, MAISON ET CONCENTRATION -->
+                            <div class="col m6 lh-15 left-content">
+                                <span id="house">Maison: </span><span>Gare</span>
+                                <div class="divider"></div>
+                                <span>Possessions fixes :</span><br>
+                                <span>10$</span><br>
+                                <span>Possessions aléatoires :</span><br>
+                                <span>1 Compétence, 1 Sort, 1 Objet Unique, 2 Objets Communs</span>
+                                <div class="divider"></div>
+                                <span>Concentration: 1</span>
+                            </div>
+                            <!-- COMPÉTENCES SPÉCIALES -->
+                            <div class="col m6 justified-text">
+                                <span class="lh-15">Héritage</span><br><br>
+                                <span id="capacity-text">
+                                    <!-- <b>Entretien:</b> Jenny gagne 1$. -->
+                                    <b>Entretien:</b> Les monstres et les portails ne peuvent pas apparaitre a l'endroit ou se trouve Kate à cause de son stabilitisateur de flux. Les monstres et les portails ne disparaissent cependant pas quand elle rentre dans un lieu, et les monstres peuvent entre normalement dans un lieu ou elle se trouve.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="row lh-15">
+                            <!-- TEXTES D'APTITUDES -->
+                            <div class="col m4">
+                                <div class="skills mt-5">
+                                    <div>vitesse :</div>
+                                    <div>discretion:</div>
+                                </div>
+                                <div class="skills mt-25">
+                                    <div>vigueur:</div>
+                                    <div>volonté:</div>
+                                </div>
+                                <div class="skills mt-25">
+                                    <div>savoir:</div>
+                                    <div>chance:</div>
+                                </div>
+                            </div>
+                            <!-- VALEURS ET GLOBULES -->
+                            <div class="col m8">
+                                <div v-for="(skills,index) of investigator.availableSkills" class="row row-skills center-align">
+                                    <div v-for="(value) of skills"
+                                        class="col m3 skill"
+                                        v-html="value"
+                                        v-bind:class="investigator.skills[index] == value?globule(index):''">
+                                    </div>
+                                    <br>
+                                    <div v-if="index =='discretion' || index =='volonte'" v-html="'<br>'"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <!-- ARGENT, INDICES ET POSITION -->
+                        <div class="row lh-15">
+                            <div class="col m6">
+                                <span>Argent : 10$</span>
+                            </div>
+                            <div class="col m6">
+                                <span>Indices : <img id="clue-token-img" :src="'/image/token/clue.png'" alt="indices"> X 2</span><br>
+                            </div>
+                            <div class="col m12">
+                                <span>Position : Journal</span>
+                            </div>
+                        </div>
+
+                        <!-- BOUTONS D'OBJETS -->
+                        <div class="row lh-15 center-align">
+                            <div class="col m12">
+                                <button class="waves-effect waves-green green darken-1 btn character-button">
+                                    Compétences
+                                    <img class="button-icon-small" :src="'/image/icon/parchment.png'" alt="competences">
+                                </button>
+                                <button class="waves-effect waves-green green darken-1 btn character-button">
+                                    Objets
+                                    <img class="button-icon-small" :src="'/image/icon/object.png'" alt="objets">
+                                </button>
+                                <button class="waves-effect waves-green green darken-1 btn character-button">
+                                    Alliés
+                                    <img class="button-icon-small" :src="'/image/icon/ally.png'" alt="allies">
+                                </button>
+                            </div>
+                            <div class="col m12">
+                                <button class="waves-effect waves-green green darken-1 btn character-button">
+                                    Trophés
+                                    <img class="button-icon-small" :src="'/image/icon/trophy.png'" alt="trophees">
+                                </button>
+                                <button class="waves-effect waves-green green darken-1 btn character-button">
+                                    Objets spéciaux
+                                    <img class="button-icon-small" :src="'/image/icon/special.png'" alt="objets speciaux">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </transition>
             </nav>
         </transition>
 
@@ -157,7 +159,7 @@
                  v-if="navbar.game">
                 <div class="container">
                     <div class="row lh-15 mt-25">
-                        <div class="col-md-6">
+                        <div class="col m6">
                             <span>Tour n° 2</span><br>
                             <span>Phase : Mouvement</span><br>
                             <span>Premier joueur : joueur 1 - Francis Sailor</span><br>
@@ -173,7 +175,7 @@
                             </ul> -->
 
                         </div>
-                        <div class="col-md-6">
+                        <div class="col m6">
                             <span>Environnement actif : aucun</span><br>
                             <span>Rumeur active : aucune</span><br>
                             <span>Niveau de terreur : 1/12</span><br>
@@ -197,62 +199,66 @@
 
         <!-- PANNEAU ANCIENT -->
         <transition name="fade">
-            <nav id="sidebar-ancient" class="grey lh-15"
+            <nav id="sidebar-ancient"
+                class="grey lh-15"
                 v-if="navbar.ancient">
-                <div class="row text-center">
+                <div class="row center-align">
                     <!-- IMAGE DE L'ANCIEN -->
                     <img :src="'/image/sheet/ancient/head/'+ ancient.name +'.png'"
-                        class="col-md-10 col-md-offset-1 grey lighten-3 z-depth-3"
+                        class="col m12 col moffset-1 grey lighten-3 z-depth-3"
                         style="padding:6px;"
                         :alt="ancient.name">
-                    <!-- INFORMATIONS SUR L'ANCIEN -->
-                    <div class="col-md-12">
-                        <h5 id="name">{{ancient.name}}</h5>
+                    <!-- NOM -->
+                    <div class="col m12">
+                        <h5 id="name" class="center-align">{{ancient.name}}</h5>
                     </div>
-                    <div class="col-md-6">
+                    <!-- VALEUR DE COMBAT -->
+                    <div class="col m6">
                         <span id="combatValue">{{ancient.combatValue}}</span>
                     </div>
-                    <div class="col-md-6">
+                    <!-- CAPACITE DEFENSIVE -->
+                    <div class="col m6">
                         <span id="defensiveAbility">{{ancient.defensiveAbility.join(', ')}}</span>
                     </div>
                 </div>
-                <hr>
+                <div class="divider"></div>
                 <!-- TEXTES DE COMPÉTENCES D'ANCIEN -->
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col m6">
                         <div class="justified-text">
                             <b>Adorateurs</b><br>
                             <span>{{ ancient.adorer.text }}</span>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col m6">
                         <div class="justified-text">
                             <b>{{ ancient.power.title }}</b><br>
-                            <span>{{ ancient.power.text }}</span><hr>
+                            <span>{{ ancient.power.text }}</span>
+                            <div class="divider"></div>
                             <b v-if="ancient.battleEvent">Début de bataille</b>
                             <span v-if="ancient.battleEvent">{{ ancient.battleEvent.text }}</span>
                         </div>
                     </div>
                 </div>
-                <hr>
+                <div class="divider"></div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col m12">
                         <b>Attaque</b><br>
-                        <p>{{ ancient.attack.text }}</p>
+                        <span>{{ ancient.attack.text }}</span>
                     </div>
                 </div>
-                <hr>
+                <div class="divider"></div>
                 <!-- ECHELLE DE L'ANCIEN -->
                 <div class="row">
-                    <div class="col-md-12 mt-25">
-                        <div class="col-md-2 text-center" v-for="n in ancient.ladder.maximum">
+                    <div class="col m12 mt-25">
+                        <div class="col m2 center-align"
+                            v-for="n in ancient.ladder.maximum">
                             <div class="green valign-wrapper z-depth-3 ancient-number-ladder">
                                 {{ n }}
                                 <!-- PIONS DESTIN -->
                                 <img :src="'/image/token/destin.jpg'"
                                     v-if="n <= ancient.ladder.current"
                                     class="destiny-token"
-                                    style=""
                                     alt="marqueur_destin">
                             </div>
                         </div>
@@ -263,7 +269,7 @@
         </transition>
 
 
-        <!-- BOUTONS POUR AFFICHER LES SIDEBARS-->
+        <!-- BOUTONS AFFICHANT LES SIDEBARS-->
         <div id="button-container" class="center-align green card">
 
             <!-- INVESTIGATEURS -->
@@ -428,6 +434,7 @@
     {
         height:25px;
         margin-right:7px;
+        padding-top: 7px;
     }
 
     img.button-icon-small

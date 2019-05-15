@@ -40,16 +40,19 @@
 
                         <div class="col s12">
                             <ul class="collection" v-if="mythStep>0">
+                                <!-- APPARITION DU PORTAIL -->
                                 <li class="collection-item" v-if="mythStep>=1">
                                     <span v-if="mythResume.portal.action=='add'">Un portail vers <span v-html="mythResume.portal.portalName"></span> apparaît à/au : <span v-html="mythResume.portal.siteName"></span>.</span>
                                     <span v-if="mythResume.portal.action=='already'">Un portail devrait apparaître à/au <span v-html="mythResume.portal.siteName"></span> mais il y en a déjà un!</span>
                                     <span v-if="mythResume.portal.action=='none'">Un portail devrait apparaître à/au <span v-html="mythResume.portal.siteName"></span> mais il y a un Signe des Anciens. Aucun portail n'apparaît.</span>
                                 </li>
+                                <!-- ARRIVEE DU MONSTRE -->
                                 <li class="collection-item" v-if="mythStep>=2">
                                     <span v-if="mythResume.monster.action=='add'">Un monstre apparaît au même lieu.<br>C'est un(e) <span v-html="mythResume.monster.monsterName"></span>.</span>
                                     <span v-if="mythResume.monster.action=='wave'">Une vague de montres se produit.</span>
                                     <span v-if="mythResume.monster.action=='none'">Aucun monstre n'apparaît.</span>
                                 </li>
+                                <!-- INDICE -->
                                 <li class="collection-item" v-if="mythStep>=3">
                                     <span v-if="mythResume.clue.action=='add'">Un indice apparaît à : <br><span v-html="mythResume.clue.siteName"></span></span>
                                     <span v-if="mythResume.clue.action=='none'">
@@ -57,7 +60,7 @@
                                         Mais un portail y est ouvert. Il n'est pas ajouté.
                                     </span>
                                 </li>
-
+                                <!-- DEPLACEMENT DES MONSTRES -->
                                 <li class="collection-item" v-if="mythStep>=4">
                                     Les monstres se déplacent :
                                     <ul>
@@ -77,7 +80,7 @@
                                         </li>
                                     </ul>
                                 </li>
-
+                                <!-- EVENEMENT -->
                                 <li class="collection-item" v-if="mythStep>=5">
                                     C'est un(e) {{ mythResume.event.action }} :<br> <strong>{{mythResume.event.name}}</strong>.<br>
                                     Lieu d'activité: {{ mythResume.event.siteName }}

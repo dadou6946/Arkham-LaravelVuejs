@@ -2,25 +2,29 @@
 
     <div class="container">
 
-        <h1 class="jumbotron text-center">{{ pageTitle }}</h1>
-        <hr>
-        <div class="row text-center">
-            <div class="col-md-12">
+        <h1 class="center-align">{{ pageTitle }}</h1>
+        
+        <div class="divider"></div><br>
+
+        <div class="row center-align">
+            <div class="col m12">
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col m12">
                         Les paquets de l'ancien sont mélangés.
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col m12 center-align">
                         <img class="responsive-img card-image" style="width: 100px;border-radius:5px;" src="/image/card/type/autre-monde.jpg" alt="Autre monde">
                         <img class="responsive-img card-image" style="width: 100px;border-radius:5px;" src="/image/card/type/mythe.jpg" alt="Carte Mythe">
                         <img class="responsive-img card-image" style="width: 100px;border-radius:50%;" src="/image/card/type/PortailBack.jpg" alt="Portail">
                     </div>
                 </div>
-                <hr>
+                
+                <div class="divider"></div><br>
+                
                 <div>
                   <div class="waves-effect waves-light btn" @click="continueAction">Etape suivante</div>
                 </div>
@@ -51,5 +55,6 @@
     img .card-image
     {
         width: 100px;
+        display: inline-block;
     }
 </style>

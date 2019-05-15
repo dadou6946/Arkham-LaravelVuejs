@@ -1,14 +1,16 @@
 <template>
     <div class="container">
 
-        <h1 class="jumbotron text-center">{{ pageTitle3 }}</h1>
-        <hr>
+        <h1 class="center-align">{{ pageTitle3 }}</h1>
+        <br><div class="divider"></div><br>
 
         <div class="row">
-            <div class="col-md-7 text-center">
+            <div class="col m7 center-align">
+
                 <div>
-                  <label>{{ instruction }}</label>
+                  <p>{{ instruction }}</p>
                 </div>
+
                 <div>
                     <button v-for="ancien in anciens"
                         v-bind:class="{ 'teal': !ancien.selected, 'red': ancien.selected }"
@@ -19,18 +21,22 @@
                     {{ ancien.name }}
                     </button>
                 </div>
-                <hr>
-                <div class="form-group">
-                  <input type="submit" class="form-control btn btn-success" :disabled="!preventConfirm" @click="continueAction" value="Confirmer">
+
+                <br><div class="divider"></div><br>
+
+                <div>
+                  <input type="submit" class="btn" :disabled="!preventConfirm" @click="continueAction" value="Confirmer">
                 </div>
 
-                <hr>
+                <br><div class="divider"></div><br>
             </div>
 
-            <div class="col-md-5 text-center">
+            <div class="col m5 center-align">
                 <transition name="fade">
-                    <div v-if="hovered !=''" id="image_content" class="center-align">
-                        <img id="image-preview" :src="imagePath" alt="" class="">
+                    <div v-if="hovered !=''"
+                        id="image_content"
+                        class="center-align z-depth-3">
+                        <img id="image-preview" :src="imagePath">
                     </div>
                 </transition>
             </div>
@@ -38,7 +44,7 @@
         </div>
         <div class="row">
 
-            <div class="col-md-4 text-center">
+            <div class="col m4 center-align">
             </div>
         </div>
 
@@ -103,7 +109,17 @@
 </script>
 
 <style>
+    #image_content {
+        height: 680px;
+        width: 100%;
+        padding: 25px;
+    }
 
+    #image-preview {
+        height: 100%;
+        width: auto;
+        margin: auto;
+    }
     /*TRANSITIONS*/
     .fade-enter-active, .fade-leave-active {
         transition: opacity .75s;

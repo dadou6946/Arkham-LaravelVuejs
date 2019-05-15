@@ -15648,7 +15648,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\nbody\n{\n    background-color: #e8eaf6;\n    /*background-color: #586C99;*/\n}\n", ""]);
+exports.push([module.i, "\nbody\n{\n    background-color: #e8eaf6;\n    /*background-color: #586C99;*/\n}\nh1\n{\n    margin-top: 15px;\n}\n", ""]);
 
 // exports
 
@@ -17131,7 +17131,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n}\n.selected {\n    border: 3px solid lightgreen;\n    -webkit-box-shadow: -3px -2px 5px 0px lightgreen;\n    box-shadow: -3px -2px 5px 0px lightgreen;\n}\n#image_content {\n    height: 550px;\n    width: 100%;\n}\n#image-preview {\n    height: 100%;\n    width: auto;\n    margin: auto;\n}\n.character-resume {\n    margin: 4px;\n}\n\n\n/*TRANSITIONS*/\n.fade-enter-active,\n.fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter,\n.fade-leave-to {\n    opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n}\n.selected {\n    border: 3px solid lightgreen;\n    -webkit-box-shadow: -3px -2px 5px 0px lightgreen;\n    box-shadow: -3px -2px 5px 0px lightgreen;\n}\n#image_content {\n    height: 680px;\n    width: 100%;\n    padding: 25px;\n}\n#image-preview {\n    height: 100%;\n    width: auto;\n    margin: auto;\n}\n.character-resume {\n    margin: 4px;\n}\n\n\n/*TRANSITIONS*/\n.fade-enter-active,\n.fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter,\n.fade-leave-to {\n    opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -17142,6 +17142,16 @@ exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n}\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -17310,7 +17320,7 @@ var render = function() {
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "col m12" }, [
-              _c("span", [
+              _c("blockquote", [
                 _vm._v(
                   "Le joueur " + _vm._s(_vm.first) + " commencera la partie"
                 )
@@ -17323,7 +17333,7 @@ var render = function() {
                     _vm._v(
                       "\n                            Le joueur " +
                         _vm._s(_vm.current) +
-                        " doit choisir son investivateur :"
+                        " doit choisir son investivateur :\n                        "
                     )
                   ])
                 : _vm._e()
@@ -17359,9 +17369,9 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\n                        " +
+                    "\n                    " +
                       _vm._s(player.name) +
-                      "\n                    "
+                      "\n                "
                   )
                 ]
               )
@@ -17417,11 +17427,7 @@ var render = function() {
                   _c("p", [
                     _vm._v("Joueur " + _vm._s(investigator.player) + " :"),
                     _c("br"),
-                    _vm._v(
-                      " " +
-                        _vm._s(investigator.name) +
-                        "\n                        "
-                    )
+                    _vm._v(" " + _vm._s(investigator.name))
                   ])
                 ])
               ]
@@ -17444,9 +17450,6 @@ var render = function() {
         "div",
         { staticClass: "col m5 center-align" },
         [
-          _c("br"),
-          _c("br"),
-          _vm._v(" "),
           _c("transition", { attrs: { name: "fade" } }, [
             _vm.hovered != ""
               ? _c(
@@ -17457,11 +17460,7 @@ var render = function() {
                   },
                   [
                     _c("img", {
-                      attrs: {
-                        id: "image-preview",
-                        src: _vm.imagePath,
-                        alt: ""
-                      }
+                      attrs: { id: "image-preview", src: _vm.imagePath }
                     })
                   ]
                 )
@@ -17569,7 +17568,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\nimg#ally-img\n{\n    height: 150px;\n    width: auto;\n}\n", ""]);
 
 // exports
 
@@ -17639,19 +17638,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
+    _c("br"),
     _vm._v(" "),
-    _c("div", { staticClass: "row text-center" }, [
-      _c("div", { staticClass: "col-md-12" }, [
+    _c("div", { staticClass: "row center-align" }, [
+      _c("div", { staticClass: "col m12" }, [
         _vm._m(0),
         _vm._v(" "),
         _vm._m(1),
         _vm._v(" "),
-        _c("hr"),
+        _c("div", { staticClass: "divider" }),
+        _c("br"),
         _vm._v(" "),
         _c("div", [
           _c(
@@ -17673,7 +17672,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
+      _c("div", { staticClass: "col m12" }, [
         _vm._v(
           "\n                    On crée la pile des alliés (11 pris au hasard).\n                "
         )
@@ -17685,9 +17684,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
+      _c("div", { staticClass: "col m12" }, [
         _c("img", {
-          attrs: { src: "/image/card/type/ally.jpg", alt: "Alliés" }
+          staticClass: "z-depth-2",
+          attrs: {
+            id: "ally-img",
+            src: "/image/card/type/ally.jpg",
+            alt: "Alliés"
+          }
         })
       ])
     ])
@@ -17788,7 +17792,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\nimg.object-image\n{\n    display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -17799,6 +17803,10 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -17858,19 +17866,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
     _vm._v(" "),
-    _c("div", { staticClass: "row text-center" }, [
+    _c("div", { staticClass: "row center-align" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _vm._m(0),
         _vm._v(" "),
         _vm._m(1),
         _vm._v(" "),
-        _c("hr"),
+        _c("div", { staticClass: "divider" }),
+        _vm._v(" "),
+        _c("br"),
         _vm._v(" "),
         _c("div", [
           _c(
@@ -17891,12 +17899,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _vm._v(
-          "\n                    Les paquets investigateur sont mélangés.\n                "
-        )
-      ])
+    return _c("div", [
+      _c("p", [_vm._v("Les paquets investigateur sont mélangés.")])
     ])
   },
   function() {
@@ -17905,25 +17909,32 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12" }, [
-        _c("img", {
-          attrs: { src: "/image/card/type/ally.jpg", alt: "Alliés" }
-        }),
-        _vm._v(" "),
-        _c("img", {
-          attrs: { src: "/image/card/type/spell.jpg", alt: "Sorts" }
-        }),
-        _vm._v(" "),
-        _c("img", {
-          attrs: { src: "/image/card/type/common.jpg", alt: "Objets communs" }
-        }),
-        _vm._v(" "),
-        _c("img", {
-          attrs: { src: "/image/card/type/unique.jpg", alt: "Objets uniques" }
-        }),
-        _vm._v(" "),
-        _c("img", {
-          attrs: { src: "/image/card/type/skill.jpg", alt: "Compétences" }
-        })
+        _c("div", { staticClass: "row center-align" }, [
+          _c("img", {
+            staticClass: "object-image",
+            attrs: { src: "/image/card/type/ally.jpg", alt: "Alliés" }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "object-image",
+            attrs: { src: "/image/card/type/spell.jpg", alt: "Sorts" }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "object-image",
+            attrs: { src: "/image/card/type/common.jpg", alt: "Objets communs" }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "object-image",
+            attrs: { src: "/image/card/type/unique.jpg", alt: "Objets uniques" }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "object-image",
+            attrs: { src: "/image/card/type/skill.jpg", alt: "Compétences" }
+          })
+        ])
       ])
     ])
   }
@@ -18023,7 +18034,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n#image_content {\n    height: 680px;\n    width: 100%;\n    padding: 25px;\n}\n#image-preview {\n    height: 100%;\n    width: auto;\n    margin: auto;\n}\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -18034,6 +18045,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -18134,15 +18151,15 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle3))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle3))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("br"),
+    _c("div", { staticClass: "divider" }),
+    _c("br"),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-7 text-center" }, [
-        _c("div", [_c("label", [_vm._v(_vm._s(_vm.instruction))])]),
+      _c("div", { staticClass: "col m7 center-align" }, [
+        _c("div", [_c("p", [_vm._v(_vm._s(_vm.instruction))])]),
         _vm._v(" "),
         _c(
           "div",
@@ -18175,11 +18192,13 @@ var render = function() {
           })
         ),
         _vm._v(" "),
-        _c("hr"),
+        _c("br"),
+        _c("div", { staticClass: "divider" }),
+        _c("br"),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
+        _c("div", [
           _c("input", {
-            staticClass: "form-control btn btn-success",
+            staticClass: "btn",
             attrs: {
               type: "submit",
               disabled: !_vm.preventConfirm,
@@ -18189,28 +18208,26 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("hr")
+        _c("br"),
+        _c("div", { staticClass: "divider" }),
+        _c("br")
       ]),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "col-md-5 text-center" },
+        { staticClass: "col m5 center-align" },
         [
           _c("transition", { attrs: { name: "fade" } }, [
             _vm.hovered != ""
               ? _c(
                   "div",
                   {
-                    staticClass: "center-align",
+                    staticClass: "center-align z-depth-3",
                     attrs: { id: "image_content" }
                   },
                   [
                     _c("img", {
-                      attrs: {
-                        id: "image-preview",
-                        src: _vm.imagePath,
-                        alt: ""
-                      }
+                      attrs: { id: "image-preview", src: _vm.imagePath }
                     })
                   ]
                 )
@@ -18230,7 +18247,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-4 text-center" })
+      _c("div", { staticClass: "col m4 center-align" })
     ])
   }
 ]
@@ -18329,7 +18346,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -18346,7 +18363,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SimpleModal_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Map_vue__);
-//
 //
 //
 //
@@ -18442,7 +18458,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* BOUTONS */\nbutton.character-button\n{\n    margin:3px;\n    border-radius:5px;\n    font-size:10px;\n    line-height: normal;\n}\nimg.button-icon\n{\n    height:25px;\n    margin-right:7px;\n}\nimg.button-icon-small\n{\n    height:15px;\n    margin-left:7px;\n}\n\n/* SIDEBARS */\n#sidebar-investigator\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:980;\n    width:370px;\n    line-height:8pt;\n}\n#sidebar-guardian\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n#sidebar-game\n{\n    z-index:1000;\n    width:100%;\n    height:300px;\n    position:absolute;\n    bottom:0;\n}\n#sidebar-ancient\n{\n    z-index:980;\n    height:100%;\n    width:370px;\n    position:absolute;\n    right:0;\n}\n#sidebar-herald\n{\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active\n{\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/* PRÉSENTATION */\nimg.photo-character\n{\n    padding:12px;height:165px; width:auto;\n}\n\n/*APTITUDES*/\n.row-skills\n{\n    margin-bottom: 0;\n}\n.glob-top\n{\n    border: 3px solid;\n    border-color: red red transparent red;\n    border-radius: 8px 8px 0 0;\n}\n.glob-bot\n{\n    border: 3px solid;\n    border-color: transparent blue blue blue;\n    border-radius: 0 0 8px 8px;\n}\n#capacity-text\n{\n    font-size:13px;\n    line-height:11pt;\n}\ndiv.left-content\n{\n    border-right: 1px solid #eee;\n}\n\n/* OBJETS */\ndiv.object-card\n{\n    height:45px;\n    margin-left:2px;\n    padding:10px;\n}\n#clue-token-img\n{\n    height:20px;\n    width:auto;\n}\n\n/* ANCIEN */\nimg.destiny-token\n{\n    height: 35px;\n    width: 35px;\n    border-radius:50%;\n    display: inline-block;\n    position: absolute;\n    top:0;\n    left:0;\n}\ndiv.ancient-number-ladder\n{\n    height: 35px;\n    width: 35px;\n    border-radius:50%;\n    display: inline-block;\n    position: relative;\n    margin-bottom:15px;\n    padding-top:5px;\n}\n\n/* GENERAL */\n.lh-15\n{\n    line-height:15pt;\n}\n.mt-25\n{\n    margin-top: 25px;\n}\n.mt-5\n{\n    margin-top: 5px;\n}\nhr\n{\n    margin-top: 10px;\n    margin-bottom: 10px;\n}\ndiv.justified-text\n{\n    text-align:justify;\n}\nb.bold\n{\n    font-weight: 900;\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* BOUTONS */\nbutton.character-button\n{\n    margin:3px;\n    border-radius:5px;\n    font-size:10px;\n    line-height: normal;\n}\nimg.button-icon\n{\n    height:25px;\n    margin-right:7px;\n    padding-top: 7px;\n}\nimg.button-icon-small\n{\n    height:15px;\n    margin-left:7px;\n}\n\n/* SIDEBARS */\n#sidebar-investigator\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:980;\n    width:370px;\n    line-height:8pt;\n}\n#sidebar-guardian\n{\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n#sidebar-game\n{\n    z-index:1000;\n    width:100%;\n    height:300px;\n    position:absolute;\n    bottom:0;\n}\n#sidebar-ancient\n{\n    z-index:980;\n    height:100%;\n    width:370px;\n    position:absolute;\n    right:0;\n}\n#sidebar-herald\n{\n    z-index:990;\n    height:100%;\n    width:280px;\n    position:absolute;\n    right:0;\n}\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active\n{\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/* PRÉSENTATION */\nimg.photo-character\n{\n    padding:12px;height:165px; width:auto;\n}\n\n/*APTITUDES*/\n.row-skills\n{\n    margin-bottom: 0;\n}\n.glob-top\n{\n    border: 3px solid;\n    border-color: red red transparent red;\n    border-radius: 8px 8px 0 0;\n}\n.glob-bot\n{\n    border: 3px solid;\n    border-color: transparent blue blue blue;\n    border-radius: 0 0 8px 8px;\n}\n#capacity-text\n{\n    font-size:13px;\n    line-height:11pt;\n}\ndiv.left-content\n{\n    border-right: 1px solid #eee;\n}\n\n/* OBJETS */\ndiv.object-card\n{\n    height:45px;\n    margin-left:2px;\n    padding:10px;\n}\n#clue-token-img\n{\n    height:20px;\n    width:auto;\n}\n\n/* ANCIEN */\nimg.destiny-token\n{\n    height: 35px;\n    width: 35px;\n    border-radius:50%;\n    display: inline-block;\n    position: absolute;\n    top:0;\n    left:0;\n}\ndiv.ancient-number-ladder\n{\n    height: 35px;\n    width: 35px;\n    border-radius:50%;\n    display: inline-block;\n    position: relative;\n    margin-bottom:15px;\n    padding-top:5px;\n}\n\n/* GENERAL */\n.lh-15\n{\n    line-height:15pt;\n}\n.mt-25\n{\n    margin-top: 25px;\n}\n.mt-5\n{\n    margin-top: 5px;\n}\nhr\n{\n    margin-top: 10px;\n    margin-bottom: 10px;\n}\ndiv.justified-text\n{\n    text-align:justify;\n}\nb.bold\n{\n    font-weight: 900;\n}\n\n", ""]);
 
 // exports
 
@@ -18453,6 +18469,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -18879,6 +18901,7 @@ var render = function() {
                     return _c(
                       "button",
                       {
+                        key: index,
                         staticClass:
                           "waves-effect waves-grey grey darken-2 btn btn-small character-button",
                         on: {
@@ -18896,7 +18919,7 @@ var render = function() {
                   })
                 ),
                 _vm._v(" "),
-                _c("hr"),
+                _c("div", { staticClass: "divider" }),
                 _vm._v(" "),
                 _c(
                   "transition",
@@ -18908,7 +18931,7 @@ var render = function() {
                           _c("div", { staticClass: "row center-align lh-15" }, [
                             _c("img", {
                               staticClass:
-                                "col-md-6 grey lighten-3 z-depth-3 photo-character",
+                                "grey lighten-3 z-depth-3 photo-character",
                               attrs: {
                                 src:
                                   "/image/sheet/character/head/" +
@@ -18918,7 +18941,7 @@ var render = function() {
                               }
                             }),
                             _vm._v(" "),
-                            _c("div", { staticClass: "col-md-6" }, [
+                            _c("div", { staticClass: "col m6" }, [
                               _c("h5", { attrs: { id: "name" } }, [
                                 _vm._v(_vm._s(investigator.name))
                               ]),
@@ -18927,7 +18950,7 @@ var render = function() {
                                 _vm._v("La Diletante")
                               ]),
                               _vm._v(" "),
-                              _c("hr"),
+                              _c("div", { staticClass: "divider" }),
                               _vm._v(" "),
                               _c("span", { attrs: { id: "sanity" } }, [
                                 _vm._v("Santé mentale: 6/6")
@@ -18939,7 +18962,7 @@ var render = function() {
                               ]),
                               _c("br"),
                               _vm._v(" "),
-                              _c("hr"),
+                              _c("div", { staticClass: "divider" }),
                               _vm._v(" "),
                               _c("span", { attrs: { id: "statut" } }, [
                                 _vm._v("Statut: ok")
@@ -18947,19 +18970,19 @@ var render = function() {
                             ])
                           ]),
                           _vm._v(" "),
-                          _c("hr"),
+                          _c("div", { staticClass: "divider" }),
                           _vm._v(" "),
                           _c("div", { staticClass: "row" }, [
                             _c(
                               "div",
-                              { staticClass: "col-md-6 lh-15 left-content" },
+                              { staticClass: "col m6 lh-15 left-content" },
                               [
                                 _c("span", { attrs: { id: "house" } }, [
                                   _vm._v("Maison: ")
                                 ]),
                                 _c("span", [_vm._v("Gare")]),
                                 _vm._v(" "),
-                                _c("hr"),
+                                _c("div", { staticClass: "divider" }),
                                 _vm._v(" "),
                                 _c("span", [_vm._v("Possessions fixes :")]),
                                 _c("br"),
@@ -18978,7 +19001,7 @@ var render = function() {
                                   )
                                 ]),
                                 _vm._v(" "),
-                                _c("hr"),
+                                _c("div", { staticClass: "divider" }),
                                 _vm._v(" "),
                                 _c("span", [_vm._v("Concentration: 1")])
                               ]
@@ -18986,7 +19009,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "div",
-                              { staticClass: "col-md-6 justified-text" },
+                              { staticClass: "col m6 justified-text" },
                               [
                                 _c("span", { staticClass: "lh-15" }, [
                                   _vm._v("Héritage")
@@ -18997,17 +19020,17 @@ var render = function() {
                                 _c("span", { attrs: { id: "capacity-text" } }, [
                                   _c("b", [_vm._v("Entretien:")]),
                                   _vm._v(
-                                    " Les monstres et les portails ne peuvent pas apparaitre a l'endroit ou se trouve Kate à cause de son stabilitisateur de flux. Les monstres et les portails ne disparaissent cependant pas quand elle rentre dans un lieu, et les monstres peuvent entre normalement dans un lieu ou elle se trouve.\n                                "
+                                    " Les monstres et les portails ne peuvent pas apparaitre a l'endroit ou se trouve Kate à cause de son stabilitisateur de flux. Les monstres et les portails ne disparaissent cependant pas quand elle rentre dans un lieu, et les monstres peuvent entre normalement dans un lieu ou elle se trouve.\n                            "
                                   )
                                 ])
                               ]
                             )
                           ]),
                           _vm._v(" "),
-                          _c("hr"),
+                          _c("div", { staticClass: "divider" }),
                           _vm._v(" "),
                           _c("div", { staticClass: "row lh-15" }, [
-                            _c("div", { staticClass: "col-xs-4" }, [
+                            _c("div", { staticClass: "col m4" }, [
                               _c("div", { staticClass: "skills mt-5" }, [
                                 _c("div", [_vm._v("vitesse :")]),
                                 _vm._v(" "),
@@ -19029,18 +19052,20 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "div",
-                              { staticClass: "col-xs-8" },
+                              { staticClass: "col m8" },
                               _vm._l(investigator.availableSkills, function(
                                 skills,
                                 index
                               ) {
                                 return _c(
                                   "div",
-                                  { staticClass: "row row-skills text-center" },
+                                  {
+                                    staticClass: "row row-skills center-align"
+                                  },
                                   [
                                     _vm._l(skills, function(value) {
                                       return _c("div", {
-                                        staticClass: "col-xs-3 skill",
+                                        staticClass: "col m3 skill",
                                         class:
                                           investigator.skills[index] == value
                                             ? _vm.globule(index)
@@ -19065,14 +19090,14 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("hr"),
+                          _c("div", { staticClass: "divider" }),
                           _vm._v(" "),
                           _c("div", { staticClass: "row lh-15" }, [
-                            _c("div", { staticClass: "col-md-6" }, [
+                            _c("div", { staticClass: "col m6" }, [
                               _c("span", [_vm._v("Argent : 10$")])
                             ]),
                             _vm._v(" "),
-                            _c("div", { staticClass: "col-md-6" }, [
+                            _c("div", { staticClass: "col m6" }, [
                               _c("span", [
                                 _vm._v("Indices : "),
                                 _c("img", {
@@ -19087,13 +19112,13 @@ var render = function() {
                               _c("br")
                             ]),
                             _vm._v(" "),
-                            _c("div", { staticClass: "col-md-12" }, [
+                            _c("div", { staticClass: "col m12" }, [
                               _c("span", [_vm._v("Position : Journal")])
                             ])
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "row lh-15 text-center" }, [
-                            _c("div", { staticClass: "col-md-12" }, [
+                          _c("div", { staticClass: "row lh-15 center-align" }, [
+                            _c("div", { staticClass: "col m12" }, [
                               _c(
                                 "button",
                                 {
@@ -19102,7 +19127,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Compétences\n                                    "
+                                    "\n                                Compétences\n                                "
                                   ),
                                   _c("img", {
                                     staticClass: "button-icon-small",
@@ -19122,7 +19147,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Objets\n                                    "
+                                    "\n                                Objets\n                                "
                                   ),
                                   _c("img", {
                                     staticClass: "button-icon-small",
@@ -19142,7 +19167,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Alliés\n                                    "
+                                    "\n                                Alliés\n                                "
                                   ),
                                   _c("img", {
                                     staticClass: "button-icon-small",
@@ -19155,7 +19180,7 @@ var render = function() {
                               )
                             ]),
                             _vm._v(" "),
-                            _c("div", { staticClass: "col-md-12" }, [
+                            _c("div", { staticClass: "col m12" }, [
                               _c(
                                 "button",
                                 {
@@ -19164,7 +19189,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Trophés\n                                    "
+                                    "\n                                Trophés\n                                "
                                   ),
                                   _c("img", {
                                     staticClass: "button-icon-small",
@@ -19184,7 +19209,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Objets spéciaux\n                                    "
+                                    "\n                                Objets spéciaux\n                                "
                                   ),
                                   _c("img", {
                                     staticClass: "button-icon-small",
@@ -19224,7 +19249,7 @@ var render = function() {
               [
                 _c("div", { staticClass: "container" }, [
                   _c("div", { staticClass: "row lh-15 mt-25" }, [
-                    _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "col m6" }, [
                       _c("span", [_vm._v("Tour n° 2")]),
                       _c("br"),
                       _vm._v(" "),
@@ -19263,7 +19288,7 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "col m6" }, [
                       _c("span", [_vm._v("Environnement actif : aucun")]),
                       _c("br"),
                       _vm._v(" "),
@@ -19318,10 +19343,10 @@ var render = function() {
               "nav",
               { staticClass: "grey lh-15", attrs: { id: "sidebar-ancient" } },
               [
-                _c("div", { staticClass: "row text-center" }, [
+                _c("div", { staticClass: "row center-align" }, [
                   _c("img", {
                     staticClass:
-                      "col-md-10 col-md-offset-1 grey lighten-3 z-depth-3",
+                      "col m12 col moffset-1 grey lighten-3 z-depth-3",
                     staticStyle: { padding: "6px" },
                     attrs: {
                       src:
@@ -19332,29 +19357,31 @@ var render = function() {
                     }
                   }),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-12" }, [
-                    _c("h5", { attrs: { id: "name" } }, [
-                      _vm._v(_vm._s(_vm.ancient.name))
-                    ])
+                  _c("div", { staticClass: "col m12" }, [
+                    _c(
+                      "h5",
+                      { staticClass: "center-align", attrs: { id: "name" } },
+                      [_vm._v(_vm._s(_vm.ancient.name))]
+                    )
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "col m6" }, [
                     _c("span", { attrs: { id: "combatValue" } }, [
                       _vm._v(_vm._s(_vm.ancient.combatValue))
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "col m6" }, [
                     _c("span", { attrs: { id: "defensiveAbility" } }, [
                       _vm._v(_vm._s(_vm.ancient.defensiveAbility.join(", ")))
                     ])
                   ])
                 ]),
                 _vm._v(" "),
-                _c("hr"),
+                _c("div", { staticClass: "divider" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "col m6" }, [
                     _c("div", { staticClass: "justified-text" }, [
                       _c("b", [_vm._v("Adorateurs")]),
                       _c("br"),
@@ -19363,13 +19390,14 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "col m6" }, [
                     _c("div", { staticClass: "justified-text" }, [
                       _c("b", [_vm._v(_vm._s(_vm.ancient.power.title))]),
                       _c("br"),
                       _vm._v(" "),
                       _c("span", [_vm._v(_vm._s(_vm.ancient.power.text))]),
-                      _c("hr"),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "divider" }),
                       _vm._v(" "),
                       _vm.ancient.battleEvent
                         ? _c("b", [_vm._v("Début de bataille")])
@@ -19384,54 +19412,50 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("hr"),
+                _c("div", { staticClass: "divider" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-12" }, [
+                  _c("div", { staticClass: "col m12" }, [
                     _c("b", [_vm._v("Attaque")]),
                     _c("br"),
                     _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(_vm.ancient.attack.text))])
+                    _c("span", [_vm._v(_vm._s(_vm.ancient.attack.text))])
                   ])
                 ]),
                 _vm._v(" "),
-                _c("hr"),
+                _c("div", { staticClass: "divider" }),
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c(
                     "div",
-                    { staticClass: "col-md-12 mt-25" },
+                    { staticClass: "col m12 mt-25" },
                     _vm._l(_vm.ancient.ladder.maximum, function(n) {
-                      return _c(
-                        "div",
-                        { staticClass: "col-md-2 text-center" },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "green valign-wrapper z-depth-3 ancient-number-ladder"
-                            },
-                            [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(n) +
-                                  "\n                            "
-                              ),
-                              _vm._v(" "),
-                              n <= _vm.ancient.ladder.current
-                                ? _c("img", {
-                                    staticClass: "destiny-token",
-                                    attrs: {
-                                      src: "/image/token/destin.jpg",
-                                      alt: "marqueur_destin"
-                                    }
-                                  })
-                                : _vm._e()
-                            ]
-                          )
-                        ]
-                      )
+                      return _c("div", { staticClass: "col m2 center-align" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "green valign-wrapper z-depth-3 ancient-number-ladder"
+                          },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(n) +
+                                "\n                            "
+                            ),
+                            _vm._v(" "),
+                            n <= _vm.ancient.ladder.current
+                              ? _c("img", {
+                                  staticClass: "destiny-token",
+                                  attrs: {
+                                    src: "/image/token/destin.jpg",
+                                    alt: "marqueur_destin"
+                                  }
+                                })
+                              : _vm._e()
+                          ]
+                        )
+                      ])
                     })
                   )
                 ])
@@ -19606,7 +19630,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*Modale*/\n#modal1\n{\n    z-index: 999;\n    display: block;\n    opacity: 1; top: 10%;\n    -webkit-transform: scaleX(1) scaleY(1);\n            transform: scaleX(1) scaleY(1);\n    height:168px;\n    border-radius: 15px;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*Modale*/\n#modal1\n{\n    z-index: 999;\n    display: block;\n    opacity: 1; \n    top: 25%;\n    -webkit-transform: scaleX(1) scaleY(1);\n            transform: scaleX(1) scaleY(1);\n    height:168px;\n    border-radius: 15px;\n}\n", ""]);
 
 // exports
 
@@ -19662,7 +19686,7 @@ var render = function() {
         [
           _c("h4", [_vm._v(_vm._s(_vm.title))]),
           _vm._v(" "),
-          _c("p", { staticClass: "text-center" }, [
+          _c("p", { staticClass: "center-align" }, [
             _vm._v(_vm._s(_vm.content))
           ]),
           _vm._v(" "),
@@ -20339,7 +20363,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n    /*color: white;\n    background-color: teal;*/\n}\n.selected {\n    border: 3px solid lightgreen;\n    -webkit-box-shadow: -3px -2px 5px 0px lightgreen;\n    box-shadow: -3px -2px 5px 0px lightgreen;\n}\n\n", ""]);
+exports.push([module.i, "\n.btn \n{\n    border-radius: 5px;\n    margin: 2px;\n}\n.selected \n{\n    border: 3px solid lightgreen;\n    -webkit-box-shadow: -3px -2px 5px 0px lightgreen;\n    box-shadow: -3px -2px 5px 0px lightgreen;\n}\ndiv.object-card\n{\n    height: 360px;\n    margin: 15px;\n    /*display: text;*/\n}\n.il-display\n{\n    display: inline-block;\n}\ndiv.card-image-content\n{\n    width:159px;height:245px;\n}\nimg.object-image-cards\n{\n    padding: 3px;margin: 5px;\n}\n\n\n", ""]);
 
 // exports
 
@@ -20350,6 +20374,10 @@ exports.push([module.i, "\n.btn {\n    border-radius: 5px;\n    margin: 2px;\n  
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -20442,7 +20470,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             console.log(message);
         },
         continueAction: function continueAction() {
-            // console.log('ici')
             this.$router.push('mix-investigator-package');
         }
     }
@@ -20457,16 +20484,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle2))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle2))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
+    _vm._v(" "),
+    _c("br"),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        { staticClass: "col-md-1" },
+        { staticClass: "col m2" },
         _vm._l(_vm.button, function(bu) {
           return bu.hidden != false
             ? _c(
@@ -20491,46 +20518,59 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "col-md-11 text-center" },
+        { staticClass: "col m10 center-align" },
         [
           _vm._l(_vm.investigators, function(investigator, index) {
             return index + 1 == _vm.current
               ? _c("div", [
-                  _c("span", {
-                    domProps: { innerHTML: _vm._s(investigator.name) }
-                  }),
-                  _vm._v(" (joueur "),
-                  _c("span", { domProps: { innerHTML: _vm._s(index + 1) } }),
-                  _vm._v(") commence la partie avec :\n                "),
-                  _c("br"),
-                  _c("br"),
+                  _c("p", { staticClass: "center-align" }, [
+                    _c("span", {
+                      domProps: { innerHTML: _vm._s(investigator.name) }
+                    }),
+                    _vm._v(" (joueur "),
+                    _c("span", { domProps: { innerHTML: _vm._s(index + 1) } }),
+                    _vm._v(") commence la partie avec :\n                ")
+                  ]),
                   _vm._v(" "),
-                  _c(
-                    "ul",
-                    { staticClass: "list-unstyled list-inline" },
-                    _vm._l(investigator.object, function(ob) {
-                      return _c("li", [
-                        _c("div", { staticClass: "card" }, [
-                          _c("div", { staticClass: "card-image" }, [
-                            _c("img", {
-                              staticClass: "responsive-img",
-                              staticStyle: { width: "159px", height: "245px" },
-                              attrs: {
-                                src:
-                                  "/image/card/common/" +
-                                  ob.replace(" ", "_") +
-                                  ".jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "card-content" }, [
-                            _c("p", { domProps: { innerHTML: _vm._s(ob) } })
-                          ])
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "ul",
+                      { staticClass: "list-unstyled list-inline center-align" },
+                      _vm._l(investigator.object, function(ob) {
+                        return _c("li", { staticClass: "il-display" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "card",
+                              staticStyle: { margin: "5px" }
+                            },
+                            [
+                              _c("div", { staticClass: "card-image" }, [
+                                _c("img", {
+                                  staticClass: "responsive-img",
+                                  staticStyle: {
+                                    width: "159px",
+                                    height: "245px",
+                                    padding: "3px"
+                                  },
+                                  attrs: {
+                                    src:
+                                      "/image/card/common/" +
+                                      ob.replace(" ", "_") +
+                                      ".jpg"
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "card-content" }, [
+                                _c("p", { domProps: { innerHTML: _vm._s(ob) } })
+                              ])
+                            ]
+                          )
                         ])
-                      ])
-                    })
-                  ),
+                      })
+                    )
+                  ]),
                   _vm._v(" "),
                   _c("br")
                 ])
@@ -20662,7 +20702,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\ndiv.object-card\n{\n    height: 360px;\n    margin: 15px;\n    /*display: text;*/\n}\n.il-display\n{\n    display: inline-block;\n}\ndiv.card-image-content\n{\n    width:159px;height:245px;\n}\nimg.object-image-cards\n{\n    padding: 3px;margin: 5px;\n}\n", ""]);
 
 // exports
 
@@ -20673,6 +20713,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -20780,16 +20822,14 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle2))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle2))]),
     _vm._v(" "),
     _c("hr"),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        { staticClass: "col-md-1" },
+        { staticClass: "col m2" },
         _vm._l(_vm.button, function(bu) {
           return bu.hidden != false
             ? _c(
@@ -20814,7 +20854,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "col-md-11 text-center" },
+        { staticClass: "col m10 center-align" },
         [
           _vm._l(_vm.investigators, function(investigator, index) {
             return index + 1 == _vm.current
@@ -20828,32 +20868,45 @@ var render = function() {
                   _c("br"),
                   _c("br"),
                   _vm._v(" "),
-                  _c(
-                    "ul",
-                    { staticClass: "list-unstyled list-inline" },
-                    _vm._l(investigator.object, function(ob) {
-                      return _c("li", [
-                        _c("div", { staticClass: "card" }, [
-                          _c("div", { staticClass: "card-image" }, [
-                            _c("img", {
-                              staticClass: "responsive-img",
-                              staticStyle: { width: "159px", height: "245px" },
-                              attrs: {
-                                src:
-                                  "/image/card/common/" +
-                                  ob.replace(" ", "_") +
-                                  ".jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "card-content" }, [
-                            _c("p", { domProps: { innerHTML: _vm._s(ob) } })
-                          ])
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "ul",
+                      { staticClass: "list-unstyled list-inline center-align" },
+                      _vm._l(investigator.object, function(ob) {
+                        return _c("li", { staticClass: "il-display" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "card",
+                              staticStyle: { margin: "5px" }
+                            },
+                            [
+                              _c("div", { staticClass: "card-image" }, [
+                                _c("img", {
+                                  staticClass: "responsive-img",
+                                  staticStyle: {
+                                    width: "159px",
+                                    height: "245px",
+                                    padding: "3px"
+                                  },
+                                  attrs: {
+                                    src:
+                                      "/image/card/common/" +
+                                      ob.replace(" ", "_") +
+                                      ".jpg"
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "card-content" }, [
+                                _c("p", { domProps: { innerHTML: _vm._s(ob) } })
+                              ])
+                            ]
+                          )
                         ])
-                      ])
-                    })
-                  ),
+                      })
+                    )
+                  ]),
                   _vm._v(" "),
                   _c("br")
                 ])
@@ -21050,16 +21103,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
+      _c("br"),
+      _vm._v(" "),
       _c(
         "div",
-        { staticClass: "col-md-12 text-center" },
+        { staticClass: "col m12 center-align" },
         [
           _vm._l(_vm.investigators, function(investigator, index) {
             return _c("div", [
@@ -21311,6 +21364,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -21425,16 +21479,15 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle2))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle2))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
+    _c("br"),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        { staticClass: "col-xs-2" },
+        { staticClass: "col s2" },
         _vm._l(_vm.button, function(bu) {
           return bu.hidden != false
             ? _c(
@@ -21457,7 +21510,7 @@ var render = function() {
         })
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "col-xs-10 text-center" }, [
+      _c("div", { staticClass: "col s10 center-align" }, [
         _c(
           "div",
           { staticClass: "row" },
@@ -21476,7 +21529,7 @@ var render = function() {
                   _vm._v(" "),
                   _vm._m(0, true),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-xs-1" }, [
+                  _c("div", { staticClass: "col s1" }, [
                     _c("img", {
                       staticClass: "arrows",
                       attrs: {
@@ -21519,7 +21572,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "col-xs-4" },
+                    { staticClass: "col s4" },
                     _vm._l(investigator.availableSkills, function(
                       skills,
                       index
@@ -21530,7 +21583,7 @@ var render = function() {
                         [
                           _vm._l(skills, function(value) {
                             return _c("div", {
-                              staticClass: "col-xs-3",
+                              staticClass: "col s3",
                               class:
                                 investigator.skills[index] == value
                                   ? _vm.globule(index)
@@ -21550,7 +21603,7 @@ var render = function() {
                     })
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-xs-1" }, [
+                  _c("div", { staticClass: "col s1" }, [
                     _c("img", {
                       staticClass: "arrows",
                       attrs: {
@@ -21597,6 +21650,7 @@ var render = function() {
           })
         ),
         _vm._v(" "),
+        _c("div", { staticClass: "divider" }),
         _c("br"),
         _vm._v(" "),
         _vm.current != 4
@@ -21629,7 +21683,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xs-4 col-xs-offset-1" }, [
+    return _c("div", { staticClass: "col s4 col offset-s1" }, [
       _c("div", { staticClass: "skills" }, [
         _c("div", [_vm._v("vitesse :")]),
         _vm._v(" "),
@@ -21793,6 +21847,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -21820,19 +21875,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
+    _c("br"),
     _vm._v(" "),
-    _c("div", { staticClass: "row text-center" }, [
+    _c("div", { staticClass: "row center-align" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _vm._m(0),
         _vm._v(" "),
         _vm._m(1),
         _vm._v(" "),
-        _c("hr"),
+        _c("div", { staticClass: "divider" }),
+        _c("br"),
         _vm._v(" "),
         _c("div", [
           _c(
@@ -21975,7 +22030,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\nimg .card-image\n{\n    width: 100px;\n}\n", ""]);
+exports.push([module.i, "\nimg .card-image\n{\n    width: 100px;\n    display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -21986,6 +22041,10 @@ exports.push([module.i, "\nimg .card-image\n{\n    width: 100px;\n}\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -22043,19 +22102,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("h1", { staticClass: "jumbotron text-center" }, [
-      _vm._v(_vm._s(_vm.pageTitle))
-    ]),
+    _c("h1", { staticClass: "center-align" }, [_vm._v(_vm._s(_vm.pageTitle))]),
     _vm._v(" "),
-    _c("hr"),
+    _c("div", { staticClass: "divider" }),
+    _c("br"),
     _vm._v(" "),
-    _c("div", { staticClass: "row text-center" }, [
-      _c("div", { staticClass: "col-md-12" }, [
+    _c("div", { staticClass: "row center-align" }, [
+      _c("div", { staticClass: "col m12" }, [
         _vm._m(0),
         _vm._v(" "),
         _vm._m(1),
         _vm._v(" "),
-        _c("hr"),
+        _c("div", { staticClass: "divider" }),
+        _c("br"),
         _vm._v(" "),
         _c("div", [
           _c(
@@ -22077,7 +22136,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
+      _c("div", { staticClass: "col m12" }, [
         _vm._v(
           "\n                    Les paquets de l'ancien sont mélangés.\n                "
         )
@@ -22089,7 +22148,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
+      _c("div", { staticClass: "col m12 center-align" }, [
         _c("img", {
           staticClass: "responsive-img card-image",
           staticStyle: { width: "100px", "border-radius": "5px" },
@@ -22419,7 +22478,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*Modales*/\n#modal-myth-1\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-left: 25px;\n}\n#modal-myth-2\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-right: 25px;\n    height:100%;\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*Modales*/\n#modal-myth-1\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-left: 25px;\n}\n#modal-myth-2\n{\n    z-index: 999;\n    display: block;\n    opacity: 1;\n    top: 5%;\n    width: 20%;\n    margin-right: 25px;\n    height:100%;\n}\n\n", ""]);
 
 // exports
 
@@ -22434,6 +22493,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Map_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Map_vue__);
+//
+//
+//
 //
 //
 //
@@ -23145,7 +23207,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/*Modales*/\n#modal-upkeep\n{\n    z-index: 1003;\n    display: block;\n    opacity: 1;\n    top: 10%;\n    -webkit-transform: scaleX(1) scaleY(1);\n            transform: scaleX(1) scaleY(1);\n    height:450px;\n}\n#modal-upkeep-1\n{\n    width: 20%;\n    margin-left: 25px;\n    z-index: 1003;\n    display: block;\n    opacity: 1;\n    /*height:100%;*/\n}\n.btn\n{\n    margin: 2px;\n}\n.btn-investigator\n{\n    margin: 5px;\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*TRANSITIONS*/\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .75s;\n    transition: opacity .75s;\n}\n.fade-enter, .fade-leave-to\n{\n    opacity: 0;\n}\n\n/*Modales*/\n#modal-upkeep\n{\n    z-index: 1003;\n    display: block;\n    opacity: 1;\n    top: 10%;\n    -webkit-transform: scaleX(1) scaleY(1);\n            transform: scaleX(1) scaleY(1);\n    height:450px;\n}\n#modal-upkeep-1\n{\n    width: 20%;\n    top: 10%;\n    margin-left: 25px;\n    z-index: 1003;\n    display: block;\n    opacity: 1;\n    height:100%;\n}\n.btn\n{\n    margin: 2px;\n}\n.btn-investigator\n{\n    margin: 5px;\n}\n\n", ""]);
 
 // exports
 
@@ -23160,6 +23222,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Sidebar_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Map_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Map_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Map_vue__);
+//
+//
 //
 //
 //
@@ -23438,7 +23502,7 @@ var render = function() {
         ? _c(
             "div",
             {
-              staticClass: "modal open",
+              staticClass: "modal open center-align",
               attrs: { id: "modal-upkeep", tabindex: "0" }
             },
             [
@@ -23449,7 +23513,7 @@ var render = function() {
                   staticStyle: { height: "100%" }
                 },
                 [
-                  _c("h4", [_vm._v("Phase d'entretien")]),
+                  _c("h4", {}, [_vm._v("Phase d'entretien")]),
                   _c("br"),
                   _vm._v(" "),
                   _c(
@@ -23468,7 +23532,7 @@ var render = function() {
                               "ul",
                               _vm._l(_vm.investigators, function(investigator) {
                                 return investigator.status != "ok"
-                                  ? _c("li", { staticClass: "center-align" }, [
+                                  ? _c("li", {}, [
                                       _c("span", [
                                         _vm._v(
                                           _vm._s(investigator.name) +
@@ -23494,16 +23558,6 @@ var render = function() {
                                   : _vm._e()
                               })
                             )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.upkeepStep == 1
-                        ? _c("div", { key: "1" }, [
-                            _c("p", [
-                              _vm._v(
-                                "Les investigateurs perdus dans le Temps et l’Espace se déplacent sur le lieu d’Arkham de leur choix."
-                              )
-                            ])
                           ])
                         : _vm._e(),
                       _vm._v(" "),
@@ -23599,37 +23653,35 @@ var render = function() {
                         : _vm._e(),
                       _vm._v(" "),
                       investigator.newSiteName != ""
-                        ? _c("span", {
-                            staticClass: "teal darken-4 white-text right-align",
-                            staticStyle: {
-                              display: "block",
-                              "border-radius": "3px",
-                              "padding-right": "5px",
-                              "margin-left": "15px"
-                            },
-                            domProps: {
-                              innerHTML: _vm._s(investigator.newSiteNameText)
-                            }
-                          })
+                        ? _c("blockquote", [
+                            _c("span", {
+                              domProps: {
+                                innerHTML: _vm._s(investigator.newSiteNameText)
+                              }
+                            })
+                          ])
                         : _vm._e()
                     ])
                   }),
                   _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn waves-effect waves-light teal right-align",
-                      staticStyle: { position: "absolute", bottom: "25px" },
-                      attrs: { disabled: _vm.next == false },
-                      on: { click: _vm.nextUpkeepStep }
-                    },
-                    [
-                      _vm._v(
-                        "\n                    valider les déplacements\n                "
-                      )
-                    ]
-                  )
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "modal-footer right-align" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn waves-effect waves-light teal ",
+                        staticStyle: { display: "inline-block" },
+                        attrs: { disabled: _vm.next == false },
+                        on: { click: _vm.nextUpkeepStep }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        valider les déplacements\n                    "
+                        )
+                      ]
+                    )
+                  ])
                 ],
                 2
               )

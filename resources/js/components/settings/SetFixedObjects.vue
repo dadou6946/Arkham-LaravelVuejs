@@ -1,12 +1,13 @@
 <template>
     <div class="container">
 
-        <h1 class="jumbotron text-center">{{ pageTitle2 }}</h1>
-        <hr>
+        <h1 class="center-align">{{ pageTitle2 }}</h1>
+        <div class="divider"></div>
+        <br>
 
         <div class="row">
 
-            <div class="col-md-1">
+            <div class="col m2">
                 <div v-for="bu of button"
                     v-if="bu.hidden != false"
                     @click="changeCharacter(bu.number)"
@@ -16,25 +17,28 @@
                     </div>
             </div>
 
-            <div class="col-md-11 text-center">
-
+            <div class="col m10 center-align">
+                
                 <div v-for="(investigator,index) of investigators"
                     v-if="index+1 == current">
-                    <span v-html="investigator.name"></span> (joueur <span v-html="index + 1"></span>) commence la partie avec :
-                    <br><br>
-                    <ul class="list-unstyled list-inline">
-                        <li v-for="ob of investigator.object">
-                            <div class="card" >
-                                <div class="card-image">
-                                  <img class="responsive-img" style="width:159px;height:245px;"
-                                        :src="'/image/card/common/'+ob.replace(' ','_')+'.jpg'">
+                    <p class="center-align">
+                        <span v-html="investigator.name"></span> (joueur <span v-html="index + 1"></span>) commence la partie avec :
+                    </p>
+                    <div class="row">
+                        <ul class="list-unstyled list-inline center-align" >
+                            <li v-for="ob of investigator.object" class="il-display">
+                                <div class="card" style="margin: 5px;">
+                                    <div class="card-image">
+                                      <img class="responsive-img" style="width:159px;height:245px;padding: 3px;"
+                                            :src="'/image/card/common/'+ob.replace(' ','_')+'.jpg'">
+                                    </div>
+                                    <div class="card-content">
+                                      <p v-html="ob"></p>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                  <p v-html="ob"></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul> 
+                    </div>
                     <br>
                 </div>
 
@@ -78,7 +82,8 @@
         },
         methods: {
             // Au click sur bouton jouerur suivant
-            nextPlayer () {
+            nextPlayer () 
+            {
                 // Si pas dernier joueur
                 if(this.current != this.playerNumber)
                 {
@@ -102,8 +107,8 @@
             {
                 console.log(message);
             },
-            continueAction () {
-                // console.log('ici')
+            continueAction ()
+            {
                 this.$router.push('mix-investigator-package')
             }
 
@@ -114,17 +119,37 @@
 </script>
 
 <style>
-    .btn {
+    .btn 
+    {
         border-radius: 5px;
         margin: 2px;
-        /*color: white;
-        background-color: teal;*/
     }
-    .selected {
+    .selected 
+    {
         border: 3px solid lightgreen;
         -webkit-box-shadow: -3px -2px 5px 0px lightgreen;
         -moz-box-shadow: -3px -2px 5px 0px lightgreen;
         box-shadow: -3px -2px 5px 0px lightgreen;
     }
+    div.object-card
+    {
+        height: 360px;
+        margin: 15px;
+        /*display: text;*/
+    }
+    .il-display
+    {
+        display: inline-block;
+    }
+    div.card-image-content
+    {
+        width:159px;height:245px;
+    }
+
+    img.object-image-cards
+    {
+        padding: 3px;margin: 5px;
+    }
+
 
 </style>

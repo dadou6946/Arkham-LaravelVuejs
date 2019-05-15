@@ -11,11 +11,12 @@
                 <div class="row">
                     <div class="card">
                         <div class="col m12">
-                            <span>Le joueur {{ first }} commencera la partie</span>
+                            <blockquote>Le joueur {{ first }} commencera la partie</blockquote>
                         </div>
                         <div class="col m12">
                             <div v-if="!enableSubmit">
-                                Le joueur {{ current }} doit choisir son investivateur :</div>
+                                Le joueur {{ current }} doit choisir son investivateur :
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -24,9 +25,14 @@
                 <br>
 
                 <div class="row center-align">
-                    <button v-for="player in available" v-bind:class="player.disabled" @click="choose(player)" @mouseover="mouseOver(player.name)" @mouseleave="hovered=''" class="btn">
-                            {{ player.name }}
-                        </button>
+                    <button v-for="player in available"
+                        v-bind:class="player.disabled" 
+                        @click="choose(player)" 
+                        @mouseover="mouseOver(player.name)" 
+                        @mouseleave="hovered=''" 
+                        class="btn">
+                        {{ player.name }}
+                    </button>
                     <br><br>
                     <button class="btn" :disabled="!enableSubmit" @click="continueAction">Confirmer</button>
                     <button class="btn" @click="reboot">Réattribuer les personnages</button>
@@ -37,11 +43,14 @@
                 <br>
 
                 <div class="row">
-                    <!-- Messages récapitulatifs des chois de personnages -->
-                    <div v-for="investigator in investigators" class="col m5 character-resume center-align card teal lighten-3" role="alert" @mouseover="mouseOver(investigator.name)" @mouseleave="hovered=''">
+                    <!-- Messages récapitulatifs des choix de personnages -->
+                    <div v-for="investigator in investigators"
+                        class="col m5 character-resume center-align card teal lighten-3"
+                        role="alert"
+                        @mouseover="mouseOver(investigator.name)"
+                        @mouseleave="hovered=''">
                         <div class="card-content">
-                            <p>Joueur {{investigator.player}} :<br> {{investigator.name}}
-                            </p>
+                            <p>Joueur {{investigator.player}} :<br> {{investigator.name}}</p>
                         </div>
                     </div>
                 </div>
@@ -51,10 +60,11 @@
             </div>
 
             <div class="col m5 center-align">
-                <br><br>
                 <transition name="fade">
-                    <div v-if="hovered !=''" id="image_content" class="center-align card">
-                        <img id="image-preview" :src="imagePath" alt="" class="">
+                    <div v-if="hovered !=''"
+                        id="image_content"
+                        class="center-align card">
+                        <img id="image-preview" :src="imagePath">
                     </div>
                 </transition>
             </div>
@@ -174,8 +184,9 @@
     }
 
     #image_content {
-        height: 550px;
+        height: 680px;
         width: 100%;
+        padding: 25px;
     }
 
     #image-preview {

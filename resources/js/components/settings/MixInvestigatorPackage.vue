@@ -2,27 +2,31 @@
 
     <div class="container">
 
-        <h1 class="jumbotron text-center">{{ pageTitle }}</h1>
-        <hr>
-        <div class="row text-center">
+        <h1 class="center-align">{{ pageTitle }}</h1>
+        
+        <div class="divider"></div>
+
+        <div class="row center-align">
             <div class="col-md-12">
-
-                <div class="row">
-                    <div class="col-md-12">
-                        Les paquets investigateur sont mélangés.
-                    </div>
+                
+                <div>
+                    <p>Les paquets investigateur sont mélangés.</p>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <img src="/image/card/type/ally.jpg" alt="Alliés">
-                        <img src="/image/card/type/spell.jpg" alt="Sorts">
-                        <img src="/image/card/type/common.jpg" alt="Objets communs">
-                        <img src="/image/card/type/unique.jpg" alt="Objets uniques">
-                        <img src="/image/card/type/skill.jpg" alt="Compétences">
+                        <div class="row center-align">
+                            <img class="object-image" src="/image/card/type/ally.jpg" alt="Alliés">
+                            <img class="object-image" src="/image/card/type/spell.jpg" alt="Sorts">
+                            <img class="object-image" src="/image/card/type/common.jpg" alt="Objets communs">
+                            <img class="object-image" src="/image/card/type/unique.jpg" alt="Objets uniques">
+                            <img class="object-image" src="/image/card/type/skill.jpg" alt="Compétences">
+                        </div>
                     </div>
                 </div>
-                <hr>
+                
+                <div class="divider"></div>
+                <br>
                 <div>
                   <div class="waves-effect waves-light btn" @click="continueAction">Etape suivante</div>
                 </div>
@@ -50,5 +54,8 @@
 </script>
 
 <style>
-
+    img.object-image
+    {
+        display: inline-block;
+    }
 </style>

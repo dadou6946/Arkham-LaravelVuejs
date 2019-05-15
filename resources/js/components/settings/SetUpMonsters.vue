@@ -2,10 +2,11 @@
 
     <div class="container">
 
-        <h1 class="jumbotron text-center">{{ pageTitle }}</h1>
-        <hr>
+        <h1 class="center-align">{{ pageTitle }}</h1>
+        
+        <div class="divider"></div><br>
 
-        <div class="row text-center">
+        <div class="row center-align">
             <div class="col-md-12">
 
                 <div class="row">
@@ -21,7 +22,7 @@
                     </div>
                 </div>
 
-                <hr>
+                <div class="divider"></div><br>
 
                 <div>
                   <div class="waves-effect waves-light btn" @click="continueAction">Etape suivante</div>
