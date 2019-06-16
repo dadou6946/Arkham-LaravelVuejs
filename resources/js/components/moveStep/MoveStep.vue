@@ -8,6 +8,7 @@
                  :beyond="beyond"
                  :specials="specials"
                  :monsters="monsters"
+                 :moves="moves"
                  @wasClicked="move($event)"></app-map>
 
         <div id="modal-movement-1" class="modal" tabindex="0">
@@ -148,7 +149,35 @@
                     { name: 'Ciel',                                   id: 37, monster: []},
                     { name: 'Périphérie',                             id: 38, monster: []},
                     { name: 'Cellule de prison',                      id: 39, monster: []}
-                ]
+                ],
+                moves: 
+                {
+                    1: {
+                        1: [27],
+                        2: [1,2,28,30],
+                        3: [10,11,12,4,5,6,29,32,31]    
+                    },
+                    2: {
+                        1: [29],
+                        2: [7,9,28,31],
+                        3: [4,5,6,27,30,13,14,15,33]    
+                    },
+                    3: {
+                        1: [29],
+                        2: [7,8,28,31],
+                        3: [4,5,6,27,30,13,14,15,33]    
+                    },
+                    4: {
+                        1: [28],
+                        2: [4,5,27,29,30],
+                        3: [1,2,3,7,8,9,10,11,12,32,31]    
+                    },
+                    5: {
+                        1: [29],
+                        2: [8,9,28,31],
+                        3: [4,5,6,27,30,13,14,15,33]      
+                    },
+                },
                 // adjacentSites: [
                 //     { id: 1 , adjacentSites: [27]},
                 //     { id: 2 , adjacentSites: [27]},
@@ -221,7 +250,8 @@
                         // Recherche des lieux adjacents
                         var adjacentSites = this.getAdjacentSites(id);
                         // Sauvegarde de l'objet à retourner
-                        getAvailableSites.push({ rang: (i+1), sites: adjacentSites });
+                        getAvailableSites.push({ rang: 1, sites: adjacentSites });
+                        // getAvailableSites.push({ rang: 1, sites: adjacentSites });
                         // Sauvegarde des lieux trouvés
                         adjacentSites.forEach((adj) => {
                             find.push(adj)

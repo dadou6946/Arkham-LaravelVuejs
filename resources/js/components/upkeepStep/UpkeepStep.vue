@@ -206,7 +206,7 @@
                     { name: 'Ciel',                                   id: 37, monster: []},
                     { name: 'Périphérie',                             id: 38, monster: []},
                     { name: 'Cellule de prison',                      id: 39, monster: []}
-                ],
+                ]
 
             }
         },

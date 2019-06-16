@@ -8,7 +8,7 @@
             <!-- Lieux -->
             <div class="card hoverable"
                 v-for="site of sites"
-                v-bind:class="[site.color, site.type, adjacent(site)]"
+                v-bind:class="[site.color, site.type, highlight(site.id)]"
                 v-bind:id="'site'+site.id"
                 @click="lastClick(site)"
                 :key="site.id">
@@ -161,6 +161,7 @@
             "specials",
             "monsters",
             "objects",
+            "moves"
         ],
         data: function(){
             return {
@@ -309,10 +310,10 @@
                     });
                 });
             },
-            adjacent(site)
+            // retourne une classe différente de mise en valeur de site en fonction de son rang d'éloignement
+            highlight(id)
             {
-                // if(this.availableSites[0].sites.indexOf(site.id) == -1)
-                // return 'adjacent';
+               console.log(id ) 
             }
         },
         mounted(){
